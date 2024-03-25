@@ -12,6 +12,7 @@ import os
 # 全局变量用于存储认证数据
 global_auth_data = None
 
+
 async def login():
     global global_auth_data
 
@@ -24,7 +25,7 @@ async def login():
         print("读取认证文件")
         async with aiofiles.open(file_path, "r") as file:  # 使用aiofiles进行异步文件操作
             content = await file.read()
-            data=json.loads(content)
+            data = json.loads(content)
             if datetime.now().timestamp() - data['timestamp'] < 430000:
                 global_auth_data = data
                 return global_auth_data
@@ -44,11 +45,11 @@ async def login():
 
         login_json_data = {
             "account": user_name,
-            "pwd": encrypt_password(password, response.json()["data"]["secretKey"]),  
+            "pwd": encrypt_password(password, response.json()["data"]["secretKey"]),
             "verify_code": "",
             "uuid": str(uuid.uuid4()),
             "auto_login": 1,
-            "sensorsAnonymousId": generate_sensor_id(),  
+            "sensorsAnonymousId": generate_sensor_id(),
             "secretId": response.json()["data"]["secretId"]
         }
 
@@ -70,15 +71,16 @@ async def login():
         except Exception as e:
             print(f"处理响应时出现问题: {e}")
 
+
 def before_call_login(func):
     @wraps(func)
     async def wrapper(*args, **kwargs):
         login_info = await login()  # 使用await来调用异步的login函数
         return await func(login_info, *args, **kwargs)  # 确保func也是异步的
+
     return wrapper
 
-    
+
 if __name__ == "__main__":
     asyncio.run(login())
     print(global_auth_data)
-
