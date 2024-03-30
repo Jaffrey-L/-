@@ -1,7 +1,7 @@
 import asyncio
 import httpx
 import json
-from lingxing_header import set_header
+from lingxing import set_header
 from lingxing_login import before_call_login
 from mongodb import close_mongo_connection, db
 from pymongo import UpdateOne

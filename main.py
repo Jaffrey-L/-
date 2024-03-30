@@ -7,6 +7,7 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
+
 @app.get("/")
 async def read_root():
     return {"Hello": "World"}
@@ -19,6 +20,7 @@ async def fetch_async():
         response = await client.get("https://httpbin.org/delay/2")
         logger.info("Async fetch finished")
     return {"Async": "Success"}
+
 
 @app.get("/sync")
 def fetch_sync():
