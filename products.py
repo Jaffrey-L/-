@@ -65,13 +65,14 @@ async def _sync(payload):
     collection = db['products']
     request_url = "https://vayi.lingxing.com/api/product/lists"
     total, _, items_list = await fetch_data_list(request_url, payload)
-    await bulk_update_collection(collection, items_list, "id", "info", _additional_info)
-    total_pages = (total + payload["length"] - 1) // payload["length"]
-    for page in range(1, total_pages):
-        payload["offset"] = page * payload["length"]
-        payload["req_time_sequence"] = f"/api/product/lists$${page}"  # 更新序列号
-        _, _, items_list = await fetch_data_list(request_url, payload)
+    if total > 0:
         await bulk_update_collection(collection, items_list, "id", "info", _additional_info)
+        total_pages = (total + payload["length"] - 1) // payload["length"]
+        for page in range(1, total_pages):
+            payload["offset"] = page * payload["length"]
+            payload["req_time_sequence"] = f"/api/product/lists$${page}"  # 更新序列号
+            _, _, items_list = await fetch_data_list(request_url, payload)
+            await bulk_update_collection(collection, items_list, "id", "info", _additional_info)
 
 
 async def _product_info(product_id, order, retries=3):
@@ -114,5 +115,5 @@ async def product_info_all_sync():
 
 if __name__ == "__main__":
     # asyncio.run(products_full_sync())
-    asyncio.run(products_inc_sync('2024-3-27', '2024-3-29'))
+    asyncio.run(products_inc_sync('2024-03-28', '2024-04-02'))
     # asyncio.run(product_info_all_sync())

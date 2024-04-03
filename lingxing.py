@@ -62,7 +62,8 @@ async def bulk_update_collection(collection: Collection, items: list, id_field: 
             operations.append(UpdateOne({'_id': item_id}, {'$set': item}, upsert=True))
     if operations:
         result = await collection.bulk_write(operations)
-        print(f"批量写入/更新完成，匹配{result.matched_count}，修改{result.modified_count}，插入{result.upserted_count}")
+        print(
+            f"正在更新集合：{collection.name},批量写入/更新完成，匹配{result.matched_count}，修改{result.modified_count}，插入{result.upserted_count}")
 
 
 async def fetch_data_list(request_url: str, payload: dict,
