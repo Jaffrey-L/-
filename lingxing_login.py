@@ -2,10 +2,14 @@ import asyncio
 from datetime import datetime
 from functools import wraps
 import aiofiles
+import aiomysql
 import httpx
 import json
 import uuid
+
+from AsyncMySQL import AsyncMySQL
 from gen_sensors_anonymous_id import generate_sensor_id
+from lingxingopenapi.openapi import OpenApiBase
 from lingxingpwd import encrypt_password
 import os
 
@@ -70,6 +74,25 @@ async def login():
             print(f"HTTP状态错误: {e}")
         except Exception as e:
             print(f"处理响应时出现问题: {e}")
+
+
+async def get_access_token_from_mysql():
+    async with AsyncMySQL() as conn:
+        async with conn.cursor(aiomysql.DictCursor) as cur:
+            # 执行SQL查询
+            await cur.execute("SELECT access_token from get_access_token")
+            result = await cur.fetchone()
+            return result["access_token"]
+
+
+def lingxing_openapi(func):
+    @wraps(func)
+    async def wrapper(*args, **kwargs):
+        access_token = await get_access_token_from_mysql()
+        op_api = OpenApiBase()
+        return await func(access_token, op_api, *args, **kwargs)
+
+    return wrapper
 
 
 def before_call_login(func):
