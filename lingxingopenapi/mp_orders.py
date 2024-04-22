@@ -1,20 +1,32 @@
 import asyncio
-import calendar
 from datetime import datetime, timedelta
 
-from lingxing import bulk_update_collection
-from lingxing_login import lingxing_openapi
-from mongodb import db
+from app.lingxing import bulk_update_collection
+from app.lingxing_login import lingxing_openapi
+from app.mongodb import db
 
 
 @lingxing_openapi
-async def get_mp_orders(access_token, op_api, start_time: int, end_time: int, date_type: str = "global_purchase_time",
+async def get_mp_orders(access_token, op_api, start_time: str, end_time: str, date_type: str = "global_purchase_time",
                         offset=0, length=500):
+    """
+    多平台中的订单同步
+    :param access_token: 由 @lingxing_openapi 提供
+    :param op_api:  由 @lingxing_openapi 提供
+    :param start_time:  开始时间
+    :param end_time:    结束时间
+    :param date_type: 订购时间 global_purchase_time（默认）,更新时间 update_time,发货时间 global_delivery_time,付款时间 global_payment_time
+    :param offset:分页偏移量
+    :param length:分页长度，上限500
+    """
+    date_format = "%Y-%m-%d"
+    start_time = datetime.strptime(start_time, date_format)
+    end_time = datetime.strptime(end_time, date_format)
     orders_url = "/pb/mp/order/v2/list"
     collection = db['api_mp_orders']
     req_body = {
-        "start_time": start_time,
-        "end_time": end_time,
+        "start_time": int(start_time.timestamp()),
+        "end_time": int(end_time.timestamp()),
         "date_type": date_type,
         "offset": offset,
         "length": length
@@ -57,5 +69,5 @@ async def fetch_mp_orders():
 
 
 if __name__ == "__main__":
-    asyncio.run(get_mp_orders("2022-05-01", "2022-06-01"))
+    asyncio.run(get_mp_orders("2024-04-01", "2024-4-29", "update_time"))
     # asyncio.run(fetch_mp_orders())

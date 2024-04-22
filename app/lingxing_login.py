@@ -7,10 +7,10 @@ import httpx
 import json
 import uuid
 
-from AsyncMySQL import AsyncMySQL
-from gen_sensors_anonymous_id import generate_sensor_id
+from app.AsyncMySQL import AsyncMySQL
+from app.gen_sensors_anonymous_id import generate_sensor_id
 from lingxingopenapi.openapi import OpenApiBase
-from lingxingpwd import encrypt_password
+from app.lingxingpwd import encrypt_password
 import os
 
 # 全局变量用于存储认证数据

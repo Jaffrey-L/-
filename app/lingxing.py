@@ -1,9 +1,9 @@
-from lingxing_login import before_call_login
+from app.lingxing_login import before_call_login
 import asyncio
 import httpx
 from pymongo.collection import Collection
 from pymongo import UpdateOne
-from mongodb import db
+from app.mongodb import db
 
 
 @before_call_login
@@ -212,3 +212,4 @@ async def test_products():
 
 if __name__ == '__main__':
     asyncio.run(test_products())
+

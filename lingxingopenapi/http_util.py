@@ -7,7 +7,7 @@ import aiohttp
 import orjson
 from typing import Optional
 from lingxingopenapi.resp_schema import ResponseResult
-from pprint import pprint
+
 
 class HttpBase(object):
 
@@ -28,7 +28,7 @@ class HttpBase(object):
                 async with aio_session.request(method=method, url=req_url, params=params, data=data,
                                                timeout=timeout, headers=headers, **kwargs) as resp:
                     print(method, f"{req_url}?{urlencode(params)}")
-                    print(data.decode('utf-8'))
+                    print(data.decode('utf-8') if data is not None else "No data to display.")
                     if resp.status != 200:
                         raise ValueError(f"Response error, status code: {resp.status}, body: {await resp.text()}")
                     resp_json = await resp.json()

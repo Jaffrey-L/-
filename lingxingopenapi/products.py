@@ -1,5 +1,5 @@
 import asyncio
-from lingxing_login import lingxing_openapi
+from app.lingxing_login import lingxing_openapi
 
 
 @lingxing_openapi

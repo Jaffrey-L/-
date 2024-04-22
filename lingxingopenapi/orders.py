@@ -1,16 +1,15 @@
 import asyncio
-import time
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from dateutil.relativedelta import relativedelta
 
-from lingxing import bulk_update_collection
-from lingxing_login import lingxing_openapi
-from mongodb import db
+from app.lingxing import bulk_update_collection
+from app.lingxing_login import lingxing_openapi
+from app.mongodb import db
 
 
 @lingxing_openapi
-async def get_orders(access_token, op_api, start_date, end_date, offset=0, length=20):
+async def get_orders(access_token, op_api, start_date, end_date, offset=0, length=1000):
     """
     :param access_token: 通过 @lingxing_openapi 获取 access_token
     :param op_api: 通过 @lingxing_openapi 获取 op_api
@@ -60,4 +59,4 @@ async def fetch_orders():
 
 
 if __name__ == "__main__":
-    asyncio.run(get_orders("2024-04-01", "2024-04-03"))
+    asyncio.run(get_orders("2024-04-01", "2024-04-18"))
