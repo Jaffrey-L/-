@@ -2,16 +2,20 @@
 # -*- coding: utf-8 -*-
 """封装 Openapi的 http请求"""
 import asyncio
+import logging
 from urllib.parse import urlencode
 import aiohttp
 import orjson
 from typing import Optional
 from lingxingopenapi.resp_schema import ResponseResult
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 
 class HttpBase(object):
 
-    def __init__(self, default_timeout=30):
+    def __init__(self, default_timeout=180):
         self.default_timeout = default_timeout
 
     async def request(self, method: str, req_url: str,
@@ -27,15 +31,15 @@ class HttpBase(object):
             async with aiohttp.ClientSession() as aio_session:
                 async with aio_session.request(method=method, url=req_url, params=params, data=data,
                                                timeout=timeout, headers=headers, **kwargs) as resp:
-                    print(method, f"{req_url}?{urlencode(params)}")
-                    print(data.decode('utf-8') if data is not None else "No data to display.")
+                    logger.info(f"{method}--{req_url}?{urlencode(params)}")
+                    logger.info(data.decode('utf-8') if data is not None else "No data to display.")
                     if resp.status != 200:
                         raise ValueError(f"Response error, status code: {resp.status}, body: {await resp.text()}")
                     resp_json = await resp.json()
                     return ResponseResult(**resp_json)
         except asyncio.TimeoutError:
             if retries > 0:
-                print(f"Timeout, retrying... ({retries} retries left)")
+                logger.info(f"Timeout, retrying... ({retries} retries left)")
                 await asyncio.sleep(180)  # 简单的等待策略，等待时间可以根据重试次数调整(180秒）
                 return await self.request(method, req_url, params, json, headers, retries=retries - 1, **kwargs)
             else:

@@ -1,4 +1,5 @@
 import asyncio
+import logging
 import time
 
 import httpx
@@ -7,6 +8,9 @@ ihr_token_info = {
     'access_token': None,
     'expires_at': None
 }
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 async def login():
@@ -49,14 +53,15 @@ async def fetch_all_pages(base_url, data_list='dataList', additional_params=None
         params.update(additional_params)
 
     # 初始化 httpx 客户端
-    async with httpx.AsyncClient(headers=header) as client:
+    async with httpx.AsyncClient(headers=header, timeout=180) as client:
+        logger.info(f"Fetching data from {base_url} with params: {params}")
         # 首次请求以获取总页数
         response = await client.get(base_url, params=params)
         response_data = response.json()
 
         # 检查初始请求是否成功
         if response.status_code != 200 or response_data.get('errorResult', True):
-            print("Failed to fetch initial data:", response_data.get('message'))
+            logger.info(f"Failed to fetch initial data:{response_data.get('message')}")
             return []
 
         total_pages = response_data['data']['pageInfo']['totalPages']
@@ -72,7 +77,7 @@ async def fetch_all_pages(base_url, data_list='dataList', additional_params=None
             if response.status_code == 200 and not response_data.get('errorResult', False):
                 all_data.extend(response_data['data'][data_list])
             else:
-                print(f"Failed to fetch data for page {page}: {response_data.get('message')}")
+                logger.info(f"Failed to fetch data for page {page}: {response_data.get('message')}")
 
         return all_data
 

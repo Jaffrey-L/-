@@ -6,7 +6,7 @@ import aiomysql
 import httpx
 import json
 import uuid
-
+import logging
 from app.AsyncMySQL import AsyncMySQL
 from app.gen_sensors_anonymous_id import generate_sensor_id
 from lingxingopenapi.openapi import OpenApiBase
@@ -15,6 +15,8 @@ import os
 
 # 全局变量用于存储认证数据
 global_auth_data = None
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 async def login():
@@ -26,7 +28,7 @@ async def login():
 
     file_path = "auth.json"
     if os.path.exists(file_path):
-        print("读取认证文件")
+        logger.info("读取认证文件")
         async with aiofiles.open(file_path, "r") as file:  # 使用aiofiles进行异步文件操作
             content = await file.read()
             data = json.loads(content)
@@ -34,7 +36,7 @@ async def login():
                 global_auth_data = data
                 return global_auth_data
 
-    print("重新登录")
+    logger.info("重新登录")
     get_login_seckey_url = "https://gw.lingxingerp.com/newadmin/api/passport/getLoginSecretKey"
     login_url = "https://gw.lingxingerp.com/newadmin/api/passport/login"
     user_name = "vayiapi"
@@ -67,13 +69,13 @@ async def login():
                 global_auth_data = response_json
                 return response_json
             else:
-                print(f"登录失败: {response_json}")
+                logger.info(f"登录失败: {response_json}")
         except httpx.RequestError as e:
-            print(f"请求过程中出现问题: {e}")
+            logger.info(f"请求过程中出现问题: {e}")
         except httpx.HTTPStatusError as e:
-            print(f"HTTP状态错误: {e}")
+            logger.info(f"HTTP状态错误: {e}")
         except Exception as e:
-            print(f"处理响应时出现问题: {e}")
+            logger.info(f"处理响应时出现问题: {e}")
 
 
 async def get_access_token_from_mysql():

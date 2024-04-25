@@ -30,7 +30,7 @@ async def ihr_staffs(request: Request):
         "message": "SUCCESS",
         "data": []
     }
-    async with httpx.AsyncClient(headers=header) as client:
+    async with httpx.AsyncClient(headers=header, timeout=180) as client:
         # 每次处理最多1000个IDs
         batch_size = 1000
         for i in range(0, len(ids), batch_size):
@@ -63,13 +63,15 @@ async def ihr_proxy_request(request: Request, full_path: str):
             try:
                 body = await request.body()
                 req_body = json.loads(body.decode("utf-8"))
+                logger.info(f"Requesting {req_body}")
             except json.JSONDecodeError:
                 raise HTTPException(status_code=400, detail="Invalid JSON data received")
         else:
             raise HTTPException(status_code=415, detail="Unsupported Media Type or Missing JSON Content-Type")
 
-    async with httpx.AsyncClient(headers=header) as client:
+    async with httpx.AsyncClient(headers=header, timeout=180) as client:
         try:
+            logger.info(f"Requesting https://openapi.ihr360.com/{full_path}")
             # 通过 httpx 发送请求，包括 query 参数和请求体
             response = await client.request(
                 method=request.method,
@@ -77,12 +79,14 @@ async def ihr_proxy_request(request: Request, full_path: str):
                 json=req_body,
                 params=request.query_params  # 传递原始查询参数
             )
+            response.raise_for_status()
+            return response.json()
         except httpx.RequestError as exc:
             # 网络问题或无效响应
             raise HTTPException(status_code=500, detail=str(exc))
 
         # 返回从目标API收到的响应
-    return response.json()
+
 
 
 @app.post("/lx_openapi/erp/sc/routing/data/local_inventory/batchGetProductInfo")
@@ -135,8 +139,9 @@ async def lx_web_proxy_request(request: Request, full_path: str):
         else:
             raise HTTPException(status_code=415, detail="Unsupported Media Type or Missing JSON Content-Type")
 
-    async with httpx.AsyncClient(headers=header) as client:
+    async with httpx.AsyncClient(headers=header, timeout=180) as client:
         try:
+            logger.info(f"Requesting {req_body}")
             # 通过 httpx 发送请求，包括 query 参数和请求体
             response = await client.request(
                 method=request.method,
@@ -144,12 +149,17 @@ async def lx_web_proxy_request(request: Request, full_path: str):
                 json=req_body,
                 params=request.query_params  # 传递原始查询参数
             )
-        except httpx.RequestError as exc:
-            # 网络问题或无效响应
+            response.raise_for_status()
+            return response.json()
+        except httpx.HTTPStatusError as exc:
+            logger.info(f"HTTP error occurred: {exc.response.status_code}")
             raise HTTPException(status_code=500, detail=str(exc))
-
-        # 返回从目标API收到的响应
-    return response.json()
+        except httpx.RequestError as exc:
+            logger.info(f"An error occurred while requesting: {exc}")
+            raise HTTPException(status_code=500, detail=str(exc))
+        except Exception as exc:
+            logger.info(f"An unexpected error occurred: {exc}")
+            raise HTTPException(status_code=500, detail=str(exc))
 
 
 @lingxing_openapi
