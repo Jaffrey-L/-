@@ -3,7 +3,9 @@ import logging
 
 import httpx
 from fastapi import FastAPI, Request, HTTPException
+from pydantic import BaseModel
 
+from app.AsyncPostgres import AsyncPostgres
 from app.ihr import login, fetch_all_pages
 from app.lingxing import set_header
 from app.lingxing_login import lingxing_openapi
@@ -86,7 +88,6 @@ async def ihr_proxy_request(request: Request, full_path: str):
             raise HTTPException(status_code=500, detail=str(exc))
 
         # 返回从目标API收到的响应
-
 
 
 @app.post("/lx_openapi/erp/sc/routing/data/local_inventory/batchGetProductInfo")
@@ -187,6 +188,47 @@ async def lx_product_openapi_request(access_token, op_api, req_body):
     resp = await op_api.request(access_token, full_path, "POST",
                                 req_body=req_body)
     return resp
+
+
+class ResponseData(BaseModel):
+    url: str
+    data: str
+
+
+@app.post("/log_response")
+async def log_response(response: ResponseData):
+    print(f"接收数据：{response.url}:{response.data}")
+    return {"status": "success"}
+
+
+allowed_tables = ["lx_web_fba_inventory", "lx_inventory_by_wyt", "kd_v_just_inventory_eng"]
+
+
+class TableNameRequest(BaseModel):
+    table_name: str
+
+
+"""
+清楚postgresql中表里面的内容
+"""
+
+
+@app.post("/clear_table")
+async def clear_table(request: TableNameRequest):
+    table_name = request.table_name
+    logger.info(f"Received request to clear table: {table_name}")
+    if table_name not in allowed_tables:
+        logger.error(f"Table name {table_name} is not allowed")
+        raise HTTPException(status_code=400, detail="Table name not allowed")
+
+    async with AsyncPostgres() as conn:
+        try:
+            await conn.execute(f'TRUNCATE TABLE "{table_name}" RESTART IDENTITY CASCADE')
+            logger.info(f"Table {table_name} cleared successfully")
+            return {"message": f"Table {table_name} cleared successfully"}
+        except Exception as e:
+            logger.error(f"Failed to clear table {table_name}: {e}")
+            raise HTTPException(status_code=500, detail="Failed to clear the table")
 
 
 if __name__ == "__main__":
