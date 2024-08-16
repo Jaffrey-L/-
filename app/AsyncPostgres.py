@@ -3,7 +3,7 @@ import asyncpg
 
 
 class AsyncPostgres:
-    def __init__(self, host='192.168.1.223', port=5432, user='postgres', password='ab3E3k3j4DDEEabc',
+    def __init__(self, host='192.168.1.227', port=5432, user='postgres', password='vayiERty123',
                  database='postgres', schema='vayidw'):
         self.host = host
         self.port = port

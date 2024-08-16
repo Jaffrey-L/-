@@ -1,9 +1,10 @@
 import json
 import logging
+from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 
 import httpx
-from fastapi import FastAPI, Request, HTTPException
+from fastapi import FastAPI, Request, HTTPException, Query
 from fastapi.params import Body
 from k3cloud_webapi_sdk.main import K3CloudApiSdk
 from pydantic import BaseModel
@@ -11,6 +12,7 @@ from pymongo import MongoClient
 
 from app.AsyncPostgres import AsyncPostgres
 from app.ihr import login, fetch_all_pages
+from app.kingdee import Ext_k3sdk
 from app.lingxing import set_header
 from app.lingxing_login import lingxing_openapi
 
@@ -186,6 +188,32 @@ async def lx_openapi_request(access_token, op_api, full_path: str, request: Requ
     return resp
 
 
+@app.get("/generate_dates/")
+def generate_dates(
+        start_date: str = Query(..., description="Start date in YYYY-MM-DD format"),
+        end_date: str = Query(..., description="End date in YYYY-MM-DD format"),
+        format: str = Query("%Y-%m-%d", description="Date format")
+) -> List[Dict[str, str]]:
+    """
+    Generate a list of dates between specified start and end dates.
+
+    :param start_date: Start date in YYYY-MM-DD format
+    :param end_date: End date in YYYY-MM-DD format
+    :param format: Date format
+    :return: List of dates in the specified format
+    """
+    start_date_dt = datetime.strptime(start_date, "%Y-%m-%d")
+    end_date_dt = datetime.strptime(end_date, "%Y-%m-%d")
+
+    if start_date_dt > end_date_dt:
+        start_date_dt, end_date_dt = end_date_dt, start_date_dt
+
+    days_difference = (end_date_dt - start_date_dt).days + 1
+    date_list = [{"day": (start_date_dt + timedelta(days=i)).strftime(format)} for i in range(days_difference)]
+
+    return date_list
+
+
 @lingxing_openapi
 async def lx_product_openapi_request(access_token, op_api, req_body):
     full_path = "/erp/sc/routing/data/local_inventory/batchGetProductInfo"
@@ -221,9 +249,9 @@ class TableNameRequest(BaseModel):
 async def clear_table(request: TableNameRequest):
     table_name = request.table_name
     logger.info(f"Received request to clear table: {table_name}")
-    if table_name not in allowed_tables:
-        logger.error(f"Table name {table_name} is not allowed")
-        raise HTTPException(status_code=400, detail="Table name not allowed")
+    # if table_name not in allowed_tables:
+    #     logger.error(f"Table name {table_name} is not allowed")
+    #     raise HTTPException(status_code=400, detail="Table name not allowed")
 
     async with AsyncPostgres() as conn:
         try:
@@ -235,9 +263,9 @@ async def clear_table(request: TableNameRequest):
             raise HTTPException(status_code=500, detail="Failed to clear the table")
 
 
-k3api_sdk = K3CloudApiSdk()
+k3api_sdk = Ext_k3sdk()
 k3api_sdk.InitConfig("65790e1ca8a581", "kd", "267507_R7cJ3xiIUvAY4awJQ7Rs5z9H3sR+QoOu",
-                     "a16e530ad15546dfa318a8f950025ff5")
+                     "a16e530ad15546dfa318a8f950025ff5","http://erp.vayi.cn:8090/k3cloud")
 
 
 @app.post("/k3/bill_query")
@@ -255,6 +283,12 @@ async def k3_sys_report_query(request: Request):
     response = k3api_sdk.getSysReportData(form_id, data)
     return json.loads(response)
 
+@app.post("/k3/stock_report")
+async def k3_stock_report_query(request: Request):
+    body = await request.json()
+
+    response = k3api_sdk.stock_report(body)
+    return json.loads(response)
 
 @app.post("/k3/query_bussiness_info")
 async def k3_query_bussiness_info(request: Request):
