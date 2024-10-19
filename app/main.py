@@ -264,8 +264,8 @@ async def clear_table(request: TableNameRequest):
 
 
 k3api_sdk = Ext_k3sdk()
-k3api_sdk.InitConfig("65790e1ca8a581", "kd", "267507_R7cJ3xiIUvAY4awJQ7Rs5z9H3sR+QoOu",
-                     "a16e530ad15546dfa318a8f950025ff5","http://erp.vayi.cn:8090/k3cloud")
+k3api_sdk.InitConfig("66ec14697e30c9", "kd", "290636_XefN38hGVkAewXWPQ40O6YSNQI0VSAqG",
+                     "e8a38bef8a174933853cddb4728e7f56","http://erp.vayi.cn:8090/k3cloud")
 
 
 @app.post("/k3/bill_query")
