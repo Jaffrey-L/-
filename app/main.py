@@ -2,7 +2,7 @@ import json
 import logging
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
-
+import os
 import httpx
 from fastapi import FastAPI, Request, HTTPException, Query
 from fastapi.params import Body
@@ -127,6 +127,12 @@ async def lx_api_proxy_request(request: Request, full_path: str):
     resp = await lx_openapi_request(full_path=full_path, request=request)
     return resp
 
+@app.get("/lx_downfile")
+async def lx_downfile(request: Request):
+    url = f"https://vayi.lingxing.com/api/download/downloadCenterReport/downloadResource?report_id={request.query_params.get('report_id')}"
+    header = await set_header()
+    await download_file(url=url, headers=header)
+
 
 @app.api_route("/lx_web/{full_path:path}",
                methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH", "TRACE"])
@@ -135,18 +141,25 @@ async def lx_web_proxy_request(request: Request, full_path: str):
     通过模拟登录，反向代理请求到领星web API，并返回响应。
     """
     header = await set_header()
+    req_time_seq = "/" + full_path.split('/', 1)[1] + "$$"
     req_body = None
     if request.method in ["POST", "PUT", "PATCH"]:
         if request.headers.get('Content-Type', '').startswith('application/json'):
             try:
                 body = await request.body()
                 req_body = json.loads(body.decode("utf-8"))
+                if req_body.get("offset") is not None:
+                    req_time_seq = req_time_seq + str(req_body.get("offset") // req_body.get("length") + 1)
+                    req_body["req_time_sequence"] = req_time_seq
+                else:
+                    req_body["req_time_sequence"] = req_time_seq + "1"
             except json.JSONDecodeError:
                 raise HTTPException(status_code=400, detail="Invalid JSON data received")
         else:
             raise HTTPException(status_code=415, detail="Unsupported Media Type or Missing JSON Content-Type")
 
     async with httpx.AsyncClient(headers=header, timeout=180) as client:
+        logger.info(header)
         try:
             logger.info(f"Requesting {req_body}")
             # 通过 httpx 发送请求，包括 query 参数和请求体
@@ -179,6 +192,9 @@ async def lx_openapi_request(access_token, op_api, full_path: str, request: Requ
             try:
                 body = await request.body()
                 req_body = json.loads(body.decode("utf-8"))
+                # 判断 req_body 中是否有 length 键但没有 offset 键
+                if req_body and isinstance(req_body, dict) and "length" in req_body and "offset" not in req_body:
+                    req_body["offset"] = 0
             except json.JSONDecodeError:
                 raise HTTPException(status_code=400, detail="Invalid JSON data received")
         else:
@@ -265,7 +281,7 @@ async def clear_table(request: TableNameRequest):
 
 k3api_sdk = Ext_k3sdk()
 k3api_sdk.InitConfig("66ec14697e30c9", "kd", "290636_XefN38hGVkAewXWPQ40O6YSNQI0VSAqG",
-                     "e8a38bef8a174933853cddb4728e7f56","http://erp.vayi.cn:8090/k3cloud")
+                     "e8a38bef8a174933853cddb4728e7f56", "http://erp.vayi.cn:8090/k3cloud")
 
 
 @app.post("/k3/bill_query")
@@ -283,12 +299,14 @@ async def k3_sys_report_query(request: Request):
     response = k3api_sdk.getSysReportData(form_id, data)
     return json.loads(response)
 
+
 @app.post("/k3/stock_report")
 async def k3_stock_report_query(request: Request):
     body = await request.json()
 
     response = k3api_sdk.stock_report(body)
     return json.loads(response)
+
 
 @app.post("/k3/query_bussiness_info")
 async def k3_query_bussiness_info(request: Request):
@@ -364,6 +382,94 @@ async def get_items(query_params: QueryParams = Body(...)):
         result.append(item)
 
     return result
+
+
+
+# 创建自定义事件钩子
+async def download_file(url, headers=None):
+    """
+    使用httpx下载文件，记录302重定向过程
+
+    参数:
+    url (str): 下载链接
+    cookies (dict): 请求所需的cookies
+
+    返回:
+    str: 下载文件的路径
+    """
+    logger.info(f"开始下载: {url}")
+
+    # 定义事件钩子函数
+    def log_request(request):
+        logger.debug(f"请求: {request.method} {request.url}")
+        logger.debug(f"请求头: {dict(request.headers)}")
+        return request
+
+    def log_response(response):
+        logger.debug(f"响应状态: {response.status_code}")
+        logger.debug(f"响应头: {dict(response.headers)}")
+
+        if 300 <= response.status_code < 400:
+            location = response.headers.get('location')
+            logger.debug(f"重定向到: {location}")
+
+        return response
+
+    # 创建事件钩子字典
+    event_hooks = {
+        "request": [log_request],
+        "response": [log_response]
+    }
+
+    # 创建httpx客户端
+    async with httpx.AsyncClient(
+            follow_redirects=True,
+            timeout=30.0,
+            event_hooks=event_hooks
+    ) as client:
+        # 记录初始请求
+        logger.info("发送初始请求")
+        if headers:
+            logger.debug(f"使用cookies: {headers}")
+
+        # 发送GET请求
+        try:
+            headers[""]="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+            response = await client.get(url, headers=headers)
+
+            # 检查响应状态
+            response.raise_for_status()
+
+            # 记录最终状态
+            logger.info(f"最终响应状态码: {response.status_code}")
+            logger.debug(f"最终响应URL: {response.url}")
+
+            # 获取文件名
+            content_disposition = response.headers.get('content-disposition')
+            if content_disposition and 'filename=' in content_disposition:
+                # 提取文件名
+                filename = content_disposition.split('filename=')[1].strip('"\'')
+                logger.info(f"从响应头获取文件名: {filename}")
+            else:
+                # 使用默认文件名
+                filename = "downloaded_report.xlsx"
+                logger.info(f"使用默认文件名: {filename}")
+
+            # 保存文件
+            logger.info(f"开始保存文件: {filename}")
+            with open(filename, 'wb') as f:
+                f.write(response.content)
+
+            file_path = os.path.abspath(filename)
+            logger.info(f"文件保存完成: {file_path}")
+            return file_path
+
+        except httpx.HTTPStatusError as e:
+            logger.error(f"HTTP错误: {e}")
+            raise
+        except Exception as e:
+            logger.error(f"下载过程中出错: {e}")
+            raise
 
 
 if __name__ == "__main__":

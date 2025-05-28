@@ -107,7 +107,7 @@ class OpenApiBase(object):
                                                              **kwargs)
 
                 # 检查业务响应码
-                if str(resp.get("code")) == "3001008":
+                if str(resp.get("code")) == "3001008" or str(resp.get("code")) == "103":
                     error_msg = f"业务错误, 错误码: {resp.get('code')}, 错误信息: {resp.get('message', '')}"
                     logger.error(error_msg)
                     if retry_count < retries:
