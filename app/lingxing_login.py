@@ -19,6 +19,7 @@ _token_cache = {
     "access_token": None,
     "expires_at": 0,
 }
+_token_lock = asyncio.Lock()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -87,11 +88,16 @@ async def ensure_access_token(op_api: OpenApiBase) -> str:
     if _token_cache["access_token"] and now_ts < int(_token_cache["expires_at"]) - 300:
         return _token_cache["access_token"]
 
-    logger.info("Generating access_token from app credentials")
-    token_dto = await op_api.generate_access_token()
-    _token_cache["access_token"] = token_dto.access_token
-    _token_cache["expires_at"] = now_ts + int(token_dto.expires_in)
-    return token_dto.access_token
+    async with _token_lock:
+        now_ts = int(datetime.now().timestamp())
+        if _token_cache["access_token"] and now_ts < int(_token_cache["expires_at"]) - 300:
+            return _token_cache["access_token"]
+
+        logger.info("Generating access_token from app credentials")
+        token_dto = await op_api.generate_access_token()
+        _token_cache["access_token"] = token_dto.access_token
+        _token_cache["expires_at"] = now_ts + int(token_dto.expires_in)
+        return token_dto.access_token
 
 
 def lingxing_openapi(func):

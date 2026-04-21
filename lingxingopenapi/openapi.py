@@ -97,6 +97,8 @@ class OpenApiBase(object):
         )
 
         route_lock = self._route_locks.setdefault(route_key, asyncio.Lock())
+        working_access_token = access_token
+        auth_refreshed = False
         async with route_lock:
             now = time.monotonic()
             cooldown_until = self._route_cooldown_until.get(route_key, 0)
@@ -122,7 +124,7 @@ class OpenApiBase(object):
 
                     sign_params = {
                         "app_key": self.app_id,
-                        "access_token": access_token,
+                        "access_token": working_access_token,
                         "timestamp": f'{int(time.time())}',
                     }
                     gen_sign_params.update(sign_params)
@@ -146,7 +148,18 @@ class OpenApiBase(object):
                     last_resp = resp
 
                     code = str(resp.get("code"))
-                    if code in {"3001008", "103"}:
+                    if code == "103":
+                        logger.warning("检测到鉴权失败 code=103，尝试刷新token后重试")
+                        if not auth_refreshed:
+                            token_dto = await self.generate_access_token()
+                            working_access_token = token_dto.access_token
+                            auth_refreshed = True
+                            if retry_count < retries:
+                                retry_count += 1
+                                continue
+                        return ResponseResult(**resp)
+
+                    if code == "3001008":
                         cached_resp = self._get_cached_response(cache_key, cache_ttl_seconds)
                         if cached_resp:
                             logger.warning("命中成功缓存，绕过限频 route=%s", route_key)
