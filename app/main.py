@@ -1,5 +1,7 @@
 import json
 import logging
+import traceback
+import uuid
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 import os
@@ -7,6 +9,7 @@ import re
 import httpx
 from fastapi import FastAPI, Request, HTTPException, Query
 from fastapi.params import Body
+from fastapi.responses import JSONResponse
 from k3cloud_webapi_sdk.main import K3CloudApiSdk
 from pydantic import BaseModel
 from pymongo import MongoClient
@@ -26,6 +29,27 @@ app = FastAPI()
 OPENAPI_ALLOWED_PATHS = set(Config.OPENAPI_ALLOWED_PATHS)
 WEB_ALLOWED_HOSTS = set(Config.WEB_ALLOWED_HOSTS)
 TABLE_NAME_PATTERN = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+
+
+@app.exception_handler(Exception)
+async def unhandled_exception_handler(request: Request, exc: Exception):
+    request_id = str(uuid.uuid4())
+    logger.exception(
+        "Unhandled exception request_id=%s method=%s path=%s detail=%s\n%s",
+        request_id,
+        request.method,
+        request.url.path,
+        str(exc),
+        traceback.format_exc(),
+    )
+    return JSONResponse(
+        status_code=500,
+        content={
+            "code": 500,
+            "message": str(exc) or "Internal Server Error",
+            "request_id": request_id,
+        },
+    )
 
 
 def _is_openapi_path_allowed(full_path: str) -> bool:
