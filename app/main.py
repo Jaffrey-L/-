@@ -17,6 +17,7 @@ from pymongo import MongoClient
 from urllib.parse import urlparse
 
 from app.AsyncPostgres import AsyncPostgres
+from app.compatibility import compatibility_routes, maybe_envelope
 from app.config import Config
 from app.ihr import login, fetch_all_pages
 from app.kingdee import Ext_k3sdk
@@ -103,8 +104,17 @@ def _build_and_validate_web_url(full_path: str) -> str:
 
 
 @app.get("/healthz")
-async def healthz():
-    return {"status": "ok"}
+async def healthz(request: Request):
+    return maybe_envelope(request, {"status": "ok"}, source="internal", message="ok")
+
+
+@app.get("/meta/compatibility/routes")
+async def meta_compatibility_routes(request: Request):
+    payload = {
+        "routes": compatibility_routes(),
+        "note": "Use query _compat_envelope=1 or header X-Compat-Envelope:1 to get unified envelope response.",
+    }
+    return maybe_envelope(request, payload, source="compatibility-meta")
 
 
 @app.get("/ihr/openapi/thirdparty/api/staff/v1/staffs")
@@ -136,7 +146,7 @@ async def ihr_staffs(request: Request):
                 results['data'].extend(response.json()['data'])
             else:
                 print(f"Error fetching data for batch starting at index {i}: {response.text}")
-    return results
+    return maybe_envelope(request, results, source="ihr")
 
 
 @app.api_route("/ihr/{full_path:path}",
@@ -173,7 +183,7 @@ async def ihr_proxy_request(request: Request, full_path: str):
                 params=request.query_params  # 传递原始查询参数
             )
             response.raise_for_status()
-            return response.json()
+            return maybe_envelope(request, response.json(), source="ihr")
         except httpx.RequestError as exc:
             # 网络问题或无效响应
             raise HTTPException(status_code=500, detail=str(exc))
@@ -212,7 +222,7 @@ async def lx_api_proxy_request(request: Request, full_path: str):
     if not _is_openapi_path_allowed(full_path):
         raise HTTPException(status_code=403, detail=f"OpenAPI path not allowed: /{full_path.strip('/')}")
     resp = await lx_openapi_request(full_path=full_path, request=request)
-    return resp
+    return maybe_envelope(request, resp.model_dump(), source="lingxing-openapi")
 
 @app.get("/lx_downfile")
 async def lx_downfile(request: Request):
@@ -259,7 +269,7 @@ async def lx_web_proxy_request(request: Request, full_path: str):
                 params=request.query_params  # 传递原始查询参数
             )
             response.raise_for_status()
-            return response.json()
+            return maybe_envelope(request, response.json(), source="lingxing-web")
         except httpx.HTTPStatusError as exc:
             logger.info(f"HTTP error occurred: {exc.response.status_code}")
             raise HTTPException(status_code=500, detail=str(exc))
@@ -392,7 +402,7 @@ k3api_sdk.InitConfig(Config.K3_APP_ID, Config.K3_ACCOUNT, Config.K3_APP_SECRET, 
 async def k3_bill_query(request: Request):
     body = await request.json()
     response = k3api_sdk.BillQuery(body)
-    return json.loads(response)
+    return maybe_envelope(request, json.loads(response), source="k3")
 
 
 @app.post("/k3/sys_report_query")
@@ -401,7 +411,7 @@ async def k3_sys_report_query(request: Request):
     form_id = body.get("formId")
     data = body.get("data")
     response = k3api_sdk.getSysReportData(form_id, data)
-    return json.loads(response)
+    return maybe_envelope(request, json.loads(response), source="k3")
 
 
 @app.post("/k3/stock_report")
@@ -409,7 +419,7 @@ async def k3_stock_report_query(request: Request):
     body = await request.json()
 
     response = k3api_sdk.stock_report(body)
-    return json.loads(response)
+    return maybe_envelope(request, json.loads(response), source="k3")
 
 
 @app.post("/k3/query_bussiness_info")
@@ -453,7 +463,7 @@ async def k3_query_bussiness_info(request: Request):
                 continue
     keys_string = ', '.join(f"{key}" for key in fields_info.keys())
     fields_info['keys_string'] = keys_string
-    return fields_info
+    return maybe_envelope(request, fields_info, source="k3")
 
 
 client = MongoClient(Config.MONGO_VIEW_URI)
@@ -467,8 +477,8 @@ class QueryParams(BaseModel):
     limit: Optional[int] = 10
 
 
-@app.post("/mongodb/view/", response_model=List[Dict])
-async def get_items(query_params: QueryParams = Body(...)):
+@app.post("/mongodb/view/")
+async def get_items(request: Request, query_params: QueryParams = Body(...)):
     # 根据视图名获取集合
     collection = db[query_params.view_name]
 
@@ -485,7 +495,7 @@ async def get_items(query_params: QueryParams = Body(...)):
         item["id"] = item["_id"]
         result.append(item)
 
-    return result
+    return maybe_envelope(request, result, source="mongodb-view")
 
 
 
