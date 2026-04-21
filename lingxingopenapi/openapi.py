@@ -37,7 +37,7 @@ class OpenApiBase(object):
             "appId": self.app_id,
             "appSecret": self.app_secret,
         }
-        token_timeout = int(os.getenv("OPENAPI_TOKEN_TIMEOUT_SECONDS", os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "20")))
+        token_timeout = int(os.getenv("OPENAPI_TOKEN_TIMEOUT_SECONDS", os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "8")))
         resp_result = await HttpBase().request("POST", req_url, params=req_params, timeout=token_timeout)
         if resp_result.code != 200:
             raise ValueError(f"generate_access_token failed, reason: {resp_result.message}")
@@ -52,7 +52,7 @@ class OpenApiBase(object):
             "appId": self.app_id,
             "refreshToken": refresh_token,
         }
-        token_timeout = int(os.getenv("OPENAPI_TOKEN_TIMEOUT_SECONDS", os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "20")))
+        token_timeout = int(os.getenv("OPENAPI_TOKEN_TIMEOUT_SECONDS", os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "8")))
         resp_result = await HttpBase().request("POST", req_url, params=req_params, timeout=token_timeout)
         if resp_result.code != 200:
             raise ValueError(f"refresh_token failed, reason: {resp_result.message}")
@@ -69,9 +69,9 @@ class OpenApiBase(object):
         headers = kwargs.pop('headers', {})
 
         if retries is None:
-            retries = int(os.getenv("OPENAPI_RETRIES", "1"))
-        max_backoff = int(os.getenv("OPENAPI_RETRY_MAX_BACKOFF_SECONDS", "2"))
-        kwargs.setdefault('timeout', int(os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "20")))
+            retries = int(os.getenv("OPENAPI_RETRIES", "0"))
+        max_backoff = int(os.getenv("OPENAPI_RETRY_MAX_BACKOFF_SECONDS", "1"))
+        kwargs.setdefault('timeout', int(os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "12")))
 
         retry_count = 0
         last_resp = None
