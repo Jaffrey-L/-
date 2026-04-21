@@ -40,7 +40,7 @@ class OpenApiBase(object):
             "appId": self.app_id,
             "appSecret": self.app_secret,
         }
-        token_timeout = int(os.getenv("OPENAPI_TOKEN_TIMEOUT_SECONDS", os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "8")))
+        token_timeout = int(os.getenv("OPENAPI_TOKEN_TIMEOUT_SECONDS", os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "12")))
         resp_result = await HttpBase().request("POST", req_url, params=req_params, timeout=token_timeout)
         if resp_result.code != 200:
             raise ValueError(f"generate_access_token failed, reason: {resp_result.message}")
@@ -55,7 +55,7 @@ class OpenApiBase(object):
             "appId": self.app_id,
             "refreshToken": refresh_token,
         }
-        token_timeout = int(os.getenv("OPENAPI_TOKEN_TIMEOUT_SECONDS", os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "8")))
+        token_timeout = int(os.getenv("OPENAPI_TOKEN_TIMEOUT_SECONDS", os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "12")))
         resp_result = await HttpBase().request("POST", req_url, params=req_params, timeout=token_timeout)
         if resp_result.code != 200:
             raise ValueError(f"refresh_token failed, reason: {resp_result.message}")
@@ -73,9 +73,9 @@ class OpenApiBase(object):
         route_key = f"{method.upper()} {route_name}"
 
         if retries is None:
-            retries = int(os.getenv("OPENAPI_RETRIES", "0"))
-        max_backoff = int(os.getenv("OPENAPI_RETRY_MAX_BACKOFF_SECONDS", "1"))
-        kwargs.setdefault('timeout', int(os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "12")))
+            retries = int(os.getenv("OPENAPI_RETRIES", "2"))
+        max_backoff = int(os.getenv("OPENAPI_RETRY_MAX_BACKOFF_SECONDS", "6"))
+        kwargs.setdefault('timeout', int(os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "20")))
         min_interval_seconds = float(os.getenv("OPENAPI_MIN_INTERVAL_SECONDS", "1.2"))
         rate_limit_cooldown_seconds = float(os.getenv("OPENAPI_RATE_LIMIT_COOLDOWN_SECONDS", "6"))
         timeout_cooldown_seconds = float(os.getenv("OPENAPI_TIMEOUT_COOLDOWN_SECONDS", "2"))
@@ -89,12 +89,8 @@ class OpenApiBase(object):
             cooldown_until = self._route_cooldown_until.get(route_key, 0)
             if now < cooldown_until:
                 wait_seconds = round(cooldown_until - now, 2)
-                logger.warning("接口处于冷却期 route=%s wait=%.2fs", route_key, wait_seconds)
-                return ResponseResult(
-                    code=3001008,
-                    message=f"cooldown active, retry after {wait_seconds}s",
-                    data=None,
-                )
+                logger.warning("接口处于冷却期 route=%s wait=%.2fs，内部等待后继续请求", route_key, wait_seconds)
+                await asyncio.sleep(wait_seconds)
 
             last_call = self._route_last_call_at.get(route_key, 0)
             if min_interval_seconds > 0 and now - last_call < min_interval_seconds:
@@ -143,7 +139,7 @@ class OpenApiBase(object):
                         logger.error(error_msg)
                         if retry_count < retries:
                             retry_count += 1
-                            wait_time = min(2 ** retry_count, max_backoff) + random.uniform(0, 0.3)
+                            wait_time = max(rate_limit_cooldown_seconds, min(2 ** retry_count, max_backoff)) + random.uniform(0, 0.3)
                             logger.info(
                                 f"业务错误重试，{wait_time:.2f}s 后重试 (剩余 {retries - retry_count} 次)"
                             )
