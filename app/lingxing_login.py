@@ -14,15 +14,6 @@ from app.gen_sensors_anonymous_id import generate_sensor_id
 from app.lingxingpwd import encrypt_password
 from lingxingopenapi.openapi import OpenApiBase
 
-# Optional MySQL token source for backward compatibility
-try:
-    import aiomysql
-    from app.AsyncMySQL import AsyncMySQL
-except Exception:  # pragma: no cover
-    aiomysql = None
-    AsyncMySQL = None
-
-
 global_auth_data = None
 _token_cache = {
     "access_token": None,
@@ -31,10 +22,6 @@ _token_cache = {
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-
-def _use_mysql_token_cache() -> bool:
-    return os.getenv("USE_MYSQL_TOKEN_CACHE", "false").strip().lower() in {"1", "true", "yes", "on"}
 
 
 async def login():
@@ -95,36 +82,12 @@ async def login():
             logger.info(f"处理响应时出现问题: {e}")
 
 
-async def get_access_token_from_mysql():
-    if not _use_mysql_token_cache():
-        return None
-    if not AsyncMySQL or not aiomysql:
-        return None
-
-    try:
-        async with AsyncMySQL() as conn:
-            async with conn.cursor(aiomysql.DictCursor) as cur:
-                await cur.execute("SELECT access_token from get_access_token")
-                result = await cur.fetchone()
-                if result and result.get("access_token"):
-                    return result["access_token"]
-    except Exception as exc:
-        logger.warning(f"Read access_token from MySQL failed: {exc}")
-    return None
-
-
 async def ensure_access_token(op_api: OpenApiBase) -> str:
     now_ts = int(datetime.now().timestamp())
     if _token_cache["access_token"] and now_ts < int(_token_cache["expires_at"]) - 300:
         return _token_cache["access_token"]
 
-    mysql_token = await get_access_token_from_mysql()
-    if mysql_token:
-        _token_cache["access_token"] = mysql_token
-        _token_cache["expires_at"] = now_ts + 1800
-        return mysql_token
-
-    logger.info("No DB token found, generating access_token from app credentials")
+    logger.info("Generating access_token from app credentials")
     token_dto = await op_api.generate_access_token()
     _token_cache["access_token"] = token_dto.access_token
     _token_cache["expires_at"] = now_ts + int(token_dto.expires_in)

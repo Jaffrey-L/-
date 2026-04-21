@@ -2,6 +2,7 @@ import json
 import logging
 import traceback
 import uuid
+import time
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 import os
@@ -33,7 +34,7 @@ TABLE_NAME_PATTERN = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 
 @app.exception_handler(Exception)
 async def unhandled_exception_handler(request: Request, exc: Exception):
-    request_id = str(uuid.uuid4())
+    request_id = getattr(request.state, "request_id", str(uuid.uuid4()))
     logger.exception(
         "Unhandled exception request_id=%s method=%s path=%s detail=%s\n%s",
         request_id,
@@ -50,6 +51,31 @@ async def unhandled_exception_handler(request: Request, exc: Exception):
             "request_id": request_id,
         },
     )
+
+
+@app.middleware("http")
+async def request_trace_middleware(request: Request, call_next):
+    request_id = request.headers.get("X-Request-ID") or str(uuid.uuid4())
+    request.state.request_id = request_id
+    started_at = time.perf_counter()
+
+    logger.info("request.start request_id=%s method=%s path=%s", request_id, request.method, request.url.path)
+    try:
+        response = await call_next(request)
+    except Exception:
+        raise
+
+    cost_ms = round((time.perf_counter() - started_at) * 1000, 2)
+    response.headers["X-Request-ID"] = request_id
+    logger.info(
+        "request.end request_id=%s method=%s path=%s status=%s cost_ms=%s",
+        request_id,
+        request.method,
+        request.url.path,
+        response.status_code,
+        cost_ms,
+    )
+    return response
 
 
 def _is_openapi_path_allowed(full_path: str) -> bool:
@@ -247,6 +273,8 @@ async def lx_web_proxy_request(request: Request, full_path: str):
 
 @lingxing_openapi
 async def lx_openapi_request(access_token, op_api, full_path: str, request: Request):
+    request_id = getattr(request.state, "request_id", "")
+    started_at = time.perf_counter()
     full_path = "/" + full_path
     # 根据请求类型处理请求体
     req_body = None
@@ -264,6 +292,16 @@ async def lx_openapi_request(access_token, op_api, full_path: str, request: Requ
             raise HTTPException(status_code=415, detail="Unsupported Media Type or Missing JSON Content-Type")
     resp = await op_api.request(access_token, full_path, request.method, req_params=request.query_params,
                                 req_body=req_body)
+    if not resp.request_id:
+        resp.request_id = request_id
+    logger.info(
+        "openapi.result request_id=%s path=%s code=%s message=%s cost_ms=%s",
+        request_id,
+        full_path,
+        resp.code,
+        resp.message,
+        round((time.perf_counter() - started_at) * 1000, 2),
+    )
     return resp
 
 
