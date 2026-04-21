@@ -3,14 +3,17 @@ import logging
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 import os
+import re
 import httpx
 from fastapi import FastAPI, Request, HTTPException, Query
 from fastapi.params import Body
 from k3cloud_webapi_sdk.main import K3CloudApiSdk
 from pydantic import BaseModel
 from pymongo import MongoClient
+from urllib.parse import urlparse
 
 from app.AsyncPostgres import AsyncPostgres
+from app.config import Config
 from app.ihr import login, fetch_all_pages
 from app.kingdee import Ext_k3sdk
 from app.lingxing import set_header
@@ -20,6 +23,38 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI()
+OPENAPI_ALLOWED_PATHS = set(Config.OPENAPI_ALLOWED_PATHS)
+WEB_ALLOWED_HOSTS = set(Config.WEB_ALLOWED_HOSTS)
+TABLE_NAME_PATTERN = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+
+
+def _is_openapi_path_allowed(full_path: str) -> bool:
+    if not Config.ENFORCE_OPENAPI_WHITELIST:
+        return True
+    if not OPENAPI_ALLOWED_PATHS:
+        return False
+
+    normalized_path = "/" + full_path.strip("/")
+    for allowed_path in OPENAPI_ALLOWED_PATHS:
+        normalized_allowed = "/" + allowed_path.strip("/")
+        if normalized_path == normalized_allowed or normalized_path.startswith(normalized_allowed + "/"):
+            return True
+    return False
+
+
+def _build_and_validate_web_url(full_path: str) -> str:
+    target_url = "https://" + full_path.lstrip("/")
+    parsed = urlparse(target_url)
+    if not parsed.hostname:
+        raise HTTPException(status_code=400, detail="Invalid target url")
+    if Config.ENFORCE_WEB_HOST_WHITELIST and parsed.hostname not in WEB_ALLOWED_HOSTS:
+        raise HTTPException(status_code=403, detail=f"Target host not allowed: {parsed.hostname}")
+    return target_url
+
+
+@app.get("/healthz")
+async def healthz():
+    return {"status": "ok"}
 
 
 @app.get("/ihr/openapi/thirdparty/api/staff/v1/staffs")
@@ -124,6 +159,8 @@ async def lx_api_proxy_request(request: Request, full_path: str):
     """
     通过提供的 openapi登录，反向代理请求到领星openapi，并返回响应（不需要认证）
     """
+    if not _is_openapi_path_allowed(full_path):
+        raise HTTPException(status_code=403, detail=f"OpenAPI path not allowed: /{full_path.strip('/')}")
     resp = await lx_openapi_request(full_path=full_path, request=request)
     return resp
 
@@ -140,8 +177,10 @@ async def lx_web_proxy_request(request: Request, full_path: str):
     """
     通过模拟登录，反向代理请求到领星web API，并返回响应。
     """
+    target_url = _build_and_validate_web_url(full_path)
+    parsed_target = urlparse(target_url)
     header = await set_header()
-    req_time_seq = "/" + full_path.split('/', 1)[1] + "$$"
+    req_time_seq = parsed_target.path + "$$"
     req_body = None
     if request.method in ["POST", "PUT", "PATCH"]:
         if request.headers.get('Content-Type', '').startswith('application/json'):
@@ -165,7 +204,7 @@ async def lx_web_proxy_request(request: Request, full_path: str):
             # 通过 httpx 发送请求，包括 query 参数和请求体
             response = await client.request(
                 method=request.method,
-                url="https://" + full_path,
+                url=target_url,
                 json=req_body,
                 params=request.query_params  # 传递原始查询参数
             )
@@ -249,7 +288,7 @@ async def log_response(response: ResponseData):
     return {"status": "success"}
 
 
-allowed_tables = ["lx_web_fba_inventory", "lx_inventory_by_wyt", "kd_v_just_inventory_eng"]
+allowed_tables = set(Config.ALLOWED_TABLES)
 
 
 class TableNameRequest(BaseModel):
@@ -265,9 +304,12 @@ class TableNameRequest(BaseModel):
 async def clear_table(request: TableNameRequest):
     table_name = request.table_name
     logger.info(f"Received request to clear table: {table_name}")
-    # if table_name not in allowed_tables:
-    #     logger.error(f"Table name {table_name} is not allowed")
-    #     raise HTTPException(status_code=400, detail="Table name not allowed")
+    if not TABLE_NAME_PATTERN.match(table_name):
+        logger.error(f"Invalid table name format: {table_name}")
+        raise HTTPException(status_code=400, detail="Invalid table name")
+    if table_name not in allowed_tables:
+        logger.error(f"Table name {table_name} is not allowed")
+        raise HTTPException(status_code=400, detail="Table name not allowed")
 
     async with AsyncPostgres() as conn:
         try:
@@ -280,8 +322,8 @@ async def clear_table(request: TableNameRequest):
 
 
 k3api_sdk = Ext_k3sdk()
-k3api_sdk.InitConfig("66ec14697e30c9", "kd", "290636_XefN38hGVkAewXWPQ40O6YSNQI0VSAqG",
-                     "e8a38bef8a174933853cddb4728e7f56", "http://erp.vayi.cn:8090/k3cloud")
+k3api_sdk.InitConfig(Config.K3_APP_ID, Config.K3_ACCOUNT, Config.K3_APP_SECRET, Config.K3_SERVICE_SECRET,
+                     Config.K3_BASE_URL)
 
 
 @app.post("/k3/bill_query")
@@ -352,8 +394,8 @@ async def k3_query_bussiness_info(request: Request):
     return fields_info
 
 
-client = MongoClient("mongodb://192.168.1.181:27017/")
-db = client.my_database  # 替换为你的数据库名
+client = MongoClient(Config.MONGO_VIEW_URI)
+db = client[Config.MONGO_VIEW_DB]  # 替换为你的数据库名
 
 
 class QueryParams(BaseModel):

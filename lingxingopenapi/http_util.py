@@ -18,6 +18,22 @@ class HttpBase(object):
     def __init__(self, default_timeout=180):
         self.default_timeout = default_timeout
 
+    async def request(self, method: str, req_url: str,
+                      params: Optional[dict] = None,
+                      json: Optional[dict] = None,
+                      headers: Optional[dict] = None,
+                      **kwargs) -> ResponseResult:
+        """Compatibility wrapper for legacy callers expecting ResponseResult."""
+        resp = await self.request_without_retry(
+            method=method,
+            req_url=req_url,
+            params=params,
+            json=json,
+            headers=headers,
+            **kwargs,
+        )
+        return ResponseResult(**resp)
+
     async def request_without_retry(self, method: str, req_url: str,
                                     params: Optional[dict] = None,
                                     json: Optional[dict] = None,

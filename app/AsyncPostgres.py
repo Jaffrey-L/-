@@ -1,10 +1,11 @@
 import asyncio
 import asyncpg
+from app.config import Config
 
 
 class AsyncPostgres:
-    def __init__(self, host='192.168.1.227', port=5432, user='postgres', password='vayiERty123',
-                 database='postgres', schema='vayidw'):
+    def __init__(self, host=Config.PG_HOST, port=Config.PG_PORT, user=Config.PG_USER, password=Config.PG_PASSWORD,
+                 database=Config.PG_DATABASE, schema=Config.PG_SCHEMA):
         self.host = host
         self.port = port
         self.user = user

@@ -3,6 +3,7 @@
 """封装Openapi基础操作"""
 import asyncio
 import copy
+import os
 import time
 from typing import Optional
 
@@ -15,8 +16,13 @@ logger = logging.getLogger(__name__)
 
 class OpenApiBase(object):
 
-    def __init__(self, host: str = "https://openapi.lingxing.com", app_id: str = "ak_dLMBP259Pb5wH",
-                 app_secret: str = "BYKn4e/XVg+shbQPVbMjiQ=="):
+    def __init__(self, host: str = None, app_id: str = None, app_secret: str = None):
+        if host is None:
+            host = os.getenv("LINGXING_OPENAPI_HOST", "https://openapi.lingxing.com")
+        if app_id is None:
+            app_id = os.getenv("LINGXING_APP_ID", "ak_dLMBP259Pb5wH")
+        if app_secret is None:
+            app_secret = os.getenv("LINGXING_APP_SECRET", "BYKn4e/XVg+shbQPVbMjiQ==")
         self.host = host
         self.app_id = app_id
         self.app_secret = app_secret

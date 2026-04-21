@@ -1,9 +1,11 @@
 import asyncio
 import aiomysql
+from app.config import Config
 
 
 class AsyncMySQL:
-    def __init__(self, host='192.168.1.191', port=3306, user='root', password='Dk03Bt3409abc', db='api_access_token'):
+    def __init__(self, host=Config.MYSQL_HOST, port=Config.MYSQL_PORT, user=Config.MYSQL_USER,
+                 password=Config.MYSQL_PASSWORD, db=Config.MYSQL_DB):
         self.host = host
         self.port = port
         self.user = user
