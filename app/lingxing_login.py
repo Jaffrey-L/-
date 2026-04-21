@@ -33,6 +33,10 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
+def _use_mysql_token_cache() -> bool:
+    return os.getenv("USE_MYSQL_TOKEN_CACHE", "false").strip().lower() in {"1", "true", "yes", "on"}
+
+
 async def login():
     global global_auth_data
 
@@ -92,6 +96,8 @@ async def login():
 
 
 async def get_access_token_from_mysql():
+    if not _use_mysql_token_cache():
+        return None
     if not AsyncMySQL or not aiomysql:
         return None
 

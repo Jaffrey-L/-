@@ -51,6 +51,7 @@ class Config:
     MYSQL_USER = os.getenv("MYSQL_USER", "root")
     MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "Dk03Bt3409abc")
     MYSQL_DB = os.getenv("MYSQL_DB", "api_access_token")
+    MYSQL_CONNECT_TIMEOUT_SECONDS = int(os.getenv("MYSQL_CONNECT_TIMEOUT_SECONDS", "3"))
 
     PG_HOST = os.getenv("PG_HOST", "192.168.1.227")
     PG_PORT = int(os.getenv("PG_PORT", "5432"))
