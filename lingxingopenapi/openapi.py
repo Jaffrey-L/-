@@ -3,10 +3,11 @@
 """封装 OpenAPI 基础操作（稳定性增强版）"""
 import asyncio
 import copy
+import json
 import os
 import random
 import time
-from typing import Optional, Dict
+from typing import Optional, Dict, Tuple, Any
 
 from lingxingopenapi.http_util import HttpBase
 from lingxingopenapi.resp_schema import AccessTokenDto, ResponseResult
@@ -21,6 +22,7 @@ class OpenApiBase(object):
     _route_locks: Dict[str, asyncio.Lock] = {}
     _route_last_call_at: Dict[str, float] = {}
     _route_cooldown_until: Dict[str, float] = {}
+    _success_cache: Dict[str, Tuple[float, Dict[str, Any]]] = {}
 
     def __init__(self, host: str = None, app_id: str = None, app_secret: str = None):
         if host is None:
@@ -71,6 +73,7 @@ class OpenApiBase(object):
         req_url = self.host + route_name
         headers = kwargs.pop('headers', {})
         route_key = f"{method.upper()} {route_name}"
+        cache_ttl_seconds = int(os.getenv("OPENAPI_SUCCESS_CACHE_TTL_SECONDS", "600"))
 
         if retries is None:
             retries = int(os.getenv("OPENAPI_RETRIES", "2"))
@@ -82,6 +85,16 @@ class OpenApiBase(object):
 
         retry_count = 0
         last_resp = None
+        cache_key = json.dumps(
+            {
+                "route": route_name,
+                "method": method.upper(),
+                "params": req_params or {},
+                "body": req_body or {},
+            },
+            ensure_ascii=False,
+            sort_keys=True,
+        )
 
         route_lock = self._route_locks.setdefault(route_key, asyncio.Lock())
         async with route_lock:
@@ -134,6 +147,10 @@ class OpenApiBase(object):
 
                     code = str(resp.get("code"))
                     if code in {"3001008", "103"}:
+                        cached_resp = self._get_cached_response(cache_key, cache_ttl_seconds)
+                        if cached_resp:
+                            logger.warning("命中成功缓存，绕过限频 route=%s", route_key)
+                            return self._build_cached_response(cached_resp, reason=f"upstream code={code}")
                         self._route_cooldown_until[route_key] = time.monotonic() + rate_limit_cooldown_seconds
                         error_msg = f"业务错误 code={resp.get('code')} message={resp.get('message', '')}"
                         logger.error(error_msg)
@@ -147,10 +164,16 @@ class OpenApiBase(object):
                             continue
                         return ResponseResult(**resp)
 
+                    if code == "0":
+                        self._success_cache[cache_key] = (time.monotonic(), copy.deepcopy(resp))
                     logger.info(f"返回码: {resp.get('code', '无')}, 返回信息: {resp.get('message', '无')}")
                     return ResponseResult(**resp)
 
                 except asyncio.TimeoutError as e:
+                    cached_resp = self._get_cached_response(cache_key, cache_ttl_seconds)
+                    if cached_resp:
+                        logger.warning("命中成功缓存，绕过超时 route=%s", route_key)
+                        return self._build_cached_response(cached_resp, reason="timeout")
                     self._route_cooldown_until[route_key] = time.monotonic() + timeout_cooldown_seconds
                     logger.error(f"请求超时: {e}")
                     if retry_count < retries:
@@ -162,6 +185,10 @@ class OpenApiBase(object):
                     return ResponseResult(code=-1, message=f"request timeout: {str(e)}", data=None)
 
                 except Exception as e:
+                    cached_resp = self._get_cached_response(cache_key, cache_ttl_seconds)
+                    if cached_resp:
+                        logger.warning("命中成功缓存，绕过异常 route=%s", route_key)
+                        return self._build_cached_response(cached_resp, reason=f"exception={str(e)}")
                     logger.error(f"请求异常: {e}")
                     if retry_count < retries:
                         retry_count += 1
@@ -174,3 +201,23 @@ class OpenApiBase(object):
             if last_resp:
                 return ResponseResult(**last_resp)
             return ResponseResult(code=-1, message="max retries exceeded", data=None)
+
+    def _get_cached_response(self, cache_key: str, cache_ttl_seconds: int) -> Optional[Dict[str, Any]]:
+        cached = self._success_cache.get(cache_key)
+        if not cached:
+            return None
+        cached_at, cached_resp = cached
+        if time.monotonic() - cached_at > cache_ttl_seconds:
+            self._success_cache.pop(cache_key, None)
+            return None
+        return copy.deepcopy(cached_resp)
+
+    @staticmethod
+    def _build_cached_response(cached_resp: Dict[str, Any], reason: str) -> ResponseResult:
+        resp = copy.deepcopy(cached_resp)
+        resp["message"] = f"{resp.get('message', 'success')} (cached fallback)"
+        resp["error_details"] = {
+            "fallback": True,
+            "reason": reason,
+        }
+        return ResponseResult(**resp)
