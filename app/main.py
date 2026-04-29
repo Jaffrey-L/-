@@ -1,3 +1,4 @@
+﻿import asyncio
 import json
 import logging
 import traceback
@@ -22,6 +23,7 @@ from app.ihr import login, fetch_all_pages
 from app.kingdee import Ext_k3sdk
 from app.lingxing import set_header
 from app.lingxing_login import lingxing_openapi
+from lingxingopenapi.resp_schema import ResponseResult
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -31,11 +33,20 @@ OPENAPI_ALLOWED_PATHS = set(Config.OPENAPI_ALLOWED_PATHS)
 WEB_ALLOWED_HOSTS = set(Config.WEB_ALLOWED_HOSTS)
 TABLE_NAME_PATTERN = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 OPENAPI_ROUTE_OPTIONS = {
-    # 订单利润报表耗时通常更长，单独放宽超时与重试，提升稳定性
+    # 订单利润报表耗时通常更长，单独放宽超时与重试
     "basicOpen/finance/mreport/OrderProfit": {
         "timeout": int(os.getenv("ORDER_PROFIT_TIMEOUT_SECONDS", "120")),
         "retries": int(os.getenv("ORDER_PROFIT_RETRIES", "3")),
-    }
+        "total_timeout": int(os.getenv("ORDER_PROFIT_TOTAL_TIMEOUT_SECONDS", "180")),
+        "lock_wait_timeout_seconds": float(os.getenv("ORDER_PROFIT_LOCK_WAIT_TIMEOUT_SECONDS", "12")),
+    },
+    # listing 在 ETL 中调用频繁，重点控制整体耗时，避免 FDL 读超时
+    "erp/sc/data/mws/listing": {
+        "timeout": int(os.getenv("MWS_LISTING_TIMEOUT_SECONDS", "25")),
+        "retries": int(os.getenv("MWS_LISTING_RETRIES", "1")),
+        "total_timeout": int(os.getenv("MWS_LISTING_TOTAL_TIMEOUT_SECONDS", "55")),
+        "lock_wait_timeout_seconds": float(os.getenv("MWS_LISTING_LOCK_WAIT_TIMEOUT_SECONDS", "8")),
+    },
 }
 
 
@@ -126,7 +137,7 @@ async def meta_compatibility_routes(request: Request):
 @app.get("/ihr/openapi/thirdparty/api/staff/v1/staffs")
 async def ihr_staffs(request: Request):
     """
-    浠嶪HR360鑾峰彇鎵€鏈夊憳宸ョ殑鍩烘湰淇℃伅銆傝嚜宸卞皝瑁咃紝鑷甫鎺ュ彛涓嶈兘涓€娆℃€ц幏鍙栨墍鏈夊憳宸ヤ俊鎭€?
+    娴犲丢HR360閼惧嘲褰囬幍鈧張澶婃喅瀹搞儳娈戦崺鐑樻拱娣団剝浼呴妴鍌濆殰瀹稿崬鐨濈憗鍜冪礉閼奉亜鐢幒銉ュ經娑撳秷鍏樻稉鈧▎鈩冣偓褑骞忛崣鏍ㄥ閺堝鎲冲銉や繆閹垬鈧?
     """
     ids = await fetch_all_pages(base_url="https://openapi.ihr360.com/openapi/thirdparty/api/staff/v1/staffs/ids")
     token_info = await login()
@@ -140,7 +151,7 @@ async def ihr_staffs(request: Request):
         "data": []
     }
     async with httpx.AsyncClient(headers=header, timeout=180) as client:
-        # 姣忔澶勭悊鏈€澶?000涓狪Ds
+        # 濮ｅ繑顐兼径鍕倞閺堚偓婢?000娑撶嫪Ds
         batch_size = 1000
         for i in range(0, len(ids), batch_size):
             current_batch = ids[i:i + batch_size]
@@ -159,7 +170,7 @@ async def ihr_staffs(request: Request):
                methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH", "TRACE"])
 async def ihr_proxy_request(request: Request, full_path: str):
     """
-    閫氳繃妯℃嫙鐧诲綍锛屽弽鍚戜唬鐞嗚姹傚埌ihr360锛屽苟杩斿洖鍝嶅簲銆?
+    闁俺绻冨Ο鈩冨珯閻ц缍嶉敍灞藉冀閸氭垳鍞悶鍡氼嚞濮瑰倸鍩宨hr360閿涘苯鑻熸潻鏂挎礀閸濆秴绨查妴?
     """
     token_info = await login()
     header = {
@@ -181,20 +192,20 @@ async def ihr_proxy_request(request: Request, full_path: str):
     async with httpx.AsyncClient(headers=header, timeout=180) as client:
         try:
             logger.info(f"Requesting https://openapi.ihr360.com/{full_path}")
-            # 閫氳繃 httpx 鍙戦€佽姹傦紝鍖呮嫭 query 鍙傛暟鍜岃姹備綋
+            # 闁俺绻?httpx 閸欐垿鈧浇顕Ч鍌︾礉閸栧懏瀚?query 閸欏倹鏆熼崪宀冾嚞濮瑰倷缍?
             response = await client.request(
                 method=request.method,
                 url="https://openapi.ihr360.com/" + full_path,
                 json=req_body,
-                params=request.query_params  # 浼犻€掑師濮嬫煡璇㈠弬鏁?
+                params=request.query_params  # 娴肩娀鈧帒甯慨瀣叀鐠囥垹寮弫?
             )
             response.raise_for_status()
             return maybe_envelope(request, response.json(), source="ihr")
         except httpx.RequestError as exc:
-            # 缃戠粶闂鎴栨棤鏁堝搷搴?
+            # 缂冩垹绮堕梻顕€顣介幋鏍ㄦ￥閺佸牆鎼锋惔?
             raise HTTPException(status_code=500, detail=str(exc))
 
-        # 杩斿洖浠庣洰鏍嘇PI鏀跺埌鐨勫搷搴?
+        # 鏉╂柨娲栨禒搴ｆ窗閺嶅槆PI閺€璺哄煂閻ㄥ嫬鎼锋惔?
 
 
 @app.post("/lx_openapi/erp/sc/routing/data/local_inventory/batchGetProductInfo")
@@ -226,7 +237,7 @@ async def lx_batch_get_product_info(request: Request):
                methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH", "TRACE"])
 async def lx_api_proxy_request(request: Request, full_path: str):
     """
-    閫氳繃鎻愪緵鐨?openapi鐧诲綍锛屽弽鍚戜唬鐞嗚姹傚埌棰嗘槦openapi锛屽苟杩斿洖鍝嶅簲锛堜笉闇€瑕佽璇侊級
+    闁俺绻冮幓鎰返閻?openapi閻ц缍嶉敍灞藉冀閸氭垳鍞悶鍡氼嚞濮瑰倸鍩屾０鍡樻Еopenapi閿涘苯鑻熸潻鏂挎礀閸濆秴绨查敍鍫滅瑝闂団偓鐟曚浇顓荤拠渚婄礆
     """
     if not _is_openapi_path_allowed(full_path):
         raise HTTPException(status_code=403, detail=f"OpenAPI path not allowed: /{full_path.strip('/')}")
@@ -244,7 +255,7 @@ async def lx_downfile(request: Request):
                methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH", "TRACE"])
 async def lx_web_proxy_request(request: Request, full_path: str):
     """
-    閫氳繃妯℃嫙鐧诲綍锛屽弽鍚戜唬鐞嗚姹傚埌棰嗘槦web API锛屽苟杩斿洖鍝嶅簲銆?
+    闁俺绻冨Ο鈩冨珯閻ц缍嶉敍灞藉冀閸氭垳鍞悶鍡氼嚞濮瑰倸鍩屾０鍡樻Еweb API閿涘苯鑻熸潻鏂挎礀閸濆秴绨查妴?
     """
     target_url = _build_and_validate_web_url(full_path)
     parsed_target = urlparse(target_url)
@@ -270,12 +281,12 @@ async def lx_web_proxy_request(request: Request, full_path: str):
         logger.info(header)
         try:
             logger.info(f"Requesting {req_body}")
-            # 閫氳繃 httpx 鍙戦€佽姹傦紝鍖呮嫭 query 鍙傛暟鍜岃姹備綋
+            # 闁俺绻?httpx 閸欐垿鈧浇顕Ч鍌︾礉閸栧懏瀚?query 閸欏倹鏆熼崪宀冾嚞濮瑰倷缍?
             response = await client.request(
                 method=request.method,
                 url=target_url,
                 json=req_body,
-                params=request.query_params,  # 浼犻€掑師濮嬫煡璇㈠弬鏁?
+                params=request.query_params,  # 娴肩娀鈧帒甯慨瀣叀鐠囥垹寮弫?
             )
             response.raise_for_status()
             return maybe_envelope(request, response.json(), source="lingxing-web")
@@ -295,14 +306,14 @@ async def lx_openapi_request(access_token, op_api, full_path: str, request: Requ
     request_id = getattr(request.state, "request_id", "")
     started_at = time.perf_counter()
     full_path = "/" + full_path
-    # 鏍规嵁璇锋眰绫诲瀷澶勭悊璇锋眰浣?
+    # 閺嶈宓佺拠閿嬬湴缁鐎锋径鍕倞鐠囬攱鐪版担?
     req_body = None
     if request.method in ["POST", "PUT", "PATCH"]:
         if request.headers.get('Content-Type', '').startswith('application/json'):
             try:
                 body = await request.body()
                 req_body = json.loads(body.decode("utf-8"))
-                # 鍒ゆ柇 req_body 涓槸鍚︽湁 length 閿絾娌℃湁 offset 閿?
+                # 閸掋倖鏌?req_body 娑擃厽妲搁崥锔芥箒 length 闁款喕绲惧▽鈩冩箒 offset 闁?
                 if req_body and isinstance(req_body, dict) and "length" in req_body and "offset" not in req_body:
                     req_body["offset"] = 0
             except json.JSONDecodeError:
@@ -310,15 +321,23 @@ async def lx_openapi_request(access_token, op_api, full_path: str, request: Requ
         else:
             raise HTTPException(status_code=415, detail="Unsupported Media Type or Missing JSON Content-Type")
     route_key = full_path.strip("/")
-    route_options = OPENAPI_ROUTE_OPTIONS.get(route_key, {})
-    resp = await op_api.request(
-        access_token,
-        full_path,
-        request.method,
-        req_params=request.query_params,
-        req_body=req_body,
-        **route_options,
-    )
+    route_options = dict(OPENAPI_ROUTE_OPTIONS.get(route_key, {}))
+    total_timeout = int(route_options.pop("total_timeout", os.getenv("OPENAPI_TOTAL_TIMEOUT_SECONDS", "90")))
+    try:
+        resp = await asyncio.wait_for(
+            op_api.request(
+                access_token,
+                full_path,
+                request.method,
+                req_params=request.query_params,
+                req_body=req_body,
+                **route_options,
+            ),
+            timeout=total_timeout,
+        )
+    except asyncio.TimeoutError:
+        logger.error("openapi.total_timeout request_id=%s path=%s total_timeout=%ss", request_id, full_path, total_timeout)
+        return ResponseResult(code=-1, message=f"request timeout(total): {total_timeout}s", data=None, request_id=request_id)
     if not resp.request_id:
         resp.request_id = request_id
     logger.info(
@@ -373,7 +392,7 @@ class ResponseData(BaseModel):
 
 @app.post("/log_response")
 async def log_response(response: ResponseData):
-    print(f"接收数据: {response.url}:{response.data}")
+    print(f"鎺ユ敹鏁版嵁: {response.url}:{response.data}")
     return {"status": "success"}
 
 
@@ -385,7 +404,7 @@ class TableNameRequest(BaseModel):
 
 
 """
-娓呴櫎postgresql涓〃閲岄潰鐨勫唴瀹?
+濞撳懘娅巔ostgresql娑擃叀銆冮柌宀勬桨閻ㄥ嫬鍞寸€?
 """
 
 
@@ -445,37 +464,37 @@ async def k3_query_bussiness_info(request: Request):
 
     metadata = k3api_sdk.QueryBusinessInfo(body)
     metadata = json.loads(metadata)
-    # 鍒濆鍖栦竴涓垪琛ㄦ潵瀛樺偍瀛楁淇℃伅
+    # 閸掓繂顫愰崠鏍︾娑擃亜鍨悰銊︽降鐎涙ê鍋嶇€涙顔屾穱鈩冧紖
     fields_info = {}
 
     try:
-        # 妫€鏌?Entrys'閿槸鍚﹀瓨鍦ㄤ簬鍏冩暟鎹腑
+        # 濡偓閺?Entrys'闁款喗妲搁崥锕€鐡ㄩ崷銊ょ艾閸忓啯鏆熼幑顔昏厬
         entries = metadata['Result']['NeedReturnData']['Entrys']
     except KeyError:
         print("The expected data structure is missing in the metadata.")
-        return fields_info  # 杩斿洖绌哄垪琛?
+        return fields_info  # 鏉╂柨娲栫粚鍝勫灙鐞?
 
-    # 閬嶅巻姣忎釜鏉＄洰
+    # 闁秴宸诲В蹇庨嚋閺夛紕娲?
     for entry in entries:
         try:
-            # 鑾峰彇姣忎釜鏉＄洰涓殑'Fields'鏁扮粍
+            # 閼惧嘲褰囧В蹇庨嚋閺夛紕娲版稉顓犳畱'Fields'閺佹壆绮?
             fields = entry['Fields']
         except KeyError:
-            # 濡傛灉鏉＄洰涓病鏈?Fields'閿紝缁х画澶勭悊涓嬩竴涓潯鐩?
+            # 婵″倹鐏夐弶锛勬窗娑擃厽鐥呴張?Fields'闁款噯绱濈紒褏鐢绘径鍕倞娑撳绔存稉顏呮蒋閻?
             continue
 
-        # 閬嶅巻姣忎釜瀛楁
+        # 闁秴宸诲В蹇庨嚋鐎涙顔?
         for field in fields:
             try:
-                # 鎻愬彇瀛楁鍚嶅拰瀛楁鍚嶇О
+                # 閹绘劕褰囩€涙顔岄崥宥呮嫲鐎涙顔岄崥宥囆?
                 field_name = field['FieldName']
-                # 鍋囪璇█浠ｇ爜2052瀵瑰簲鐨勫悕绉?
+                # 閸嬪洩顔曠拠顓♀枅娴狅絿鐖?052鐎电懓绨查惃鍕倳缁?
                 human_readable_name = next((name['Value'] for name in field['Name'] if name['Key'] == 2052), None)
-                # 纭繚瀛楁鍚嶅拰瀛楁鍚嶇О閮藉瓨鍦?
+                # 绾喕绻氱€涙顔岄崥宥呮嫲鐎涙顔岄崥宥囆為柈钘夌摠閸?
                 if field_name and human_readable_name:
                     fields_info.update({field_name: human_readable_name})
             except KeyError:
-                # 濡傛灉瀛楁缂哄け蹇呰鐨勯敭锛岃褰曡繖涓€寮傚父鎯呭喌骞剁户缁?
+                # 婵″倹鐏夌€涙顔岀紓鍝勩亼韫囧懓顩﹂惃鍕暛閿涘矁顔囪ぐ鏇＄箹娑撯偓瀵倸鐖堕幆鍛枌楠炲墎鎴风紒?
                 print(f"Missing necessary information in field: {field}")
                 continue
     keys_string = ', '.join(f"{key}" for key in fields_info.keys())
@@ -484,7 +503,7 @@ async def k3_query_bussiness_info(request: Request):
 
 
 client = MongoClient(Config.MONGO_VIEW_URI)
-db = client[Config.MONGO_VIEW_DB]  # 鏇挎崲涓轰綘鐨勬暟鎹簱鍚?
+db = client[Config.MONGO_VIEW_DB]  # 閺囨寧宕叉稉杞扮稑閻ㄥ嫭鏆熼幑顔肩氨閸?
 
 class QueryParams(BaseModel):
     view_name: str
@@ -495,19 +514,19 @@ class QueryParams(BaseModel):
 
 @app.post("/mongodb/view/")
 async def get_items(request: Request, query_params: QueryParams = Body(...)):
-    # 鏍规嵁瑙嗗浘鍚嶈幏鍙栭泦鍚?
+    # 閺嶈宓佺憴鍡楁禈閸氬秷骞忛崣鏍肠閸?
     collection = db[query_params.view_name]
 
-    # 鏋勫缓鏌ヨ鏉′欢
+    # 閺嬪嫬缂撻弻銉嚄閺夆€叉
     query = query_params.conditions
 
-    # 鏌ヨ骞跺垎椤?
+    # 閺屻儴顕楅獮璺哄瀻妞?
     items = collection.find(query).skip(query_params.skip).limit(query_params.limit)
 
-    # 杞崲涓哄垪琛ㄥ苟杩斿洖
+    # 鏉烆剚宕叉稉鍝勫灙鐞涖劌鑻熸潻鏂挎礀
     result = []
     for item in items:
-        item["_id"] = str(item["_id"])  # 灏?ObjectId 杞崲涓哄瓧绗︿覆
+        item["_id"] = str(item["_id"])  # 鐏?ObjectId 鏉烆剚宕叉稉鍝勭摟缁楋缚瑕?
         item["id"] = item["_id"]
         result.append(item)
 
@@ -515,90 +534,90 @@ async def get_items(request: Request, query_params: QueryParams = Body(...)):
 
 
 
-# 鍒涘缓鑷畾涔変簨浠堕挬瀛?
+# 閸掓稑缂撻懛顏勭暰娑斿绨ㄦ禒鍫曟尙鐎?
 async def download_file(url, headers=None):
     """
-    浣跨敤httpx涓嬭浇鏂囦欢锛岃褰?02閲嶅畾鍚戣繃绋?
+    娴ｈ法鏁ttpx娑撳娴囬弬鍥︽閿涘矁顔囪ぐ?02闁插秴鐣鹃崥鎴ｇ箖缁?
 
-    鍙傛暟:
-    url (str): 涓嬭浇閾炬帴
-    cookies (dict): 璇锋眰鎵€闇€鐨刢ookies
+    閸欏倹鏆?
+    url (str): 娑撳娴囬柧鐐复
+    cookies (dict): 鐠囬攱鐪伴幍鈧棁鈧惃鍒okies
 
-    杩斿洖:
-    str: 涓嬭浇鏂囦欢鐨勮矾寰?
+    鏉╂柨娲?
+    str: 娑撳娴囬弬鍥︽閻ㄥ嫯鐭惧?
     """
-    logger.info(f"寮€濮嬩笅杞? {url}")
+    logger.info(f"瀵偓婵绗呮潪? {url}")
 
-    # 瀹氫箟浜嬩欢閽╁瓙鍑芥暟
+    # 鐎规矮绠熸禍瀣╂闁解晛鐡欓崙鑺ユ殶
     def log_request(request):
-        logger.debug(f"璇锋眰: {request.method} {request.url}")
-        logger.debug(f"璇锋眰澶? {dict(request.headers)}")
+        logger.debug(f"鐠囬攱鐪? {request.method} {request.url}")
+        logger.debug(f"鐠囬攱鐪版径? {dict(request.headers)}")
         return request
 
     def log_response(response):
-        logger.debug(f"鍝嶅簲鐘舵€? {response.status_code}")
-        logger.debug(f"鍝嶅簲澶? {dict(response.headers)}")
+        logger.debug(f"閸濆秴绨查悩鑸碘偓? {response.status_code}")
+        logger.debug(f"閸濆秴绨叉径? {dict(response.headers)}")
 
         if 300 <= response.status_code < 400:
             location = response.headers.get('location')
-            logger.debug(f"閲嶅畾鍚戝埌: {location}")
+            logger.debug(f"闁插秴鐣鹃崥鎴濆煂: {location}")
 
         return response
 
-    # 鍒涘缓浜嬩欢閽╁瓙瀛楀吀
+    # 閸掓稑缂撴禍瀣╂闁解晛鐡欑€涙鍚€
     event_hooks = {
         "request": [log_request],
         "response": [log_response]
     }
 
-    # 鍒涘缓httpx瀹㈡埛绔?
+    # 閸掓稑缂揾ttpx鐎广垺鍩涚粩?
     async with httpx.AsyncClient(
             follow_redirects=True,
             timeout=30.0,
             event_hooks=event_hooks
     ) as client:
-        # 璁板綍鍒濆璇锋眰
+        # 鐠佹澘缍嶉崚婵嗩潗鐠囬攱鐪?
         logger.info("Sending initial request")
         if headers:
-            logger.debug(f"浣跨敤cookies: {headers}")
+            logger.debug(f"娴ｈ法鏁ookies: {headers}")
 
-        # 鍙戦€丟ET璇锋眰
+        # 閸欐垿鈧笩ET鐠囬攱鐪?
         try:
             headers[""]="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
             response = await client.get(url, headers=headers)
 
-            # 妫€鏌ュ搷搴旂姸鎬?
+            # 濡偓閺屻儱鎼锋惔鏃傚Ц閹?
             response.raise_for_status()
 
-            # 璁板綍鏈€缁堢姸鎬?
-            logger.info(f"鏈€缁堝搷搴旂姸鎬佺爜: {response.status_code}")
-            logger.debug(f"鏈€缁堝搷搴擴RL: {response.url}")
+            # 鐠佹澘缍嶉張鈧紒鍫㈠Ц閹?
+            logger.info(f"閺堚偓缂佸牆鎼锋惔鏃傚Ц閹胶鐖? {response.status_code}")
+            logger.debug(f"閺堚偓缂佸牆鎼锋惔鎿碦L: {response.url}")
 
-            # 鑾峰彇鏂囦欢鍚?
+            # 閼惧嘲褰囬弬鍥︽閸?
             content_disposition = response.headers.get('content-disposition')
             if content_disposition and 'filename=' in content_disposition:
-                # 鎻愬彇鏂囦欢鍚?
+                # 閹绘劕褰囬弬鍥︽閸?
                 filename = content_disposition.split('filename=')[1].strip('"\'')
-                logger.info(f"浠庡搷搴斿ご鑾峰彇鏂囦欢鍚? {filename}")
+                logger.info(f"娴犲骸鎼锋惔鏂裤仈閼惧嘲褰囬弬鍥︽閸? {filename}")
             else:
-                # 浣跨敤榛樿鏂囦欢鍚?
+                # 娴ｈ法鏁ゆ妯款吇閺傚洣娆㈤崥?
                 filename = "downloaded_report.xlsx"
-                logger.info(f"浣跨敤榛樿鏂囦欢鍚? {filename}")
+                logger.info(f"娴ｈ法鏁ゆ妯款吇閺傚洣娆㈤崥? {filename}")
 
-            # 淇濆瓨鏂囦欢
-            logger.info(f"寮€濮嬩繚瀛樻枃浠? {filename}")
+            # 娣囨繂鐡ㄩ弬鍥︽
+            logger.info(f"瀵偓婵绻氱€涙ɑ鏋冩禒? {filename}")
             with open(filename, 'wb') as f:
                 f.write(response.content)
 
             file_path = os.path.abspath(filename)
-            logger.info(f"鏂囦欢淇濆瓨瀹屾垚: {file_path}")
+            logger.info(f"閺傚洣娆㈡穱婵嗙摠鐎瑰本鍨? {file_path}")
             return file_path
 
         except httpx.HTTPStatusError as e:
-            logger.error(f"HTTP閿欒: {e}")
+            logger.error(f"HTTP闁挎瑨顕? {e}")
             raise
         except Exception as e:
-            logger.error(f"涓嬭浇杩囩▼涓嚭閿? {e}")
+            logger.error(f"娑撳娴囨潻鍥┾柤娑擃厼鍤柨? {e}")
             raise
 
 
@@ -606,4 +625,5 @@ if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(app, host="0.0.0.0", port=8088)
+
 

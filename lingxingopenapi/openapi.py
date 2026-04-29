@@ -79,6 +79,7 @@ class OpenApiBase(object):
             retries = int(os.getenv("OPENAPI_RETRIES", "2"))
         max_backoff = int(os.getenv("OPENAPI_RETRY_MAX_BACKOFF_SECONDS", "6"))
         kwargs.setdefault('timeout', int(os.getenv("OPENAPI_REQUEST_TIMEOUT_SECONDS", "20")))
+        lock_wait_timeout_seconds = float(kwargs.pop("lock_wait_timeout_seconds", os.getenv("OPENAPI_LOCK_WAIT_TIMEOUT_SECONDS", "0")))
         min_interval_seconds = float(os.getenv("OPENAPI_MIN_INTERVAL_SECONDS", "1.2"))
         rate_limit_cooldown_seconds = float(os.getenv("OPENAPI_RATE_LIMIT_COOLDOWN_SECONDS", "6"))
         timeout_cooldown_seconds = float(os.getenv("OPENAPI_TIMEOUT_COOLDOWN_SECONDS", "2"))
@@ -99,7 +100,14 @@ class OpenApiBase(object):
         route_lock = self._route_locks.setdefault(route_key, asyncio.Lock())
         working_access_token = access_token
         auth_refreshed = False
-        async with route_lock:
+        lock_acquired = False
+        try:
+            if lock_wait_timeout_seconds > 0:
+                await asyncio.wait_for(route_lock.acquire(), timeout=lock_wait_timeout_seconds)
+            else:
+                await route_lock.acquire()
+            lock_acquired = True
+
             now = time.monotonic()
             cooldown_until = self._route_cooldown_until.get(route_key, 0)
             if now < cooldown_until:
@@ -214,6 +222,16 @@ class OpenApiBase(object):
             if last_resp:
                 return ResponseResult(**last_resp)
             return ResponseResult(code=-1, message="max retries exceeded", data=None)
+        except asyncio.TimeoutError:
+            cached_resp = self._get_cached_response(cache_key, cache_ttl_seconds)
+            if cached_resp:
+                logger.warning("锁等待超时，命中成功缓存 route=%s", route_key)
+                return self._build_cached_response(cached_resp, reason="lock-wait-timeout")
+            logger.error("锁等待超时 route=%s wait_timeout=%.2fs", route_key, lock_wait_timeout_seconds)
+            return ResponseResult(code=-1, message=f"lock wait timeout: {lock_wait_timeout_seconds}s", data=None)
+        finally:
+            if lock_acquired and route_lock.locked():
+                route_lock.release()
 
     def _get_cached_response(self, cache_key: str, cache_ttl_seconds: int) -> Optional[Dict[str, Any]]:
         cached = self._success_cache.get(cache_key)
