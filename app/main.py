@@ -321,6 +321,25 @@ async def lx_openapi_request(access_token, op_api, full_path: str, request: Requ
         else:
             raise HTTPException(status_code=415, detail="Unsupported Media Type or Missing JSON Content-Type")
     route_key = full_path.strip("/")
+    if route_key == "erp/sc/data/mws/listing":
+        sid = req_body.get("sid") if isinstance(req_body, dict) else None
+        if not sid:
+            logger.warning(
+                "openapi.invalid_param request_id=%s path=%s missing=sid body=%s",
+                request_id,
+                full_path,
+                req_body,
+            )
+            return ResponseResult(
+                code=102,
+                message="参数不合法：sid 不能为空",
+                data=[],
+                error_details={
+                    "hint": "请在 ETL 的 listing 请求体中传入 sid（店铺ID）",
+                    "example": {"sid": "123456", "offset": 0, "length": 30},
+                },
+                request_id=request_id,
+            )
     route_options = dict(OPENAPI_ROUTE_OPTIONS.get(route_key, {}))
     total_timeout = int(route_options.pop("total_timeout", os.getenv("OPENAPI_TOTAL_TIMEOUT_SECONDS", "90")))
     try:
