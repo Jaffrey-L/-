@@ -321,6 +321,19 @@ async def lx_openapi_request(access_token, op_api, full_path: str, request: Requ
         else:
             raise HTTPException(status_code=415, detail="Unsupported Media Type or Missing JSON Content-Type")
     route_key = full_path.strip("/")
+    if route_key == "basicOpen/finance/mreport/OrderProfit" and isinstance(req_body, dict):
+        max_len = int(os.getenv("ORDER_PROFIT_MAX_LENGTH", "200"))
+        req_len = req_body.get("length")
+        if isinstance(req_len, int) and req_len > max_len:
+            logger.warning(
+                "openapi.guard request_id=%s path=%s length=%s > %s, force to %s",
+                request_id,
+                full_path,
+                req_len,
+                max_len,
+                max_len,
+            )
+            req_body["length"] = max_len
     if route_key == "erp/sc/data/mws/listing":
         sid = req_body.get("sid") if isinstance(req_body, dict) else None
         if not sid:
