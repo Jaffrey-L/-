@@ -52,3 +52,14 @@ powershell -ExecutionPolicy Bypass -File .\scripts\smoke_test.ps1
 - `/healthz` 返回 `{"status":"ok"}`
 - ETL 调用 `lx_openapi` 接口返回业务成功
 - 分页任务能正确停止，不重复拉取
+
+## 6) 生产稳定性建议（systemd）
+
+推荐改为 `systemd` 托管，避免手工 `nohup` 带来的进程丢失和端口占用问题。
+
+```bash
+cd /opt/lingxing-middleware/app
+git pull myrepo main
+chmod +x deploy/systemd/install_systemd_service.sh
+sudo bash deploy/systemd/install_systemd_service.sh
+```

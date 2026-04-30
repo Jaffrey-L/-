@@ -1,0 +1,23 @@
+[Unit]
+Description=Lingxing Middleware API Service
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/lingxing-middleware/app
+EnvironmentFile=/opt/lingxing-middleware/app/.env
+ExecStart=/opt/lingxing-middleware/app/.venv/bin/python -m uvicorn app.main:app --host 0.0.0.0 --port 8088 --workers 2
+ExecStop=/bin/kill -s TERM $MAINPID
+Restart=always
+RestartSec=3
+TimeoutStopSec=30
+KillSignal=SIGTERM
+User=root
+Group=root
+LimitNOFILE=65535
+StandardOutput=append:/opt/lingxing-middleware/app/app.log
+StandardError=append:/opt/lingxing-middleware/app/app.log
+
+[Install]
+WantedBy=multi-user.target
