@@ -14,59 +14,59 @@
   <header class="hero shell">
     <div>
       <h1>AI Daily Radar</h1>
-      <p>中英双语前沿情报，国外优先，聚焦企业应用与实战方法。</p>
+      <p>&#20013;&#33521;&#21452;&#35821;&#21069;&#27839;&#24773;&#25253;&#65292;&#22269;&#22806;&#20248;&#20808;&#65292;&#32858;&#28966;&#20225;&#19994;&#24212;&#29992;&#19982;&#23454;&#25112;&#26041;&#27861;&#12290;</p>
     </div>
     <div class="badges">
-      <span>日报模式</span>
-      <span>A/B/C 信源分级</span>
-      <span>PC 优先版</span>
+      <span>&#26085;&#25253;&#27169;&#24335;</span>
+      <span>A/B/C &#20449;&#28304;&#20998;&#32423;</span>
+      <span>PC &#20248;&#20808;&#29256;</span>
     </div>
   </header>
 
-  <section class="shell overview">
+  <section class="shell overview" aria-label="Daily summary">
     <article class="kpi">
-      <small>今日总条目</small>
+      <small>&#20170;&#26085;&#24635;&#26465;&#30446;</small>
       <strong id="kpiTotal">-</strong>
     </article>
     <article class="kpi">
-      <small>企业应用相关</small>
+      <small>&#20225;&#19994;&#24212;&#29992;&#30456;&#20851;</small>
       <strong id="kpiEnterprise">-</strong>
     </article>
     <article class="kpi">
-      <small>A级信源占比</small>
+      <small>A&#32423;&#20449;&#28304;&#21344;&#27604;</small>
       <strong id="kpiAGrade">-</strong>
     </article>
     <article class="kpi">
-      <small>实战方法条目</small>
+      <small>&#23454;&#25112;&#26041;&#27861;&#26465;&#30446;</small>
       <strong id="kpiPractice">-</strong>
     </article>
   </section>
 
   <main class="shell layout">
     <aside class="panel filters">
-      <h2>筛选器</h2>
-      <label>分类<select id="categoryFilter"></select></label>
-      <label>信源级别
+      <h2>&#31579;&#36873;&#22120;</h2>
+      <label>&#20998;&#31867;<select id="categoryFilter"></select></label>
+      <label>&#20449;&#28304;&#32423;&#21035;
         <select id="gradeFilter">
-          <option value="all">全部</option>
-          <option value="A">A级</option>
-          <option value="B">B级</option>
-          <option value="C">C级</option>
+          <option value="all">&#20840;&#37096;</option>
+          <option value="A">A&#32423;</option>
+          <option value="B">B&#32423;</option>
+          <option value="C">C&#32423;</option>
         </select>
       </label>
-      <label>关键词<input id="searchInput" type="text" placeholder="公司 / 博主 / 主题"></label>
-      <label>排序
+      <label>&#20851;&#38190;&#35789;<input id="searchInput" type="text" placeholder="OpenAI / Agent / Vibe"></label>
+      <label>&#25490;&#24207;
         <select id="sortFilter">
-          <option value="latest">按时间（最新）</option>
-          <option value="importance">按重要级别</option>
+          <option value="latest">&#25353;&#26102;&#38388;&#65288;&#26368;&#26032;&#65289;</option>
+          <option value="importance">&#25353;&#37325;&#35201;&#32423;&#21035;</option>
         </select>
       </label>
-      <button id="resetBtn" type="button">重置筛选</button>
+      <button id="resetBtn" type="button">&#37325;&#32622;&#31579;&#36873;</button>
     </aside>
 
     <section class="panel stream">
       <div class="stream-header">
-        <h2>今日信息流</h2>
+        <h2>&#20170;&#26085;&#20449;&#24687;&#27969;</h2>
         <p id="resultCount"></p>
       </div>
       <div id="newsList" class="news-list"></div>
@@ -74,16 +74,16 @@
   </main>
 
   <section class="panel sources shell">
-    <h2>核心来源池</h2>
+    <h2>&#26680;&#24515;&#26469;&#28304;&#27744;</h2>
     <div class="source-groups">
-      <article><h3>核心AI公司</h3><ul id="companySources"></ul></article>
-      <article><h3>核心AI博主</h3><ul id="creatorSources"></ul></article>
-      <article><h3>AI个人公司大神</h3><ul id="soloSources"></ul></article>
+      <article><h3>&#26680;&#24515;AI&#20844;&#21496;</h3><ul id="companySources"></ul></article>
+      <article><h3>&#26680;&#24515;AI&#21338;&#20027;</h3><ul id="creatorSources"></ul></article>
+      <article><h3>AI&#20010;&#20154;&#20844;&#21496;&#22823;&#31070;</h3><ul id="soloSources"></ul></article>
     </div>
   </section>
 
   <footer class="shell">
-    <p>数据来源：<code>data/news.json</code>，每日自动同步。</p>
+    <p>&#25968;&#25454;&#26469;&#28304;&#65306;<code>data/news.json</code>&#65292;&#27599; 12 &#23567;&#26102;&#33258;&#21160;&#21516;&#27493;&#12290;</p>
   </footer>
 
   <script src="./app.js"></script>

@@ -1,21 +1,35 @@
 const DATA_ENDPOINT = "./data/news.json";
 const SOURCES_ENDPOINT = "./sources.json";
 
+const TEXT = {
+  all: "\u5168\u90e8",
+  coreCompany: "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+  creator: "\u6838\u5fc3AI\u535a\u4e3b",
+  solo: "AI\u4e2a\u4eba\u516c\u53f8\u5927\u795e",
+  practice: "Vibe/Prompt/Agent\u5b9e\u6218",
+  countPrefix: "\u5171",
+  countSuffix: "\u6761",
+  gradeSuffix: "\u7ea7\u4fe1\u6e90",
+  importance: "\u91cd\u8981\u5ea6",
+  tags: "\u6807\u7b7e",
+  source: "\u6765\u6e90"
+};
+
 const fallbackNews = [
   {
-    title: "OpenAI launches enterprise workflow updates for agents",
-    summary: "Focuses on controllability, audit logs, and tool reliability for enterprise deployment.",
-    date: "2026-05-12",
-    sourceName: "OpenAI Blog",
+    title: "OpenAI launches DeployCo to help businesses build around intelligence",
+    summary: "\u6765\u81ea OpenAI \u7684\u6700\u65b0\u52a8\u6001\uff0c\u5efa\u8bae\u6253\u5f00\u539f\u6587\u6838\u9a8c\u7ec6\u8282\u3002",
+    date: "2026-05-11",
+    sourceName: "OpenAI",
     sourceUrl: "https://openai.com/news/",
     sourceGrade: "A",
-    category: "核心AI公司新闻",
-    tags: ["enterprise", "agent", "product"],
+    category: TEXT.coreCompany,
+    tags: ["OpenAI", "official"],
     importance: 5
   }
 ];
 
-const categories = ["全部", "核心AI公司新闻", "核心AI博主", "AI个人公司大神", "Vibe/Prompt/Agent实战"];
+const categories = [TEXT.all, TEXT.coreCompany, TEXT.creator, TEXT.solo, TEXT.practice];
 
 const categoryFilter = document.getElementById("categoryFilter");
 const gradeFilter = document.getElementById("gradeFilter");
@@ -25,11 +39,21 @@ const resetBtn = document.getElementById("resetBtn");
 const newsList = document.getElementById("newsList");
 const resultCount = document.getElementById("resultCount");
 
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;"
+  })[char]);
+}
+
 function initCategoryOptions() {
   categoryFilter.innerHTML = "";
   categories.forEach((cat) => {
     const option = document.createElement("option");
-    option.value = cat === "全部" ? "all" : cat;
+    option.value = cat === TEXT.all ? "all" : cat;
     option.textContent = cat;
     categoryFilter.appendChild(option);
   });
@@ -37,23 +61,29 @@ function initCategoryOptions() {
 
 function renderNews(items) {
   newsList.innerHTML = "";
-  resultCount.textContent = `共 ${items.length} 条`;
+  resultCount.textContent = `${TEXT.countPrefix} ${items.length} ${TEXT.countSuffix}`;
+
+  if (!items.length) {
+    newsList.innerHTML = `<article class="card empty">${TEXT.countPrefix} 0 ${TEXT.countSuffix}</article>`;
+    return;
+  }
 
   items.forEach((item) => {
     const tags = Array.isArray(item.tags) ? item.tags : [];
+    const safeUrl = String(item.sourceUrl || "#");
     const card = document.createElement("article");
     card.className = "card";
     card.innerHTML = `
       <div class="meta">
-        <span class="chip">${item.category}</span>
-        <span class="chip grade-${item.sourceGrade}">${item.sourceGrade}级信源</span>
-        <span class="chip">重要度 ${item.importance}</span>
-        <span>${item.date}</span>
+        <span class="chip">${escapeHtml(item.category)}</span>
+        <span class="chip grade-${escapeHtml(item.sourceGrade)}">${escapeHtml(item.sourceGrade)}${TEXT.gradeSuffix}</span>
+        <span class="chip">${TEXT.importance} ${escapeHtml(item.importance || 0)}</span>
+        <span>${escapeHtml(item.date)}</span>
       </div>
-      <h3>${item.title}</h3>
-      <p>${item.summary}</p>
-      <p>标签：${tags.join(" / ")}</p>
-      <a href="${item.sourceUrl}" target="_blank" rel="noreferrer noopener">来源：${item.sourceName}</a>
+      <h3>${escapeHtml(item.title)}</h3>
+      <p>${escapeHtml(item.summary)}</p>
+      <p>${TEXT.tags}: ${escapeHtml(tags.join(" / "))}</p>
+      <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noreferrer noopener">${TEXT.source}: ${escapeHtml(item.sourceName)}</a>
     `;
     newsList.appendChild(card);
   });
@@ -86,7 +116,7 @@ function updateKpis(newsItems) {
   const total = newsItems.length;
   const enterprise = newsItems.filter((i) => (i.tags || []).some((t) => String(t).toLowerCase().includes("enterprise"))).length;
   const aGrade = newsItems.filter((i) => i.sourceGrade === "A").length;
-  const practice = newsItems.filter((i) => i.category === "Vibe/Prompt/Agent实战").length;
+  const practice = newsItems.filter((i) => i.category === TEXT.practice).length;
 
   document.getElementById("kpiTotal").textContent = String(total);
   document.getElementById("kpiEnterprise").textContent = String(enterprise);
@@ -124,7 +154,7 @@ async function renderSourcePools() {
     fill("creatorSources", sourceData.creators);
     fill("soloSources", sourceData.soloBuilders);
   } catch (_) {
-    // keep silent
+    // Source lists are helpful context, but the news feed remains usable without them.
   }
 }
 
