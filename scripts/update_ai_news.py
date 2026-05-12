@@ -10,106 +10,54 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_FILE = ROOT / "data" / "news.json"
+SOURCES_FILE = ROOT / "sources.json"
 
 CORE_CATEGORY = "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb"
 CREATOR_CATEGORY = "\u6838\u5fc3AI\u535a\u4e3b"
+SOLO_CATEGORY = "AI\u4e2a\u4eba\u516c\u53f8\u5927\u795e"
 PRACTICE_CATEGORY = "Vibe/Prompt/Agent\u5b9e\u6218"
 LOOKBACK_DAYS = 30
-MAX_ITEMS = 80
+MAX_ITEMS = 120
 
-OFFICIAL_RSS_SOURCES = [
-    {
-        "name": "OpenAI",
-        "url": "https://openai.com/news/rss.xml",
-        "category": CORE_CATEGORY,
-        "tags": ["OpenAI", "official"],
-        "importance": 5,
-    },
-    {
-        "name": "NVIDIA AI",
-        "url": "https://blogs.nvidia.com/blog/category/deep-learning/feed/",
-        "category": CORE_CATEGORY,
-        "tags": ["NVIDIA", "official"],
-        "importance": 4,
-    },
-    {
-        "name": "Hugging Face Blog",
-        "url": "https://huggingface.co/blog/feed.xml",
-        "category": PRACTICE_CATEGORY,
-        "tags": ["Hugging Face", "open-source", "practice"],
-        "importance": 4,
-    },
-    {
-        "name": "Microsoft AI Blog",
-        "url": "https://blogs.microsoft.com/ai/feed/",
-        "category": CORE_CATEGORY,
-        "tags": ["Microsoft AI", "official"],
-        "importance": 4,
-    },
+RSS_SOURCES = [
+    {"name": "OpenAI", "url": "https://openai.com/news/rss.xml", "category": CORE_CATEGORY, "tags": ["OpenAI", "official"], "importance": 5},
+    {"name": "NVIDIA", "url": "https://blogs.nvidia.com/blog/category/deep-learning/feed/", "category": CORE_CATEGORY, "tags": ["NVIDIA", "official"], "importance": 4},
+    {"name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml", "category": PRACTICE_CATEGORY, "tags": ["Hugging Face", "open-source", "practice"], "importance": 4},
+    {"name": "Microsoft AI", "url": "https://blogs.microsoft.com/ai/feed/", "category": CORE_CATEGORY, "tags": ["Microsoft AI", "official"], "importance": 4},
+    {"name": "Andrej Karpathy", "url": "https://karpathy.bearblog.dev/feed/", "category": CREATOR_CATEGORY, "tags": ["Andrej Karpathy", "vibecoding", "agent", "creator"], "importance": 5},
+    {"name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "category": CREATOR_CATEGORY, "tags": ["Simon Willison", "llm-engineering", "creator"], "importance": 5},
+    {"name": "One Useful Thing", "url": "https://www.oneusefulthing.org/feed", "category": CREATOR_CATEGORY, "tags": ["Ethan Mollick", "enterprise", "creator"], "importance": 5},
+    {"name": "Latent.Space", "url": "https://www.latent.space/feed", "category": CREATOR_CATEGORY, "tags": ["swyx", "agent", "creator"], "importance": 5},
+    {"name": "Interconnects", "url": "https://www.interconnects.ai/feed", "category": CREATOR_CATEGORY, "tags": ["Nathan Lambert", "research", "creator"], "importance": 5},
+    {"name": "The Batch", "url": "https://www.deeplearning.ai/the-batch/feed/", "category": CREATOR_CATEGORY, "tags": ["deeplearning.ai", "newsletter", "creator"], "importance": 4},
+    {"name": "Chip Huyen", "url": "https://huyenchip.com/feed.xml", "category": CREATOR_CATEGORY, "tags": ["Chip Huyen", "ml-systems", "creator"], "importance": 4},
+    {"name": "Lilian Weng", "url": "https://lilianweng.github.io/index.xml", "category": CREATOR_CATEGORY, "tags": ["Lilian Weng", "agent", "research"], "importance": 4},
 ]
 
-CREATOR_RSS_SOURCES = [
-    {
-        "name": "Simon Willison",
-        "url": "https://simonwillison.net/atom/everything/",
-        "category": CREATOR_CATEGORY,
-        "tags": ["Simon Willison", "llm-engineering", "creator"],
-        "importance": 5,
-    },
-    {
-        "name": "One Useful Thing",
-        "url": "https://www.oneusefulthing.org/feed",
-        "category": CREATOR_CATEGORY,
-        "tags": ["Ethan Mollick", "enterprise", "creator"],
-        "importance": 5,
-    },
-    {
-        "name": "Latent.Space",
-        "url": "https://www.latent.space/feed",
-        "category": CREATOR_CATEGORY,
-        "tags": ["swyx", "agent", "creator"],
-        "importance": 5,
-    },
-    {
-        "name": "Interconnects",
-        "url": "https://www.interconnects.ai/feed",
-        "category": CREATOR_CATEGORY,
-        "tags": ["Nathan Lambert", "research", "creator"],
-        "importance": 5,
-    },
-    {
-        "name": "The Batch",
-        "url": "https://www.deeplearning.ai/the-batch/feed/",
-        "category": CREATOR_CATEGORY,
-        "tags": ["deeplearning.ai", "newsletter", "creator"],
-        "importance": 4,
-    },
-]
-
-GOOGLE_NEWS_QUERIES = [
-    ("Anthropic", "site:anthropic.com/news Anthropic Claude enterprise", CORE_CATEGORY, ["Anthropic", "enterprise"], 4),
-    ("Google DeepMind", "site:deepmind.google/discover/blog Google DeepMind AI", CORE_CATEGORY, ["Google DeepMind", "research"], 4),
-    ("Meta AI", "site:ai.meta.com/blog Meta AI Llama", CORE_CATEGORY, ["Meta AI", "model"], 4),
-    ("xAI", "site:x.ai xAI Grok", CORE_CATEGORY, ["xAI", "model"], 4),
-    ("DeepSeek", "DeepSeek AI enterprise model", CORE_CATEGORY, ["DeepSeek", "enterprise"], 4),
-    ("Alibaba Qwen", "Alibaba Qwen Tongyi enterprise AI", CORE_CATEGORY, ["Alibaba Qwen", "enterprise"], 4),
-    ("Xiaomi AI", "Xiaomi AI model agent", CORE_CATEGORY, ["Xiaomi AI", "model"], 3),
-    ("Mistral AI", "Mistral AI enterprise model", CORE_CATEGORY, ["Mistral AI", "model"], 4),
-    ("Perplexity", "Perplexity AI enterprise search", CORE_CATEGORY, ["Perplexity", "search"], 3),
-    ("Runway", "Runway AI video model", CORE_CATEGORY, ["Runway", "video"], 3),
+EXTRA_QUERIES = [
     ("Cursor", "Cursor AI coding agent", PRACTICE_CATEGORY, ["Cursor", "coding", "agent"], 4),
     ("Claude Code", "Claude Code agent coding workflow", PRACTICE_CATEGORY, ["Claude Code", "coding", "agent"], 4),
     ("Vibe Coding", "vibe coding agent prompt engineering", PRACTICE_CATEGORY, ["vibecoding", "prompt", "agent"], 5),
     ("Enterprise Agents", "enterprise AI agent workflow deployment", PRACTICE_CATEGORY, ["enterprise", "agent", "workflow"], 5),
 ]
 
-BLOCKED_TITLE_KEYWORDS = [
-    "lawsuit",
-    "shoot",
-    "celebrity",
-    "stock price prediction",
-    "price target",
-]
+BLOCKED_TITLE_KEYWORDS = ["lawsuit", "shoot", "celebrity", "stock price prediction", "price target"]
+ZH_TERMS = {
+    "ai": "AI", "agent": "\u667a\u80fd\u4f53", "agents": "\u667a\u80fd\u4f53", "model": "\u6a21\u578b", "models": "\u6a21\u578b",
+    "enterprise": "\u4f01\u4e1a\u5e94\u7528", "workflow": "\u5de5\u4f5c\u6d41", "deployment": "\u90e8\u7f72", "coding": "\u7f16\u7a0b",
+    "prompt": "\u63d0\u793a\u8bcd", "open-source": "\u5f00\u6e90", "research": "\u7814\u7a76", "inference": "\u63a8\u7406",
+    "training": "\u8bad\u7ec3", "voice": "\u8bed\u97f3", "video": "\u89c6\u9891", "search": "\u641c\u7d22", "official": "\u5b98\u65b9\u52a8\u6001",
+    "creator": "\u535a\u4e3b\u89c2\u70b9", "practice": "\u5b9e\u6218\u65b9\u6cd5", "newsletter": "\u901a\u8baf", "vibecoding": "Vibe Coding",
+}
+
+
+def load_source_pool():
+    data = json.loads(SOURCES_FILE.read_text(encoding="utf-8"))
+    return {
+        CORE_CATEGORY: list(data.get("companies", [])),
+        CREATOR_CATEGORY: list(data.get("creators", [])),
+        SOLO_CATEGORY: list(data.get("soloBuilders", [])),
+    }
 
 
 def fetch_text(url):
@@ -136,94 +84,8 @@ def strip_html(value):
 
 
 def extract_image(value):
-    if not value:
-        return ""
-    match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', value, flags=re.IGNORECASE)
+    match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', value or "", flags=re.IGNORECASE)
     return match.group(1) if match else ""
-
-
-def summarize_text(title, body, source_name):
-    text = strip_html(body)
-    if not text:
-        return "{} \u6765\u81ea {} \uff0c\u5df2\u7eb3\u5165\u4eca\u65e5 AI \u60c5\u62a5\u6458\u8981\uff0c\u5efa\u8bae\u7ed3\u5408\u539f\u6587\u6838\u9a8c\u7ec6\u8282\u4e0e\u5e94\u7528\u4ef7\u503c\u3002".format(title, source_name)
-    sentences = re.split(r"(?<=[.!?\u3002\uff01\uff1f])\s+", text)
-    useful = [s.strip() for s in sentences if len(s.strip()) > 40]
-    summary = " ".join(useful[:2]) or text[:260]
-    if len(summary) < 80:
-        summary = "{} \u6765\u81ea {} \uff0c\u9002\u5408\u7528\u4e8e\u5feb\u901f\u5224\u65ad\u8fd9\u7bc7\u6587\u7ae0\u662f\u5426\u503c\u5f97\u6df1\u8bfb\u3002".format(title, source_name)
-    return summary[:420]
-
-
-def key_points_from_text(title, body, tags):
-    text = strip_html(body)
-    candidates = []
-    for sentence in re.split(r"(?<=[.!?\u3002\uff01\uff1f])\s+", text):
-        s = sentence.strip()
-        lowered = s.lower()
-        if 35 <= len(s) <= 180 and any(k in lowered for k in ("ai", "agent", "model", "enterprise", "llm", "open-source", "prompt", "coding")):
-            candidates.append(s)
-    if not candidates:
-        tag_text = ", ".join(tags[:3])
-        return [
-            "Focus: {}".format(tag_text or "AI"),
-            "Worth reading for practical context and source details.",
-            "Open the original article for full evidence and nuance.",
-        ]
-    return candidates[:3]
-
-
-def reading_score(grade, importance, category, body):
-    score = importance * 12
-    if grade == "A":
-        score += 20
-    if category in (CREATOR_CATEGORY, PRACTICE_CATEGORY):
-        score += 15
-    if len(strip_html(body)) > 600:
-        score += 10
-    return min(score, 100)
-
-
-ZH_TERMS = {
-    "AI": "AI",
-    "agent": "智能体",
-    "agents": "智能体",
-    "model": "模型",
-    "models": "模型",
-    "enterprise": "企业应用",
-    "workflow": "工作流",
-    "deployment": "部署",
-    "coding": "编程",
-    "prompt": "提示词",
-    "open-source": "开源",
-    "research": "研究",
-    "inference": "推理",
-    "training": "训练",
-    "voice": "语音",
-    "video": "视频",
-    "search": "搜索",
-}
-
-
-def chinese_headline(title, source_name):
-    if re.search(r"[\u4e00-\u9fff]", title):
-        return title
-    compact = title[:140]
-    return "【{}】{}".format(source_name, compact)
-
-
-def chinese_summary(title, summary, tags):
-    tag_text = "、".join([ZH_TERMS.get(str(tag).lower(), str(tag)) for tag in tags[:4]]) or "AI"
-    return "这篇内容聚焦{}。原文要点：{} 建议重点关注它对产品、企业落地或个人工作流的启发。".format(tag_text, summary[:260])
-
-
-def chinese_points(points):
-    result = []
-    for point in points[:3]:
-        text = point
-        for en, zh in ZH_TERMS.items():
-            text = re.sub(r"\b{}\b".format(re.escape(en)), zh, text, flags=re.IGNORECASE)
-        result.append(text[:180])
-    return result
 
 
 def normalize_date(raw):
@@ -254,10 +116,125 @@ def is_relevant(title):
     return not any(keyword in lowered for keyword in BLOCKED_TITLE_KEYWORDS)
 
 
+def summarize_text(title, body, source_name):
+    text = strip_html(body)
+    if not text:
+        return "{} from {}. Included for AI tracking; open the original article to verify details.".format(title, source_name)
+    sentences = re.split(r"(?<=[.!?\u3002\uff01\uff1f])\s+", text)
+    useful = [s.strip() for s in sentences if len(s.strip()) > 40]
+    summary = " ".join(useful[:2]) or text[:260]
+    if len(summary) < 80:
+        summary = "{} from {}. Useful for deciding whether the original article deserves a deeper read.".format(title, source_name)
+    return summary[:420]
+
+
+def localize_text(text):
+    result = text or ""
+    phrase_map = {
+        "Focus:": "\u5173\u6ce8\u65b9\u5411\uff1a",
+        "Worth reading for practical context and source details.": "\u503c\u5f97\u9605\u8bfb\uff0c\u53ef\u5e2e\u52a9\u7406\u89e3\u5b9e\u6218\u80cc\u666f\u4e0e\u4fe1\u606f\u6765\u6e90\u3002",
+        "Open the original article for full evidence and nuance.": "\u5efa\u8bae\u6253\u5f00\u539f\u6587\u67e5\u770b\u5b8c\u6574\u8bc1\u636e\u548c\u7ec6\u8282\u3002",
+        "Included for AI tracking; open the original article to verify details.": "\u5df2\u7eb3\u5165 AI \u60c5\u62a5\u8ddf\u8e2a\uff0c\u5efa\u8bae\u6253\u5f00\u539f\u6587\u6838\u9a8c\u7ec6\u8282\u3002",
+        "Useful for deciding whether the original article deserves a deeper read.": "\u9002\u5408\u7528\u4e8e\u5feb\u901f\u5224\u65ad\u8fd9\u7bc7\u5185\u5bb9\u662f\u5426\u503c\u5f97\u6df1\u8bfb\u3002",
+        "from": "\u6765\u81ea", "for": "\u9762\u5411", "with": "\u7ed3\u5408", "and": "\u4ee5\u53ca",
+    }
+    for en, zh in phrase_map.items():
+        result = re.sub(r"\b{}\b".format(re.escape(en)), zh, result, flags=re.IGNORECASE)
+    for en, zh in sorted(ZH_TERMS.items(), key=lambda item: len(item[0]), reverse=True):
+        result = re.sub(r"\b{}\b".format(re.escape(en)), zh, result, flags=re.IGNORECASE)
+    return result
+
+
+def readable_tags(tags):
+    return [ZH_TERMS.get(str(tag).lower(), str(tag)) for tag in tags[:4]]
+
+
+def chinese_headline(title, source_name, tags):
+    if re.search(r"[\u4e00-\u9fff]", title):
+        return title
+    tag_text = "\u3001".join(readable_tags(tags)[:3]) or "AI"
+    return "\u3010{}\u3011{}\u76f8\u5173\u524d\u6cbf\u52a8\u6001".format(source_name, tag_text)
+
+
+def chinese_summary(source_name, summary, tags):
+    tag_text = "\u3001".join(readable_tags(tags)) or "AI"
+    localized = localize_text(summary[:220])
+    if len(re.findall(r"[\u4e00-\u9fff]", localized)) < 12:
+        localized = "\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002"
+    return "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81ea{}\uff0c\u805a\u7126{}\u3002{}\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002".format(source_name, tag_text, localized)
+
+
+def key_points_from_text(body, tags):
+    text = strip_html(body)
+    candidates = []
+    for sentence in re.split(r"(?<=[.!?\u3002\uff01\uff1f])\s+", text):
+        s = sentence.strip()
+        lowered = s.lower()
+        if 35 <= len(s) <= 180 and any(k in lowered for k in ("ai", "agent", "model", "enterprise", "llm", "open-source", "prompt", "coding")):
+            candidates.append(s)
+    if not candidates:
+        tag_text = ", ".join(tags[:3])
+        candidates = ["Focus: {}".format(tag_text or "AI"), "Worth reading for practical context and source details.", "Open the original article for full evidence and nuance."]
+    return candidates[:3]
+
+
+def chinese_points(points, tags):
+    result = []
+    defaults = [
+        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002",
+        "\u53ef\u4f18\u5148\u5173\u6ce8\u5176\u5bf9\u4f01\u4e1a\u5e94\u7528\u3001Agent \u5de5\u4f5c\u6d41\u6216\u5b9e\u6218\u65b9\u6cd5\u7684\u542f\u53d1\u3002",
+        "\u82e5\u8981\u505a\u51b3\u7b56\u6216\u6df1\u5ea6\u5b66\u4e60\uff0c\u5efa\u8bae\u70b9\u51fb\u539f\u6587\u6838\u9a8c\u5b8c\u6574\u8bed\u5883\u3002",
+    ]
+    for index, point in enumerate(points[:3]):
+        text = localize_text(point)
+        if not re.search(r"[\u4e00-\u9fff]", text):
+            text = defaults[index]
+        result.append(text[:180])
+    return result
+
+
+def reading_score(grade, importance, category, body):
+    score = importance * 12
+    if grade == "A":
+        score += 20
+    if category in (CREATOR_CATEGORY, PRACTICE_CATEGORY, SOLO_CATEGORY):
+        score += 15
+    if len(strip_html(body)) > 600:
+        score += 10
+    return min(score, 100)
+
+
+def make_item(title, date, source_name, link, grade, category, tags, importance, body="", image_url="", publisher=""):
+    summary = summarize_text(title, body, source_name)
+    points = key_points_from_text(body, tags)
+    return {
+        "title": title,
+        "titleZh": chinese_headline(title, source_name, tags),
+        "summary": summary,
+        "summaryZh": chinese_summary(source_name, summary, tags),
+        "keyPoints": points,
+        "keyPointsZh": chinese_points(points, tags),
+        "imageUrl": image_url,
+        "date": date,
+        "sourceName": source_name,
+        "publisher": publisher,
+        "sourceUrl": link,
+        "sourceGrade": grade,
+        "category": category,
+        "contentType": "article" if category in (CREATOR_CATEGORY, SOLO_CATEGORY) else "news",
+        "readingScore": reading_score(grade, importance, category, body),
+        "tags": tags,
+        "importance": importance,
+    }
+
+
+def keep_item(item):
+    return bool(item["title"] and item["sourceUrl"] and is_recent(item["date"]) and is_relevant(item["title"]))
+
+
 def parse_feed_items(feed_text, source_name, category, grade, tags, importance, limit):
     root = ET.fromstring(feed_text)
     items = []
-
     rss_items = root.findall("./channel/item")
     if rss_items:
         for node in rss_items[:limit]:
@@ -277,110 +254,80 @@ def parse_feed_items(feed_text, source_name, category, grade, tags, importance, 
         link_node = node.find("atom:link", ns)
         link = link_node.attrib.get("href", "") if link_node is not None else ""
         title = clean_title(node.findtext("atom:title", default="", namespaces=ns))
-        date = normalize_date(
-            node.findtext("atom:updated", default="", namespaces=ns)
-            or node.findtext("atom:published", default="", namespaces=ns)
-        )
-        body = (
-            node.findtext("atom:summary", default="", namespaces=ns)
-            or node.findtext("atom:content", default="", namespaces=ns)
-            or ""
-        )
+        date = normalize_date(node.findtext("atom:updated", default="", namespaces=ns) or node.findtext("atom:published", default="", namespaces=ns))
+        body = node.findtext("atom:summary", default="", namespaces=ns) or node.findtext("atom:content", default="", namespaces=ns) or ""
         items.append(make_item(title, date, source_name, link, grade, category, tags, importance, body, extract_image(body)))
     return items
 
 
-def parse_google_news(feed_text, query_name, category, tags, importance, limit):
+def parse_google_news(feed_text, tracked_source, category, tags, importance, limit):
     root = ET.fromstring(feed_text)
     channel = root.find("channel")
     if channel is None:
         return []
-
     items = []
     for node in channel.findall("item")[:limit]:
         title = clean_title(node.findtext("title"))
         date = normalize_date(node.findtext("pubDate") or "")
         link = node.findtext("link") or ""
         source_node = node.find("source")
-        source_name = source_node.text.strip() if source_node is not None and source_node.text else query_name
+        publisher = source_node.text.strip() if source_node is not None and source_node.text else "Google News"
         description = node.findtext("description") or ""
-        items.append(make_item(title, date, source_name, link, "B", category, tags, importance, description, extract_image(description)))
+        items.append(make_item(title, date, tracked_source, link, "B", category, tags, importance, description, extract_image(description), publisher))
     return items
 
 
-def make_item(title, date, source_name, link, grade, category, tags, importance, body="", image_url=""):
-    return {
-        "title": title,
-        "titleZh": chinese_headline(title, source_name),
-        "summary": summarize_text(title, body, source_name),
-        "summaryZh": chinese_summary(title, summarize_text(title, body, source_name), tags),
-        "keyPoints": key_points_from_text(title, body, tags),
-        "keyPointsZh": chinese_points(key_points_from_text(title, body, tags)),
-        "imageUrl": image_url,
-        "date": date,
-        "sourceName": source_name,
-        "sourceUrl": link,
-        "sourceGrade": grade,
-        "category": category,
-        "contentType": "article" if category == CREATOR_CATEGORY else "news",
-        "readingScore": reading_score(grade, importance, category, body),
-        "tags": tags,
-        "importance": importance,
-    }
-
-
-def keep_item(item):
-    return bool(item["title"] and item["sourceUrl"] and is_recent(item["date"]) and is_relevant(item["title"]))
-
-
-def collect_official():
-    items = []
-    for source in OFFICIAL_RSS_SOURCES:
+def collect_rss():
+    items, coverage = [], {}
+    for source in RSS_SOURCES:
+        coverage[source["name"]] = {"rss": source["url"], "rssItems": 0, "googleItems": 0, "status": "pending"}
         try:
-            feed = fetch_text(source["url"])
-            parsed = parse_feed_items(
-                feed,
-                source["name"],
-                source["category"],
-                "A",
-                source["tags"],
-                source["importance"],
-                limit=8,
-            )
-            items.extend([item for item in parsed if keep_item(item)])
+            parsed = parse_feed_items(fetch_text(source["url"]), source["name"], source["category"], "A", source["tags"], source["importance"], limit=8)
+            parsed = [item for item in parsed if keep_item(item)]
+            coverage[source["name"]]["rssItems"] = len(parsed)
+            coverage[source["name"]]["status"] = "ok"
+            items.extend(parsed)
         except Exception as exc:
-            print("Official source failed: {} ({})".format(source["name"], exc))
-    return items
+            coverage[source["name"]]["status"] = "failed: {}".format(exc)
+            print("RSS source failed: {} ({})".format(source["name"], exc))
+    return items, coverage
 
 
-def collect_creators():
+def source_query(name, category):
+    if category == CORE_CATEGORY:
+        return '"{}" AI model agent enterprise official'.format(name)
+    if category == CREATOR_CATEGORY:
+        return '"{}" AI LLM agent prompt coding'.format(name)
+    return '"{}" AI startup founder product'.format(name)
+
+
+def collect_google_news(source_pool, coverage):
     items = []
-    for source in CREATOR_RSS_SOURCES:
-        try:
-            feed = fetch_text(source["url"])
-            parsed = parse_feed_items(
-                feed,
-                source["name"],
-                source["category"],
-                "A",
-                source["tags"],
-                source["importance"],
-                limit=8,
-            )
-            items.extend([item for item in parsed if keep_item(item)])
-        except Exception as exc:
-            print("Creator source failed: {} ({})".format(source["name"], exc))
-    return items
+    query_specs = []
+    for category, names in source_pool.items():
+        for name in names:
+            tags = [name, "enterprise" if category == CORE_CATEGORY else "creator"]
+            importance = 5 if category != SOLO_CATEGORY else 4
+            query_specs.append((name, source_query(name, category), category, tags, importance))
+    query_specs.extend(EXTRA_QUERIES)
 
-
-def collect_google_news():
-    items = []
-    for name, query, category, tags, importance in GOOGLE_NEWS_QUERIES:
+    seen_specs = set()
+    for name, query, category, tags, importance in query_specs:
+        key = (name, query)
+        if key in seen_specs:
+            continue
+        seen_specs.add(key)
+        coverage.setdefault(name, {"rss": "", "rssItems": 0, "googleItems": 0, "status": "pending"})
         try:
-            feed = fetch_text(google_news_rss(query))
-            parsed = parse_google_news(feed, name, category, tags, importance, limit=6)
-            items.extend([item for item in parsed if keep_item(item)])
+            parsed = parse_google_news(fetch_text(google_news_rss(query)), name, category, tags, importance, limit=3)
+            parsed = [item for item in parsed if keep_item(item)]
+            coverage[name]["googleItems"] = coverage[name].get("googleItems", 0) + len(parsed)
+            if coverage[name].get("status") in ("pending", ""):
+                coverage[name]["status"] = "ok"
+            items.extend(parsed)
         except Exception as exc:
+            if coverage[name].get("status") in ("pending", ""):
+                coverage[name]["status"] = "failed: {}".format(exc)
             print("Google News query failed: {} ({})".format(name, exc))
     return items
 
@@ -389,31 +336,37 @@ def dedupe(items):
     seen_titles = set()
     result = []
     for item in sorted(items, key=lambda x: (x["sourceGrade"] != "A", x["date"], x["importance"]), reverse=False):
-        title_key = re.sub(r"[^a-z0-9]+", " ", item["title"].lower()).strip()
-        if title_key in seen_titles:
+        title_key = re.sub(r"[^a-z0-9\u4e00-\u9fff]+", " ", item["title"].lower()).strip()
+        source_key = item.get("sourceName", "").lower()
+        key = (source_key, title_key)
+        if key in seen_titles:
             continue
-        seen_titles.add(title_key)
+        seen_titles.add(key)
         result.append(item)
     return result
 
 
 def main():
-    items = collect_official() + collect_creators() + collect_google_news()
+    source_pool = load_source_pool()
+    items, coverage = collect_rss()
+    items.extend(collect_google_news(source_pool, coverage))
     items = dedupe(items)
     items.sort(key=lambda x: (x["date"], x["readingScore"], x["sourceGrade"] == "A", x["importance"]), reverse=True)
 
     payload = {
         "updatedAt": datetime.now(timezone.utc).isoformat(),
+        "lookbackDays": LOOKBACK_DAYS,
         "policy": {
             "A": "Official RSS, official blog, or first-party source.",
-            "B": "Official-domain Google News query or reputable media/newsletter source.",
+            "B": "Google News query for a tracked source or reputable media/newsletter source.",
             "C": "Secondary commentary; not included in the default daily feed yet.",
         },
+        "sourceCoverage": coverage,
         "items": items[:MAX_ITEMS],
     }
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUT_FILE.write_text(json.dumps(payload, ensure_ascii=True, indent=2), encoding="utf-8")
-    print("Updated {} with {} items.".format(OUT_FILE, len(payload["items"])))
+    print("Updated {} with {} items from {} tracked sources.".format(OUT_FILE, len(payload["items"]), len(coverage)))
 
 
 if __name__ == "__main__":

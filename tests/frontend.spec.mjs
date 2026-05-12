@@ -11,7 +11,8 @@ expect.extend({
 });
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("/", { waitUntil: "networkidle" });
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+  await expect(page.locator(".card").first()).toBeVisible();
 });
 
 test("loads readable monthly AI news cards", async ({ page }) => {
@@ -19,19 +20,20 @@ test("loads readable monthly AI news cards", async ({ page }) => {
   await expect(page.locator(".card")).toHaveCountGreaterThan(20);
   await expect(page.locator(".key-points").first()).toBeVisible();
   await expect(page.locator(".visual").first()).toBeVisible();
-  await expect(page.locator(".original-title").first()).toBeVisible();
+  await expect(page.locator(".read-more-note").first()).toContainText("\u5982\u679c\u611f\u5174\u8da3\u8bf7\u70b9\u51fb\u67e5\u770b\u539f\u6587");
+  await expect(page.locator(".original-title")).toHaveCount(0);
   await expect(page.locator("#kpiTotal")).not.toHaveText("-");
 });
 
 test("filters A-grade sources", async ({ page }) => {
   await page.selectOption("#gradeFilter", "A");
   await expect(page.locator(".card").first()).toBeVisible();
-  await expect(page.locator(".card").filter({ hasNotText: "A级信源" })).toHaveCount(0);
+  await expect(page.locator(".card").filter({ hasNotText: "A\u7ea7\u4fe1\u6e90" })).toHaveCount(0);
 });
 
 test("filters creator articles", async ({ page }) => {
-  await page.selectOption("#categoryFilter", "核心AI博主");
-  await expect(page.locator(".card").first()).toContainText("核心AI博主");
+  await page.selectOption("#categoryFilter", "\u6838\u5fc3AI\u535a\u4e3b");
+  await expect(page.locator(".card").first()).toContainText("\u6838\u5fc3AI\u535a\u4e3b");
 });
 
 test("source, date, search and reset work", async ({ page }) => {
@@ -57,8 +59,13 @@ test("source, date, search and reset work", async ({ page }) => {
 });
 
 test("practice category remains usable", async ({ page }) => {
-  await page.selectOption("#categoryFilter", "Vibe/Prompt/Agent实战");
-  await expect(page.locator(".card").first()).toContainText("Vibe/Prompt/Agent实战");
+  await page.selectOption("#categoryFilter", "Vibe/Prompt/Agent\u5b9e\u6218");
+  await expect(page.locator(".card").first()).toContainText("Vibe/Prompt/Agent\u5b9e\u6218");
+});
+
+test("date fields use native date picker controls", async ({ page }) => {
+  await expect(page.locator("#startDateFilter")).toHaveAttribute("type", "date");
+  await expect(page.locator("#endDateFilter")).toHaveAttribute("type", "date");
 });
 
 test("desktop layout keeps filters left of stream", async ({ page }) => {

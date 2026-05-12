@@ -14,7 +14,8 @@ const TEXT = {
   tags: "\u6807\u7b7e",
   source: "\u6765\u6e90",
   readingScore: "\u53ef\u8bfb\u6027",
-  keyPoints: "\u8981\u70b9"
+  keyPoints: "\u8981\u70b9",
+  readMoreNote: "\u5982\u679c\u611f\u5174\u8da3\u8bf7\u70b9\u51fb\u67e5\u770b\u539f\u6587"
 };
 
 const fallbackNews = [
@@ -32,6 +33,24 @@ const fallbackNews = [
 ];
 
 const categories = [TEXT.all, TEXT.coreCompany, TEXT.creator, TEXT.solo, TEXT.practice];
+const TAG_LABELS = {
+  official: "\u5b98\u65b9\u52a8\u6001",
+  enterprise: "\u4f01\u4e1a\u5e94\u7528",
+  creator: "\u535a\u4e3b\u89c2\u70b9",
+  practice: "\u5b9e\u6218\u65b9\u6cd5",
+  agent: "\u667a\u80fd\u4f53",
+  agents: "\u667a\u80fd\u4f53",
+  coding: "\u7f16\u7a0b",
+  prompt: "\u63d0\u793a\u8bcd",
+  workflow: "\u5de5\u4f5c\u6d41",
+  research: "\u7814\u7a76",
+  model: "\u6a21\u578b",
+  search: "\u641c\u7d22",
+  video: "\u89c6\u9891",
+  newsletter: "\u901a\u8baf",
+  "open-source": "\u5f00\u6e90",
+  vibecoding: "Vibe Coding"
+};
 
 const categoryFilter = document.getElementById("categoryFilter");
 const gradeFilter = document.getElementById("gradeFilter");
@@ -114,6 +133,7 @@ function renderNews(items) {
 
   items.forEach((item) => {
     const tags = Array.isArray(item.tags) ? item.tags : [];
+    const tagLabels = tags.map((tag) => TAG_LABELS[String(tag).toLowerCase()] || tag);
     const safeUrl = String(item.sourceUrl || "#");
     const card = document.createElement("article");
     card.className = "card";
@@ -131,8 +151,8 @@ function renderNews(items) {
           <h3>${escapeHtml(item.titleZh || item.title)}</h3>
           <p>${escapeHtml(item.summaryZh || item.summary)}</p>
           ${renderKeyPoints(item.keyPointsZh || item.keyPoints)}
-          ${item.titleZh ? `<p class="original-title">Original: ${escapeHtml(item.title)}</p>` : ""}
-          <p class="tagline">${TEXT.tags}: ${escapeHtml(tags.join(" / "))}</p>
+          <p class="tagline">${TEXT.tags}: ${escapeHtml(tagLabels.join(" / "))}</p>
+          <p class="read-more-note">${TEXT.readMoreNote}</p>
           <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noreferrer noopener">${TEXT.source}: ${escapeHtml(item.sourceName)}</a>
         </div>
       </div>
