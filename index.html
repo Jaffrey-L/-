@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Daily Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <header class="hero">
+    <h1>AI Daily Radar</h1>
+    <p>中英双语前沿情报，国外优先，聚焦企业应用与实战方法。</p>
+    <div class="badges">
+      <span>日报模式</span>
+      <span>A/B/C 信源分级</span>
+      <span>Vibe/Prompt/Agent 专区</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel filters">
+      <h2>筛选器</h2>
+      <label>
+        分类
+        <select id="categoryFilter"></select>
+      </label>
+      <label>
+        信源级别
+        <select id="gradeFilter">
+          <option value="all">全部</option>
+          <option value="A">A级</option>
+          <option value="B">B级</option>
+          <option value="C">C级</option>
+        </select>
+      </label>
+      <label>
+        关键词
+        <input id="searchInput" type="text" placeholder="公司 / 博主 / 主题">
+      </label>
+      <label>
+        排序
+        <select id="sortFilter">
+          <option value="latest">按时间（最新）</option>
+          <option value="importance">按重要级别</option>
+        </select>
+      </label>
+      <button id="resetBtn" type="button">重置筛选</button>
+    </aside>
+
+    <section class="panel stream">
+      <div class="stream-header">
+        <h2>今日信息流</h2>
+        <p id="resultCount"></p>
+      </div>
+      <div id="newsList" class="news-list"></div>
+    </section>
+  </main>
+
+  <section class="panel sources">
+    <h2>核心来源池</h2>
+    <div class="source-groups">
+      <article>
+        <h3>核心AI公司</h3>
+        <ul id="companySources"></ul>
+      </article>
+      <article>
+        <h3>核心AI博主</h3>
+        <ul id="creatorSources"></ul>
+      </article>
+      <article>
+        <h3>AI个人公司大神</h3>
+        <ul id="soloSources"></ul>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <p>数据结构：<code>sources.json</code> + <code>app.js</code>。后续可接 RSS/API/爬虫。</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
