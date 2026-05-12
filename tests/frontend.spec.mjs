@@ -38,6 +38,8 @@ test("source, date, search and reset work", async ({ page }) => {
   await page.selectOption("#sourceFilter", { index: 1 });
   await expect(page.locator(".card").first()).toBeVisible();
 
+  await page.click('[data-days="7"]');
+  await expect(page.locator('[data-days="7"]')).toHaveClass(/active/);
   await page.fill("#startDateFilter", "2026-05-01");
   await page.fill("#endDateFilter", "2026-05-12");
   await expect(page.locator(".card").first()).toBeVisible();
@@ -49,6 +51,7 @@ test("source, date, search and reset work", async ({ page }) => {
   await page.click("#resetBtn");
   await expect(page.locator("#categoryFilter")).toHaveValue("all");
   await expect(page.locator("#sourceFilter")).toHaveValue("all");
+  await expect(page.locator('[data-days="30"]')).toHaveClass(/active/);
   await expect(page.locator("#searchInput")).toHaveValue("");
   await expect(page.locator(".card")).toHaveCountGreaterThan(20);
 });

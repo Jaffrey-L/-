@@ -88,6 +88,27 @@ h1 { margin: 0; font-size: 3rem; letter-spacing: 0.5px; }
 }
 .filters h2 { margin-top: 0; }
 .filters label { display: block; margin: 10px 0; color: var(--muted); }
+.date-presets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 10px 0;
+}
+.preset-btn {
+  min-height: 34px;
+  margin: 0;
+  padding: 7px 6px;
+  border-radius: 8px;
+  background: #0b1327;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  font-size: 0.82rem;
+}
+.preset-btn.active {
+  background: linear-gradient(130deg, var(--mint), #5aa8ff);
+  color: #071220;
+  border-color: transparent;
+}
 
 select, input, button {
   width: 100%;

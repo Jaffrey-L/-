@@ -38,6 +38,7 @@ const gradeFilter = document.getElementById("gradeFilter");
 const sourceFilter = document.getElementById("sourceFilter");
 const startDateFilter = document.getElementById("startDateFilter");
 const endDateFilter = document.getElementById("endDateFilter");
+const presetButtons = Array.from(document.querySelectorAll(".preset-btn"));
 const sortFilter = document.getElementById("sortFilter");
 const searchInput = document.getElementById("searchInput");
 const resetBtn = document.getElementById("resetBtn");
@@ -79,14 +80,27 @@ function initSourceOptions(newsItems) {
   });
 }
 
-function initDateRange(newsItems) {
+function setActivePreset(value) {
+  presetButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.days === value);
+  });
+}
+
+function initDateRange(newsItems, days = 30) {
   const dates = newsItems.map((item) => item.date).filter(Boolean).sort();
   if (!dates.length) return;
   const latest = dates[dates.length - 1];
-  const start = new Date(latest);
-  start.setDate(start.getDate() - 30);
+  if (days === "all") {
+    startDateFilter.value = "";
+    endDateFilter.value = "";
+    setActivePreset("all");
+    return;
+  }
+  const start = new Date(`${latest}T00:00:00`);
+  start.setDate(start.getDate() - Number(days));
   startDateFilter.value = start.toISOString().slice(0, 10);
   endDateFilter.value = latest;
+  setActivePreset(String(days));
 }
 
 function renderNews(items) {
@@ -141,11 +155,11 @@ function renderKeyPoints(points) {
 }
 
 function inSelectedTimeRange(dateValue) {
-  const date = new Date(dateValue);
+  const date = new Date(`${dateValue}T00:00:00`);
   if (Number.isNaN(date.getTime())) return false;
-  if (startDateFilter.value && date < new Date(startDateFilter.value)) return false;
+  if (startDateFilter.value && date < new Date(`${startDateFilter.value}T00:00:00`)) return false;
   if (endDateFilter.value) {
-    const end = new Date(endDateFilter.value);
+    const end = new Date(`${endDateFilter.value}T00:00:00`);
     end.setHours(23, 59, 59, 999);
     if (date > end) return false;
   }
@@ -194,12 +208,22 @@ function updateKpis(newsItems) {
 function bindEvents(newsItems) {
   const render = () => renderNews(getFilteredNews(newsItems));
   [categoryFilter, gradeFilter, sourceFilter, startDateFilter, endDateFilter, sortFilter].forEach((el) => el.addEventListener("change", render));
+  [startDateFilter, endDateFilter].forEach((el) => el.addEventListener("input", () => {
+    setActivePreset("");
+    render();
+  }));
+  presetButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      initDateRange(newsItems, button.dataset.days);
+      render();
+    });
+  });
   searchInput.addEventListener("input", render);
   resetBtn.addEventListener("click", () => {
     categoryFilter.value = "all";
     gradeFilter.value = "all";
     sourceFilter.value = "all";
-    initDateRange(newsItems);
+    initDateRange(newsItems, 30);
     sortFilter.value = "latest";
     searchInput.value = "";
     render();
