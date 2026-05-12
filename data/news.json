@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-12T10:38:28.235016+00:00",
+  "updatedAt": "2026-05-12T14:38:55.400396+00:00",
   "lookbackDays": 30,
   "policy": {
     "A": "Official RSS, official blog, or first-party source.",
@@ -22,7 +22,7 @@
     "Hugging Face": {
       "rss": "https://huggingface.co/blog/feed.xml",
       "rssItems": 8,
-      "googleItems": 1,
+      "googleItems": 0,
       "status": "ok"
     },
     "Microsoft AI": {
@@ -52,7 +52,7 @@
     "Latent.Space": {
       "rss": "https://www.latent.space/feed",
       "rssItems": 8,
-      "googleItems": 0,
+      "googleItems": 1,
       "status": "ok"
     },
     "Interconnects": {
@@ -65,7 +65,7 @@
       "rss": "https://www.deeplearning.ai/the-batch/feed/",
       "rssItems": 0,
       "googleItems": 0,
-      "status": "failed: HTTP Error 308: Permanent Redirect"
+      "status": "failed: HTTP Error 404: Not Found"
     },
     "Chip Huyen": {
       "rss": "https://huyenchip.com/feed.xml",
@@ -136,19 +136,19 @@
     "Stability AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 2,
+      "googleItems": 1,
       "status": "ok"
     },
     "Midjourney": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 1,
+      "googleItems": 2,
       "status": "ok"
     },
     "Character.AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 2,
+      "googleItems": 1,
       "status": "ok"
     },
     "Runway": {
@@ -172,7 +172,7 @@
     "Snowflake AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 2,
+      "googleItems": 3,
       "status": "ok"
     },
     "Salesforce AI": {
@@ -943,37 +943,6 @@
       "importance": 5
     },
     {
-      "title": "If Elon Musk Wants To Compete With Anthropic, He Should Build Rather Than Buy",
-      "titleZh": "\u3010Cursor\u3011Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "If Elon Musk Wants To Compete With Anthropic, He Should Build Rather Than Buy promarket.org",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaCursor\uff0c\u805a\u7126Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Focus: Cursor, coding, agent",
-        "Worth reading for practical context and source details.",
-        "Open the original article for full evidence and nuance."
-      ],
-      "keyPointsZh": [
-        "Focus: Cursor, \u7f16\u7a0b, \u667a\u80fd\u4f53",
-        "Worth reading \u9762\u5411 practical context \u4ee5\u53ca source details.",
-        "Open the original article \u9762\u5411 full evidence \u4ee5\u53ca nuance."
-      ],
-      "imageUrl": "",
-      "date": "2026-05-12",
-      "sourceName": "Cursor",
-      "publisher": "promarket.org",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPajE2ekhxbXZSUnNvek9LZ2dwdkJDTDBKSTVCWlAtSWgyaC1pWkR5eDFVYWRBcHk1VDJlNi11MVhFaTZvWm9HS1lFbFNNbDBhb2hkWWFxbWtvMGlyUS1KdkczTWZDdldUazdvTWVjVkY5N1hBN0ZjNVJXZktIRUw0RURRZ21XS3VoMkhzWGlHUlg1eWwyRllkb2IySHBYWmF0eld2QlhvaDdtWkpGTUJ0QURrWkc?oc=5",
-      "sourceGrade": "B",
-      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
-      "contentType": "news",
-      "readingScore": 63,
-      "tags": [
-        "Cursor",
-        "coding",
-        "agent"
-      ],
-      "importance": 4
-    },
-    {
       "title": "Building Blocks for Foundation Model Training and Inference on AWS",
       "titleZh": "\u3010Hugging Face\u3011Hugging Face\u3001\u5f00\u6e90\u3001\u5b9e\u6218\u65b9\u6cd5\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
       "summary": "Building Blocks for Foundation Model Training and Inference on AWS from Hugging Face. Included for AI tracking; open the original article to verify details.",
@@ -1330,84 +1299,6 @@
       "importance": 5
     },
     {
-      "title": "Top 75 Generative AI Companies & Startups in 2026",
-      "titleZh": "\u3010Stability AI\u3011Stability AI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "Top 75 Generative AI Companies & Startups in 2026 from Stability AI. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaStability AI\uff0c\u805a\u7126Stability AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Top 75 Generative AI Companies & Startups in 2026 eWeek"
-      ],
-      "keyPointsZh": [
-        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-08",
-      "sourceName": "Stability AI",
-      "publisher": "eWeek",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uOWo1N0ViYk9xTV9hMS1RMDFsMG1xMXBXSGp4dmJseDFuSDdMeXFpaEp6bHdxcFZyMzhSemtyRXZrY2hpdWdGU3FQYi1QY0ZtY1FBa0FVQ2ZCTW1qQTRV?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 60,
-      "tags": [
-        "Stability AI",
-        "enterprise"
-      ],
-      "importance": 5
-    },
-    {
-      "title": "Top 75 Generative AI Companies & Startups in 2026",
-      "titleZh": "\u3010Character.AI\u3011Character.AI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "Top 75 Generative AI Companies & Startups in 2026 from Character.AI. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaCharacter.AI\uff0c\u805a\u7126Character.AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Top 75 Generative AI Companies & Startups in 2026 eWeek"
-      ],
-      "keyPointsZh": [
-        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-08",
-      "sourceName": "Character.AI",
-      "publisher": "eWeek",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uOWo1N0ViYk9xTV9hMS1RMDFsMG1xMXBXSGp4dmJseDFuSDdMeXFpaEp6bHdxcFZyMzhSemtyRXZrY2hpdWdGU3FQYi1QY0ZtY1FBa0FVQ2ZCTW1qQTRV?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 60,
-      "tags": [
-        "Character.AI",
-        "enterprise"
-      ],
-      "importance": 5
-    },
-    {
-      "title": "Top 75 Generative AI Companies & Startups in 2026",
-      "titleZh": "\u3010Hugging Face\u3011Hugging Face\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "Top 75 Generative AI Companies & Startups in 2026 from Hugging Face. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaHugging Face\uff0c\u805a\u7126Hugging Face\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Top 75 Generative AI Companies & Startups in 2026 eWeek"
-      ],
-      "keyPointsZh": [
-        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-08",
-      "sourceName": "Hugging Face",
-      "publisher": "eWeek",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uOWo1N0ViYk9xTV9hMS1RMDFsMG1xMXBXSGp4dmJseDFuSDdMeXFpaEp6bHdxcFZyMzhSemtyRXZrY2hpdWdGU3FQYi1QY0ZtY1FBa0FVQ2ZCTW1qQTRV?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 60,
-      "tags": [
-        "Hugging Face",
-        "enterprise"
-      ],
-      "importance": 5
-    },
-    {
       "title": "Databricks' Genie Data Agent",
       "titleZh": "\u3010Databricks AI\u3011Databricks AI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
       "summary": "Databricks' Genie Data Agent from Databricks AI. Useful for deciding whether the original article deserves a deeper read.",
@@ -1566,6 +1457,32 @@
       "tags": [
         "OpenAI",
         "official"
+      ],
+      "importance": 5
+    },
+    {
+      "title": "How to Engineer AI Reliability: A 5-Step Framework for Founders",
+      "titleZh": "\u3010Latent.Space\u3011Latent.Space\u3001\u535a\u4e3b\u89c2\u70b9\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "How to Engineer AI Reliability: A 5-Step Framework for Founders from Latent.Space. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaLatent.Space\uff0c\u805a\u7126Latent.Space\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "How to Engineer AI Reliability: A 5-Step Framework for Founders Substack"
+      ],
+      "keyPointsZh": [
+        "How to Engineer AI Reliability: A 5-Step Framework \u9762\u5411 Founders Substack"
+      ],
+      "imageUrl": "",
+      "date": "2026-05-07",
+      "sourceName": "Latent.Space",
+      "publisher": "Substack",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMigwRBVV95cUxNYVhLSEZfOEQ4cEVYZXQ3TDdjU2xTZDhYN3A4SXc3OUktVXNRRFdQbUdsWkt3Y3ZsbGFHZGZ6NWE3RkVoRERGZ3pGQlhCTFN5NTFzOFVPTGc5TFJBRWc2ZWV1eUx4aXJ1X0JTVTNTSmIyRHVfSTBzMW5XR1dSOE1VNlhONE13OVdSTTFPQklsOWc5WWVlUW90M0RucTBrMDlPZUZjZE9MZWt2YnFVeTg1VFZXVG5ZQ0FFU2pDZDIteGloZEI0VnpTS1ZaZWdrWFB5Rm5VNmVzUTdoNEpNZVk2NkoyanpCazhvbUN6RUlxMy1OUFo2S0xQYkxYbUg1WEhEeW9VR2J5M3g0ZFA3MUg2UktvNDFLVUE4b0FtR08xZUxib3otTzVrdUxQZFhySnVueTJ3RGpTc20wZnFOMXc4Mnd2bGUxM3JHZ1V6M3RwTDZHMlU0elFMQlFXa0dCajBuUE42VmhxdWRUTTRJMFVncUpzZGwwdHpMZ1BheWd2SUEwTW1sR245X19ieHpSMjI4dlBLdUk2eHdMQkZ4MlVaSVZWWHJYSXpidC1WTGdvQWpzeFdtN0pNMEs3XzNmWG9YdGFmZTdyX1dxVk9Oei1qTC05RGNLLUJXSFVHUUJ6dkt3aU04TExFQ09mUTdjVDJFeTY1Z2tWRXFBcjdxS0hISW84aw?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 75,
+      "tags": [
+        "Latent.Space",
+        "creator"
       ],
       "importance": 5
     },
@@ -1833,32 +1750,6 @@
       "importance": 5
     },
     {
-      "title": "OpenAI, Anthropic expand services push, signaling new phase in enterprise AI race",
-      "titleZh": "\u3010Anthropic\u3011Anthropic\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "OpenAI, Anthropic expand services push, signaling new phase in enterprise AI race cio.com",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaAnthropic\uff0c\u805a\u7126Anthropic\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "OpenAI, Anthropic expand services push, signaling new phase in enterprise AI race cio.com"
-      ],
-      "keyPointsZh": [
-        "OpenAI, Anthropic expand services push, signaling new phase in \u4f01\u4e1a\u5e94\u7528 AI race cio.com"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-06",
-      "sourceName": "Anthropic",
-      "publisher": "cio.com",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNLUZFMmFiR0FRRG13ajMwQXNfYzJHUzVpOXZOZkQ2NW50c1o2bXp4NHl4ZFNpcGtBWDh3QnlxN01NWW45TUFWZ01lWVAwaEV3cFFueEpaVFFhbm9UX3J3QUlIbk5YTXZjSjdKQ0JKa2JNWEpvMm5icUVId3hDUHhETEtaSXZfUGdqWmljMmdfZ0RUOG8tLXp2LURrUm00ZC1DX0g5RE8wclRvT01ESEh5d1Y5U0loRmFzanI0bA?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 60,
-      "tags": [
-        "Anthropic",
-        "enterprise"
-      ],
-      "importance": 5
-    },
-    {
       "title": "\ud83d\udd2cDoing Vibe Physics \u2014 Alex Lupsasca, OpenAI",
       "titleZh": "\u3010Latent.Space\u3011swyx\u3001\u667a\u80fd\u4f53\u3001\u535a\u4e3b\u89c2\u70b9\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
       "summary": "The full story of how GPT\u20115.x derived new results in theoretical physics and quantum gravity.",
@@ -1886,6 +1777,32 @@
         "swyx",
         "agent",
         "creator"
+      ],
+      "importance": 5
+    },
+    {
+      "title": "Agents for financial services",
+      "titleZh": "\u3010Anthropic\u3011Anthropic\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "Agents for financial services from Anthropic. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaAnthropic\uff0c\u805a\u7126Anthropic\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Agents for financial services Anthropic"
+      ],
+      "keyPointsZh": [
+        "\u667a\u80fd\u4f53 \u9762\u5411 financial services Anthropic"
+      ],
+      "imageUrl": "",
+      "date": "2026-05-05",
+      "sourceName": "Anthropic",
+      "publisher": "Anthropic",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1IS1R3ZVd5NUxtWGJjRlFBQXZfOXJPS2xlY0wtaWZhSmx0M2RNaFUwN3FCU1Y3bTh5dkhqOEtIUE94UXFtT2l1MEk0WFZyUVRYV1Fsc1JrMEU?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 60,
+      "tags": [
+        "Anthropic",
+        "enterprise"
       ],
       "importance": 5
     },
@@ -1996,33 +1913,6 @@
         "Nathan Lambert",
         "research",
         "creator"
-      ],
-      "importance": 5
-    },
-    {
-      "title": "Agentic AI vs Generative AI: Comparing Autonomy, Workflows, and Use Cases",
-      "titleZh": "\u3010Enterprise Agents\u3011\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "Agentic AI vs Generative AI: Comparing Autonomy, Workflows, and Use Cases Databricks",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaEnterprise Agents\uff0c\u805a\u7126\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Agentic AI vs Generative AI: Comparing Autonomy, Workflows, and Use Cases Databricks"
-      ],
-      "keyPointsZh": [
-        "Agentic AI vs Generative AI: Comparing Autonomy, Workflows, \u4ee5\u53ca Use Cases Databricks"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-04",
-      "sourceName": "Enterprise Agents",
-      "publisher": "Databricks",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1PQWE1TGtnR3lfaGVpcU5HMUtiNG5kRFhVcFBhTGt1ck5McllUT3ZySWhiZ21QQk1UMHkxUy0wRnd6VHZoR1VxaWxPUWh1dGNxQUs4YVF1ZzQwRkRfeVNod0w1Vy1wdDl4WXNn?oc=5",
-      "sourceGrade": "B",
-      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
-      "contentType": "news",
-      "readingScore": 75,
-      "tags": [
-        "enterprise",
-        "agent",
-        "workflow"
       ],
       "importance": 5
     },
@@ -2221,33 +2111,6 @@
       "importance": 5
     },
     {
-      "title": "AI coding assistant goes rogue and deletes user data and backup",
-      "titleZh": "\u3010Cursor\u3011Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "AI coding assistant goes rogue and deletes user data and backup from Cursor. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaCursor\uff0c\u805a\u7126Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "AI coding assistant goes rogue and deletes user data and backup TechRadar"
-      ],
-      "keyPointsZh": [
-        "AI \u7f16\u7a0b assistant goes rogue \u4ee5\u53ca deletes user data \u4ee5\u53ca backup TechRadar"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-02",
-      "sourceName": "Cursor",
-      "publisher": "TechRadar",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOMnpiX2FxM0lYTFp6cnhJQTZQOTFxN0ZjWlM4eXZXTXUtcFo0cGE5bFVINmt1cEIwQkFQSDVEbENqdEdwb00yejF3emlnVkd6NlNqekhtTFl1eUFVUmJGdEV5bm5pOWVDMUFnamdhaG1lek9HTVRMUFZaTmdNRGl0N0FNVklzbmxKRGE1S1phU1dLVUp6M19tdi1fUGpXX3hDN2pmaW56RWhiUzdJUlZKOUltLUhJUEhlbjB0ZU9HQ2lzbW9HeDFSb3V5TlR6QnBRLThmMTFLZHRGdHFRZ29Tc1dFamRyT0lCUmo3SUtlRDhsYmVtYlQ1VFVrYkxRcFZVTUkwcHFUSVVReHg0dVpwQl91UGJhZU1PNWZR?oc=5",
-      "sourceGrade": "B",
-      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
-      "contentType": "news",
-      "readingScore": 63,
-      "tags": [
-        "Cursor",
-        "coding",
-        "agent"
-      ],
-      "importance": 4
-    },
-    {
       "title": "Oracle AI Agent Memory: A Governed, Unified Memory Core for Enterprise AI Agents",
       "titleZh": "\u3010Oracle AI\u3011Oracle AI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
       "summary": "Oracle AI Agent Memory: A Governed, Unified Memory Core for Enterprise AI Agents Oracle Blogs",
@@ -2296,6 +2159,33 @@
       "tags": [
         "Sam Altman",
         "creator"
+      ],
+      "importance": 5
+    },
+    {
+      "title": "WRITER Launches Event-Based Triggers To Enable Autonomous Enterprise AI Agents",
+      "titleZh": "\u3010Enterprise Agents\u3011\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "WRITER Launches Event-Based Triggers To Enable Autonomous Enterprise AI Agents Pulse 2.0",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaEnterprise Agents\uff0c\u805a\u7126\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "WRITER Launches Event-Based Triggers To Enable Autonomous Enterprise AI Agents Pulse 2.0"
+      ],
+      "keyPointsZh": [
+        "WRITER Launches Event-Based Triggers To Enable Autonomous \u4f01\u4e1a\u5e94\u7528 AI \u667a\u80fd\u4f53 Pulse 2.0"
+      ],
+      "imageUrl": "",
+      "date": "2026-04-30",
+      "sourceName": "Enterprise Agents",
+      "publisher": "Pulse 2.0",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxON0doVFVqUFJyaXRNaGNMVU1iTlJGU0NpLXViM1dCTzQydTFEWjVaMDdVdWRHVGM0X2w3TkpEVHBoeE1EQTRmOVQwS090RExHYVJoaW1oWURnZlZLeWw4Z3FMQzZaYWVRQkZnRVFhc1FNcGd3Nkk4b3pESWc0V3Zlald3ZFdnY2Vyc0lsX2JtUGZTY29EVGJFeTBLTUVrcUnSAaQBQVVfeXFMUFVfUjRpWTZZLV9hY2JpYXU2QUs3N2hzMjdvUFlsQ2tiU3FZYzRENnpqU3hheDlpR3oxeEIxVUtuUXNHci1tUm1OUHFMblU0Mi1iZUwtdHd0eC1ZUmhXVm9SZWRUNjJNUXZwOEFjWDFEQXd5OENnaV9GbjBOcnlhX2gzRE9ZMl9Ocm5MTG1FRFJYb3FoelFTT0pnamZHX180NUI4VGU?oc=5",
+      "sourceGrade": "B",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
+      "contentType": "news",
+      "readingScore": 75,
+      "tags": [
+        "enterprise",
+        "agent",
+        "workflow"
       ],
       "importance": 5
     },
@@ -2471,6 +2361,62 @@
       "importance": 4
     },
     {
+      "title": "A founder says Cursor's AI agent deleted his startup's database, causing chaos for customers",
+      "titleZh": "\u3010Cursor\u3011Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "A founder says Cursor's AI agent deleted his startup's database, causing chaos for customers Business Insider",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaCursor\uff0c\u805a\u7126Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "A founder says Cursor's AI agent deleted his startup's database, causing chaos for customers Business Insider"
+      ],
+      "keyPointsZh": [
+        "A founder says Cursor's AI \u667a\u80fd\u4f53 deleted his startup's database, causing chaos \u9762\u5411 customers Business Insider"
+      ],
+      "imageUrl": "",
+      "date": "2026-04-28",
+      "sourceName": "Cursor",
+      "publisher": "Business Insider",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQeGhfWEFXZV82d05Jc3l0eTBrRnE4eEtjOE5LelJnQmNSeXFuc3pnRW9rSHJqRF9xeEszcmFndHFNUVI2MG83eDBWSXhZVFNDdFhPOHpxLWN5bml3elNXT2NBRWVfeFZEc2o5Z1JHajgtSWpIS1lnQTV5Mkp4Y0tmclVFSGdlYlpxejFpSnhPOTRHMmdXeFRPNi1FeENENlRWNVBrRnpyWEVMYkE?oc=5",
+      "sourceGrade": "B",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
+      "contentType": "news",
+      "readingScore": 63,
+      "tags": [
+        "Cursor",
+        "coding",
+        "agent"
+      ],
+      "importance": 4
+    },
+    {
+      "title": "'I violated every principle I was given': AI agent deleted software company's database. It may not be AI's fault",
+      "titleZh": "\u3010Cursor\u3011Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "'I violated every principle I was given': AI agent deleted software company's database.",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaCursor\uff0c\u805a\u7126Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "'I violated every principle I was given': AI agent deleted software company's database.",
+        "It may not be AI's fault Fast Company"
+      ],
+      "keyPointsZh": [
+        "'I violated every principle I was given': AI \u667a\u80fd\u4f53 deleted software company's database.",
+        "\u53ef\u4f18\u5148\u5173\u6ce8\u5176\u5bf9\u4f01\u4e1a\u5e94\u7528\u3001Agent \u5de5\u4f5c\u6d41\u6216\u5b9e\u6218\u65b9\u6cd5\u7684\u542f\u53d1\u3002"
+      ],
+      "imageUrl": "",
+      "date": "2026-04-28",
+      "sourceName": "Cursor",
+      "publisher": "Fast Company",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTXBaWGRFSWVqYUtuMDIyZHgwdFNEVWxaOFpFUFJEanFrWndiWDF0NXF5d21Odm8yNE02RGJHZ0FhVVR6WlN6bXB4c1NCZ2NTSjl1aTZsRlNJOTdCZ29xN2VHdGUzdG5PdzlwNzN4WkRvelZfdF8tQnhfVlV2aVJZWVhIY014anBabFpxNmc0elNZalB0UkhkZmQ0aG9KdldWNENxR05OX0pfSVhsZmZHNHd2NA?oc=5",
+      "sourceGrade": "B",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
+      "contentType": "news",
+      "readingScore": 63,
+      "tags": [
+        "Cursor",
+        "coding",
+        "agent"
+      ],
+      "importance": 4
+    },
+    {
       "title": "AWS and OpenAI announce expanded partnership to bring frontier intelligence to the infrastructure you already trust",
       "titleZh": "\u3010OpenAI\u3011OpenAI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
       "summary": "AWS and OpenAI announce expanded partnership to bring frontier intelligence to the infrastructure you already trust About Amazon",
@@ -2492,6 +2438,32 @@
       "readingScore": 60,
       "tags": [
         "OpenAI",
+        "enterprise"
+      ],
+      "importance": 5
+    },
+    {
+      "title": "Nvidia Nemotron 3 Nano Omni Powers Enterprise AI Agents",
+      "titleZh": "\u3010NVIDIA\u3011NVIDIA\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "Nvidia Nemotron 3 Nano Omni Powers Enterprise AI Agents from NVIDIA. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaNVIDIA\uff0c\u805a\u7126NVIDIA\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Nvidia Nemotron 3 Nano Omni Powers Enterprise AI Agents AI Business"
+      ],
+      "keyPointsZh": [
+        "Nvidia Nemotron 3 Nano Omni Powers \u4f01\u4e1a\u5e94\u7528 AI \u667a\u80fd\u4f53 AI Business"
+      ],
+      "imageUrl": "",
+      "date": "2026-04-28",
+      "sourceName": "NVIDIA",
+      "publisher": "AI Business",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNa0RHeWZTem1WT3NJazZTd1NEV29oa2FNTGpuY2VPSU1iLTdEUE95aW9iZUE3MVBQejdhbTN2U21NaUpqeWhveHdIVmJKQktYZUlrVzMwRmh1TzI1Sy0wdjV3dEtxVnpQRi1SYlc4bkRLRDFQMHlXSHZBcV9wMEhSakpoRWdUdzh6QVhNX2wxMjlzTFk?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 60,
+      "tags": [
+        "NVIDIA",
         "enterprise"
       ],
       "importance": 5
@@ -2570,6 +2542,32 @@
       "readingScore": 60,
       "tags": [
         "Mistral AI",
+        "enterprise"
+      ],
+      "importance": 5
+    },
+    {
+      "title": "Appian adopts MCP protocol and partners with Snowflake to provide more structure and control for AI agents",
+      "titleZh": "\u3010Snowflake AI\u3011Snowflake AI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "Appian adopts MCP protocol and partners with Snowflake to provide more structure and control for AI agents SiliconANGLE",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaSnowflake AI\uff0c\u805a\u7126Snowflake AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Appian adopts MCP protocol and partners with Snowflake to provide more structure and control for AI agents SiliconANGLE"
+      ],
+      "keyPointsZh": [
+        "Appian adopts MCP protocol \u4ee5\u53ca partners \u7ed3\u5408 Snowflake to provide more structure \u4ee5\u53ca control \u9762\u5411 AI \u667a\u80fd\u4f53 SiliconANGLE"
+      ],
+      "imageUrl": "",
+      "date": "2026-04-28",
+      "sourceName": "Snowflake AI",
+      "publisher": "SiliconANGLE",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZm1HX1NwRkxNMk9LbjBCR3R4cjExX1MxbVNEeGw0Sl9XMUVlcWlnTGVySUZ5OXF0NXNTM2diYzg5OWp1V0hhWTd2MEx4RTU2SFY5M3duZzZCX2wzNUk3Rm9FYWZ4aEQtQWZUVGltVi1OdWk4NlRmdnNidzNtVzBKVGlVaEd4WFAyN1JQTkd2MEZreGoyRkN3SFUyMG5ITGZKaHg2cUszSFM0c08ybFJJT1FQaTFBLUJGVWc?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 60,
+      "tags": [
+        "Snowflake AI",
         "enterprise"
       ],
       "importance": 5
@@ -2706,32 +2704,6 @@
       "readingScore": 60,
       "tags": [
         "Databricks AI",
-        "enterprise"
-      ],
-      "importance": 5
-    },
-    {
-      "title": "OpenAI GPT 5.5 on Snowflake Cortex AI",
-      "titleZh": "\u3010Snowflake AI\u3011Snowflake AI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "OpenAI GPT 5.5 on Snowflake Cortex AI from Snowflake AI. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaSnowflake AI\uff0c\u805a\u7126Snowflake AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "OpenAI GPT 5.5 on Snowflake Cortex AI Snowflake"
-      ],
-      "keyPointsZh": [
-        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002"
-      ],
-      "imageUrl": "",
-      "date": "2026-04-24",
-      "sourceName": "Snowflake AI",
-      "publisher": "Snowflake",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1ZaXI4UWY0WElhbEM0TzdsZDk1RGgxM0VzMXBTMkNwc2FQWnZNRzRoZTM4Y3RxWWV5c0ZrZ3l4N0xMd3lnWElSZ3VDeEFqWlJwalBJcHE0TFNHalpESS1abFNPV19jVjhtaE8zLXZnZFFxQVY5cmZiOA?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 60,
-      "tags": [
-        "Snowflake AI",
         "enterprise"
       ],
       "importance": 5
@@ -2902,32 +2874,6 @@
       "importance": 5
     },
     {
-      "title": "NVIDIA and Google Cloud Collaborate to Advance Agentic and Physical AI",
-      "titleZh": "\u3010NVIDIA\u3011NVIDIA\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "NVIDIA and Google Cloud Collaborate to Advance Agentic and Physical AI NVIDIA Blog",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaNVIDIA\uff0c\u805a\u7126NVIDIA\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "NVIDIA and Google Cloud Collaborate to Advance Agentic and Physical AI NVIDIA Blog"
-      ],
-      "keyPointsZh": [
-        "NVIDIA \u4ee5\u53ca Google Cloud Collaborate to Advance Agentic \u4ee5\u53ca Physical AI NVIDIA Blog"
-      ],
-      "imageUrl": "",
-      "date": "2026-04-22",
-      "sourceName": "NVIDIA",
-      "publisher": "NVIDIA Blog",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTFB2X1RtalRVQjJ5S3R2SEtLRi1RTXVIQ3RUQk85WWxYM3dXLTBCVEdYVkpqYWYtdHFJTVk4X1hrX1JTSmhZbWhOY0Y5RkpqMThTWUh3dFM1cG5sa1RxWDBUckgzNVdIWEVsNmF6d19Uc1lhN2lpUnlic2t1N1l5QQ?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 60,
-      "tags": [
-        "NVIDIA",
-        "enterprise"
-      ],
-      "importance": 5
-    },
-    {
       "title": "Bringing Business Data Insights to Every User with Gemini Enterprise and Oracle AI Database",
       "titleZh": "\u3010Oracle AI\u3011Oracle AI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
       "summary": "Bringing Business Data Insights to Every User with Gemini Enterprise and Oracle AI Database Oracle Blogs",
@@ -2975,6 +2921,32 @@
       "readingScore": 60,
       "tags": [
         "Google DeepMind",
+        "enterprise"
+      ],
+      "importance": 5
+    },
+    {
+      "title": "Kimi K2.6 runs agents for days \u2014 and exposes the limits of enterprise orchestration",
+      "titleZh": "\u3010Midjourney\u3011Midjourney\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "Kimi K2.6 runs agents for days \u2014 and exposes the limits of enterprise orchestration Venturebeat",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaMidjourney\uff0c\u805a\u7126Midjourney\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Kimi K2.6 runs agents for days \u2014 and exposes the limits of enterprise orchestration Venturebeat"
+      ],
+      "keyPointsZh": [
+        "Kimi K2.6 runs \u667a\u80fd\u4f53 \u9762\u5411 days \u2014 \u4ee5\u53ca exposes the limits of \u4f01\u4e1a\u5e94\u7528 orchestration Venturebeat"
+      ],
+      "imageUrl": "",
+      "date": "2026-04-21",
+      "sourceName": "Midjourney",
+      "publisher": "Venturebeat",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOR1IySUdLMmtFaTI0dy1qOU0xVDAtUHh1RHVuNWJmdTFwcWREV21KeHJiVGlJQTZzNUJqVVA0dHFZVm5id1U5dmxFbkIwVWpGZDRZeDdlODVGMDVKcWFNQU00ajl5cTFLYTN5UnhfQV9QTmN2dDdzTWxUeGM0amY0THZYRkNOMkExX25jVkxpN3NrbW5EamZUVnFTY1BIR0ZBVFNpUkRDZXRvWDdYVHA4eE91WHNjVUk1Vldv?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 60,
+      "tags": [
+        "Midjourney",
         "enterprise"
       ],
       "importance": 5
@@ -3387,18 +3359,18 @@
     {
       "title": "Anthropic\u2019s Claude Managed Agents gives enterprises a new one-stop shop but raises vendor 'lock-in' risk",
       "titleZh": "\u3010Midjourney\u3011Midjourney\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "Anthropic\u2019s Claude Managed Agents gives enterprises a new one-stop shop but raises vendor 'lock-in' risk VentureBeat",
+      "summary": "Anthropic\u2019s Claude Managed Agents gives enterprises a new one-stop shop but raises vendor 'lock-in' risk Venturebeat",
       "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaMidjourney\uff0c\u805a\u7126Midjourney\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Anthropic\u2019s Claude Managed Agents gives enterprises a new one-stop shop but raises vendor 'lock-in' risk VentureBeat"
+        "Anthropic\u2019s Claude Managed Agents gives enterprises a new one-stop shop but raises vendor 'lock-in' risk Venturebeat"
       ],
       "keyPointsZh": [
-        "Anthropic\u2019s Claude Managed \u667a\u80fd\u4f53 gives enterprises a new one-stop shop but raises vendor 'lock-in' risk VentureBeat"
+        "Anthropic\u2019s Claude Managed \u667a\u80fd\u4f53 gives enterprises a new one-stop shop but raises vendor 'lock-in' risk Venturebeat"
       ],
       "imageUrl": "",
       "date": "2026-04-14",
       "sourceName": "Midjourney",
-      "publisher": "VentureBeat",
+      "publisher": "Venturebeat",
       "sourceUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbDFKREVTQ2kxYUtFY0hjdG5MM0xOZkU4VXBfMjIyR2FBQUNyUkVPeHp5VlM3VkdEZk4xTFA3OTE1R1Bwd3o4WTBHeW5FMlBKR0NPbVVtY21HSTBUQ1VPLW5EYXlqdEllams1R2xjM2YzS2pKYlJlLThJckdrX2tLQjFjQnQ3a1Brdll0dTZ6dE9vclQ5ZkZrN0hSRV9Ib1ZlTlhlSmFYNkJxQkN1RWNwa2VB?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
