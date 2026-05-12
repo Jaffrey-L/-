@@ -1,4 +1,4 @@
-const sampleNews = [
+const fallbackNews = [
   {
     title: "OpenAI launches enterprise workflow updates for agents",
     summary: "Focuses on controllability, audit logs, and tool reliability for enterprise deployment.",
@@ -80,6 +80,7 @@ const sampleNews = [
 
 const categories = ["全部", "核心AI公司新闻", "核心AI博主", "AI个人公司大神", "Vibe/Prompt/Agent实战"];
 
+const DATA_ENDPOINT = "./data/news.json";
 const categoryFilter = document.getElementById("categoryFilter");
 const gradeFilter = document.getElementById("gradeFilter");
 const sortFilter = document.getElementById("sortFilter");
@@ -119,13 +120,13 @@ function renderNews(items) {
   });
 }
 
-function getFilteredNews() {
+function getFilteredNews(newsItems) {
   const selectedCategory = categoryFilter.value;
   const selectedGrade = gradeFilter.value;
   const searchValue = searchInput.value.trim().toLowerCase();
   const selectedSort = sortFilter.value;
 
-  let filtered = sampleNews.filter((item) => {
+  let filtered = newsItems.filter((item) => {
     const categoryMatch = selectedCategory === "all" || item.category === selectedCategory;
     const gradeMatch = selectedGrade === "all" || item.sourceGrade === selectedGrade;
     const textBlob = `${item.title} ${item.summary} ${item.tags.join(" ")} ${item.sourceName}`.toLowerCase();
@@ -175,11 +176,38 @@ async function renderSourcePools() {
   fill("soloSources", sourceData.soloBuilders);
 }
 
+async function loadNewsData() {
+  try {
+    const response = await fetch(DATA_ENDPOINT, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`Failed to load ${DATA_ENDPOINT}: ${response.status}`);
+    }
+    const data = await response.json();
+    return Array.isArray(data.items) ? data.items : fallbackNews;
+  } catch (_) {
+    return fallbackNews;
+  }
+}
+
 async function init() {
+  const newsItems = await loadNewsData();
   initCategoryOptions();
-  bindEvents();
-  renderNews(getFilteredNews());
+  bindEventsForNews(newsItems);
+  renderNews(getFilteredNews(newsItems));
   await renderSourcePools();
 }
 
+function bindEventsForNews(newsItems) {
+  [categoryFilter, gradeFilter, sortFilter].forEach((el) =>
+    el.addEventListener("change", () => renderNews(getFilteredNews(newsItems)))
+  );
+  searchInput.addEventListener("input", () => renderNews(getFilteredNews(newsItems)));
+  resetBtn.addEventListener("click", () => {
+    categoryFilter.value = "all";
+    gradeFilter.value = "all";
+    sortFilter.value = "latest";
+    searchInput.value = "";
+    renderNews(getFilteredNews(newsItems));
+  });
+}
 init();
