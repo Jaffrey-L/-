@@ -11,25 +11,42 @@
 </head>
 <body>
   <div class="bg"></div>
-  <header class="hero">
-    <h1>AI Daily Radar</h1>
-    <p>中英双语前沿情报，国外优先，聚焦企业应用与实战方法。</p>
+  <header class="hero shell">
+    <div>
+      <h1>AI Daily Radar</h1>
+      <p>中英双语前沿情报，国外优先，聚焦企业应用与实战方法。</p>
+    </div>
     <div class="badges">
       <span>日报模式</span>
       <span>A/B/C 信源分级</span>
-      <span>Vibe/Prompt/Agent 专区</span>
+      <span>PC 优先版</span>
     </div>
   </header>
 
-  <main class="layout">
+  <section class="shell overview">
+    <article class="kpi">
+      <small>今日总条目</small>
+      <strong id="kpiTotal">-</strong>
+    </article>
+    <article class="kpi">
+      <small>企业应用相关</small>
+      <strong id="kpiEnterprise">-</strong>
+    </article>
+    <article class="kpi">
+      <small>A级信源占比</small>
+      <strong id="kpiAGrade">-</strong>
+    </article>
+    <article class="kpi">
+      <small>实战方法条目</small>
+      <strong id="kpiPractice">-</strong>
+    </article>
+  </section>
+
+  <main class="shell layout">
     <aside class="panel filters">
       <h2>筛选器</h2>
-      <label>
-        分类
-        <select id="categoryFilter"></select>
-      </label>
-      <label>
-        信源级别
+      <label>分类<select id="categoryFilter"></select></label>
+      <label>信源级别
         <select id="gradeFilter">
           <option value="all">全部</option>
           <option value="A">A级</option>
@@ -37,12 +54,8 @@
           <option value="C">C级</option>
         </select>
       </label>
-      <label>
-        关键词
-        <input id="searchInput" type="text" placeholder="公司 / 博主 / 主题">
-      </label>
-      <label>
-        排序
+      <label>关键词<input id="searchInput" type="text" placeholder="公司 / 博主 / 主题"></label>
+      <label>排序
         <select id="sortFilter">
           <option value="latest">按时间（最新）</option>
           <option value="importance">按重要级别</option>
@@ -60,26 +73,17 @@
     </section>
   </main>
 
-  <section class="panel sources">
+  <section class="panel sources shell">
     <h2>核心来源池</h2>
     <div class="source-groups">
-      <article>
-        <h3>核心AI公司</h3>
-        <ul id="companySources"></ul>
-      </article>
-      <article>
-        <h3>核心AI博主</h3>
-        <ul id="creatorSources"></ul>
-      </article>
-      <article>
-        <h3>AI个人公司大神</h3>
-        <ul id="soloSources"></ul>
-      </article>
+      <article><h3>核心AI公司</h3><ul id="companySources"></ul></article>
+      <article><h3>核心AI博主</h3><ul id="creatorSources"></ul></article>
+      <article><h3>AI个人公司大神</h3><ul id="soloSources"></ul></article>
     </div>
   </section>
 
-  <footer>
-    <p>数据结构：<code>sources.json</code> + <code>app.js</code>。后续可接 RSS/API/爬虫。</p>
+  <footer class="shell">
+    <p>数据来源：<code>data/news.json</code>，每日自动同步。</p>
   </footer>
 
   <script src="./app.js"></script>

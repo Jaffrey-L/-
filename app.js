@@ -1,3 +1,6 @@
+const DATA_ENDPOINT = "./data/news.json";
+const SOURCES_ENDPOINT = "./sources.json";
+
 const fallbackNews = [
   {
     title: "OpenAI launches enterprise workflow updates for agents",
@@ -9,78 +12,11 @@ const fallbackNews = [
     category: "核心AI公司新闻",
     tags: ["enterprise", "agent", "product"],
     importance: 5
-  },
-  {
-    title: "Anthropic publishes safety-eval notes for production AI systems",
-    summary: "Covers eval coverage, failure taxonomy, and enterprise governance checkpoints.",
-    date: "2026-05-11",
-    sourceName: "Anthropic News",
-    sourceUrl: "https://www.anthropic.com/news",
-    sourceGrade: "A",
-    category: "核心AI公司新闻",
-    tags: ["safety", "enterprise", "eval"],
-    importance: 4
-  },
-  {
-    title: "DeepSeek tooling update triggers China enterprise adoption discussion",
-    summary: "Developers highlight integration speed and local deployment tradeoffs.",
-    date: "2026-05-12",
-    sourceName: "行业媒体汇总",
-    sourceUrl: "https://example.com/deepseek-update",
-    sourceGrade: "C",
-    category: "核心AI公司新闻",
-    tags: ["china", "enterprise", "model"],
-    importance: 3
-  },
-  {
-    title: "Andrej Karpathy shares pragmatic vibe coding workflow",
-    summary: "Suggests iterative prompting loop with fast test harness for coding agents.",
-    date: "2026-05-12",
-    sourceName: "X Thread",
-    sourceUrl: "https://x.com/karpathy",
-    sourceGrade: "B",
-    category: "Vibe/Prompt/Agent实战",
-    tags: ["vibecoding", "prompt", "workflow"],
-    importance: 5
-  },
-  {
-    title: "Simon Willison compares agent tool-calling patterns",
-    summary: "Breaks down reliability tactics for long-running tool loops in production.",
-    date: "2026-05-10",
-    sourceName: "Blog Post",
-    sourceUrl: "https://simonwillison.net/",
-    sourceGrade: "B",
-    category: "Vibe/Prompt/Agent实战",
-    tags: ["agent", "tool-calling", "engineering"],
-    importance: 4
-  },
-  {
-    title: "Pieter Levels posts solo-AI SaaS revenue snapshot",
-    summary: "Shows traffic-to-revenue conversion and AI feature-driven retention impacts.",
-    date: "2026-05-11",
-    sourceName: "X Post",
-    sourceUrl: "https://x.com/levelsio",
-    sourceGrade: "B",
-    category: "AI个人公司大神",
-    tags: ["solo", "saas", "growth"],
-    importance: 4
-  },
-  {
-    title: "宝玉总结企业内 Agent 落地三阶段",
-    summary: "从 PoC、流程嵌入到权限治理，给出中文团队可执行模板。",
-    date: "2026-05-12",
-    sourceName: "公众号",
-    sourceUrl: "https://mp.weixin.qq.com/",
-    sourceGrade: "B",
-    category: "核心AI博主",
-    tags: ["enterprise", "agent", "china"],
-    importance: 5
   }
 ];
 
 const categories = ["全部", "核心AI公司新闻", "核心AI博主", "AI个人公司大神", "Vibe/Prompt/Agent实战"];
 
-const DATA_ENDPOINT = "./data/news.json";
 const categoryFilter = document.getElementById("categoryFilter");
 const gradeFilter = document.getElementById("gradeFilter");
 const sortFilter = document.getElementById("sortFilter");
@@ -90,6 +26,7 @@ const newsList = document.getElementById("newsList");
 const resultCount = document.getElementById("resultCount");
 
 function initCategoryOptions() {
+  categoryFilter.innerHTML = "";
   categories.forEach((cat) => {
     const option = document.createElement("option");
     option.value = cat === "全部" ? "all" : cat;
@@ -101,7 +38,9 @@ function initCategoryOptions() {
 function renderNews(items) {
   newsList.innerHTML = "";
   resultCount.textContent = `共 ${items.length} 条`;
+
   items.forEach((item) => {
+    const tags = Array.isArray(item.tags) ? item.tags : [];
     const card = document.createElement("article");
     card.className = "card";
     card.innerHTML = `
@@ -113,7 +52,7 @@ function renderNews(items) {
       </div>
       <h3>${item.title}</h3>
       <p>${item.summary}</p>
-      <p>标签：${item.tags.join(" / ")}</p>
+      <p>标签：${tags.join(" / ")}</p>
       <a href="${item.sourceUrl}" target="_blank" rel="noreferrer noopener">来源：${item.sourceName}</a>
     `;
     newsList.appendChild(card);
@@ -126,64 +65,75 @@ function getFilteredNews(newsItems) {
   const searchValue = searchInput.value.trim().toLowerCase();
   const selectedSort = sortFilter.value;
 
-  let filtered = newsItems.filter((item) => {
+  const filtered = newsItems.filter((item) => {
     const categoryMatch = selectedCategory === "all" || item.category === selectedCategory;
     const gradeMatch = selectedGrade === "all" || item.sourceGrade === selectedGrade;
-    const textBlob = `${item.title} ${item.summary} ${item.tags.join(" ")} ${item.sourceName}`.toLowerCase();
+    const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
+    const textBlob = `${item.title} ${item.summary} ${item.sourceName} ${tags}`.toLowerCase();
     const searchMatch = !searchValue || textBlob.includes(searchValue);
     return categoryMatch && gradeMatch && searchMatch;
   });
 
-  if (selectedSort === "latest") {
-    filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+  if (selectedSort === "importance") {
+    filtered.sort((a, b) => (b.importance || 0) - (a.importance || 0));
   } else {
-    filtered.sort((a, b) => b.importance - a.importance);
+    filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
   }
-
   return filtered;
 }
 
-function bindEvents() {
-  [categoryFilter, gradeFilter, sortFilter].forEach((el) =>
-    el.addEventListener("change", () => renderNews(getFilteredNews()))
-  );
-  searchInput.addEventListener("input", () => renderNews(getFilteredNews()));
+function updateKpis(newsItems) {
+  const total = newsItems.length;
+  const enterprise = newsItems.filter((i) => (i.tags || []).some((t) => String(t).toLowerCase().includes("enterprise"))).length;
+  const aGrade = newsItems.filter((i) => i.sourceGrade === "A").length;
+  const practice = newsItems.filter((i) => i.category === "Vibe/Prompt/Agent实战").length;
+
+  document.getElementById("kpiTotal").textContent = String(total);
+  document.getElementById("kpiEnterprise").textContent = String(enterprise);
+  document.getElementById("kpiAGrade").textContent = total ? `${Math.round((aGrade / total) * 100)}%` : "0%";
+  document.getElementById("kpiPractice").textContent = String(practice);
+}
+
+function bindEvents(newsItems) {
+  const render = () => renderNews(getFilteredNews(newsItems));
+  [categoryFilter, gradeFilter, sortFilter].forEach((el) => el.addEventListener("change", render));
+  searchInput.addEventListener("input", render);
   resetBtn.addEventListener("click", () => {
     categoryFilter.value = "all";
     gradeFilter.value = "all";
     sortFilter.value = "latest";
     searchInput.value = "";
-    renderNews(getFilteredNews());
+    render();
   });
 }
 
 async function renderSourcePools() {
-  const response = await fetch("./sources.json");
-  const sourceData = await response.json();
-
-  const fill = (id, list) => {
-    const ul = document.getElementById(id);
-    ul.innerHTML = "";
-    list.forEach((name) => {
-      const li = document.createElement("li");
-      li.textContent = name;
-      ul.appendChild(li);
-    });
-  };
-
-  fill("companySources", sourceData.companies);
-  fill("creatorSources", sourceData.creators);
-  fill("soloSources", sourceData.soloBuilders);
+  try {
+    const response = await fetch(SOURCES_ENDPOINT, { cache: "no-store" });
+    const sourceData = await response.json();
+    const fill = (id, list) => {
+      const ul = document.getElementById(id);
+      ul.innerHTML = "";
+      (list || []).forEach((name) => {
+        const li = document.createElement("li");
+        li.textContent = name;
+        ul.appendChild(li);
+      });
+    };
+    fill("companySources", sourceData.companies);
+    fill("creatorSources", sourceData.creators);
+    fill("soloSources", sourceData.soloBuilders);
+  } catch (_) {
+    // keep silent
+  }
 }
 
 async function loadNewsData() {
   try {
     const response = await fetch(DATA_ENDPOINT, { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`Failed to load ${DATA_ENDPOINT}: ${response.status}`);
-    }
+    if (!response.ok) throw new Error("load news failed");
     const data = await response.json();
-    return Array.isArray(data.items) ? data.items : fallbackNews;
+    return Array.isArray(data.items) && data.items.length ? data.items : fallbackNews;
   } catch (_) {
     return fallbackNews;
   }
@@ -192,22 +142,10 @@ async function loadNewsData() {
 async function init() {
   const newsItems = await loadNewsData();
   initCategoryOptions();
-  bindEventsForNews(newsItems);
+  updateKpis(newsItems);
+  bindEvents(newsItems);
   renderNews(getFilteredNews(newsItems));
   await renderSourcePools();
 }
 
-function bindEventsForNews(newsItems) {
-  [categoryFilter, gradeFilter, sortFilter].forEach((el) =>
-    el.addEventListener("change", () => renderNews(getFilteredNews(newsItems)))
-  );
-  searchInput.addEventListener("input", () => renderNews(getFilteredNews(newsItems)));
-  resetBtn.addEventListener("click", () => {
-    categoryFilter.value = "all";
-    gradeFilter.value = "all";
-    sortFilter.value = "latest";
-    searchInput.value = "";
-    renderNews(getFilteredNews(newsItems));
-  });
-}
 init();
