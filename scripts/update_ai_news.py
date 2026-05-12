@@ -39,6 +39,13 @@ OFFICIAL_RSS_SOURCES = [
         "tags": ["Hugging Face", "open-source", "practice"],
         "importance": 4,
     },
+    {
+        "name": "Microsoft AI Blog",
+        "url": "https://blogs.microsoft.com/ai/feed/",
+        "category": CORE_CATEGORY,
+        "tags": ["Microsoft AI", "official"],
+        "importance": 4,
+    },
 ]
 
 CREATOR_RSS_SOURCES = [
@@ -70,6 +77,13 @@ CREATOR_RSS_SOURCES = [
         "tags": ["Nathan Lambert", "research", "creator"],
         "importance": 5,
     },
+    {
+        "name": "The Batch",
+        "url": "https://www.deeplearning.ai/the-batch/feed/",
+        "category": CREATOR_CATEGORY,
+        "tags": ["deeplearning.ai", "newsletter", "creator"],
+        "importance": 4,
+    },
 ]
 
 GOOGLE_NEWS_QUERIES = [
@@ -80,6 +94,11 @@ GOOGLE_NEWS_QUERIES = [
     ("DeepSeek", "DeepSeek AI enterprise model", CORE_CATEGORY, ["DeepSeek", "enterprise"], 4),
     ("Alibaba Qwen", "Alibaba Qwen Tongyi enterprise AI", CORE_CATEGORY, ["Alibaba Qwen", "enterprise"], 4),
     ("Xiaomi AI", "Xiaomi AI model agent", CORE_CATEGORY, ["Xiaomi AI", "model"], 3),
+    ("Mistral AI", "Mistral AI enterprise model", CORE_CATEGORY, ["Mistral AI", "model"], 4),
+    ("Perplexity", "Perplexity AI enterprise search", CORE_CATEGORY, ["Perplexity", "search"], 3),
+    ("Runway", "Runway AI video model", CORE_CATEGORY, ["Runway", "video"], 3),
+    ("Cursor", "Cursor AI coding agent", PRACTICE_CATEGORY, ["Cursor", "coding", "agent"], 4),
+    ("Claude Code", "Claude Code agent coding workflow", PRACTICE_CATEGORY, ["Claude Code", "coding", "agent"], 4),
     ("Vibe Coding", "vibe coding agent prompt engineering", PRACTICE_CATEGORY, ["vibecoding", "prompt", "agent"], 5),
     ("Enterprise Agents", "enterprise AI agent workflow deployment", PRACTICE_CATEGORY, ["enterprise", "agent", "workflow"], 5),
 ]
@@ -162,6 +181,49 @@ def reading_score(grade, importance, category, body):
     if len(strip_html(body)) > 600:
         score += 10
     return min(score, 100)
+
+
+ZH_TERMS = {
+    "AI": "AI",
+    "agent": "智能体",
+    "agents": "智能体",
+    "model": "模型",
+    "models": "模型",
+    "enterprise": "企业应用",
+    "workflow": "工作流",
+    "deployment": "部署",
+    "coding": "编程",
+    "prompt": "提示词",
+    "open-source": "开源",
+    "research": "研究",
+    "inference": "推理",
+    "training": "训练",
+    "voice": "语音",
+    "video": "视频",
+    "search": "搜索",
+}
+
+
+def chinese_headline(title, source_name):
+    if re.search(r"[\u4e00-\u9fff]", title):
+        return title
+    compact = title[:140]
+    return "【{}】{}".format(source_name, compact)
+
+
+def chinese_summary(title, summary, tags):
+    tag_text = "、".join([ZH_TERMS.get(str(tag).lower(), str(tag)) for tag in tags[:4]]) or "AI"
+    return "这篇内容聚焦{}。原文要点：{} 建议重点关注它对产品、企业落地或个人工作流的启发。".format(tag_text, summary[:260])
+
+
+def chinese_points(points):
+    result = []
+    for point in points[:3]:
+        text = point
+        for en, zh in ZH_TERMS.items():
+            text = re.sub(r"\b{}\b".format(re.escape(en)), zh, text, flags=re.IGNORECASE)
+        result.append(text[:180])
+    return result
 
 
 def normalize_date(raw):
@@ -249,8 +311,11 @@ def parse_google_news(feed_text, query_name, category, tags, importance, limit):
 def make_item(title, date, source_name, link, grade, category, tags, importance, body="", image_url=""):
     return {
         "title": title,
+        "titleZh": chinese_headline(title, source_name),
         "summary": summarize_text(title, body, source_name),
+        "summaryZh": chinese_summary(title, summarize_text(title, body, source_name), tags),
         "keyPoints": key_points_from_text(title, body, tags),
+        "keyPointsZh": chinese_points(key_points_from_text(title, body, tags)),
         "imageUrl": image_url,
         "date": date,
         "sourceName": source_name,

@@ -19,6 +19,7 @@ test("loads readable monthly AI news cards", async ({ page }) => {
   await expect(page.locator(".card")).toHaveCountGreaterThan(20);
   await expect(page.locator(".key-points").first()).toBeVisible();
   await expect(page.locator(".visual").first()).toBeVisible();
+  await expect(page.locator(".original-title").first()).toBeVisible();
   await expect(page.locator("#kpiTotal")).not.toHaveText("-");
 });
 
@@ -33,16 +34,21 @@ test("filters creator articles", async ({ page }) => {
   await expect(page.locator(".card").first()).toContainText("核心AI博主");
 });
 
-test("time filter, search and reset work", async ({ page }) => {
-  await page.selectOption("#timeFilter", "7");
+test("source, date, search and reset work", async ({ page }) => {
+  await page.selectOption("#sourceFilter", { index: 1 });
   await expect(page.locator(".card").first()).toBeVisible();
 
+  await page.fill("#startDateFilter", "2026-05-01");
+  await page.fill("#endDateFilter", "2026-05-12");
+  await expect(page.locator(".card").first()).toBeVisible();
+
+  await page.click("#resetBtn");
   await page.fill("#searchInput", "OpenAI");
   await expect(page.locator(".card").first()).toContainText(/OpenAI/i);
 
   await page.click("#resetBtn");
   await expect(page.locator("#categoryFilter")).toHaveValue("all");
-  await expect(page.locator("#timeFilter")).toHaveValue("30");
+  await expect(page.locator("#sourceFilter")).toHaveValue("all");
   await expect(page.locator("#searchInput")).toHaveValue("");
   await expect(page.locator(".card")).toHaveCountGreaterThan(20);
 });

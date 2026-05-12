@@ -35,7 +35,9 @@ const categories = [TEXT.all, TEXT.coreCompany, TEXT.creator, TEXT.solo, TEXT.pr
 
 const categoryFilter = document.getElementById("categoryFilter");
 const gradeFilter = document.getElementById("gradeFilter");
-const timeFilter = document.getElementById("timeFilter");
+const sourceFilter = document.getElementById("sourceFilter");
+const startDateFilter = document.getElementById("startDateFilter");
+const endDateFilter = document.getElementById("endDateFilter");
 const sortFilter = document.getElementById("sortFilter");
 const searchInput = document.getElementById("searchInput");
 const resetBtn = document.getElementById("resetBtn");
@@ -60,6 +62,31 @@ function initCategoryOptions() {
     option.textContent = cat;
     categoryFilter.appendChild(option);
   });
+}
+
+function initSourceOptions(newsItems) {
+  const sources = Array.from(new Set(newsItems.map((item) => item.sourceName).filter(Boolean))).sort();
+  sourceFilter.innerHTML = "";
+  const allOption = document.createElement("option");
+  allOption.value = "all";
+  allOption.textContent = TEXT.all;
+  sourceFilter.appendChild(allOption);
+  sources.forEach((source) => {
+    const option = document.createElement("option");
+    option.value = source;
+    option.textContent = source;
+    sourceFilter.appendChild(option);
+  });
+}
+
+function initDateRange(newsItems) {
+  const dates = newsItems.map((item) => item.date).filter(Boolean).sort();
+  if (!dates.length) return;
+  const latest = dates[dates.length - 1];
+  const start = new Date(latest);
+  start.setDate(start.getDate() - 30);
+  startDateFilter.value = start.toISOString().slice(0, 10);
+  endDateFilter.value = latest;
 }
 
 function renderNews(items) {
@@ -87,9 +114,10 @@ function renderNews(items) {
       <div class="card-body">
         ${renderVisual(item)}
         <div class="card-copy">
-          <h3>${escapeHtml(item.title)}</h3>
-          <p>${escapeHtml(item.summary)}</p>
-          ${renderKeyPoints(item.keyPoints)}
+          <h3>${escapeHtml(item.titleZh || item.title)}</h3>
+          <p>${escapeHtml(item.summaryZh || item.summary)}</p>
+          ${renderKeyPoints(item.keyPointsZh || item.keyPoints)}
+          ${item.titleZh ? `<p class="original-title">Original: ${escapeHtml(item.title)}</p>` : ""}
           <p class="tagline">${TEXT.tags}: ${escapeHtml(tags.join(" / "))}</p>
           <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noreferrer noopener">${TEXT.source}: ${escapeHtml(item.sourceName)}</a>
         </div>
@@ -113,30 +141,34 @@ function renderKeyPoints(points) {
 }
 
 function inSelectedTimeRange(dateValue) {
-  if (!timeFilter || timeFilter.value === "all") return true;
-  const days = Number(timeFilter.value);
   const date = new Date(dateValue);
   if (Number.isNaN(date.getTime())) return false;
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - days);
-  return date >= cutoff;
+  if (startDateFilter.value && date < new Date(startDateFilter.value)) return false;
+  if (endDateFilter.value) {
+    const end = new Date(endDateFilter.value);
+    end.setHours(23, 59, 59, 999);
+    if (date > end) return false;
+  }
+  return true;
 }
 
 function getFilteredNews(newsItems) {
   const selectedCategory = categoryFilter.value;
   const selectedGrade = gradeFilter.value;
+  const selectedSource = sourceFilter.value;
   const searchValue = searchInput.value.trim().toLowerCase();
   const selectedSort = sortFilter.value;
 
   const filtered = newsItems.filter((item) => {
     const categoryMatch = selectedCategory === "all" || item.category === selectedCategory;
     const gradeMatch = selectedGrade === "all" || item.sourceGrade === selectedGrade;
+    const sourceMatch = selectedSource === "all" || item.sourceName === selectedSource;
     const timeMatch = inSelectedTimeRange(item.date);
     const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
     const keyPoints = Array.isArray(item.keyPoints) ? item.keyPoints.join(" ") : "";
-    const textBlob = `${item.title} ${item.summary} ${item.sourceName} ${tags} ${keyPoints}`.toLowerCase();
+    const textBlob = `${item.title} ${item.titleZh || ""} ${item.summary} ${item.summaryZh || ""} ${item.sourceName} ${tags} ${keyPoints}`.toLowerCase();
     const searchMatch = !searchValue || textBlob.includes(searchValue);
-    return categoryMatch && gradeMatch && timeMatch && searchMatch;
+    return categoryMatch && gradeMatch && sourceMatch && timeMatch && searchMatch;
   });
 
   if (selectedSort === "importance") {
@@ -161,12 +193,13 @@ function updateKpis(newsItems) {
 
 function bindEvents(newsItems) {
   const render = () => renderNews(getFilteredNews(newsItems));
-  [categoryFilter, gradeFilter, timeFilter, sortFilter].forEach((el) => el.addEventListener("change", render));
+  [categoryFilter, gradeFilter, sourceFilter, startDateFilter, endDateFilter, sortFilter].forEach((el) => el.addEventListener("change", render));
   searchInput.addEventListener("input", render);
   resetBtn.addEventListener("click", () => {
     categoryFilter.value = "all";
     gradeFilter.value = "all";
-    timeFilter.value = "30";
+    sourceFilter.value = "all";
+    initDateRange(newsItems);
     sortFilter.value = "latest";
     searchInput.value = "";
     render();
@@ -208,6 +241,8 @@ async function loadNewsData() {
 async function init() {
   const newsItems = await loadNewsData();
   initCategoryOptions();
+  initSourceOptions(newsItems);
+  initDateRange(newsItems);
   updateKpis(newsItems);
   bindEvents(newsItems);
   renderNews(getFilteredNews(newsItems));

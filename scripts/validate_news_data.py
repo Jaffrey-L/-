@@ -21,10 +21,12 @@ def main():
     for item in items:
         date = datetime.strptime(item["date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
         assert date >= cutoff, f"item is older than 30 days: {item['title']} ({item['date']})"
-        for field in ("title", "summary", "date", "sourceName", "sourceUrl", "sourceGrade", "category", "readingScore"):
+        for field in ("title", "titleZh", "summary", "summaryZh", "date", "sourceName", "sourceUrl", "sourceGrade", "category", "readingScore"):
             assert item.get(field), f"missing field {field}: {item}"
         assert len(item["summary"]) >= 40, f"summary is too short: {item['title']}"
+        assert len(item["summaryZh"]) >= 40, f"Chinese summary is too short: {item['title']}"
         assert isinstance(item.get("keyPoints"), list) and item["keyPoints"], f"missing key points: {item['title']}"
+        assert isinstance(item.get("keyPointsZh"), list) and item["keyPointsZh"], f"missing Chinese key points: {item['title']}"
 
     print(
         "PASS news data validation: "
