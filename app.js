@@ -60,9 +60,11 @@ const endDateFilter = document.getElementById("endDateFilter");
 const presetButtons = Array.from(document.querySelectorAll(".preset-btn"));
 const sortFilter = document.getElementById("sortFilter");
 const searchInput = document.getElementById("searchInput");
+const applyBtn = document.getElementById("applyBtn");
 const resetBtn = document.getElementById("resetBtn");
 const newsList = document.getElementById("newsList");
 const resultCount = document.getElementById("resultCount");
+let appliedFilters = null;
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -122,6 +124,30 @@ function initDateRange(newsItems, days = 30) {
   setActivePreset(String(days));
 }
 
+function readFilterControls() {
+  let startDate = startDateFilter.value || "";
+  let endDate = endDateFilter.value || "";
+  if (startDate && endDate && startDate > endDate) {
+    [startDate, endDate] = [endDate, startDate];
+    startDateFilter.value = startDate;
+    endDateFilter.value = endDate;
+  }
+  return {
+    category: categoryFilter.value,
+    grade: gradeFilter.value,
+    source: sourceFilter.value,
+    startDate,
+    endDate,
+    search: searchInput.value.trim().toLowerCase(),
+    sort: sortFilter.value
+  };
+}
+
+function applyCurrentFilters(newsItems) {
+  appliedFilters = readFilterControls();
+  renderNews(getFilteredNews(newsItems));
+}
+
 function renderNews(items) {
   newsList.innerHTML = "";
   resultCount.textContent = `${TEXT.countPrefix} ${items.length} ${TEXT.countSuffix}`;
@@ -174,41 +200,33 @@ function renderKeyPoints(points) {
   return `<ul class="key-points">${points.slice(0, 3).map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>`;
 }
 
-function inSelectedTimeRange(dateValue) {
-  const date = new Date(`${dateValue}T00:00:00`);
-  if (Number.isNaN(date.getTime())) return false;
-  if (startDateFilter.value && date < new Date(`${startDateFilter.value}T00:00:00`)) return false;
-  if (endDateFilter.value) {
-    const end = new Date(`${endDateFilter.value}T00:00:00`);
-    end.setHours(23, 59, 59, 999);
-    if (date > end) return false;
-  }
+function inSelectedTimeRange(dateValue, filters) {
+  const date = String(dateValue || "").slice(0, 10);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return false;
+  if (filters.startDate && date < filters.startDate) return false;
+  if (filters.endDate && date > filters.endDate) return false;
   return true;
 }
 
 function getFilteredNews(newsItems) {
-  const selectedCategory = categoryFilter.value;
-  const selectedGrade = gradeFilter.value;
-  const selectedSource = sourceFilter.value;
-  const searchValue = searchInput.value.trim().toLowerCase();
-  const selectedSort = sortFilter.value;
+  const filters = appliedFilters || readFilterControls();
 
   const filtered = newsItems.filter((item) => {
-    const categoryMatch = selectedCategory === "all" || item.category === selectedCategory;
-    const gradeMatch = selectedGrade === "all" || item.sourceGrade === selectedGrade;
-    const sourceMatch = selectedSource === "all" || item.sourceName === selectedSource;
-    const timeMatch = inSelectedTimeRange(item.date);
+    const categoryMatch = filters.category === "all" || item.category === filters.category;
+    const gradeMatch = filters.grade === "all" || item.sourceGrade === filters.grade;
+    const sourceMatch = filters.source === "all" || item.sourceName === filters.source;
+    const timeMatch = inSelectedTimeRange(item.date, filters);
     const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
     const keyPoints = Array.isArray(item.keyPoints) ? item.keyPoints.join(" ") : "";
     const textBlob = `${item.title} ${item.titleZh || ""} ${item.summary} ${item.summaryZh || ""} ${item.sourceName} ${tags} ${keyPoints}`.toLowerCase();
-    const searchMatch = !searchValue || textBlob.includes(searchValue);
+    const searchMatch = !filters.search || textBlob.includes(filters.search);
     return categoryMatch && gradeMatch && sourceMatch && timeMatch && searchMatch;
   });
 
-  if (selectedSort === "importance") {
+  if (filters.sort === "importance") {
     filtered.sort((a, b) => (b.importance || 0) - (a.importance || 0));
   } else {
-    filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+    filtered.sort((a, b) => String(b.date).localeCompare(String(a.date)));
   }
   return filtered;
 }
@@ -226,19 +244,29 @@ function updateKpis(newsItems) {
 }
 
 function bindEvents(newsItems) {
-  const render = () => renderNews(getFilteredNews(newsItems));
-  [categoryFilter, gradeFilter, sourceFilter, startDateFilter, endDateFilter, sortFilter].forEach((el) => el.addEventListener("change", render));
+  const markManualDate = () => setActivePreset("");
   [startDateFilter, endDateFilter].forEach((el) => el.addEventListener("input", () => {
-    setActivePreset("");
-    render();
+    markManualDate();
   }));
   presetButtons.forEach((button) => {
     button.addEventListener("click", () => {
       initDateRange(newsItems, button.dataset.days);
-      render();
     });
   });
-  searchInput.addEventListener("input", render);
+  document.querySelectorAll(".date-picker-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const input = document.getElementById(button.dataset.target);
+      if (input && typeof input.showPicker === "function") {
+        input.showPicker();
+      } else if (input) {
+        input.focus();
+      }
+    });
+  });
+  applyBtn.addEventListener("click", () => applyCurrentFilters(newsItems));
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") applyCurrentFilters(newsItems);
+  });
   resetBtn.addEventListener("click", () => {
     categoryFilter.value = "all";
     gradeFilter.value = "all";
@@ -246,7 +274,7 @@ function bindEvents(newsItems) {
     initDateRange(newsItems, 30);
     sortFilter.value = "latest";
     searchInput.value = "";
-    render();
+    applyCurrentFilters(newsItems);
   });
 }
 
@@ -289,6 +317,7 @@ async function init() {
   initDateRange(newsItems);
   updateKpis(newsItems);
   bindEvents(newsItems);
+  appliedFilters = readFilterControls();
   renderNews(getFilteredNews(newsItems));
   await renderSourcePools();
 }

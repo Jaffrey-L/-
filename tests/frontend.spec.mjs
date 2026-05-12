@@ -27,27 +27,40 @@ test("loads readable monthly AI news cards", async ({ page }) => {
 
 test("filters A-grade sources", async ({ page }) => {
   await page.selectOption("#gradeFilter", "A");
+  await page.click("#applyBtn");
   await expect(page.locator(".card").first()).toBeVisible();
   await expect(page.locator(".card").filter({ hasNotText: "A\u7ea7\u4fe1\u6e90" })).toHaveCount(0);
 });
 
 test("filters creator articles", async ({ page }) => {
   await page.selectOption("#categoryFilter", "\u6838\u5fc3AI\u535a\u4e3b");
+  await page.click("#applyBtn");
   await expect(page.locator(".card").first()).toContainText("\u6838\u5fc3AI\u535a\u4e3b");
 });
 
 test("source, date, search and reset work", async ({ page }) => {
+  const initialCount = await page.locator(".card").count();
   await page.selectOption("#sourceFilter", { index: 1 });
+  await expect(page.locator(".card")).toHaveCount(initialCount);
+  await page.click("#applyBtn");
   await expect(page.locator(".card").first()).toBeVisible();
 
   await page.click('[data-days="7"]');
   await expect(page.locator('[data-days="7"]')).toHaveClass(/active/);
-  await page.fill("#startDateFilter", "2026-05-01");
-  await page.fill("#endDateFilter", "2026-05-12");
   await expect(page.locator(".card").first()).toBeVisible();
+  await page.click("#applyBtn");
+  await expect(page.locator(".card").first()).toBeVisible();
+
+  await page.fill("#startDateFilter", "2099-01-01");
+  await page.fill("#endDateFilter", "2099-01-02");
+  await expect(page.locator(".card").first()).toBeVisible();
+  await page.click("#applyBtn");
+  await expect(page.locator(".empty")).toBeVisible();
 
   await page.click("#resetBtn");
   await page.fill("#searchInput", "OpenAI");
+  await expect(page.locator(".card")).toHaveCountGreaterThan(20);
+  await page.click("#applyBtn");
   await expect(page.locator(".card").first()).toContainText(/OpenAI/i);
 
   await page.click("#resetBtn");
@@ -60,12 +73,15 @@ test("source, date, search and reset work", async ({ page }) => {
 
 test("practice category remains usable", async ({ page }) => {
   await page.selectOption("#categoryFilter", "Vibe/Prompt/Agent\u5b9e\u6218");
+  await page.click("#applyBtn");
   await expect(page.locator(".card").first()).toContainText("Vibe/Prompt/Agent\u5b9e\u6218");
 });
 
 test("date fields use native date picker controls", async ({ page }) => {
   await expect(page.locator("#startDateFilter")).toHaveAttribute("type", "date");
   await expect(page.locator("#endDateFilter")).toHaveAttribute("type", "date");
+  await expect(page.locator('[data-target="startDateFilter"]')).toBeVisible();
+  await expect(page.locator('[data-target="endDateFilter"]')).toBeVisible();
 });
 
 test("desktop layout keeps filters left of stream", async ({ page }) => {

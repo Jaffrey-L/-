@@ -120,11 +120,32 @@ select, input, button {
   border-radius: 10px;
   font-family: inherit;
 }
+.date-field {
+  display: grid;
+  grid-template-columns: 1fr 72px;
+  gap: 6px;
+  align-items: end;
+}
+.date-field input,
+.date-field button { margin-top: 6px; }
+.date-picker-btn {
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #16223a;
+  color: var(--ink);
+  border-color: var(--line);
+}
 button {
   cursor: pointer;
   color: #071220;
   font-weight: 700;
   background: linear-gradient(130deg, var(--mint), #5aa8ff);
+}
+#applyBtn { margin-top: 14px; }
+#resetBtn {
+  background: #0b1327;
+  color: var(--ink);
+  border-color: var(--line);
 }
 
 .stream-header {
