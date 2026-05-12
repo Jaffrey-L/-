@@ -16,17 +16,21 @@ def main():
     assert any(item.get("sourceGrade") == "B" for item in items), "expected at least one B-grade source"
     assert any("enterprise" in [str(tag).lower() for tag in item.get("tags", [])] for item in items), "expected enterprise-tagged content"
     assert any(item.get("category") == "Vibe/Prompt/Agent实战" for item in items), "expected practice category content"
+    assert any(item.get("category") == "核心AI博主" for item in items), "expected creator/blogger content"
 
     for item in items:
         date = datetime.strptime(item["date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
         assert date >= cutoff, f"item is older than 30 days: {item['title']} ({item['date']})"
-        for field in ("title", "summary", "date", "sourceName", "sourceUrl", "sourceGrade", "category"):
+        for field in ("title", "summary", "date", "sourceName", "sourceUrl", "sourceGrade", "category", "readingScore"):
             assert item.get(field), f"missing field {field}: {item}"
+        assert len(item["summary"]) >= 40, f"summary is too short: {item['title']}"
+        assert isinstance(item.get("keyPoints"), list) and item["keyPoints"], f"missing key points: {item['title']}"
 
     print(
         "PASS news data validation: "
         f"{len(items)} items, "
         f"{sum(1 for i in items if i['sourceGrade'] == 'A')} A-grade, "
+        f"{sum(1 for i in items if i['category'] == '核心AI博主')} creator items, "
         f"{sum(1 for i in items if i['category'] == 'Vibe/Prompt/Agent实战')} practice items."
     )
 

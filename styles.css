@@ -120,7 +120,7 @@ button {
   border: 1px solid #1e2f4e;
   border-left: 4px solid #2d4e85;
   border-radius: 10px;
-  padding: 10px;
+  padding: 12px;
 }
 .meta {
   display: flex;
@@ -135,9 +135,32 @@ button {
 .grade-B { color: var(--gold); border-color: var(--gold); }
 .grade-C { color: var(--red); border-color: var(--red); }
 
+.card-body { display: grid; grid-template-columns: 150px 1fr; gap: 12px; align-items: start; }
+.visual {
+  display: grid;
+  place-items: center;
+  width: 150px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1f3b34, #16233e);
+  color: var(--mint);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card h3 { margin: 0; font-size: 1.02rem; line-height: 1.4; }
 .card p { margin: 8px 0; color: #c5d1eb; }
 .card a { color: #8dccff; text-decoration: none; }
+.key-points {
+  margin: 8px 0;
+  padding-left: 18px;
+  color: #d7e2fa;
+}
+.key-points li { margin: 3px 0; }
+.tagline { color: var(--muted) !important; font-size: 0.9rem; }
 
 .sources { margin-top: 14px; }
 .source-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
@@ -149,4 +172,6 @@ footer { color: var(--muted); padding: 14px 0 24px; }
 @media (max-width: 1024px) {
   .overview, .layout, .source-groups { grid-template-columns: 1fr; }
   .filters { position: static; max-height: none; }
+  .card-body { grid-template-columns: 1fr; }
+  .visual { width: 100%; max-height: 180px; }
 }

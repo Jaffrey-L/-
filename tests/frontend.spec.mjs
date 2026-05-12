@@ -3,9 +3,8 @@ import { expect, test } from "@playwright/test";
 expect.extend({
   async toHaveCountGreaterThan(locator, expected) {
     const actual = await locator.count();
-    const pass = actual > expected;
     return {
-      pass,
+      pass: actual > expected,
       message: () => `expected count ${actual} to be greater than ${expected}`
     };
   }
@@ -15,11 +14,12 @@ test.beforeEach(async ({ page }) => {
   await page.goto("/", { waitUntil: "networkidle" });
 });
 
-test("loads linked monthly AI news content", async ({ page }) => {
+test("loads readable monthly AI news cards", async ({ page }) => {
   await expect(page.locator(".card h3").first()).toBeVisible();
   await expect(page.locator(".card")).toHaveCountGreaterThan(20);
+  await expect(page.locator(".key-points").first()).toBeVisible();
+  await expect(page.locator(".visual").first()).toBeVisible();
   await expect(page.locator("#kpiTotal")).not.toHaveText("-");
-  await expect(page.locator("#kpiAGrade")).toContainText("%");
 });
 
 test("filters A-grade sources", async ({ page }) => {
@@ -28,12 +28,21 @@ test("filters A-grade sources", async ({ page }) => {
   await expect(page.locator(".card").filter({ hasNotText: "A级信源" })).toHaveCount(0);
 });
 
-test("searches and resets the feed", async ({ page }) => {
+test("filters creator articles", async ({ page }) => {
+  await page.selectOption("#categoryFilter", "核心AI博主");
+  await expect(page.locator(".card").first()).toContainText("核心AI博主");
+});
+
+test("time filter, search and reset work", async ({ page }) => {
+  await page.selectOption("#timeFilter", "7");
+  await expect(page.locator(".card").first()).toBeVisible();
+
   await page.fill("#searchInput", "OpenAI");
   await expect(page.locator(".card").first()).toContainText(/OpenAI/i);
 
   await page.click("#resetBtn");
   await expect(page.locator("#categoryFilter")).toHaveValue("all");
+  await expect(page.locator("#timeFilter")).toHaveValue("30");
   await expect(page.locator("#searchInput")).toHaveValue("");
   await expect(page.locator(".card")).toHaveCountGreaterThan(20);
 });

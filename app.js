@@ -12,7 +12,9 @@ const TEXT = {
   gradeSuffix: "\u7ea7\u4fe1\u6e90",
   importance: "\u91cd\u8981\u5ea6",
   tags: "\u6807\u7b7e",
-  source: "\u6765\u6e90"
+  source: "\u6765\u6e90",
+  readingScore: "\u53ef\u8bfb\u6027",
+  keyPoints: "\u8981\u70b9"
 };
 
 const fallbackNews = [
@@ -33,6 +35,7 @@ const categories = [TEXT.all, TEXT.coreCompany, TEXT.creator, TEXT.solo, TEXT.pr
 
 const categoryFilter = document.getElementById("categoryFilter");
 const gradeFilter = document.getElementById("gradeFilter");
+const timeFilter = document.getElementById("timeFilter");
 const sortFilter = document.getElementById("sortFilter");
 const searchInput = document.getElementById("searchInput");
 const resetBtn = document.getElementById("resetBtn");
@@ -78,15 +81,45 @@ function renderNews(items) {
         <span class="chip">${escapeHtml(item.category)}</span>
         <span class="chip grade-${escapeHtml(item.sourceGrade)}">${escapeHtml(item.sourceGrade)}${TEXT.gradeSuffix}</span>
         <span class="chip">${TEXT.importance} ${escapeHtml(item.importance || 0)}</span>
+        <span class="chip">${TEXT.readingScore} ${escapeHtml(item.readingScore || 0)}</span>
         <span>${escapeHtml(item.date)}</span>
       </div>
-      <h3>${escapeHtml(item.title)}</h3>
-      <p>${escapeHtml(item.summary)}</p>
-      <p>${TEXT.tags}: ${escapeHtml(tags.join(" / "))}</p>
-      <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noreferrer noopener">${TEXT.source}: ${escapeHtml(item.sourceName)}</a>
+      <div class="card-body">
+        ${renderVisual(item)}
+        <div class="card-copy">
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.summary)}</p>
+          ${renderKeyPoints(item.keyPoints)}
+          <p class="tagline">${TEXT.tags}: ${escapeHtml(tags.join(" / "))}</p>
+          <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noreferrer noopener">${TEXT.source}: ${escapeHtml(item.sourceName)}</a>
+        </div>
+      </div>
     `;
     newsList.appendChild(card);
   });
+}
+
+function renderVisual(item) {
+  if (item.imageUrl) {
+    return `<a class="visual" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer noopener"><img src="${escapeHtml(item.imageUrl)}" alt=""></a>`;
+  }
+  const initials = String(item.sourceName || "AI").slice(0, 2).toUpperCase();
+  return `<a class="visual visual-fallback" href="${escapeHtml(item.sourceUrl || "#")}" target="_blank" rel="noreferrer noopener">${escapeHtml(initials)}</a>`;
+}
+
+function renderKeyPoints(points) {
+  if (!Array.isArray(points) || !points.length) return "";
+  return `<ul class="key-points">${points.slice(0, 3).map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>`;
+}
+
+function inSelectedTimeRange(dateValue) {
+  if (!timeFilter || timeFilter.value === "all") return true;
+  const days = Number(timeFilter.value);
+  const date = new Date(dateValue);
+  if (Number.isNaN(date.getTime())) return false;
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - days);
+  return date >= cutoff;
 }
 
 function getFilteredNews(newsItems) {
@@ -98,10 +131,12 @@ function getFilteredNews(newsItems) {
   const filtered = newsItems.filter((item) => {
     const categoryMatch = selectedCategory === "all" || item.category === selectedCategory;
     const gradeMatch = selectedGrade === "all" || item.sourceGrade === selectedGrade;
+    const timeMatch = inSelectedTimeRange(item.date);
     const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
-    const textBlob = `${item.title} ${item.summary} ${item.sourceName} ${tags}`.toLowerCase();
+    const keyPoints = Array.isArray(item.keyPoints) ? item.keyPoints.join(" ") : "";
+    const textBlob = `${item.title} ${item.summary} ${item.sourceName} ${tags} ${keyPoints}`.toLowerCase();
     const searchMatch = !searchValue || textBlob.includes(searchValue);
-    return categoryMatch && gradeMatch && searchMatch;
+    return categoryMatch && gradeMatch && timeMatch && searchMatch;
   });
 
   if (selectedSort === "importance") {
@@ -126,11 +161,12 @@ function updateKpis(newsItems) {
 
 function bindEvents(newsItems) {
   const render = () => renderNews(getFilteredNews(newsItems));
-  [categoryFilter, gradeFilter, sortFilter].forEach((el) => el.addEventListener("change", render));
+  [categoryFilter, gradeFilter, timeFilter, sortFilter].forEach((el) => el.addEventListener("change", render));
   searchInput.addEventListener("input", render);
   resetBtn.addEventListener("click", () => {
     categoryFilter.value = "all";
     gradeFilter.value = "all";
+    timeFilter.value = "30";
     sortFilter.value = "latest";
     searchInput.value = "";
     render();
