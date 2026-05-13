@@ -20,6 +20,7 @@ test("loads readable monthly AI news cards", async ({ page }) => {
   await expect(page.locator(".card")).toHaveCountGreaterThan(20);
   await expect(page.locator(".key-points").first()).toBeVisible();
   await expect(page.locator(".visual").first()).toBeVisible();
+  await expect(page.locator(".chip").filter({ hasText: /技术更新|重要功能更新|AI应用方法/ }).first()).toBeVisible();
   await expect(page.locator(".read-more-note").first()).toContainText("\u5982\u679c\u611f\u5174\u8da3\u8bf7\u70b9\u51fb\u67e5\u770b\u539f\u6587");
   await expect(page.locator(".original-title")).toHaveCount(0);
   await expect(page.locator("#kpiTotal")).not.toHaveText("-");

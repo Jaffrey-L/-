@@ -17,7 +17,8 @@ CREATOR_CATEGORY = "\u6838\u5fc3AI\u535a\u4e3b"
 SOLO_CATEGORY = "AI\u4e2a\u4eba\u516c\u53f8\u5927\u795e"
 PRACTICE_CATEGORY = "Vibe/Prompt/Agent\u5b9e\u6218"
 LOOKBACK_DAYS = 30
-MAX_ITEMS = 120
+MAX_ITEMS = 90
+MIN_QUALITY_SCORE = 30
 
 RSS_SOURCES = [
     {"name": "OpenAI", "url": "https://openai.com/news/rss.xml", "category": CORE_CATEGORY, "tags": ["OpenAI", "official"], "importance": 5},
@@ -42,6 +43,39 @@ EXTRA_QUERIES = [
 ]
 
 BLOCKED_TITLE_KEYWORDS = ["lawsuit", "shoot", "celebrity", "stock price prediction", "price target"]
+LOW_VALUE_SIGNALS = [
+    "award", "awards", "conference", "event", "webinar", "podcast", "interview", "quote", "quoting",
+    "workforce reduction", "hiring", "appointed", "joins", "stock", "shares", "funding", "raises",
+    "partnership announced", "press release", "opinion", "policy statement",
+]
+LOW_VALUE_TITLE_SIGNALS = [
+    "quoting ", "quote ", "workforce reduction", "breaking my brain", "chemical hygiene",
+    "animals vs ghosts", "podcast", "interview", "event recap", "conference recap",
+]
+QUALITY_SIGNALS = {
+    "technical_update": [
+        "api", "sdk", "model", "benchmark", "architecture", "inference", "training", "eval", "evaluation",
+        "embedding", "embeddings", "reasoning", "context window", "multimodal", "tool use", "function calling",
+        "open weights", "fine-tuning", "dataset", "latency", "throughput", "memory", "token", "rlhf",
+        "distillation", "rag", "retrieval", "vector", "agent", "agents", "computer use", "code", "coding",
+    ],
+    "feature_update": [
+        "launch", "launches", "released", "release", "introduces", "announces", "adds", "available",
+        "rollout", "beta", "general availability", "ga", "upgrade", "new feature", "connector",
+        "integration", "enterprise", "workspace", "assistant", "copilot", "deep research", "operator",
+    ],
+    "application_method": [
+        "how to", "guide", "tutorial", "workflow", "playbook", "case study", "best practice", "lessons",
+        "implementation", "build", "building", "deploy", "deployment", "prompt", "prompting",
+        "vibe coding", "agent workflow", "automation", "use case", "practical", "hands-on",
+    ],
+}
+QUALITY_LABELS_ZH = {
+    "technical_update": "\u6280\u672f\u66f4\u65b0",
+    "feature_update": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
+    "application_method": "AI\u5e94\u7528\u65b9\u6cd5",
+    "general": "\u4e00\u822c\u52a8\u6001",
+}
 ZH_TERMS = {
     "ai": "AI", "agent": "\u667a\u80fd\u4f53", "agents": "\u667a\u80fd\u4f53", "model": "\u6a21\u578b", "models": "\u6a21\u578b",
     "enterprise": "\u4f01\u4e1a\u5e94\u7528", "workflow": "\u5de5\u4f5c\u6d41", "deployment": "\u90e8\u7f72", "coding": "\u7f16\u7a0b",
@@ -114,6 +148,43 @@ def is_recent(date_str):
 def is_relevant(title):
     lowered = title.lower()
     return not any(keyword in lowered for keyword in BLOCKED_TITLE_KEYWORDS)
+
+
+def count_signals(text, signals):
+    lowered = text.lower()
+    return sum(1 for signal in signals if signal in lowered)
+
+
+def quality_profile(title, summary, body, tags, category, grade):
+    text = " ".join([title or "", summary or "", strip_html(body)])
+    title_text = (title or "").lower()
+    signal_counts = {name: count_signals(text, signals) for name, signals in QUALITY_SIGNALS.items()}
+    best_type = max(signal_counts, key=signal_counts.get)
+    positive_hits = sum(signal_counts.values())
+    low_hits = count_signals(text, LOW_VALUE_SIGNALS)
+    title_low_hit = any(signal in title_text for signal in LOW_VALUE_TITLE_SIGNALS)
+
+    score = positive_hits * 18 - low_hits * 18
+    if category == PRACTICE_CATEGORY:
+        score += 24
+    if category == CREATOR_CATEGORY and best_type in ("technical_update", "application_method"):
+        score += 16
+    if grade == "A":
+        score += 8
+    if len(strip_html(body)) > 700:
+        score += 8
+    if title_low_hit:
+        score -= 45
+    if positive_hits == 0:
+        best_type = "general"
+    return {
+        "qualityScore": max(0, min(score, 100)),
+        "qualityType": best_type,
+        "qualityLabelZh": QUALITY_LABELS_ZH.get(best_type, QUALITY_LABELS_ZH["general"]),
+        "qualitySignals": signal_counts,
+        "lowValueSignals": low_hits,
+        "titleLowValue": title_low_hit,
+    }
 
 
 def summarize_text(title, body, source_name):
@@ -193,7 +264,7 @@ def chinese_points(points, tags):
     return result
 
 
-def reading_score(grade, importance, category, body):
+def reading_score(grade, importance, category, body, quality_score):
     score = importance * 12
     if grade == "A":
         score += 20
@@ -201,12 +272,14 @@ def reading_score(grade, importance, category, body):
         score += 15
     if len(strip_html(body)) > 600:
         score += 10
+    score += int(quality_score * 0.35)
     return min(score, 100)
 
 
 def make_item(title, date, source_name, link, grade, category, tags, importance, body="", image_url="", publisher=""):
     summary = summarize_text(title, body, source_name)
     points = key_points_from_text(body, tags)
+    quality = quality_profile(title, summary, body, tags, category, grade)
     return {
         "title": title,
         "titleZh": chinese_headline(title, source_name, tags),
@@ -222,14 +295,23 @@ def make_item(title, date, source_name, link, grade, category, tags, importance,
         "sourceGrade": grade,
         "category": category,
         "contentType": "article" if category in (CREATOR_CATEGORY, SOLO_CATEGORY) else "news",
-        "readingScore": reading_score(grade, importance, category, body),
+        "readingScore": reading_score(grade, importance, category, body, quality["qualityScore"]),
         "tags": tags,
         "importance": importance,
+        **quality,
     }
 
 
 def keep_item(item):
-    return bool(item["title"] and item["sourceUrl"] and is_recent(item["date"]) and is_relevant(item["title"]))
+    return bool(
+        item["title"]
+        and item["sourceUrl"]
+        and is_recent(item["date"])
+        and is_relevant(item["title"])
+        and item.get("qualityScore", 0) >= MIN_QUALITY_SCORE
+        and item.get("qualityType") != "general"
+        and not item.get("titleLowValue")
+    )
 
 
 def parse_feed_items(feed_text, source_name, category, grade, tags, importance, limit):
@@ -295,10 +377,10 @@ def collect_rss():
 
 def source_query(name, category):
     if category == CORE_CATEGORY:
-        return '"{}" AI model agent enterprise official'.format(name)
+        return '"{}" AI model agent enterprise API release feature update'.format(name)
     if category == CREATOR_CATEGORY:
-        return '"{}" AI LLM agent prompt coding'.format(name)
-    return '"{}" AI startup founder product'.format(name)
+        return '"{}" AI LLM agent prompt coding workflow guide'.format(name)
+    return '"{}" AI startup product workflow automation case study'.format(name)
 
 
 def collect_google_news(source_pool, coverage):
@@ -351,11 +433,16 @@ def main():
     items, coverage = collect_rss()
     items.extend(collect_google_news(source_pool, coverage))
     items = dedupe(items)
-    items.sort(key=lambda x: (x["date"], x["readingScore"], x["sourceGrade"] == "A", x["importance"]), reverse=True)
+    items.sort(key=lambda x: (x["date"], x["qualityScore"], x["readingScore"], x["sourceGrade"] == "A", x["importance"]), reverse=True)
 
     payload = {
         "updatedAt": datetime.now(timezone.utc).isoformat(),
         "lookbackDays": LOOKBACK_DAYS,
+        "qualityPolicy": {
+            "minQualityScore": MIN_QUALITY_SCORE,
+            "preferredTypes": QUALITY_LABELS_ZH,
+            "blockedLowValueSignals": LOW_VALUE_SIGNALS,
+        },
         "policy": {
             "A": "Official RSS, official blog, or first-party source.",
             "B": "Google News query for a tracked source or reputable media/newsletter source.",

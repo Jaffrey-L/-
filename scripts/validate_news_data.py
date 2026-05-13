@@ -8,6 +8,7 @@ SOURCES_FILE = ROOT / "sources.json"
 CREATOR_CATEGORY = "\u6838\u5fc3AI\u535a\u4e3b"
 PRACTICE_CATEGORY = "Vibe/Prompt/Agent\u5b9e\u6218"
 SOLO_CATEGORY = "AI\u4e2a\u4eba\u516c\u53f8\u5927\u795e"
+PREFERRED_QUALITY_TYPES = {"technical_update", "feature_update", "application_method"}
 
 
 def main():
@@ -26,12 +27,18 @@ def main():
     assert any(item.get("category") == PRACTICE_CATEGORY for item in items), "expected practice category content"
     assert any(item.get("category") == CREATOR_CATEGORY for item in items), "expected creator/blogger content"
     assert any(item.get("sourceName") == "Andrej Karpathy" for item in items) or "Andrej Karpathy" in coverage, "expected Andrej Karpathy to be tracked"
+    assert sum(1 for item in items if item.get("qualityType") in PREFERRED_QUALITY_TYPES) >= int(len(items) * 0.85), "expected most items to be high-value technical/feature/method content"
+    assert any(item.get("qualityType") == "technical_update" for item in items), "expected technical update content"
+    assert any(item.get("qualityType") == "feature_update" for item in items), "expected feature update content"
+    assert any(item.get("qualityType") == "application_method" for item in items), "expected AI application method content"
 
     for item in items:
         date = datetime.strptime(item["date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
         assert date >= cutoff, f"item is older than 30 days: {item['title']} ({item['date']})"
-        for field in ("title", "titleZh", "summary", "summaryZh", "date", "sourceName", "sourceUrl", "sourceGrade", "category", "readingScore"):
+        for field in ("title", "titleZh", "summary", "summaryZh", "date", "sourceName", "sourceUrl", "sourceGrade", "category", "readingScore", "qualityScore", "qualityType", "qualityLabelZh"):
             assert item.get(field), f"missing field {field}: {item}"
+        assert item["qualityType"] in PREFERRED_QUALITY_TYPES, f"low-value item leaked into feed: {item['title']} ({item['qualityType']})"
+        assert item["qualityScore"] >= 30, f"quality score too low: {item['title']} ({item['qualityScore']})"
         assert len(item["summary"]) >= 40, f"summary is too short: {item['title']}"
         assert len(item["summaryZh"]) >= 40, f"Chinese summary is too short: {item['title']}"
         assert isinstance(item.get("keyPoints"), list) and item["keyPoints"], f"missing key points: {item['title']}"
@@ -45,7 +52,10 @@ def main():
         f"{sum(1 for i in items if i['sourceGrade'] == 'A')} A-grade, "
         f"{sum(1 for i in items if i['category'] == CREATOR_CATEGORY)} creator items, "
         f"{sum(1 for i in items if i['category'] == PRACTICE_CATEGORY)} practice items, "
-        f"{sum(1 for i in items if i['category'] == SOLO_CATEGORY)} solo-builder items."
+        f"{sum(1 for i in items if i['category'] == SOLO_CATEGORY)} solo-builder items, "
+        f"{sum(1 for i in items if i['qualityType'] == 'technical_update')} technical, "
+        f"{sum(1 for i in items if i['qualityType'] == 'feature_update')} feature, "
+        f"{sum(1 for i in items if i['qualityType'] == 'application_method')} method."
     )
 
 

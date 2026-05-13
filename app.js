@@ -14,6 +14,7 @@ const TEXT = {
   tags: "\u6807\u7b7e",
   source: "\u6765\u6e90",
   readingScore: "\u53ef\u8bfb\u6027",
+  qualityScore: "\u8d28\u91cf\u5206",
   keyPoints: "\u8981\u70b9",
   readMoreNote: "\u5982\u679c\u611f\u5174\u8da3\u8bf7\u70b9\u51fb\u67e5\u770b\u539f\u6587"
 };
@@ -169,6 +170,8 @@ function renderNews(items) {
         <span class="chip grade-${escapeHtml(item.sourceGrade)}">${escapeHtml(item.sourceGrade)}${TEXT.gradeSuffix}</span>
         <span class="chip">${TEXT.importance} ${escapeHtml(item.importance || 0)}</span>
         <span class="chip">${TEXT.readingScore} ${escapeHtml(item.readingScore || 0)}</span>
+        <span class="chip quality-${escapeHtml(item.qualityType || "general")}">${escapeHtml(item.qualityLabelZh || "\u4e00\u822c\u52a8\u6001")}</span>
+        <span class="chip">${TEXT.qualityScore} ${escapeHtml(item.qualityScore || 0)}</span>
         <span>${escapeHtml(item.date)}</span>
       </div>
       <div class="card-body">

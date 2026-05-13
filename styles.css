@@ -176,6 +176,10 @@ button {
 .grade-A { color: var(--mint); border-color: var(--mint); }
 .grade-B { color: var(--gold); border-color: var(--gold); }
 .grade-C { color: var(--red); border-color: var(--red); }
+.quality-technical_update { color: #8dccff; border-color: #3a9ef7; }
+.quality-feature_update { color: var(--mint); border-color: var(--mint); }
+.quality-application_method { color: #d9b8ff; border-color: #9b6ee8; }
+.quality-general { color: var(--muted); border-color: var(--line); }
 
 .card-body { display: grid; grid-template-columns: 150px 1fr; gap: 12px; align-items: start; }
 .visual {
