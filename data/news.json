@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-13T03:58:13.090947+00:00",
+  "updatedAt": "2026-05-13T14:49:53.691200+00:00",
   "lookbackDays": 30,
   "qualityPolicy": {
     "minQualityScore": 30,
@@ -42,7 +42,7 @@
     "OpenAI": {
       "rss": "https://openai.com/news/rss.xml",
       "rssItems": 6,
-      "googleItems": 2,
+      "googleItems": 1,
       "status": "ok"
     },
     "NVIDIA": {
@@ -198,7 +198,7 @@
     "Databricks AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 1,
+      "googleItems": 2,
       "status": "ok"
     },
     "Snowflake AI": {
@@ -210,7 +210,7 @@
     "Salesforce AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 2,
+      "googleItems": 1,
       "status": "ok"
     },
     "Oracle AI": {
@@ -456,7 +456,7 @@
     "Vibe Coding": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 2,
+      "googleItems": 3,
       "status": "ok"
     },
     "Enterprise Agents": {
@@ -546,37 +546,74 @@
       "titleLowValue": false
     },
     {
-      "title": "Using LLM in the shebang line of a script",
-      "titleZh": "\u3010Simon Willison\u3011Simon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "TIL: Using LLM in the shebang line of a script Kim_Bruning on Hacker News : But seriously, you can put a shebang on an english text file now (if you're sufficiently brave) [...] This inspired me to look at patterns for doing exactly that with LLM . Here's the simplest, which takes advantage of LLM fragments : #!/usr/bin/env -S llm -f Generate an SVG of a pelican riding a bicycle But you can also incorporate tool call",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaSimon Willison\uff0c\u805a\u7126Simon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Coupa Launches AI Agent Orchestration Platform for Procurement and Supply Chains",
+      "titleZh": "\u3010Enterprise Agents\u3011\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "Coupa Launches AI Agent Orchestration Platform for Procurement and Supply Chains AIM Media House",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaEnterprise Agents\uff0c\u805a\u7126\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Tags: llm , llm-tool-use , llms , ai , generative-ai"
+        "Coupa Launches AI Agent Orchestration Platform for Procurement and Supply Chains AIM Media House"
       ],
       "keyPointsZh": [
-        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002"
+        "Coupa Launches AI \u667a\u80fd\u4f53 Orchestration Platform \u9762\u5411 Procurement \u4ee5\u53ca Supply Chains AIM Media House"
       ],
       "imageUrl": "",
       "date": "2026-05-13",
-      "sourceName": "Simon Willison",
-      "publisher": "",
-      "sourceUrl": "https://simonwillison.net/2026/May/11/llm-shebang/#atom-everything",
-      "sourceGrade": "A",
-      "category": "\u6838\u5fc3AI\u535a\u4e3b",
-      "contentType": "article",
+      "sourceName": "Enterprise Agents",
+      "publisher": "AIM Media House",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVUlzZmdES1VwZzN4TDNQNzNBMXh6aHI3QTVQVW1GSV9IZzFtV0NHSDl2WUpWWnhkNTlTVEVfUThReUpzcVMzVUVLeUJ6YTRQdWZEVzFYU0p4UjJSbDU3S0o1TWZDSnRqTkl5WFdBR1BZZDE5WS1ISlppcXZ1dEp2M090eHowdlZmblBUdzh0TWd1VEFRVnBjUDZhMkF6UFUtTDJFMlRGUExJVUpud0prUkVjS0ozTG9mZ2xGVUtKbw?oc=5",
+      "sourceGrade": "B",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
+      "contentType": "news",
       "readingScore": 100,
       "tags": [
-        "Simon Willison",
-        "llm-engineering",
-        "creator"
+        "enterprise",
+        "agent",
+        "workflow"
       ],
       "importance": 5,
-      "qualityScore": 100,
+      "qualityScore": 78,
+      "qualityType": "feature_update",
+      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 2,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false
+    },
+    {
+      "title": "How the New Claude Code Agent View Changes Development",
+      "titleZh": "\u3010Claude Code\u3011Claude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "How the New Claude Code Agent View Changes Development from Claude Code. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaClaude Code\uff0c\u805a\u7126Claude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "How the New Claude Code Agent View Changes Development Geeky Gadgets"
+      ],
+      "keyPointsZh": [
+        "How the New Claude Code \u667a\u80fd\u4f53 View Changes Development Geeky Gadgets"
+      ],
+      "imageUrl": "",
+      "date": "2026-05-13",
+      "sourceName": "Claude Code",
+      "publisher": "Geeky Gadgets",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB5SjMwdFBoVDQzMFhEcFlIMmVDbU1sOTNXV0ZQVjlESzd1Y1RibmhPaERmX0JPeUtiaExEbUx6MmRHVm8xcEVWeWhpUFpZcTFwRjJFY1EybU4yendpLXdUWXFNUElIRXJBcllfbQ?oc=5",
+      "sourceGrade": "B",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
+      "contentType": "news",
+      "readingScore": 90,
+      "tags": [
+        "Claude Code",
+        "coding",
+        "agent"
+      ],
+      "importance": 4,
+      "qualityScore": 78,
       "qualityType": "technical_update",
       "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 4,
-        "feature_update": 0,
+        "technical_update": 2,
+        "feature_update": 1,
         "application_method": 0
       },
       "lowValueSignals": 0,
@@ -659,37 +696,37 @@
       "titleLowValue": false
     },
     {
-      "title": "UiPath Expands Its Automation Platform to Support AI Coding Agents Across the Enterprise",
-      "titleZh": "\u3010Claude Code\u3011Claude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "UiPath Expands Its Automation Platform to Support AI Coding Agents Across the Enterprise Unite.AI",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaClaude Code\uff0c\u805a\u7126Claude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "CSP Allow-list Experiment",
+      "titleZh": "\u3010Simon Willison\u3011Simon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "Tool: CSP Allow-list Experiment An experiment that shows that you can load an app in a CSP-protected sandboxed iframe (see previous note ) and have a custom fetch() that intercepts CSP errors and passes them up to the parent window... which can then prompt the user to add that domain to an allow-list and then refresh the page.",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaSimon Willison\uff0c\u805a\u7126Simon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "UiPath Expands Its Automation Platform to Support AI Coding Agents Across the Enterprise Unite.AI"
+        "which can then prompt the user to add that domain to an allow-list and then refresh the page."
       ],
       "keyPointsZh": [
-        "UiPath Expands Its Automation Platform to Support AI \u7f16\u7a0b \u667a\u80fd\u4f53 Across the \u4f01\u4e1a\u5e94\u7528 Unite.AI"
+        "which can then \u63d0\u793a\u8bcd the user to add that domain to an allow-list \u4ee5\u53ca then refresh the page."
       ],
-      "imageUrl": "",
-      "date": "2026-05-12",
-      "sourceName": "Claude Code",
-      "publisher": "Unite.AI",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQWG5IVEo1WS1USXF1dVNyQk04cFA2VnFfdWtNOUpUUGtEYXJxQmdGbGtiVndqeVN1SWZUT0xjQ0ROWXh3MnJCb1A4UXB6RFpQcHF5NDllSndmZ3lnejI4YUdUOXMwWU5UbmZUNW1SV1R5M3pPUTRjVi1NR2tYRTYwUGYyTXhMNWZpTVZSS2JwVUJ6Y2pNNzNLMV9QS21EYm1WU0gyZ1loUzBxUnp0dXZR?oc=5",
-      "sourceGrade": "B",
-      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
-      "contentType": "news",
-      "readingScore": 98,
+      "imageUrl": "https://static.simonwillison.net/static/2026/csp-allow.jpg",
+      "date": "2026-05-13",
+      "sourceName": "Simon Willison",
+      "publisher": "",
+      "sourceUrl": "https://simonwillison.net/2026/May/13/csp-allow/#atom-everything",
+      "sourceGrade": "A",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 100,
       "tags": [
-        "Claude Code",
-        "coding",
-        "agent"
+        "Simon Willison",
+        "llm-engineering",
+        "creator"
       ],
-      "importance": 4,
-      "qualityScore": 100,
+      "importance": 5,
+      "qualityScore": 60,
       "qualityType": "technical_update",
       "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 3,
-        "feature_update": 1,
+        "technical_update": 1,
+        "feature_update": 0,
         "application_method": 1
       },
       "lowValueSignals": 0,
@@ -1376,42 +1413,6 @@
       "titleLowValue": false
     },
     {
-      "title": "OpenAI launches new voice intelligence features in its API",
-      "titleZh": "\u3010OpenAI\u3011OpenAI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "OpenAI launches new voice intelligence features in its API from OpenAI. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaOpenAI\uff0c\u805a\u7126OpenAI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "OpenAI launches new voice intelligence features in its API The Tech Buzz"
-      ],
-      "keyPointsZh": [
-        "OpenAI launches new \u8bed\u97f3 intelligence features in its API The Tech Buzz"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-07",
-      "sourceName": "OpenAI",
-      "publisher": "The Tech Buzz",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQNDNTV2xJajZLYWg1a0NtQnhDdUVGemp4UzNBYVQ2V1ZvVVlMZG9sbDl5eGEzRkV1OEhRRWU3ajBhNWlCVEN1cER1cl90OWlUX2ZvVlVjUU9iLTgtNU1haVFjQjJYd1FETUFyWThxdHFNSjgyWVhBSVJNUmJkTG54VC1UbjJNYVozRDFhbFFSeUNBdXBhSlE?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 78,
-      "tags": [
-        "OpenAI",
-        "enterprise"
-      ],
-      "importance": 5,
-      "qualityScore": 54,
-      "qualityType": "feature_update",
-      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 1,
-        "feature_update": 2,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false
-    },
-    {
       "title": "Notes from inside China's AI labs",
       "titleZh": "\u3010Interconnects\u3011Nathan Lambert\u3001\u7814\u7a76\u3001\u535a\u4e3b\u89c2\u70b9\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
       "summary": "Notes from inside China's AI labs from Interconnects. Useful for deciding whether the original article deserves a deeper read.",
@@ -1442,6 +1443,47 @@
       "qualityLabelZh": "AI\u5e94\u7528\u65b9\u6cd5",
       "qualitySignals": {
         "technical_update": 0,
+        "feature_update": 0,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false
+    },
+    {
+      "title": "I Vibe-Coded a Complex Data Visualization and Analysis Dashboard. Here\u2019s What I Learned.",
+      "titleZh": "\u3010Vibe Coding\u3011Vibe Coding\u3001\u63d0\u793a\u8bcd\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "I Vibe-Coded a Complex Data Visualization and Analysis Dashboard. Here\u2019s What I Learned. from Vibe Coding. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaVibe Coding\uff0c\u805a\u7126Vibe Coding\u3001\u63d0\u793a\u8bcd\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Focus: vibecoding, prompt, agent",
+        "Worth reading for practical context and source details.",
+        "Open the original article for full evidence and nuance."
+      ],
+      "keyPointsZh": [
+        "Focus: Vibe \u7f16\u7a0b, \u63d0\u793a\u8bcd, \u667a\u80fd\u4f53",
+        "Worth reading \u9762\u5411 practical context \u4ee5\u53ca source details.",
+        "Open the original article \u9762\u5411 full evidence \u4ee5\u53ca nuance."
+      ],
+      "imageUrl": "",
+      "date": "2026-05-06",
+      "sourceName": "Vibe Coding",
+      "publisher": "Generative AI in the Newsroom",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPLUp4NVA5Tm9oQUU2S3l3RzExTTlia01DZzExMFp5M0YxLUg1TDBleC1waWtVaWNubFQ0TVVpR19ac3dZSjA5dFRtbmg4SnNLZ3EtaFlMa21fLVhZZmRJSS1pblZPUnI1QjhUTlJpYW5nV1hocWVzc3MtNFlVbkxkNWhsSkJwTHRMVE40bU1qVWZsN0lzMEl5ZFNWcHZQQndKam1WTnpSYXREcjlRXzdLTFNfLXBMdE14TmxnRFR6QU9aa1dGUmJveWEyd1NBdw?oc=5",
+      "sourceGrade": "B",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
+      "contentType": "news",
+      "readingScore": 100,
+      "tags": [
+        "vibecoding",
+        "prompt",
+        "agent"
+      ],
+      "importance": 5,
+      "qualityScore": 78,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 2,
         "feature_update": 0,
         "application_method": 1
       },
@@ -1525,36 +1567,36 @@
       "titleLowValue": false
     },
     {
-      "title": "Agent-guided workflows to accelerate model customization in Amazon SageMaker AI | Artificial Intelligence",
-      "titleZh": "\u3010Claude Code\u3011Claude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "Agent-guided workflows to accelerate model customization in Amazon SageMaker AI | Artificial Intelligence Amazon Web Services (AWS)",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaClaude Code\uff0c\u805a\u7126Claude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Agentic AI vs Generative AI: Comparing Autonomy, Workflows, and Use Cases",
+      "titleZh": "\u3010Enterprise Agents\u3011\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "Agentic AI vs Generative AI: Comparing Autonomy, Workflows, and Use Cases Databricks",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaEnterprise Agents\uff0c\u805a\u7126\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Agent-guided workflows to accelerate model customization in Amazon SageMaker AI | Artificial Intelligence Amazon Web Services (AWS)"
+        "Agentic AI vs Generative AI: Comparing Autonomy, Workflows, and Use Cases Databricks"
       ],
       "keyPointsZh": [
-        "\u667a\u80fd\u4f53-guided workflows to accelerate \u6a21\u578b customization in Amazon SageMaker AI | Artificial Intelligence Amazon Web Services (AWS)"
+        "Agentic AI vs Generative AI: Comparing Autonomy, Workflows, \u4ee5\u53ca Use Cases Databricks"
       ],
       "imageUrl": "",
       "date": "2026-05-04",
-      "sourceName": "Claude Code",
-      "publisher": "Amazon Web Services (AWS)",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMlhzSFFIc3VTc3pldWZzTE1aeG1nSTRxYlpSVW5IUFhZNno0VklIUFA2ZWJBOTZmQTZIb3ZFV2FqTm4xTUhUZzN6anJOdGN1MENndGIwVU1YOWNLUXlrTU1ZVHBjUGlCNGZtbkp5czZFb2dZVjZKdzhNU2hyQlAxeWtJNmhGVFZBdDVXNDBpOWZRTHZEazZYVGZMTE1mbFQ5SDhnM2N5ekVWMWFMWlVOZTViUTl6SU1rODZGeUxoOGtiYmgw?oc=5",
+      "sourceName": "Enterprise Agents",
+      "publisher": "Databricks",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1PQWE1TGtnR3lfaGVpcU5HMUtiNG5kRFhVcFBhTGt1ck5McllUT3ZySWhiZ21QQk1UMHkxUy0wRnd6VHZoR1VxaWxPUWh1dGNxQUs4YVF1ZzQwRkRfeVNod0w1Vy1wdDl4WXNn?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
       "contentType": "news",
-      "readingScore": 96,
+      "readingScore": 100,
       "tags": [
-        "Claude Code",
-        "coding",
-        "agent"
+        "enterprise",
+        "agent",
+        "workflow"
       ],
-      "importance": 4,
-      "qualityScore": 96,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "importance": 5,
+      "qualityScore": 78,
+      "qualityType": "application_method",
+      "qualityLabelZh": "AI\u5e94\u7528\u65b9\u6cd5",
       "qualitySignals": {
-        "technical_update": 2,
+        "technical_update": 1,
         "feature_update": 0,
         "application_method": 2
       },
@@ -1640,40 +1682,40 @@
       "titleLowValue": false
     },
     {
-      "title": "WRITER Launches Event-Based Triggers To Enable Autonomous Enterprise AI Agents",
-      "titleZh": "\u3010Enterprise Agents\u3011\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "WRITER Launches Event-Based Triggers To Enable Autonomous Enterprise AI Agents Pulse 2.0",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaEnterprise Agents\uff0c\u805a\u7126\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "AI coding assistant goes rogue and deletes user data and backup",
+      "titleZh": "\u3010Cursor\u3011Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "AI coding assistant goes rogue and deletes user data and backup from Cursor. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaCursor\uff0c\u805a\u7126Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "WRITER Launches Event-Based Triggers To Enable Autonomous Enterprise AI Agents Pulse 2.0"
+        "AI coding assistant goes rogue and deletes user data and backup TechRadar"
       ],
       "keyPointsZh": [
-        "WRITER Launches Event-Based Triggers To Enable Autonomous \u4f01\u4e1a\u5e94\u7528 AI \u667a\u80fd\u4f53 Pulse 2.0"
+        "AI \u7f16\u7a0b assistant goes rogue \u4ee5\u53ca deletes user data \u4ee5\u53ca backup TechRadar"
       ],
       "imageUrl": "",
-      "date": "2026-04-30",
-      "sourceName": "Enterprise Agents",
-      "publisher": "Pulse 2.0",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxON0doVFVqUFJyaXRNaGNMVU1iTlJGU0NpLXViM1dCTzQydTFEWjVaMDdVdWRHVGM0X2w3TkpEVHBoeE1EQTRmOVQwS090RExHYVJoaW1oWURnZlZLeWw4Z3FMQzZaYWVRQkZnRVFhc1FNcGd3Nkk4b3pESWc0V3Zlald3ZFdnY2Vyc0lsX2JtUGZTY29EVGJFeTBLTUVrcUnSAaQBQVVfeXFMUFVfUjRpWTZZLV9hY2JpYXU2QUs3N2hzMjdvUFlsQ2tiU3FZYzRENnpqU3hheDlpR3oxeEIxVUtuUXNHci1tUm1OUHFMblU0Mi1iZUwtdHd0eC1ZUmhXVm9SZWRUNjJNUXZwOEFjWDFEQXd5OENnaV9GbjBOcnlhX2gzRE9ZMl9Ocm5MTG1FRFJYb3FoelFTT0pnamZHX180NUI4VGU?oc=5",
+      "date": "2026-05-02",
+      "sourceName": "Cursor",
+      "publisher": "TechRadar",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOMnpiX2FxM0lYTFp6cnhJQTZQOTFxN0ZjWlM4eXZXTXUtcFo0cGE5bFVINmt1cEIwQkFQSDVEbENqdEdwb00yejF3emlnVkd6NlNqekhtTFl1eUFVUmJGdEV5bm5pOWVDMUFnamdhaG1lek9HTVRMUFZaTmdNRGl0N0FNVklzbmxKRGE1S1phU1dLVUp6M19tdi1fUGpXX3hDN2pmaW56RWhiUzdJUlZKOUltLUhJUEhlbjB0ZU9HQ2lzbW9HeDFSb3V5TlR6QnBRLThmMTFLZHRGdHFRZ29Tc1dFamRyT0lCUmo3SUtlRDhsYmVtYlQ1VFVrYkxRcFZVTUkwcHFUSVVReHg0dVpwQl91UGJhZU1PNWZR?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
       "contentType": "news",
-      "readingScore": 100,
+      "readingScore": 84,
       "tags": [
-        "enterprise",
-        "agent",
-        "workflow"
+        "Cursor",
+        "coding",
+        "agent"
       ],
-      "importance": 5,
-      "qualityScore": 96,
-      "qualityType": "feature_update",
-      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
+      "importance": 4,
+      "qualityScore": 60,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 2,
-        "feature_update": 3,
+        "technical_update": 1,
+        "feature_update": 1,
         "application_method": 0
       },
-      "lowValueSignals": 1,
+      "lowValueSignals": 0,
       "titleLowValue": false
     },
     {
@@ -1791,82 +1833,6 @@
         "technical_update": 1,
         "feature_update": 0,
         "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false
-    },
-    {
-      "title": "'I violated every principle I was given': AI agent deleted software company's database. It may not be AI's fault",
-      "titleZh": "\u3010Cursor\u3011Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "'I violated every principle I was given': AI agent deleted software company's database.",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaCursor\uff0c\u805a\u7126Cursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "'I violated every principle I was given': AI agent deleted software company's database.",
-        "It may not be AI's fault Fast Company"
-      ],
-      "keyPointsZh": [
-        "'I violated every principle I was given': AI \u667a\u80fd\u4f53 deleted software company's database.",
-        "\u53ef\u4f18\u5148\u5173\u6ce8\u5176\u5bf9\u4f01\u4e1a\u5e94\u7528\u3001Agent \u5de5\u4f5c\u6d41\u6216\u5b9e\u6218\u65b9\u6cd5\u7684\u542f\u53d1\u3002"
-      ],
-      "imageUrl": "",
-      "date": "2026-04-28",
-      "sourceName": "Cursor",
-      "publisher": "Fast Company",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTXBaWGRFSWVqYUtuMDIyZHgwdFNEVWxaOFpFUFJEanFrWndiWDF0NXF5d21Odm8yNE02RGJHZ0FhVVR6WlN6bXB4c1NCZ2NTSjl1aTZsRlNJOTdCZ29xN2VHdGUzdG5PdzlwNzN4WkRvelZfdF8tQnhfVlV2aVJZWVhIY014anBabFpxNmc0elNZalB0UkhkZmQ0aG9KdldWNENxR05OX0pfSVhsZmZHNHd2NA?oc=5",
-      "sourceGrade": "B",
-      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
-      "contentType": "news",
-      "readingScore": 77,
-      "tags": [
-        "Cursor",
-        "coding",
-        "agent"
-      ],
-      "importance": 4,
-      "qualityScore": 42,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 1,
-        "feature_update": 0,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false
-    },
-    {
-      "title": "Inside one of the first production deployments of Lakebase: LangGuard's agentic workflow governance engine",
-      "titleZh": "\u3010Enterprise Agents\u3011\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "Inside one of the first production deployments of Lakebase: LangGuard's agentic workflow governance engine Databricks",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaEnterprise Agents\uff0c\u805a\u7126\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Inside one of the first production deployments of Lakebase: LangGuard's agentic workflow governance engine Databricks"
-      ],
-      "keyPointsZh": [
-        "Inside one of the first production deployments of Lakebase: LangGuard's agentic \u5de5\u4f5c\u6d41 governance engine Databricks"
-      ],
-      "imageUrl": "",
-      "date": "2026-04-27",
-      "sourceName": "Enterprise Agents",
-      "publisher": "Databricks",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVmR1YmhfWThsN3dFUWZtWUppMW1zZUNpZ0xtY0pNVVlnTWc0RXdWR2tOdlNSWVJNQlI4ZjNXdlplM0lZTGZVeTB1c2d1RUJ2MElCQkswRHUyU25iNWVfY2dSX3ZwSndiWDcxVEl5QXBaN082M3pPVDUxVndUSjVHS3BKVElNb3MwOURZbWFndTZYazdfRGIzRmE1REZkR1pDX2NCMTU5dEF6cklLbFRtYnhPdG8tSHNGdkpRQlVIRnQwQU9Y?oc=5",
-      "sourceGrade": "B",
-      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
-      "contentType": "news",
-      "readingScore": 100,
-      "tags": [
-        "enterprise",
-        "agent",
-        "workflow"
-      ],
-      "importance": 5,
-      "qualityScore": 96,
-      "qualityType": "application_method",
-      "qualityLabelZh": "AI\u5e94\u7528\u65b9\u6cd5",
-      "qualitySignals": {
-        "technical_update": 1,
-        "feature_update": 0,
-        "application_method": 3
       },
       "lowValueSignals": 0,
       "titleLowValue": false
@@ -2058,37 +2024,78 @@
       "titleLowValue": false
     },
     {
-      "title": "CRM: AI Shift to Autonomous Agents and Self-Driving Software [In-Depth Analysis] [2026]",
-      "titleZh": "\u3010Salesforce AI\u3011Salesforce AI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
-      "summary": "CRM: AI Shift to Autonomous Agents and Self-Driving Software [In-Depth Analysis] [2026] Klover.ai",
-      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaSalesforce AI\uff0c\u805a\u7126Salesforce AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Claude Code vs Cursor: Which Should You Use?",
+      "titleZh": "\u3010Claude Code\u3011Claude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "Claude Code vs Cursor: Which Should You Use? from Claude Code. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaClaude Code\uff0c\u805a\u7126Claude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "CRM: AI Shift to Autonomous Agents and Self-Driving Software [In-Depth Analysis] [2026] Klover.ai"
+        "Focus: Claude Code, coding, agent",
+        "Worth reading for practical context and source details.",
+        "Open the original article for full evidence and nuance."
       ],
       "keyPointsZh": [
-        "CRM: AI Shift to Autonomous \u667a\u80fd\u4f53 \u4ee5\u53ca Self-Driving Software [In-Depth Analysis] [2026] Klover.AI"
+        "Focus: Claude Code, \u7f16\u7a0b, \u667a\u80fd\u4f53",
+        "Worth reading \u9762\u5411 practical context \u4ee5\u53ca source details.",
+        "Open the original article \u9762\u5411 full evidence \u4ee5\u53ca nuance."
       ],
       "imageUrl": "",
-      "date": "2026-04-23",
-      "sourceName": "Salesforce AI",
-      "publisher": "Klover.ai",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZkVnV1NPUUVjRU1FbXFoTWsxemg1bE1seHoyZHFzeWltWmJrLWF4LW1nRmlvaEs0NlBINUQ5ZjFldkpfVDNOTEpLT29xa21jZHh0UnpQaXh0eFkydjdDdUE0bDNhR0R2c21IUTVURW5jcXNBUk9tb1lJV3hhWFdZaEI1QS1sXzhEckpGYVhIb3psYkdBUDZYTDVpM245MUJiR1JWTDdaMA?oc=5",
+      "date": "2026-04-24",
+      "sourceName": "Claude Code",
+      "publisher": "wiz.io",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ucFdnWmVvcHZwNlN0WlZZSmZtZ2gwcUlheVNXT2RhVHJuMTItOURyWXNWZXpxQ0RXWUFJTURfU0RpQW5PRWNsaHdsZzk4bzB5ZU5pRzBDQmh6cGVfWUdwQlhZX1Vha2wtT2RKRw?oc=5",
       "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
       "contentType": "news",
-      "readingScore": 72,
+      "readingScore": 77,
       "tags": [
-        "Salesforce AI",
-        "enterprise"
+        "Claude Code",
+        "coding",
+        "agent"
       ],
-      "importance": 5,
-      "qualityScore": 36,
+      "importance": 4,
+      "qualityScore": 42,
       "qualityType": "technical_update",
       "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 2,
+        "technical_update": 1,
         "feature_update": 0,
         "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false
+    },
+    {
+      "title": "AI App Development: Guide To Building AI-Powered Apps",
+      "titleZh": "\u3010Databricks AI\u3011Databricks AI\u3001\u4f01\u4e1a\u5e94\u7528\u76f8\u5173\u524d\u6cbf\u52a8\u6001",
+      "summary": "AI App Development: Guide To Building AI-Powered Apps from Databricks AI. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u8fd9\u7bc7\u5185\u5bb9\u6765\u81eaDatabricks AI\uff0c\u805a\u7126Databricks AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u539f\u6587\u6807\u9898\u548c\u6458\u8981\u8bc6\u522b\u51fa\u76f8\u5173\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165\u8fd1 30 \u5929 AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u91cd\u70b9\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "AI App Development: Guide To Building AI-Powered Apps Databricks"
+      ],
+      "keyPointsZh": [
+        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002"
+      ],
+      "imageUrl": "",
+      "date": "2026-04-23",
+      "sourceName": "Databricks AI",
+      "publisher": "Databricks",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ENXRkZlBHWFFkTlVBRkN2NTNaZ2hVcFJ4X2FYcWtpdE9xMEZkUlJ3Y2hPT2s2RUZIMmtjSzNhWEcybVlIdkdZVHloWUlsUnpGdmU4Sm1UTnVOZHJLamdr?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 78,
+      "tags": [
+        "Databricks AI",
+        "enterprise"
+      ],
+      "importance": 5,
+      "qualityScore": 54,
+      "qualityType": "application_method",
+      "qualityLabelZh": "AI\u5e94\u7528\u65b9\u6cd5",
+      "qualitySignals": {
+        "technical_update": 0,
+        "feature_update": 0,
+        "application_method": 3
       },
       "lowValueSignals": 0,
       "titleLowValue": false
