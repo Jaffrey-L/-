@@ -76,17 +76,17 @@ body::before {
 }
 
 .hero {
-  margin-top: 28px;
-  padding: 36px 38px 34px;
+  margin-top: 16px;
+  padding: 20px 24px 18px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 290px;
-  gap: 36px;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 24px;
   align-items: stretch;
   background:
     linear-gradient(90deg, rgba(255,253,248,0.98), rgba(255,253,248,0.9)),
     radial-gradient(circle at 80% 10%, rgba(11,156,168,0.16), transparent 36%);
   border: 1px solid rgba(255, 255, 255, 0.88);
-  border-radius: 36px;
+  border-radius: 24px;
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -94,18 +94,18 @@ body::before {
 .hero::before {
   content: "";
   position: absolute;
-  inset: 18px;
+  inset: 14px;
   pointer-events: none;
   border: 1px solid rgba(17, 17, 17, 0.06);
-  border-radius: 24px;
+  border-radius: 20px;
 }
 
 .hero::after {
   content: "";
   position: absolute;
-  right: 360px;
-  top: 36px;
-  bottom: 36px;
+  right: 296px;
+  top: 28px;
+  bottom: 28px;
   width: 1px;
   background: linear-gradient(to bottom, transparent, var(--hairline-strong), transparent);
 }
@@ -114,9 +114,9 @@ body::before {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   color: var(--cyan);
-  font-size: 0.76rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -131,40 +131,40 @@ body::before {
 
 h1 {
   margin: 0;
-  max-width: 780px;
+  max-width: 600px;
   color: var(--ink);
   font-family: "Newsreader", "Noto Sans SC", serif;
-  font-size: clamp(4.4rem, 8.4vw, 8.4rem);
-  line-height: 0.78;
-  letter-spacing: -0.065em;
+  font-size: clamp(2.8rem, 4.4vw, 4.7rem);
+  line-height: 0.94;
+  letter-spacing: -0.045em;
   word-spacing: 0.08em;
 }
 
 .hero p {
-  max-width: 820px;
-  margin: 24px 0 0;
+  max-width: 760px;
+  margin: 12px 0 0;
   color: var(--ink-soft);
-  font-size: 1.07rem;
-  line-height: 1.9;
+  font-size: 0.94rem;
+  line-height: 1.62;
 }
 
 .badges {
   display: grid;
   align-content: end;
   gap: 12px;
-  padding: 18px;
+  padding: 14px;
   color: #fffaf0;
   background:
     linear-gradient(150deg, #141414, #22313b 62%, #0f5a60),
     radial-gradient(circle at 30% 20%, rgba(183,128,53,0.7), transparent 36%);
-  border-radius: 24px;
+  border-radius: 20px;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
 }
 
 .badges::before {
   content: "LIVE SIGNAL";
   color: rgba(255, 250, 240, 0.52);
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 800;
   letter-spacing: 0.22em;
 }
@@ -173,9 +173,9 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 14px;
-  padding: 11px 0;
+  padding: 8px 0;
   color: #fffaf0;
-  font-size: 0.9rem;
+  font-size: 0.78rem;
   font-weight: 800;
   border-top: 1px solid rgba(255,255,255,0.16);
 }
@@ -191,7 +191,7 @@ h1 {
 }
 
 .overview {
-  margin-top: 18px;
+  margin-top: 14px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
@@ -199,8 +199,8 @@ h1 {
 
 .kpi {
   position: relative;
-  min-height: 128px;
-  padding: 18px;
+  min-height: 100px;
+  padding: 15px 17px;
   background: var(--paper);
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 24px;
@@ -230,10 +230,10 @@ h1 {
 
 .kpi strong {
   display: block;
-  margin-top: 12px;
+  margin-top: 8px;
   color: var(--ink);
   font-family: "Newsreader", "Noto Sans SC", serif;
-  font-size: 3rem;
+  font-size: 2.35rem;
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
