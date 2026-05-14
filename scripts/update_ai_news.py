@@ -3,7 +3,7 @@ import re
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from html import unescape
 from pathlib import Path
@@ -16,8 +16,8 @@ CORE_CATEGORY = "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb"
 CREATOR_CATEGORY = "\u6838\u5fc3AI\u535a\u4e3b"
 SOLO_CATEGORY = "AI\u4e2a\u4eba\u516c\u53f8\u5927\u795e"
 PRACTICE_CATEGORY = "Vibe/Prompt/Agent\u5b9e\u6218"
-LOOKBACK_DAYS = 30
-MAX_ITEMS = 90
+YEAR_START = "2026-01-01"
+MAX_ITEMS = 500
 MIN_QUALITY_SCORE = 30
 
 RSS_SOURCES = [
@@ -101,7 +101,8 @@ def fetch_text(url):
 
 
 def google_news_rss(query):
-    encoded = urllib.parse.quote_plus(query)
+    ytd_query = "{} after:{}".format(query, YEAR_START)
+    encoded = urllib.parse.quote_plus(ytd_query)
     return "https://news.google.com/rss/search?q={}&hl=en-US&gl=US&ceid=US:en".format(encoded)
 
 
@@ -137,12 +138,13 @@ def normalize_date(raw):
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
-def is_recent(date_str):
+def is_in_scope(date_str):
     try:
         published = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
     except ValueError:
         return False
-    return published >= datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)
+    start = datetime.strptime(YEAR_START, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    return start <= published <= datetime.now(timezone.utc)
 
 
 def is_relevant(title):
@@ -306,7 +308,7 @@ def keep_item(item):
     return bool(
         item["title"]
         and item["sourceUrl"]
-        and is_recent(item["date"])
+        and is_in_scope(item["date"])
         and is_relevant(item["title"])
         and item.get("qualityScore", 0) >= MIN_QUALITY_SCORE
         and item.get("qualityType") != "general"
@@ -364,7 +366,7 @@ def collect_rss():
     for source in RSS_SOURCES:
         coverage[source["name"]] = {"rss": source["url"], "rssItems": 0, "googleItems": 0, "status": "pending"}
         try:
-            parsed = parse_feed_items(fetch_text(source["url"]), source["name"], source["category"], "A", source["tags"], source["importance"], limit=8)
+            parsed = parse_feed_items(fetch_text(source["url"]), source["name"], source["category"], "A", source["tags"], source["importance"], limit=40)
             parsed = [item for item in parsed if keep_item(item)]
             coverage[source["name"]]["rssItems"] = len(parsed)
             coverage[source["name"]]["status"] = "ok"
@@ -401,7 +403,7 @@ def collect_google_news(source_pool, coverage):
         seen_specs.add(key)
         coverage.setdefault(name, {"rss": "", "rssItems": 0, "googleItems": 0, "status": "pending"})
         try:
-            parsed = parse_google_news(fetch_text(google_news_rss(query)), name, category, tags, importance, limit=3)
+            parsed = parse_google_news(fetch_text(google_news_rss(query)), name, category, tags, importance, limit=8)
             parsed = [item for item in parsed if keep_item(item)]
             coverage[name]["googleItems"] = coverage[name].get("googleItems", 0) + len(parsed)
             if coverage[name].get("status") in ("pending", ""):
@@ -437,7 +439,8 @@ def main():
 
     payload = {
         "updatedAt": datetime.now(timezone.utc).isoformat(),
-        "lookbackDays": LOOKBACK_DAYS,
+        "yearStart": YEAR_START,
+        "coverageWindow": "YTD",
         "qualityPolicy": {
             "minQualityScore": MIN_QUALITY_SCORE,
             "preferredTypes": QUALITY_LABELS_ZH,

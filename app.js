@@ -112,6 +112,12 @@ function initDateRange(newsItems, days = 30) {
   const dates = newsItems.map((item) => item.date).filter(Boolean).sort();
   if (!dates.length) return;
   const latest = dates[dates.length - 1];
+  if (days === "year") {
+    startDateFilter.value = `${latest.slice(0, 4)}-01-01`;
+    endDateFilter.value = latest;
+    setActivePreset("year");
+    return;
+  }
   if (days === "all") {
     startDateFilter.value = "";
     endDateFilter.value = "";
@@ -274,7 +280,7 @@ function bindEvents(newsItems) {
     categoryFilter.value = "all";
     gradeFilter.value = "all";
     sourceFilter.value = "all";
-    initDateRange(newsItems, 30);
+    initDateRange(newsItems, "year");
     sortFilter.value = "latest";
     searchInput.value = "";
     applyCurrentFilters(newsItems);
@@ -317,7 +323,7 @@ async function init() {
   const newsItems = await loadNewsData();
   initCategoryOptions();
   initSourceOptions(newsItems);
-  initDateRange(newsItems);
+  initDateRange(newsItems, "year");
   updateKpis(newsItems);
   bindEvents(newsItems);
   appliedFilters = readFilterControls();

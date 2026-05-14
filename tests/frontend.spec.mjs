@@ -17,10 +17,10 @@ test.beforeEach(async ({ page }) => {
 
 test("loads readable monthly AI news cards", async ({ page }) => {
   await expect(page.locator(".card h3").first()).toBeVisible();
-  await expect(page.locator(".card")).toHaveCountGreaterThan(20);
+  await expect(page.locator(".card")).toHaveCountGreaterThan(30);
   await expect(page.locator(".key-points").first()).toBeVisible();
   await expect(page.locator(".visual").first()).toBeVisible();
-  await expect(page.locator(".chip").filter({ hasText: /技术更新|重要功能更新|AI应用方法/ }).first()).toBeVisible();
+  await expect(page.locator(".chip").filter({ hasText: /\u6280\u672f\u66f4\u65b0|\u91cd\u8981\u529f\u80fd\u66f4\u65b0|AI\u5e94\u7528\u65b9\u6cd5/ }).first()).toBeVisible();
   await expect(page.locator(".read-more-note").first()).toContainText("\u5982\u679c\u611f\u5174\u8da3\u8bf7\u70b9\u51fb\u67e5\u770b\u539f\u6587");
   await expect(page.locator(".original-title")).toHaveCount(0);
   await expect(page.locator("#kpiTotal")).not.toHaveText("-");
@@ -67,9 +67,9 @@ test("source, date, search and reset work", async ({ page }) => {
   await page.click("#resetBtn");
   await expect(page.locator("#categoryFilter")).toHaveValue("all");
   await expect(page.locator("#sourceFilter")).toHaveValue("all");
-  await expect(page.locator('[data-days="30"]')).toHaveClass(/active/);
+  await expect(page.locator('[data-days="year"]')).toHaveClass(/active/);
   await expect(page.locator("#searchInput")).toHaveValue("");
-  await expect(page.locator(".card")).toHaveCountGreaterThan(20);
+  await expect(page.locator(".card")).toHaveCountGreaterThan(30);
 });
 
 test("practice category remains usable", async ({ page }) => {

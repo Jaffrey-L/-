@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -9,6 +9,7 @@ CREATOR_CATEGORY = "\u6838\u5fc3AI\u535a\u4e3b"
 PRACTICE_CATEGORY = "Vibe/Prompt/Agent\u5b9e\u6218"
 SOLO_CATEGORY = "AI\u4e2a\u4eba\u516c\u53f8\u5927\u795e"
 PREFERRED_QUALITY_TYPES = {"technical_update", "feature_update", "application_method"}
+YEAR_START = "2026-01-01"
 
 
 def main():
@@ -16,10 +17,11 @@ def main():
     source_pool = json.loads(SOURCES_FILE.read_text(encoding="utf-8"))
     items = payload.get("items", [])
     coverage = payload.get("sourceCoverage", {})
-    cutoff = datetime.now(timezone.utc) - timedelta(days=30)
+    cutoff = datetime.strptime(payload.get("yearStart", YEAR_START), "%Y-%m-%d").replace(tzinfo=timezone.utc)
     expected_sources = set(source_pool.get("companies", [])) | set(source_pool.get("creators", [])) | set(source_pool.get("soloBuilders", []))
 
-    assert len(items) >= 20, f"expected at least 20 news items, got {len(items)}"
+    assert len(items) >= 40, f"expected at least 40 YTD news items, got {len(items)}"
+    assert payload.get("coverageWindow") == "YTD", "expected year-to-date coverage window"
     assert expected_sources.issubset(set(coverage)), "source coverage is missing: {}".format(sorted(expected_sources - set(coverage)))
     assert any(item.get("sourceGrade") == "A" for item in items), "expected at least one A-grade source"
     assert any(item.get("sourceGrade") == "B" for item in items), "expected at least one B-grade source"

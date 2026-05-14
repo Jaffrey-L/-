@@ -4,6 +4,12 @@ This guide deploys AI Daily Radar on a Linux server for testing or production.
 
 The app is a static site. Python is only used to collect `data/news.json`.
 
+Current collection scope:
+
+- Default content window: current year to date, starting from `2026-01-01`
+- Quality focus: technical updates, important feature updates, and AI application methods
+- Recommended update cadence: every 12 hours, which satisfies daily update requirements with a morning/evening refresh rhythm
+
 ## 1. Server Requirements
 
 Ubuntu/Debian example:
@@ -39,7 +45,7 @@ python3 scripts/validate_news_data.py
 Expected validation output should look like:
 
 ```text
-PASS news data validation: 41 items, 16 A-grade, 17 practice items.
+PASS news data validation: 200+ items, tracked sources covered, technical/feature/method items present.
 ```
 
 The numbers may change over time, but validation should pass.
@@ -140,6 +146,20 @@ ExecStart=/usr/bin/python3 scripts/validate_news_data.py
 EOF
 ```
 
+If the app is deployed directly under an Nginx-owned directory such as `/var/www/ai-daily-radar`, make the service run as the same user that owns the writable files:
+
+```ini
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/ai-daily-radar
+ExecStart=/usr/bin/python3 scripts/update_ai_news.py
+ExecStart=/usr/bin/python3 scripts/validate_news_data.py
+```
+
+This avoids `PermissionError` when the job updates `data/news.json`.
+
 Create timer:
 
 ```bash
@@ -197,7 +217,7 @@ SITE_URL=http://127.0.0.1:8000 npm run validate:frontend
 Expected:
 
 ```text
-5 passed
+7 passed
 ```
 
 ## 9. Deployment Checklist
@@ -205,6 +225,8 @@ Expected:
 - `http://SERVER_IP` opens the dashboard
 - KPI numbers are visible
 - News cards load from `data/news.json`
+- Default date window is `今年`
+- Date/source/category/keyword filters apply after clicking the query button
 - Grade filter works
 - Search works
 - Reset works
@@ -233,4 +255,13 @@ If cron does not run:
 ```bash
 crontab -l
 tail -n 100 /opt/ai-daily-radar/news-sync.log
+```
+
+If systemd timer does not update data:
+
+```bash
+systemctl status ai-news-sync.timer --no-pager
+sudo systemctl start ai-news-sync.service
+sudo journalctl -u ai-news-sync.service -n 100 --no-pager
+ls -l data/news.json
 ```
