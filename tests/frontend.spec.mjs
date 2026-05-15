@@ -16,8 +16,12 @@ test.beforeEach(async ({ page }) => {
 });
 
 test("loads readable monthly AI news cards", async ({ page }) => {
+  await expect(page.locator(".top-briefing")).toBeVisible();
+  await expect(page.locator(".top-card")).toHaveCount(10);
+  await expect(page.locator("#sourceHealth")).toContainText("\u6765\u6e90\u5065\u5eb7");
   await expect(page.locator(".card h3").first()).toBeVisible();
   await expect(page.locator(".card")).toHaveCountGreaterThan(30);
+  await expect(page.locator(".brief-grid").first()).toBeVisible();
   await expect(page.locator(".key-points").first()).toBeVisible();
   await expect(page.locator(".visual").first()).toBeVisible();
   await expect(page.locator(".chip").filter({ hasText: /\u6280\u672f\u66f4\u65b0|\u91cd\u8981\u529f\u80fd\u66f4\u65b0|AI\u5e94\u7528\u65b9\u6cd5/ }).first()).toBeVisible();

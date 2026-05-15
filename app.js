@@ -64,6 +64,8 @@ const searchInput = document.getElementById("searchInput");
 const applyBtn = document.getElementById("applyBtn");
 const resetBtn = document.getElementById("resetBtn");
 const newsList = document.getElementById("newsList");
+const topStoriesEl = document.getElementById("topStories");
+const sourceHealthEl = document.getElementById("sourceHealth");
 const resultCount = document.getElementById("resultCount");
 let appliedFilters = null;
 
@@ -185,8 +187,10 @@ function renderNews(items) {
         <div class="card-copy">
           <h3>${escapeHtml(item.titleZh || item.title)}</h3>
           <p>${escapeHtml(item.summaryZh || item.summary)}</p>
+          ${renderIntelligenceBrief(item.intelligenceBrief)}
           ${renderKeyPoints(item.keyPointsZh || item.keyPoints)}
           <p class="tagline">${TEXT.tags}: ${escapeHtml(tagLabels.join(" / "))}</p>
+          ${renderRelatedSources(item)}
           <p class="read-more-note">${TEXT.readMoreNote}</p>
           <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noreferrer noopener">${TEXT.source}: ${escapeHtml(item.sourceName)}</a>
         </div>
@@ -194,6 +198,52 @@ function renderNews(items) {
     `;
     newsList.appendChild(card);
   });
+}
+
+function renderTopStories(stories) {
+  if (!topStoriesEl) return;
+  const top = (stories || []).slice(0, 10);
+  if (!top.length) {
+    topStoriesEl.innerHTML = `<article class="top-card empty">${TEXT.countPrefix} 0 ${TEXT.countSuffix}</article>`;
+    return;
+  }
+  topStoriesEl.innerHTML = top.map((item, index) => {
+    const brief = item.intelligenceBrief || {};
+    return `
+      <article class="top-card">
+        <span class="rank">#${escapeHtml(item.topRank || index + 1)}</span>
+        <div>
+          <h3>${escapeHtml(item.titleZh || item.title)}</h3>
+          <p>${escapeHtml(brief.recommendationReason || item.summaryZh || item.summary)}</p>
+          <small>${escapeHtml(item.sourceName)} · ${escapeHtml(item.date)} · ${escapeHtml(item.qualityLabelZh || "")}</small>
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+function renderSourceHealth(health) {
+  if (!sourceHealthEl || !health) return;
+  sourceHealthEl.textContent = `来源健康：${health.ok || 0}/${health.total || 0} 正常，${health.empty || 0} 暂无高价值内容，${health.fallback || 0} fallback，${health.failed || 0} 失败`;
+}
+
+function renderIntelligenceBrief(brief) {
+  if (!brief) return "";
+  const rows = [
+    ["发生了什么", brief.whatHappened],
+    ["为什么重要", brief.whyItMatters],
+    ["启发", brief.takeaway],
+    ["适合谁看", brief.audience]
+  ].filter(([, value]) => value);
+  if (!rows.length) return "";
+  return `<dl class="brief-grid">${rows.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl>`;
+}
+
+function renderRelatedSources(item) {
+  const related = Array.isArray(item.relatedSources) ? item.relatedSources : [];
+  if (!item.aggregatedEvent || related.length <= 1) return "";
+  const shown = related.slice(0, 4).map((source) => escapeHtml(source.sourceName || source.publisher || "source")).join(" / ");
+  return `<p class="related-sources">已合并 ${related.length} 个相关来源：${shown}</p>`;
 }
 
 function renderVisual(item) {
@@ -226,8 +276,11 @@ function getFilteredNews(newsItems) {
     const sourceMatch = filters.source === "all" || item.sourceName === filters.source;
     const timeMatch = inSelectedTimeRange(item.date, filters);
     const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
-    const keyPoints = Array.isArray(item.keyPoints) ? item.keyPoints.join(" ") : "";
-    const textBlob = `${item.title} ${item.titleZh || ""} ${item.summary} ${item.summaryZh || ""} ${item.sourceName} ${tags} ${keyPoints}`.toLowerCase();
+    const keyPointsZh = Array.isArray(item.keyPointsZh) ? item.keyPointsZh.join(" ") : "";
+    const brief = item.intelligenceBrief || {};
+    const briefText = [brief.whatHappened, brief.whyItMatters, brief.takeaway, brief.audience, brief.recommendationReason].filter(Boolean).join(" ");
+    const related = Array.isArray(item.relatedSources) ? item.relatedSources.map((source) => `${source.sourceName || ""} ${source.publisher || ""}`).join(" ") : "";
+    const textBlob = `${item.title} ${item.titleZh || ""} ${item.summaryZh || ""} ${item.sourceName} ${tags} ${keyPointsZh} ${briefText} ${related}`.toLowerCase();
     const searchMatch = !filters.search || textBlob.includes(filters.search);
     return categoryMatch && gradeMatch && sourceMatch && timeMatch && searchMatch;
   });
@@ -313,20 +366,27 @@ async function loadNewsData() {
     const response = await fetch(DATA_ENDPOINT, { cache: "no-store" });
     if (!response.ok) throw new Error("load news failed");
     const data = await response.json();
-    return Array.isArray(data.items) && data.items.length ? data.items : fallbackNews;
+    return {
+      items: Array.isArray(data.items) && data.items.length ? data.items : fallbackNews,
+      topStories: Array.isArray(data.topStories) ? data.topStories : [],
+      sourceHealth: data.sourceHealth || null
+    };
   } catch (_) {
-    return fallbackNews;
+    return { items: fallbackNews, topStories: fallbackNews, sourceHealth: null };
   }
 }
 
 async function init() {
-  const newsItems = await loadNewsData();
+  const payload = await loadNewsData();
+  const newsItems = payload.items;
   initCategoryOptions();
   initSourceOptions(newsItems);
   initDateRange(newsItems, "year");
   updateKpis(newsItems);
   bindEvents(newsItems);
   appliedFilters = readFilterControls();
+  renderTopStories(payload.topStories.length ? payload.topStories : newsItems.slice(0, 10));
+  renderSourceHealth(payload.sourceHealth);
   renderNews(getFilteredNews(newsItems));
   await renderSourcePools();
 }
