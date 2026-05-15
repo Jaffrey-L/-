@@ -19,8 +19,10 @@ test("loads readable monthly AI news cards", async ({ page }) => {
   await expect(page.locator(".top-briefing")).toBeVisible();
   await expect(page.locator(".top-card")).toHaveCount(10);
   await expect(page.locator("#sourceHealth")).toContainText("\u6765\u6e90\u5065\u5eb7");
+  await expect(page.locator("#sourceHealth")).toContainText("\u7cbe\u9009\u515c\u5e95");
   await expect(page.locator(".card h3").first()).toBeVisible();
   await expect(page.locator(".card")).toHaveCountGreaterThan(30);
+  await expect(page.locator(".reading-actions").first()).toBeVisible();
   await expect(page.locator(".brief-grid").first()).toBeVisible();
   await expect(page.locator(".key-points").first()).toBeVisible();
   await expect(page.locator(".visual").first()).toBeVisible();
@@ -71,6 +73,7 @@ test("source, date, search and reset work", async ({ page }) => {
   await page.click("#resetBtn");
   await expect(page.locator("#categoryFilter")).toHaveValue("all");
   await expect(page.locator("#sourceFilter")).toHaveValue("all");
+  await expect(page.locator("#readingFilter")).toHaveValue("all");
   await expect(page.locator('[data-days="year"]')).toHaveClass(/active/);
   await expect(page.locator("#searchInput")).toHaveValue("");
   await expect(page.locator(".card")).toHaveCountGreaterThan(30);
@@ -87,6 +90,30 @@ test("date fields use native date picker controls", async ({ page }) => {
   await expect(page.locator("#endDateFilter")).toHaveAttribute("type", "date");
   await expect(page.locator('[data-target="startDateFilter"]')).toBeVisible();
   await expect(page.locator('[data-target="endDateFilter"]')).toBeVisible();
+});
+
+test("source health details and reading state persist", async ({ page }) => {
+  await page.click("#sourceHealthToggle");
+  await expect(page.locator("#sourceHealthPanel")).toBeVisible();
+  await expect(page.locator(".source-health-row").filter({ hasText: "AI\u4e2a\u4eba\u516c\u53f8\u5927\u795e" }).first()).toBeVisible();
+
+  const firstTitle = await page.locator(".card h3").first().innerText();
+  await page.locator(".card").first().locator('[data-state="read"]').click();
+  await page.locator(".card").first().locator('[data-state="favorite"]').click();
+  await page.locator(".card").first().locator('[data-state="later"]').click();
+  await expect(page.locator(".card").first()).toHaveClass(/is-read/);
+
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await expect(page.locator(".card h3").first()).toContainText(firstTitle.slice(0, 12));
+  await expect(page.locator(".card").first().locator('[data-state="read"]')).toHaveClass(/active/);
+
+  await page.selectOption("#readingFilter", "favorite");
+  await page.click("#applyBtn");
+  await expect(page.locator(".card").first()).toContainText(firstTitle.slice(0, 12));
+
+  await page.selectOption("#readingFilter", "later");
+  await page.click("#applyBtn");
+  await expect(page.locator(".card").first()).toContainText(firstTitle.slice(0, 12));
 });
 
 test("desktop layout keeps filters left of stream", async ({ page }) => {

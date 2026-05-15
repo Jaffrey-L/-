@@ -49,9 +49,13 @@
         <span class="eyebrow small">EDITORIAL PRIORITY</span>
         <h2>&#20170;&#26085;&#24517;&#30475; Top 10</h2>
       </div>
-      <p id="sourceHealth"></p>
+      <div class="source-health-summary">
+        <p id="sourceHealth"></p>
+        <button id="sourceHealthToggle" type="button">&#26597;&#30475;&#26469;&#28304;&#35814;&#24773;</button>
+      </div>
     </div>
     <div id="topStories" class="top-stories"></div>
+    <div id="sourceHealthPanel" class="source-health-panel" hidden></div>
   </section>
 
   <main class="shell layout">
@@ -67,6 +71,15 @@
         </select>
       </label>
       <label>&#26469;&#28304;<select id="sourceFilter"></select></label>
+      <label>&#38405;&#35835;&#29366;&#24577;
+        <select id="readingFilter">
+          <option value="all">&#20840;&#37096;</option>
+          <option value="unread">&#26410;&#35835;</option>
+          <option value="read">&#24050;&#35835;</option>
+          <option value="favorite">&#24050;&#25910;&#34255;</option>
+          <option value="later">&#31245;&#21518;&#35835;</option>
+        </select>
+      </label>
       <div class="date-presets" aria-label="Date presets">
         <button class="preset-btn" type="button" data-days="7">&#26368;&#36817;7&#22825;</button>
         <button class="preset-btn" type="button" data-days="30">&#26368;&#36817;30&#22825;</button>

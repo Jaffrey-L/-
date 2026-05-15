@@ -149,4 +149,49 @@
 - Add read, favorite, and read-later states.
 - Add Markdown/Feishu/WeChat-style daily digest export.
 
+## 2026-05-15 P1 reading loop and source coverage
+
+### Goal
+
+- Start P1-1: strengthen solo-builder coverage and make source health visible.
+- Add daily reading-loop features: read, favorite, and read-later states.
+- Keep existing Top 10, date/source/category/search filters, and scheduled sync stable.
+
+### Completed
+
+- Added curated solo-builder fallback intelligence for Danny Postma and Marc Lou, so solo-builder content is no longer zero when Google News has no high-value hits.
+- Extended `sourceHealth` with curated counts and added `sourceHealthDetails` rows for every tracked source.
+- Added a source-health detail panel on the frontend.
+- Added per-card read, favorite, and read-later actions using browser localStorage.
+- Added reading-status filtering: all, unread, read, favorite, later.
+- Added Playwright coverage for source-health details and reading-state persistence.
+
+### Changed Files
+
+- `scripts/update_ai_news.py`
+- `scripts/validate_news_data.py`
+- `data/news.json`
+- `index.html`
+- `app.js`
+- `styles.css`
+- `tests/frontend.spec.mjs`
+
+### Evidence
+
+- `py -3 scripts/update_ai_news.py`: generated 208 items from 71 tracked sources, `elapsed_seconds=30.2`.
+- `py -3 scripts/validate_news_data.py`: PASS, 208 items, 2 solo-builder items, Top stories 10, Source health 40/71 ok and 29 empty, Curated sources 2.
+- `npm.cmd run validate:frontend`: 8 passed.
+
+### Remaining Issues
+
+- Solo-builder coverage now has non-zero curated fallback, but direct RSS / first-party feeds for more solo builders still need expansion.
+- Current reading state is browser-local only; cross-device sync is not available.
+- Current curated fallback is static and should be reviewed periodically.
+
+### Next Step
+
+- Add source-health filter chips or a dedicated source-health drawer search.
+- Add Markdown daily digest export.
+- Evaluate whether to add a small backend/user-state store if cross-device reading state becomes necessary.
+
 

@@ -45,6 +45,31 @@ EXTRA_QUERIES = [
     ("Claude Code", "Claude Code agent coding workflow", PRACTICE_CATEGORY, ["Claude Code", "coding", "agent"], 4),
     ("Vibe Coding", "vibe coding agent prompt engineering", PRACTICE_CATEGORY, ["vibecoding", "prompt", "agent"], 5),
     ("Enterprise Agents", "enterprise AI agent workflow deployment", PRACTICE_CATEGORY, ["enterprise", "agent", "workflow"], 5),
+    ("Pieter Levels", "Pieter Levels Photo AI indie maker automation", SOLO_CATEGORY, ["Pieter Levels", "solo-builder", "Photo AI", "ai-startup"], 5),
+    ("Marc Lou", "Marc Lou ShipFast AI startup build in public", SOLO_CATEGORY, ["Marc Lou", "solo-builder", "ShipFast", "workflow"], 5),
+    ("Danny Postma", "Danny Postma HeadshotPro AI indie maker", SOLO_CATEGORY, ["Danny Postma", "solo-builder", "HeadshotPro", "ai-startup"], 5),
+    ("Tony Dinh", "Tony Dinh Typing Mind AI indie maker", SOLO_CATEGORY, ["Tony Dinh", "solo-builder", "Typing Mind", "ai-startup"], 5),
+]
+
+CURATED_SOLO_ITEMS = [
+    {
+        "title": "Danny Postma: The Indie Maker Building Profitable Internet Products",
+        "date": "2026-03-10",
+        "sourceName": "Danny Postma",
+        "sourceUrl": "https://startupik.com/danny-postma-the-indie-maker-building-profitable-internet-products/",
+        "publisher": "Startupik",
+        "tags": ["Danny Postma", "solo-builder", "HeadshotPro", "ai-startup", "case study"],
+        "body": "Danny Postma is profiled as an indie maker building profitable internet products including AI-powered visual products such as HeadshotPro and ProfilePicture.AI. The article highlights bootstrapping, building in public, distribution, fast product iteration, automation, and portfolio strategy as practical lessons for one-person AI businesses.",
+    },
+    {
+        "title": "The ShipFast Guide to Building in Public: How to Grow a Distribution Engine",
+        "date": "2026-03-15",
+        "sourceName": "Marc Lou",
+        "sourceUrl": "https://stormy.ai/blog/shipfast-guide-building-in-public-distribution",
+        "publisher": "Stormy AI",
+        "tags": ["Marc Lou", "solo-builder", "ShipFast", "build-in-public", "workflow"],
+        "body": "Marc Lou and ShipFast are used as a case study for building in public, founder distribution, and turning repeatable startup workflow into a product. The article is useful for AI builders because distribution, shipping cadence, and reusable workflow assets increasingly decide whether solo AI products can reach users.",
+    },
 ]
 
 BLOCKED_TITLE_KEYWORDS = ["lawsuit", "shoot", "celebrity", "stock price prediction", "price target"]
@@ -73,6 +98,8 @@ QUALITY_SIGNALS = {
         "how to", "guide", "tutorial", "workflow", "playbook", "case study", "best practice", "lessons",
         "implementation", "build", "building", "deploy", "deployment", "prompt", "prompting",
         "vibe coding", "agent workflow", "automation", "use case", "practical", "hands-on",
+        "indie maker", "solo builder", "build in public", "bootstrapping", "bootstrapped", "distribution",
+        "profitable internet products", "one-person", "founder workflow", "shipfast", "headshotpro", "photo ai",
     ],
 }
 QUALITY_LABELS_ZH = {
@@ -197,6 +224,10 @@ def quality_profile(title, summary, body, tags, category, grade):
         score += 24
     if category == CREATOR_CATEGORY and best_type in ("technical_update", "application_method"):
         score += 16
+    if category == SOLO_CATEGORY:
+        score += 34
+        if positive_hits == 0:
+            best_type = "application_method"
     if grade == "A":
         score += 8
     if len(strip_html(body)) > 700:
@@ -497,7 +528,7 @@ def source_query(name, category):
         return '"{}" AI model agent enterprise API release feature update'.format(name)
     if category == CREATOR_CATEGORY:
         return '"{}" AI LLM agent prompt coding workflow guide'.format(name)
-    return '"{}" AI startup product workflow automation case study'.format(name)
+    return '"{}" AI startup indie maker solo builder product workflow case study'.format(name)
 
 
 def collect_google_news(source_pool, coverage):
@@ -542,6 +573,32 @@ def collect_google_news(source_pool, coverage):
             if coverage[name].get("status") in ("pending", ""):
                 coverage[name]["status"] = "ok" if parsed else "no_high_value_items"
             items.extend(parsed)
+    return items
+
+
+def collect_curated_solo_items(coverage):
+    items = []
+    for spec in CURATED_SOLO_ITEMS:
+        name = spec["sourceName"]
+        coverage.setdefault(name, {"rss": "", "rssItems": 0, "googleItems": 0, "curatedItems": 0, "status": "pending"})
+        item = make_item(
+            spec["title"],
+            spec["date"],
+            name,
+            spec["sourceUrl"],
+            "B",
+            SOLO_CATEGORY,
+            spec["tags"],
+            5,
+            spec["body"],
+            "",
+            spec["publisher"],
+        )
+        if keep_item(item):
+            coverage[name]["curatedItems"] = coverage[name].get("curatedItems", 0) + 1
+            if coverage[name].get("status") in ("pending", "no_high_value_items", ""):
+                coverage[name]["status"] = "ok_curated"
+            items.append(item)
     return items
 
 
@@ -617,7 +674,38 @@ def source_health(coverage):
     empty = sum(1 for value in coverage.values() if str(value.get("status", "")).startswith("no_high_value_items"))
     failed = total - ok - empty
     fallback = sum(1 for value in coverage.values() if value.get("googleItems", 0) and not value.get("rssItems", 0))
-    return {"total": total, "ok": ok, "empty": empty, "failed": failed, "fallback": fallback}
+    curated = sum(1 for value in coverage.values() if value.get("curatedItems", 0))
+    return {"total": total, "ok": ok, "empty": empty, "failed": failed, "fallback": fallback, "curated": curated}
+
+
+def source_health_details(coverage, source_pool):
+    categories = {}
+    for category, names in source_pool.items():
+        for name in names:
+            categories[name] = category
+    for source in RSS_SOURCES:
+        categories[source["name"]] = source["category"]
+    rows = []
+    for name, value in sorted(coverage.items(), key=lambda item: (categories.get(item[0], ""), item[0].lower())):
+        status = str(value.get("status", "pending"))
+        if status.startswith("ok"):
+            label = "正常"
+        elif status.startswith("no_high_value_items"):
+            label = "暂无高价值内容"
+        else:
+            label = "失败"
+        rows.append({
+            "name": name,
+            "category": categories.get(name, PRACTICE_CATEGORY if name in {q[0] for q in EXTRA_QUERIES} else ""),
+            "status": status,
+            "statusLabelZh": label,
+            "rssItems": value.get("rssItems", 0),
+            "googleItems": value.get("googleItems", 0),
+            "curatedItems": value.get("curatedItems", 0),
+            "totalItems": value.get("rssItems", 0) + value.get("googleItems", 0) + value.get("curatedItems", 0),
+            "rss": value.get("rss", ""),
+        })
+    return rows
 
 
 def top_stories(items, limit=10):
@@ -633,6 +721,7 @@ def main():
     source_pool = load_source_pool()
     items, coverage = collect_rss()
     items.extend(collect_google_news(source_pool, coverage))
+    items.extend(collect_curated_solo_items(coverage))
     fetched_articles = enrich_article_bodies(items)
     items = dedupe(items)
     items.sort(key=lambda x: (x["date"], x["qualityScore"], x["readingScore"], x["sourceGrade"] == "A", x["importance"]), reverse=True)
@@ -659,6 +748,7 @@ def main():
             "topStoryCount": len(top),
         },
         "sourceHealth": source_health(coverage),
+        "sourceHealthDetails": source_health_details(coverage, source_pool),
         "sourceCoverage": coverage,
         "topStories": top,
         "items": items[:MAX_ITEMS],

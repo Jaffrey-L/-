@@ -56,6 +56,7 @@ const TAG_LABELS = {
 const categoryFilter = document.getElementById("categoryFilter");
 const gradeFilter = document.getElementById("gradeFilter");
 const sourceFilter = document.getElementById("sourceFilter");
+const readingFilter = document.getElementById("readingFilter");
 const startDateFilter = document.getElementById("startDateFilter");
 const endDateFilter = document.getElementById("endDateFilter");
 const presetButtons = Array.from(document.querySelectorAll(".preset-btn"));
@@ -66,8 +67,13 @@ const resetBtn = document.getElementById("resetBtn");
 const newsList = document.getElementById("newsList");
 const topStoriesEl = document.getElementById("topStories");
 const sourceHealthEl = document.getElementById("sourceHealth");
+const sourceHealthToggle = document.getElementById("sourceHealthToggle");
+const sourceHealthPanel = document.getElementById("sourceHealthPanel");
 const resultCount = document.getElementById("resultCount");
+const READING_STATE_KEY = "ai-daily-radar-reading-state-v1";
 let appliedFilters = null;
+let activeNewsItems = [];
+let readingState = loadReadingState();
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -77,6 +83,34 @@ function escapeHtml(value) {
     "\"": "&quot;",
     "'": "&#39;"
   })[char]);
+}
+
+function loadReadingState() {
+  try {
+    return JSON.parse(localStorage.getItem(READING_STATE_KEY) || "{}");
+  } catch (_) {
+    return {};
+  }
+}
+
+function saveReadingState() {
+  localStorage.setItem(READING_STATE_KEY, JSON.stringify(readingState));
+}
+
+function itemKey(item) {
+  return encodeURIComponent(item.eventId || item.sourceUrl || item.title || "");
+}
+
+function getItemState(item) {
+  return readingState[itemKey(item)] || {};
+}
+
+function toggleItemState(item, field) {
+  const key = itemKey(item);
+  const state = { ...(readingState[key] || {}) };
+  state[field] = !state[field];
+  readingState[key] = state;
+  saveReadingState();
 }
 
 function initCategoryOptions() {
@@ -145,6 +179,7 @@ function readFilterControls() {
     category: categoryFilter.value,
     grade: gradeFilter.value,
     source: sourceFilter.value,
+    reading: readingFilter.value,
     startDate,
     endDate,
     search: searchInput.value.trim().toLowerCase(),
@@ -159,6 +194,7 @@ function applyCurrentFilters(newsItems) {
 
 function renderNews(items) {
   newsList.innerHTML = "";
+  activeNewsItems = items;
   resultCount.textContent = `${TEXT.countPrefix} ${items.length} ${TEXT.countSuffix}`;
 
   if (!items.length) {
@@ -167,11 +203,13 @@ function renderNews(items) {
   }
 
   items.forEach((item) => {
+    const state = getItemState(item);
     const tags = Array.isArray(item.tags) ? item.tags : [];
     const tagLabels = tags.map((tag) => TAG_LABELS[String(tag).toLowerCase()] || tag);
     const safeUrl = String(item.sourceUrl || "#");
     const card = document.createElement("article");
-    card.className = "card";
+    card.className = `card${state.read ? " is-read" : ""}`;
+    card.dataset.itemKey = itemKey(item);
     card.innerHTML = `
       <div class="meta">
         <span class="chip">${escapeHtml(item.category)}</span>
@@ -187,6 +225,7 @@ function renderNews(items) {
         <div class="card-copy">
           <h3>${escapeHtml(item.titleZh || item.title)}</h3>
           <p>${escapeHtml(item.summaryZh || item.summary)}</p>
+          ${renderReadingActions(item, state)}
           ${renderIntelligenceBrief(item.intelligenceBrief)}
           ${renderKeyPoints(item.keyPointsZh || item.keyPoints)}
           <p class="tagline">${TEXT.tags}: ${escapeHtml(tagLabels.join(" / "))}</p>
@@ -198,6 +237,17 @@ function renderNews(items) {
     `;
     newsList.appendChild(card);
   });
+}
+
+function renderReadingActions(item, state) {
+  const key = itemKey(item);
+  return `
+    <div class="reading-actions" aria-label="阅读状态">
+      <button class="state-btn ${state.read ? "active" : ""}" type="button" data-key="${key}" data-state="read">${state.read ? "已读" : "标为已读"}</button>
+      <button class="state-btn ${state.favorite ? "active" : ""}" type="button" data-key="${key}" data-state="favorite">${state.favorite ? "已收藏" : "收藏"}</button>
+      <button class="state-btn ${state.later ? "active" : ""}" type="button" data-key="${key}" data-state="later">${state.later ? "稍后读中" : "稍后读"}</button>
+    </div>
+  `;
 }
 
 function renderTopStories(stories) {
@@ -224,7 +274,24 @@ function renderTopStories(stories) {
 
 function renderSourceHealth(health) {
   if (!sourceHealthEl || !health) return;
-  sourceHealthEl.textContent = `来源健康：${health.ok || 0}/${health.total || 0} 正常，${health.empty || 0} 暂无高价值内容，${health.fallback || 0} fallback，${health.failed || 0} 失败`;
+  sourceHealthEl.textContent = `来源健康：${health.ok || 0}/${health.total || 0} 正常，${health.empty || 0} 暂无高价值内容，${health.curated || 0} 精选兜底，${health.failed || 0} 失败`;
+}
+
+function renderSourceHealthDetails(details) {
+  if (!sourceHealthPanel) return;
+  const rows = (details || []).slice().sort((a, b) => String(a.statusLabelZh).localeCompare(String(b.statusLabelZh)) || String(a.name).localeCompare(String(b.name)));
+  sourceHealthPanel.innerHTML = `
+    <div class="source-health-grid">
+      ${rows.map((row) => `
+        <article class="source-health-row status-${escapeHtml(row.statusLabelZh || "")}">
+          <strong>${escapeHtml(row.name)}</strong>
+          <span>${escapeHtml(row.category || "扩展查询")}</span>
+          <em>${escapeHtml(row.statusLabelZh || row.status)}</em>
+          <small>RSS ${escapeHtml(row.rssItems || 0)} / News ${escapeHtml(row.googleItems || 0)} / 精选 ${escapeHtml(row.curatedItems || 0)}</small>
+        </article>
+      `).join("")}
+    </div>
+  `;
 }
 
 function renderIntelligenceBrief(brief) {
@@ -274,6 +341,13 @@ function getFilteredNews(newsItems) {
     const categoryMatch = filters.category === "all" || item.category === filters.category;
     const gradeMatch = filters.grade === "all" || item.sourceGrade === filters.grade;
     const sourceMatch = filters.source === "all" || item.sourceName === filters.source;
+    const state = getItemState(item);
+    const readingMatch =
+      filters.reading === "all"
+      || (filters.reading === "unread" && !state.read)
+      || (filters.reading === "read" && state.read)
+      || (filters.reading === "favorite" && state.favorite)
+      || (filters.reading === "later" && state.later);
     const timeMatch = inSelectedTimeRange(item.date, filters);
     const tags = Array.isArray(item.tags) ? item.tags.join(" ") : "";
     const keyPointsZh = Array.isArray(item.keyPointsZh) ? item.keyPointsZh.join(" ") : "";
@@ -282,7 +356,7 @@ function getFilteredNews(newsItems) {
     const related = Array.isArray(item.relatedSources) ? item.relatedSources.map((source) => `${source.sourceName || ""} ${source.publisher || ""}`).join(" ") : "";
     const textBlob = `${item.title} ${item.titleZh || ""} ${item.summaryZh || ""} ${item.sourceName} ${tags} ${keyPointsZh} ${briefText} ${related}`.toLowerCase();
     const searchMatch = !filters.search || textBlob.includes(filters.search);
-    return categoryMatch && gradeMatch && sourceMatch && timeMatch && searchMatch;
+    return categoryMatch && gradeMatch && sourceMatch && readingMatch && timeMatch && searchMatch;
   });
 
   if (filters.sort === "importance") {
@@ -333,10 +407,19 @@ function bindEvents(newsItems) {
     categoryFilter.value = "all";
     gradeFilter.value = "all";
     sourceFilter.value = "all";
+    readingFilter.value = "all";
     initDateRange(newsItems, "year");
     sortFilter.value = "latest";
     searchInput.value = "";
     applyCurrentFilters(newsItems);
+  });
+  newsList.addEventListener("click", (event) => {
+    const button = event.target.closest(".state-btn");
+    if (!button) return;
+    const item = activeNewsItems.find((candidate) => itemKey(candidate) === button.dataset.key);
+    if (!item) return;
+    toggleItemState(item, button.dataset.state);
+    renderNews(getFilteredNews(newsItems));
   });
 }
 
@@ -369,10 +452,11 @@ async function loadNewsData() {
     return {
       items: Array.isArray(data.items) && data.items.length ? data.items : fallbackNews,
       topStories: Array.isArray(data.topStories) ? data.topStories : [],
-      sourceHealth: data.sourceHealth || null
+      sourceHealth: data.sourceHealth || null,
+      sourceHealthDetails: Array.isArray(data.sourceHealthDetails) ? data.sourceHealthDetails : []
     };
   } catch (_) {
-    return { items: fallbackNews, topStories: fallbackNews, sourceHealth: null };
+    return { items: fallbackNews, topStories: fallbackNews, sourceHealth: null, sourceHealthDetails: [] };
   }
 }
 
@@ -387,7 +471,13 @@ async function init() {
   appliedFilters = readFilterControls();
   renderTopStories(payload.topStories.length ? payload.topStories : newsItems.slice(0, 10));
   renderSourceHealth(payload.sourceHealth);
+  renderSourceHealthDetails(payload.sourceHealthDetails);
   renderNews(getFilteredNews(newsItems));
+  sourceHealthToggle?.addEventListener("click", () => {
+    const isHidden = sourceHealthPanel.hasAttribute("hidden");
+    sourceHealthPanel.toggleAttribute("hidden", !isHidden);
+    sourceHealthToggle.textContent = isHidden ? "收起来源详情" : "查看来源详情";
+  });
   await renderSourcePools();
 }
 

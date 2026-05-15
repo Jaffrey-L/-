@@ -18,6 +18,7 @@ def main():
     items = payload.get("items", [])
     top_stories = payload.get("topStories", [])
     source_health = payload.get("sourceHealth", {})
+    source_health_details = payload.get("sourceHealthDetails", [])
     p0_quality = payload.get("p0Quality", {})
     coverage = payload.get("sourceCoverage", {})
     cutoff = datetime.strptime(payload.get("yearStart", YEAR_START), "%Y-%m-%d").replace(tzinfo=timezone.utc)
@@ -30,6 +31,7 @@ def main():
     assert len({item.get("eventId") for item in top_stories}) == len(top_stories), "top stories contain duplicate event ids"
     assert source_health.get("total", 0) >= len(expected_sources), "source health does not cover all tracked sources"
     assert source_health.get("ok", 0) + source_health.get("empty", 0) >= int(source_health.get("total", 0) * 0.75), "too many source failures"
+    assert isinstance(source_health_details, list) and len(source_health_details) >= len(expected_sources), "expected source health detail rows"
     assert p0_quality.get("topStoryCount") == 10, "p0 quality metadata should report 10 top stories"
     assert p0_quality.get("fetchedArticles", 0) >= 3, "expected at least 3 real article bodies to be fetched"
     assert any(item.get("contentFetched") for item in items), "expected fetched full-text article content"
@@ -39,6 +41,8 @@ def main():
     assert any("enterprise" in [str(tag).lower() for tag in item.get("tags", [])] for item in items), "expected enterprise-tagged content"
     assert any(item.get("category") == PRACTICE_CATEGORY for item in items), "expected practice category content"
     assert any(item.get("category") == CREATOR_CATEGORY for item in items), "expected creator/blogger content"
+    assert any(item.get("category") == SOLO_CATEGORY for item in items), "expected solo-builder content or curated solo-builder intelligence"
+    assert any(row.get("category") == SOLO_CATEGORY and row.get("statusLabelZh") in {"正常", "暂无高价值内容"} for row in source_health_details), "expected visible solo-builder source health"
     assert any(item.get("sourceName") == "Andrej Karpathy" for item in items) or "Andrej Karpathy" in coverage, "expected Andrej Karpathy to be tracked"
     assert sum(1 for item in items if item.get("qualityType") in PREFERRED_QUALITY_TYPES) >= int(len(items) * 0.85), "expected most items to be high-value technical/feature/method content"
     assert any(item.get("qualityType") == "technical_update" for item in items), "expected technical update content"
@@ -77,6 +81,7 @@ def main():
         f" Top stories: {len(top_stories)}. "
         f"Source health: {source_health.get('ok')}/{source_health.get('total')} ok, "
         f"{source_health.get('empty', 0)} empty. "
+        f"Curated sources: {source_health.get('curated', 0)}. "
         f"Fetched article bodies: {p0_quality.get('fetchedArticles')}."
     )
 
