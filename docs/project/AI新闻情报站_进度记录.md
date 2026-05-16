@@ -220,7 +220,7 @@
 
 ### Evidence
 
-- `py -3 scripts/validate_news_data.py`: PASS, 208 items, 2 solo-builder items, Top stories 10.
+- `py -3 scripts/validate_news_data.py`: PASS, 205 items, 2 solo-builder items, Top stories 10.
 - `npm.cmd run validate:frontend`: 9 passed.
 - Local screenshot: `artifacts/p1-digest-export-local.png`.
 - Remote `http://192.168.1.242:8088` frontend validation: 9 passed.
