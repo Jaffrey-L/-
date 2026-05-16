@@ -319,6 +319,63 @@ h1 {
   gap: 10px;
 }
 
+.digest-export {
+  margin-top: 18px;
+  padding: 20px;
+  background: rgba(255,253,248,0.78);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(20px);
+}
+
+.digest-export-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: end;
+  margin-bottom: 14px;
+}
+
+.digest-export h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Newsreader", "Noto Sans SC", serif;
+  font-size: 1.9rem;
+  letter-spacing: -0.05em;
+}
+
+.digest-export p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.digest-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.digest-actions button {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+#digestPreview {
+  width: 100%;
+  min-height: 260px;
+  resize: vertical;
+  color: #26313d;
+  line-height: 1.55;
+  background: rgba(255,255,255,0.78);
+}
+
+.digest-status {
+  min-height: 20px;
+  color: #087b86 !important;
+}
+
 .top-card {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -902,6 +959,8 @@ code {
   .top-stories,
   .layout,
   .source-groups { grid-template-columns: 1fr; }
+  .digest-export-head { grid-template-columns: 1fr; }
+  .digest-actions { grid-template-columns: 1fr; }
   .filters { position: static; max-height: none; }
   .card-body { grid-template-columns: 1fr; }
   .visual { width: 100%; max-height: 220px; aspect-ratio: 16 / 9; }

@@ -58,6 +58,23 @@
     <div id="sourceHealthPanel" class="source-health-panel" hidden></div>
   </section>
 
+  <section class="shell digest-export" aria-label="Daily digest export">
+    <div class="digest-export-head">
+      <div>
+        <span class="eyebrow small">DAILY BRIEF EXPORT</span>
+        <h2>&#26085;&#25253;&#23548;&#20986;</h2>
+        <p id="digestMeta">&#22522;&#20110; Top 10&#12289;&#26041;&#27861;&#35770;&#21644;&#26469;&#28304;&#20581;&#24247;&#33258;&#21160;&#29983;&#25104;&#12290;</p>
+      </div>
+      <div class="digest-actions">
+        <button id="copyMarkdownBtn" type="button">&#22797;&#21046; Markdown</button>
+        <button id="copyWechatBtn" type="button">&#22797;&#21046;&#24494;&#20449;&#29256;</button>
+        <button id="downloadDigestBtn" type="button">&#19979;&#36733; .md</button>
+      </div>
+    </div>
+    <textarea id="digestPreview" readonly aria-label="Daily digest preview"></textarea>
+    <p id="digestStatus" class="digest-status" role="status"></p>
+  </section>
+
   <main class="shell layout">
     <aside class="panel filters">
       <h2>&#24773;&#25253;&#25511;&#21046;&#21488;</h2>

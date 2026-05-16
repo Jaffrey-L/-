@@ -69,11 +69,18 @@ const topStoriesEl = document.getElementById("topStories");
 const sourceHealthEl = document.getElementById("sourceHealth");
 const sourceHealthToggle = document.getElementById("sourceHealthToggle");
 const sourceHealthPanel = document.getElementById("sourceHealthPanel");
+const digestPreview = document.getElementById("digestPreview");
+const digestMeta = document.getElementById("digestMeta");
+const digestStatus = document.getElementById("digestStatus");
+const copyMarkdownBtn = document.getElementById("copyMarkdownBtn");
+const copyWechatBtn = document.getElementById("copyWechatBtn");
+const downloadDigestBtn = document.getElementById("downloadDigestBtn");
 const resultCount = document.getElementById("resultCount");
 const READING_STATE_KEY = "ai-daily-radar-reading-state-v1";
 let appliedFilters = null;
 let activeNewsItems = [];
 let readingState = loadReadingState();
+let digestCache = { markdown: "", wechat: "", filename: "ai-daily-radar.md" };
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -111,6 +118,113 @@ function toggleItemState(item, field) {
   state[field] = !state[field];
   readingState[key] = state;
   saveReadingState();
+}
+
+function plainText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function firstSentence(value, fallback = "") {
+  const text = plainText(value || fallback);
+  return text.split(/(?<=[.!?\u3002\uff01\uff1f])\s+/)[0]?.slice(0, 180) || text.slice(0, 180);
+}
+
+function formatDigestDate(value) {
+  const date = value ? new Date(value) : new Date();
+  if (Number.isNaN(date.getTime())) return new Date().toISOString().slice(0, 10);
+  return date.toISOString().slice(0, 10);
+}
+
+function markdownLink(title, url) {
+  return url ? `[${title}](${url})` : title;
+}
+
+function buildDigest(payload, newsItems) {
+  const items = newsItems || [];
+  const top = (payload.topStories?.length ? payload.topStories : items.slice(0, 10)).slice(0, 10);
+  const methods = items.filter((item) => item.qualityType === "application_method" || item.category === TEXT.practice).slice(0, 5);
+  const official = items.filter((item) => item.sourceGrade === "A").slice(0, 5);
+  const health = payload.sourceHealth || {};
+  const date = formatDigestDate(payload.updatedAt);
+  const lines = [
+    `# AI Daily Radar 日报 - ${date}`,
+    "",
+    `> 今日共 ${items.length} 条情报，Top 10 已精选。来源健康：${health.ok || 0}/${health.total || 0} 正常，${health.empty || 0} 暂无高价值内容，${health.curated || 0} 精选兜底，${health.failed || 0} 失败。`,
+    "",
+    "## 今日必看 Top 10",
+    ...top.flatMap((item, index) => {
+      const brief = item.intelligenceBrief || {};
+      return [
+        "",
+        `${index + 1}. ${markdownLink(item.titleZh || item.title, item.sourceUrl)}`,
+        `   - 推荐理由：${plainText(brief.recommendationReason || item.summaryZh || item.summary)}`,
+        `   - 启发：${plainText(brief.takeaway || firstSentence(item.summaryZh || item.summary))}`,
+        `   - 来源：${item.sourceName} / ${item.date} / ${item.qualityLabelZh || ""}`,
+      ];
+    }),
+    "",
+    "## 方法论与实战",
+    ...methods.map((item, index) => `${index + 1}. ${markdownLink(item.titleZh || item.title, item.sourceUrl)} - ${firstSentence(item.intelligenceBrief?.takeaway || item.summaryZh || item.summary)}`),
+    "",
+    "## A级/一手来源观察",
+    ...official.map((item, index) => `${index + 1}. ${markdownLink(item.titleZh || item.title, item.sourceUrl)} - ${item.sourceName}`),
+    "",
+    "## 阅读建议",
+    "- 先读 Top 10，快速判断今天最值得跟进的模型、产品和方法论变化。",
+    "- 对企业应用相关内容，重点看 API、Agent 工作流、成本结构和落地路径。",
+    "- 如果感兴趣请点击查看原文章，做决策前建议核验完整语境。",
+  ];
+  const wechat = [
+    `AI Daily Radar 日报｜${date}`,
+    "",
+    `今天收录 ${items.length} 条 AI 情报，精选 Top 10。`,
+    "",
+    "今日最值得看：",
+    ...top.slice(0, 6).map((item, index) => `${index + 1}. ${item.titleZh || item.title}\n   ${firstSentence(item.intelligenceBrief?.recommendationReason || item.summaryZh || item.summary)}\n   原文：${item.sourceUrl}`),
+    "",
+    "实战方法提醒：",
+    ...methods.slice(0, 3).map((item) => `- ${item.titleZh || item.title}：${firstSentence(item.intelligenceBrief?.takeaway || item.summaryZh || item.summary)}`),
+    "",
+    "如果感兴趣请点击查看原文章。"
+  ].join("\n");
+  return {
+    markdown: lines.join("\n"),
+    wechat,
+    filename: `ai-daily-radar-${date}.md`,
+  };
+}
+
+function renderDigestExport(payload, newsItems) {
+  if (!digestPreview) return;
+  digestCache = buildDigest(payload, newsItems);
+  digestPreview.value = digestCache.markdown;
+  if (digestMeta) {
+    digestMeta.textContent = `已生成 ${newsItems.length} 条情报的日报，可复制 Markdown / 微信版，也可下载 .md。`;
+  }
+}
+
+async function copyText(text, label) {
+  try {
+    await navigator.clipboard.writeText(text);
+    if (digestStatus) digestStatus.textContent = `${label} 已复制`;
+  } catch (_) {
+    digestPreview?.select();
+    document.execCommand("copy");
+    if (digestStatus) digestStatus.textContent = `${label} 已复制`;
+  }
+}
+
+function downloadText(text, filename) {
+  const blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  if (digestStatus) digestStatus.textContent = "Markdown 文件已生成";
 }
 
 function initCategoryOptions() {
@@ -421,6 +535,9 @@ function bindEvents(newsItems) {
     toggleItemState(item, button.dataset.state);
     renderNews(getFilteredNews(newsItems));
   });
+  copyMarkdownBtn?.addEventListener("click", () => copyText(digestCache.markdown, "Markdown"));
+  copyWechatBtn?.addEventListener("click", () => copyText(digestCache.wechat, "微信版日报"));
+  downloadDigestBtn?.addEventListener("click", () => downloadText(digestCache.markdown, digestCache.filename));
 }
 
 async function renderSourcePools() {
@@ -472,6 +589,7 @@ async function init() {
   renderTopStories(payload.topStories.length ? payload.topStories : newsItems.slice(0, 10));
   renderSourceHealth(payload.sourceHealth);
   renderSourceHealthDetails(payload.sourceHealthDetails);
+  renderDigestExport(payload, newsItems);
   renderNews(getFilteredNews(newsItems));
   sourceHealthToggle?.addEventListener("click", () => {
     const isHidden = sourceHealthPanel.hasAttribute("hidden");

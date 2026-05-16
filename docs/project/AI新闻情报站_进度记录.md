@@ -194,4 +194,49 @@
 - Add Markdown daily digest export.
 - Evaluate whether to add a small backend/user-state store if cross-device reading state becomes necessary.
 
+## 2026-05-15 P1 daily digest export
+
+### Goal
+
+- Start P1-2: turn the intelligence feed into a reusable daily digest.
+- Support one-click Markdown copy, WeChat-style copy, and `.md` download.
+- Keep the digest grounded in Top 10, methods/practice items, A-grade sources, source health, and original article links.
+
+### Completed
+
+- Added a "Daily Brief Export" section to the frontend.
+- Generated Markdown digest content from current `data/news.json`, including Top 10, methods/practice items, A-grade observations, reading advice, source health, and source links.
+- Added WeChat-style digest copy for easier reposting.
+- Added `.md` download with date-based filename.
+- Added Playwright coverage for digest preview, Markdown copy, WeChat copy, and download filename.
+
+### Changed Files
+
+- `index.html`
+- `app.js`
+- `styles.css`
+- `tests/frontend.spec.mjs`
+- `artifacts/p1-digest-export-local.png`
+
+### Evidence
+
+- `py -3 scripts/validate_news_data.py`: PASS, 208 items, 2 solo-builder items, Top stories 10.
+- `npm.cmd run validate:frontend`: 9 passed.
+- Local screenshot: `artifacts/p1-digest-export-local.png`.
+- Remote `http://192.168.1.242:8088` frontend validation: 9 passed.
+- Remote data validation: PASS; `ai-news-sync.timer` active.
+- Remote screenshot: `artifacts/p1-digest-export-remote.png`.
+
+### Remaining Issues
+
+- Digest export is browser-side only; it does not yet write a server-side daily archive file.
+- WeChat-style output is text-first, not a polished rich-media article template.
+- Copy depends on browser clipboard support, with textarea fallback.
+
+### Next Step
+
+- Add server-side generated daily Markdown archive under `data/digests/`.
+- Add trend module: 7-day company/model/topic heat.
+- Improve WeChat/Feishu style export layout with richer section formatting.
+
 

@@ -116,6 +116,34 @@ test("source health details and reading state persist", async ({ page }) => {
   await expect(page.locator(".card").first()).toContainText(firstTitle.slice(0, 12));
 });
 
+test("exports reusable daily digest", async ({ page }) => {
+  await expect(page.locator(".digest-export")).toBeVisible();
+  await expect(page.locator("#digestPreview")).toHaveValue(/AI Daily Radar 日报/);
+  await expect(page.locator("#digestPreview")).toHaveValue(/今日必看 Top 10/);
+  await expect(page.locator("#digestPreview")).toHaveValue(/方法论与实战/);
+  await expect(page.locator("#digestPreview")).toHaveValue(/来源健康/);
+
+  await page.evaluate(() => {
+    window.__copiedText = "";
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: { writeText: async (text) => { window.__copiedText = text; } }
+    });
+  });
+  await page.click("#copyMarkdownBtn");
+  await expect(page.locator("#digestStatus")).toContainText("Markdown 已复制");
+  expect(await page.evaluate(() => window.__copiedText.includes("## 今日必看 Top 10"))).toBe(true);
+
+  await page.click("#copyWechatBtn");
+  await expect(page.locator("#digestStatus")).toContainText("微信版日报 已复制");
+  expect(await page.evaluate(() => window.__copiedText.includes("如果感兴趣请点击查看原文章"))).toBe(true);
+
+  const download = page.waitForEvent("download");
+  await page.click("#downloadDigestBtn");
+  const file = await download;
+  expect(file.suggestedFilename()).toMatch(/ai-daily-radar-\d{4}-\d{2}-\d{2}\.md/);
+});
+
 test("desktop layout keeps filters left of stream", async ({ page }) => {
   const filterBox = await page.locator(".filters").boundingBox();
   const streamBox = await page.locator(".stream").boundingBox();
