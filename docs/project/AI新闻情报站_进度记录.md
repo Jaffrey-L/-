@@ -403,4 +403,50 @@
 - 下一阶段建议推进 LLM 摘要器：把每条内容升级为“发生了什么 / 为什么重要 / 怎么用 / 是否值得深读”的更自然中文情报卡。
 - 增加一个“质量复盘页”，每天显示归档原因、被过滤源、Top 入选理由，方便主人定期调校内容口味。
 
+## 2026-05-18 17:05 P1 Top 10 可点击体验修复
+
+### 本次目标
+
+- 修复 Top 10 情报卡片不可点击的问题。
+- 让高价值区域形成“快速扫读 -> 点击原文深读”的闭环。
+- 补充自动化测试，避免后续改版再次丢失点击能力。
+
+### 实际完成
+
+- 将 Top 10 卡片从纯展示 `article` 改为整卡可点击链接。
+- 每张 Top 卡片新增 `href`、`target="_blank"`、`rel="noreferrer noopener"` 和 `data-top-link="true"`。
+- Top 卡片新增“查看原文”提示。
+- 增加 hover / focus-visible 交互反馈，让用户明确知道卡片可点击。
+- 更新 `app.js` / `styles.css` 版本号，避免浏览器缓存导致远程页面不刷新。
+- Playwright 增加断言：Top 10 必须全部有链接、第一条必须是 http(s) 原文链接、必须新窗口打开。
+- 已部署远程 `http://192.168.1.242:8088`。
+
+### 改动文件
+
+- `app.js`
+- `styles.css`
+- `index.html`
+- `tests/frontend.spec.mjs`
+- `docs/project/AI新闻情报站_进度记录.md`
+- `artifacts/p1-clickable-top-local.png`
+- `artifacts/p1-clickable-top-remote.png`
+
+### 验证证据
+
+- 本地 `node --check app.js`：通过。
+- 本地 `py -3 scripts/validate_news_data.py`：PASS。
+- 本地 `npm.cmd run validate:frontend`：11 passed。
+- 本地浏览器抽检：Top cards 10，linkedTopCards 10，第一条 href 为 `https://karpathy.bearblog.dev/auto-grade-hn/`，target 为 `_blank`，包含“查看原文”。
+- 远程 `SITE_URL=http://192.168.1.242:8088 npm.cmd run validate:frontend`：11 passed。
+- 远程浏览器抽检：Top cards 10，linkedTopCards 10，第一条 href 为 `https://karpathy.bearblog.dev/auto-grade-hn/`，target 为 `_blank`，包含“查看原文”。
+- 远程截图：`artifacts/p1-clickable-top-remote.png`。
+
+### 剩余问题
+
+- 本次只修复 Top 10 点击能力。后续仍建议继续盘点其它模块中“看起来可点但不可点”的区域，例如趋势词、来源健康行、质量理由标签。
+
+### 下一步建议
+
+- 做一次全站可点击性审查：Top 10、趋势雷达、来源健康、日报预览、质量理由、卡片正文标题都按“能不能直接进入下一步”复核。
+
 

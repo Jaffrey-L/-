@@ -18,6 +18,10 @@ test.beforeEach(async ({ page }) => {
 test("loads readable monthly AI news cards", async ({ page }) => {
   await expect(page.locator(".top-briefing")).toBeVisible();
   await expect(page.locator(".top-card")).toHaveCount(10);
+  await expect(page.locator(".top-card[data-top-link]")).toHaveCount(10);
+  await expect(page.locator(".top-card[data-top-link]").first()).toHaveAttribute("href", /^https?:\/\//);
+  await expect(page.locator(".top-card[data-top-link]").first()).toHaveAttribute("target", "_blank");
+  await expect(page.locator(".top-card[data-top-link]").first()).toContainText("查看原文");
   await expect(page.locator("#sourceHealth")).toContainText("\u6765\u6e90\u5065\u5eb7");
   await expect(page.locator("#sourceHealth")).toContainText("\u7cbe\u9009\u515c\u5e95");
   await expect(page.locator(".card h3").first()).toBeVisible();

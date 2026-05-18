@@ -540,15 +540,17 @@ function renderTopStories(stories) {
   }
   topStoriesEl.innerHTML = top.map((item, index) => {
     const brief = item.intelligenceBrief || {};
+    const safeUrl = String(item.sourceUrl || "#");
     return `
-      <article class="top-card">
+      <a class="top-card" href="${escapeHtml(safeUrl)}" target="_blank" rel="noreferrer noopener" data-top-link="true">
         <span class="rank">#${escapeHtml(item.topRank || index + 1)}</span>
         <div>
           <h3>${escapeHtml(item.titleZh || item.title)}</h3>
           <p>${escapeHtml(brief.recommendationReason || item.summaryZh || item.summary)}</p>
           <small>${escapeHtml(item.sourceName)} · ${escapeHtml(item.date)} · ${escapeHtml(item.qualityLabelZh || "")}</small>
         </div>
-      </article>
+          <span class="top-card-cta">查看原文</span>
+      </a>
     `;
   }).join("");
 }
