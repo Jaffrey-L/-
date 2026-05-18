@@ -120,8 +120,11 @@ test("exports reusable daily digest", async ({ page }) => {
   await expect(page.locator(".digest-export")).toBeVisible();
   await expect(page.locator("#digestPreview")).toHaveValue(/AI Daily Radar 日报/);
   await expect(page.locator("#digestPreview")).toHaveValue(/今日必看 Top 10/);
+  await expect(page.locator("#digestPreview")).toHaveValue(/7 天趋势雷达/);
   await expect(page.locator("#digestPreview")).toHaveValue(/方法论与实战/);
   await expect(page.locator("#digestPreview")).toHaveValue(/来源健康/);
+  await expect(page.locator("#serverDigestLink")).toHaveAttribute("href", /\.\/data\/digests\/latest\.md/);
+  await expect(page.locator("#digestArchiveMeta")).toContainText("服务器已生成归档");
 
   await page.evaluate(() => {
     window.__copiedText = "";
@@ -142,6 +145,14 @@ test("exports reusable daily digest", async ({ page }) => {
   await page.click("#downloadDigestBtn");
   const file = await download;
   expect(file.suggestedFilename()).toMatch(/ai-daily-radar-\d{4}-\d{2}-\d{2}\.md/);
+});
+
+test("shows seven day trend radar", async ({ page }) => {
+  await expect(page.locator(".trend-radar")).toBeVisible();
+  await expect(page.locator("#trendMeta")).toContainText("共");
+  await expect(page.locator("#companyTrends .trend-row").first()).toBeVisible();
+  await expect(page.locator("#modelTrends .trend-row").first()).toBeVisible();
+  await expect(page.locator("#topicTrends .trend-row").first()).toBeVisible();
 });
 
 test("desktop layout keeps filters left of stream", async ({ page }) => {

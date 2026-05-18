@@ -71,10 +71,16 @@ const sourceHealthToggle = document.getElementById("sourceHealthToggle");
 const sourceHealthPanel = document.getElementById("sourceHealthPanel");
 const digestPreview = document.getElementById("digestPreview");
 const digestMeta = document.getElementById("digestMeta");
+const digestArchiveMeta = document.getElementById("digestArchiveMeta");
 const digestStatus = document.getElementById("digestStatus");
+const serverDigestLink = document.getElementById("serverDigestLink");
 const copyMarkdownBtn = document.getElementById("copyMarkdownBtn");
 const copyWechatBtn = document.getElementById("copyWechatBtn");
 const downloadDigestBtn = document.getElementById("downloadDigestBtn");
+const trendMeta = document.getElementById("trendMeta");
+const companyTrends = document.getElementById("companyTrends");
+const modelTrends = document.getElementById("modelTrends");
+const topicTrends = document.getElementById("topicTrends");
 const resultCount = document.getElementById("resultCount");
 const READING_STATE_KEY = "ai-daily-radar-reading-state-v1";
 let appliedFilters = null;
@@ -145,7 +151,15 @@ function buildDigest(payload, newsItems) {
   const methods = items.filter((item) => item.qualityType === "application_method" || item.category === TEXT.practice).slice(0, 5);
   const official = items.filter((item) => item.sourceGrade === "A").slice(0, 5);
   const health = payload.sourceHealth || {};
+  const trends = payload.trends || {};
   const date = formatDigestDate(payload.updatedAt);
+  const trendLines = [
+    "## 7 天趋势雷达",
+    `- 公司热度：${(trends.companies || []).slice(0, 5).map((row) => `${row.name} ${row.count}`).join(" / ") || "暂无明显集中趋势"}`,
+    `- 模型热度：${(trends.models || []).slice(0, 5).map((row) => `${row.name} ${row.count}`).join(" / ") || "暂无明显集中趋势"}`,
+    `- 主题热度：${(trends.topics || []).slice(0, 5).map((row) => `${row.name} ${row.count}`).join(" / ") || "暂无明显集中趋势"}`,
+    "",
+  ];
   const lines = [
     `# AI Daily Radar 日报 - ${date}`,
     "",
@@ -163,6 +177,7 @@ function buildDigest(payload, newsItems) {
       ];
     }),
     "",
+    ...trendLines,
     "## 方法论与实战",
     ...methods.map((item, index) => `${index + 1}. ${markdownLink(item.titleZh || item.title, item.sourceUrl)} - ${firstSentence(item.intelligenceBrief?.takeaway || item.summaryZh || item.summary)}`),
     "",
@@ -201,6 +216,44 @@ function renderDigestExport(payload, newsItems) {
   if (digestMeta) {
     digestMeta.textContent = `已生成 ${newsItems.length} 条情报的日报，可复制 Markdown / 微信版，也可下载 .md。`;
   }
+  if (payload.digestArchive && serverDigestLink) {
+    const path = payload.digestArchive.latestPath || payload.digestArchive.path;
+    serverDigestLink.href = `./${path}`;
+    serverDigestLink.textContent = `打开服务器归档 ${payload.digestArchive.date || ""}`.trim();
+  }
+  if (digestArchiveMeta && payload.digestArchive) {
+    digestArchiveMeta.textContent = `服务器已生成归档：${payload.digestArchive.path}，包含 ${payload.digestArchive.topStoryCount || 0} 条 Top 情报。`;
+  }
+}
+
+function renderTrendList(container, rows) {
+  if (!container) return;
+  const values = Array.isArray(rows) ? rows.slice(0, 8) : [];
+  if (!values.length) {
+    container.innerHTML = `<p class="trend-empty">暂无明显集中趋势</p>`;
+    return;
+  }
+  const max = Math.max(...values.map((row) => row.count || 0), 1);
+  container.innerHTML = values.map((row) => {
+    const width = Math.max(8, Math.round(((row.count || 0) / max) * 100));
+    return `
+      <div class="trend-row">
+        <span>${escapeHtml(row.name)}</span>
+        <strong>${escapeHtml(row.count || 0)}</strong>
+        <i style="--bar-width:${width}%"></i>
+      </div>
+    `;
+  }).join("");
+}
+
+function renderTrends(trends) {
+  if (!trends) return;
+  if (trendMeta) {
+    trendMeta.textContent = `${trends.startDate || ""} 至 ${trends.endDate || ""}，共 ${trends.itemCount || 0} 条近期高价值情报。`;
+  }
+  renderTrendList(companyTrends, trends.companies);
+  renderTrendList(modelTrends, trends.models);
+  renderTrendList(topicTrends, trends.topics);
 }
 
 async function copyText(text, label) {
@@ -570,10 +623,13 @@ async function loadNewsData() {
       items: Array.isArray(data.items) && data.items.length ? data.items : fallbackNews,
       topStories: Array.isArray(data.topStories) ? data.topStories : [],
       sourceHealth: data.sourceHealth || null,
-      sourceHealthDetails: Array.isArray(data.sourceHealthDetails) ? data.sourceHealthDetails : []
+      sourceHealthDetails: Array.isArray(data.sourceHealthDetails) ? data.sourceHealthDetails : [],
+      trends: data.trends || null,
+      digestArchive: data.digestArchive || null,
+      updatedAt: data.updatedAt || ""
     };
   } catch (_) {
-    return { items: fallbackNews, topStories: fallbackNews, sourceHealth: null, sourceHealthDetails: [] };
+    return { items: fallbackNews, topStories: fallbackNews, sourceHealth: null, sourceHealthDetails: [], trends: null, digestArchive: null, updatedAt: "" };
   }
 }
 
@@ -589,6 +645,7 @@ async function init() {
   renderTopStories(payload.topStories.length ? payload.topStories : newsItems.slice(0, 10));
   renderSourceHealth(payload.sourceHealth);
   renderSourceHealthDetails(payload.sourceHealthDetails);
+  renderTrends(payload.trends);
   renderDigestExport(payload, newsItems);
   renderNews(getFilteredNews(newsItems));
   sourceHealthToggle?.addEventListener("click", () => {

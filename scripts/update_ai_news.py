@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT_FILE = ROOT / "data" / "news.json"
 SOURCES_FILE = ROOT / "sources.json"
+DIGEST_DIR = ROOT / "data" / "digests"
 
 CORE_CATEGORY = "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb"
 CREATOR_CATEGORY = "\u6838\u5fc3AI\u535a\u4e3b"
@@ -102,11 +103,32 @@ QUALITY_SIGNALS = {
         "profitable internet products", "one-person", "founder workflow", "shipfast", "headshotpro", "photo ai",
     ],
 }
+AI_CONTEXT_TERMS = [
+    "ai", "llm", "gpt", "claude", "gemini", "grok", "deepseek", "qwen", "agent", "agents",
+    "prompt", "prompting", "model", "models", "openai", "anthropic", "cursor", "vibe coding",
+    "machine learning", "neural", "inference", "token", "tokens", "rag", "embedding", "embeddings",
+    "eval", "benchmark", "multimodal", "computer use", "tool use",
+]
 QUALITY_LABELS_ZH = {
     "technical_update": "\u6280\u672f\u66f4\u65b0",
     "feature_update": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
     "application_method": "AI\u5e94\u7528\u65b9\u6cd5",
     "general": "\u4e00\u822c\u52a8\u6001",
+}
+
+TREND_MODEL_TERMS = [
+    "GPT", "Claude", "Gemini", "Llama", "Grok", "DeepSeek", "Qwen", "通义", "豆包",
+    "Hunyuan", "混元", "ERNIE", "文心", "Pangu", "盘古", "Sora", "Veo", "Imagen",
+]
+
+TREND_TOPIC_TERMS = {
+    "Agent": ["agent", "agents", "operator", "computer use", "tool use"],
+    "Vibe Coding": ["vibe coding", "coding", "code", "cursor", "claude code"],
+    "Prompt": ["prompt", "prompting"],
+    "企业应用": ["enterprise", "workspace", "deployment", "production"],
+    "多模态": ["multimodal", "voice", "video", "image"],
+    "开源模型": ["open-source", "open weights", "llama", "hugging face"],
+    "推理能力": ["reasoning", "inference", "benchmark", "eval"],
 }
 ZH_TERMS = {
     "ai": "AI", "agent": "\u667a\u80fd\u4f53", "agents": "\u667a\u80fd\u4f53", "model": "\u6a21\u578b", "models": "\u6a21\u578b",
@@ -210,6 +232,20 @@ def count_signals(text, signals):
     return sum(1 for signal in signals if signal in lowered)
 
 
+def has_ai_context(text):
+    lowered = text.lower()
+    for term in AI_CONTEXT_TERMS:
+        term_lower = term.lower()
+        if re.search(r"[\u4e00-\u9fff]", term_lower):
+            if term_lower in lowered:
+                return True
+            continue
+        pattern = r"(?<![a-z0-9]){}(?![a-z0-9])".format(re.escape(term_lower))
+        if re.search(pattern, lowered):
+            return True
+    return False
+
+
 def quality_profile(title, summary, body, tags, category, grade):
     text = " ".join([title or "", summary or "", strip_html(body)])
     title_text = (title or "").lower()
@@ -232,6 +268,10 @@ def quality_profile(title, summary, body, tags, category, grade):
         score += 8
     if len(strip_html(body)) > 700:
         score += 8
+    if category in (CREATOR_CATEGORY, PRACTICE_CATEGORY, SOLO_CATEGORY) and not has_ai_context(text):
+        score -= 55
+        if positive_hits < 2:
+            best_type = "general"
     if title_low_hit:
         score -= 45
     if positive_hits == 0:
@@ -708,13 +748,187 @@ def source_health_details(coverage, source_pool):
     return rows
 
 
-def top_stories(items, limit=10):
+def top_stories(items, limit=10, max_per_source=2):
     ranked = sorted(items, key=lambda item: (item.get("readingScore", 0), item.get("qualityScore", 0), item.get("sourceCount", 1), item.get("importance", 0)), reverse=True)
-    top = ranked[:limit]
+    top = []
+    source_counts = {}
+    seen_events = set()
+    for item in ranked:
+        event_id = item.get("eventId") or item.get("title")
+        source = item.get("sourceName", "")
+        if event_id in seen_events:
+            continue
+        if source_counts.get(source, 0) >= max_per_source:
+            continue
+        top.append(item)
+        seen_events.add(event_id)
+        source_counts[source] = source_counts.get(source, 0) + 1
+        if len(top) >= limit:
+            break
+    if len(top) < limit:
+        for item in ranked:
+            if item in top:
+                continue
+            top.append(item)
+            if len(top) >= limit:
+                break
     for index, item in enumerate(top, start=1):
         item["topRank"] = index
         item["isTopStory"] = True
     return top
+
+
+def latest_item_date(items):
+    dates = sorted(item.get("date", "") for item in items if item.get("date"))
+    return dates[-1] if dates else datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def recent_items(items, days=7):
+    end = datetime.strptime(latest_item_date(items), "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    start = end.replace(hour=0, minute=0, second=0, microsecond=0)
+    start = start.fromtimestamp(start.timestamp() - (days - 1) * 86400, tz=timezone.utc)
+    result = []
+    for item in items:
+        try:
+            date = datetime.strptime(item.get("date", ""), "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        if start <= date <= end:
+            result.append(item)
+    return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d"), result
+
+
+def top_counts(pairs, limit=8):
+    ranked = sorted(pairs.items(), key=lambda pair: (-pair[1], pair[0].lower()))
+    return [{"name": name, "count": count} for name, count in ranked[:limit] if count > 0]
+
+
+def build_trends(items, source_pool):
+    start, end, scoped = recent_items(items, days=7)
+    company_names = set(source_pool.get(CORE_CATEGORY, [])) | {source["name"] for source in RSS_SOURCES if source["category"] == CORE_CATEGORY}
+    company_counts = {}
+    model_counts = {}
+    topic_counts = {}
+    quality_counts = {}
+
+    for item in scoped:
+        text = " ".join([
+            item.get("title", ""),
+            item.get("titleZh", ""),
+            item.get("summary", ""),
+            item.get("summaryZh", ""),
+            " ".join(str(tag) for tag in item.get("tags", [])),
+            item.get("sourceName", ""),
+        ]).lower()
+        if item.get("sourceName") in company_names:
+            company_counts[item["sourceName"]] = company_counts.get(item["sourceName"], 0) + 1
+        for company in company_names:
+            if company.lower() in text:
+                company_counts[company] = company_counts.get(company, 0) + 1
+        for model in TREND_MODEL_TERMS:
+            if model.lower() in text:
+                model_counts[model] = model_counts.get(model, 0) + 1
+        for topic, signals in TREND_TOPIC_TERMS.items():
+            if any(signal.lower() in text for signal in signals):
+                topic_counts[topic] = topic_counts.get(topic, 0) + 1
+        label = item.get("qualityLabelZh") or item.get("qualityType") or "未分类"
+        quality_counts[label] = quality_counts.get(label, 0) + 1
+
+    return {
+        "windowDays": 7,
+        "startDate": start,
+        "endDate": end,
+        "itemCount": len(scoped),
+        "companies": top_counts(company_counts),
+        "models": top_counts(model_counts),
+        "topics": top_counts(topic_counts),
+        "qualityTypes": top_counts(quality_counts, limit=4),
+    }
+
+
+def digest_line_item(item, index):
+    brief = item.get("intelligenceBrief", {})
+    title = item.get("titleZh") or item.get("title")
+    url = item.get("sourceUrl", "")
+    link = "[{}]({})".format(title, url) if url else title
+    return "\n{}. {}\n   - 推荐理由：{}\n   - 启发：{}\n   - 来源：{} / {} / {}".format(
+        index,
+        link,
+        strip_html(brief.get("recommendationReason") or item.get("summaryZh") or item.get("summary")),
+        strip_html(brief.get("takeaway") or item.get("summaryZh") or item.get("summary")),
+        item.get("sourceName", ""),
+        item.get("date", ""),
+        item.get("qualityLabelZh", ""),
+    )
+
+
+def write_daily_digest(payload):
+    items = payload.get("items", [])
+    top = (payload.get("topStories") or items[:10])[:10]
+    trends = payload.get("trends", {})
+    health = payload.get("sourceHealth", {})
+    date = latest_item_date(items)
+    methods = [item for item in items if item.get("qualityType") == "application_method" or item.get("category") == PRACTICE_CATEGORY][:5]
+    a_grade = [item for item in items if item.get("sourceGrade") == "A"][:5]
+
+    trend_lines = []
+    for section, title in (("companies", "公司热度"), ("models", "模型热度"), ("topics", "主题热度")):
+        values = trends.get(section, [])
+        trend_lines.append("### {}".format(title))
+        trend_lines.extend("- {}：{} 条".format(row["name"], row["count"]) for row in values[:6])
+        if not values:
+            trend_lines.append("- 暂无明显集中趋势")
+        trend_lines.append("")
+
+    lines = [
+        "# AI Daily Radar 日报 - {}".format(date),
+        "",
+        "> 今日共 {} 条情报，Top 10 已精选。来源健康：{}/{} 正常，{} 暂无高价值内容，{} 精选兜底，{} 失败。".format(
+            len(items),
+            health.get("ok", 0),
+            health.get("total", 0),
+            health.get("empty", 0),
+            health.get("curated", 0),
+            health.get("failed", 0),
+        ),
+        "",
+        "## 今日必看 Top 10",
+    ]
+    lines.extend(digest_line_item(item, index) for index, item in enumerate(top, start=1))
+    lines.extend(["", "## 7 天趋势雷达", ""])
+    lines.extend(trend_lines)
+    lines.extend(["## 方法论与实战"])
+    lines.extend("- [{}]({})：{}".format(item.get("titleZh") or item.get("title"), item.get("sourceUrl"), strip_html(item.get("intelligenceBrief", {}).get("takeaway") or item.get("summaryZh") or item.get("summary"))) for item in methods)
+    lines.extend(["", "## A级/一手来源观察"])
+    lines.extend("- [{}]({})：{}".format(item.get("titleZh") or item.get("title"), item.get("sourceUrl"), item.get("sourceName", "")) for item in a_grade)
+    lines.extend([
+        "",
+        "## 阅读建议",
+        "- 先读 Top 10，快速判断今天最值得跟进的模型、产品和方法论变化。",
+        "- 对企业应用相关内容，重点看 API、Agent 工作流、成本结构和落地路径。",
+        "- 如果感兴趣请点击查看原文章，做决策前建议核验完整语境。",
+        "",
+    ])
+
+    DIGEST_DIR.mkdir(parents=True, exist_ok=True)
+    digest_path = DIGEST_DIR / "{}.md".format(date)
+    latest_path = DIGEST_DIR / "latest.md"
+    markdown = "\n".join(lines)
+    digest_path.write_text(markdown, encoding="utf-8")
+    latest_path.write_text(markdown, encoding="utf-8")
+    index_path = DIGEST_DIR / "index.json"
+    archive_index = {
+        "latest": "data/digests/latest.md",
+        "digests": [{
+            "date": date,
+            "path": "data/digests/{}.md".format(date),
+            "itemCount": len(items),
+            "topStoryCount": len(top),
+            "generatedAt": payload.get("updatedAt"),
+        }],
+    }
+    index_path.write_text(json.dumps(archive_index, ensure_ascii=True, indent=2), encoding="utf-8")
+    return archive_index["digests"][0] | {"latestPath": archive_index["latest"]}
 
 
 def main():
@@ -725,6 +939,7 @@ def main():
     fetched_articles = enrich_article_bodies(items)
     items = dedupe(items)
     items.sort(key=lambda x: (x["date"], x["qualityScore"], x["readingScore"], x["sourceGrade"] == "A", x["importance"]), reverse=True)
+    items = items[:MAX_ITEMS]
     top = top_stories(items)
 
     payload = {
@@ -750,9 +965,11 @@ def main():
         "sourceHealth": source_health(coverage),
         "sourceHealthDetails": source_health_details(coverage, source_pool),
         "sourceCoverage": coverage,
+        "trends": build_trends(items, source_pool),
         "topStories": top,
-        "items": items[:MAX_ITEMS],
+        "items": items,
     }
+    payload["digestArchive"] = write_daily_digest(payload)
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUT_FILE.write_text(json.dumps(payload, ensure_ascii=True, indent=2), encoding="utf-8")
     print("Updated {} with {} items from {} tracked sources.".format(OUT_FILE, len(payload["items"]), len(coverage)))

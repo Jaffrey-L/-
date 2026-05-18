@@ -239,4 +239,61 @@
 - Add trend module: 7-day company/model/topic heat.
 - Improve WeChat/Feishu style export layout with richer section formatting.
 
+## 2026-05-18 P2 server digest archive and trend radar
+
+### Goal
+
+- Start P2-1: make the browser-side digest export become a server-side daily archive.
+- Add a 7-day trend radar for company, model, and topic heat.
+- Keep existing filters, Top 10, source health, reading state, and digest export stable.
+
+### Completed
+
+- Added server-side Markdown digest generation during `scripts/update_ai_news.py` sync.
+- Generated `data/digests/2026-05-18.md`, `data/digests/latest.md`, and `data/digests/index.json`.
+- Added `digestArchive` metadata and `trends` metadata into `data/news.json`.
+- Added a homepage "7 天趋势雷达" module with company/model/topic trend bars.
+- Added a server archive link in the daily digest export section.
+- Added frontend test coverage for trend rendering and server archive metadata.
+- Tightened Top 10 ranking with source-diversity control, so a single creator/source cannot dominate the daily briefing.
+
+### Changed Files
+
+- `scripts/update_ai_news.py`
+- `scripts/validate_news_data.py`
+- `data/news.json`
+- `data/digests/2026-05-18.md`
+- `data/digests/latest.md`
+- `data/digests/index.json`
+- `index.html`
+- `app.js`
+- `styles.css`
+- `tests/frontend.spec.mjs`
+- `artifacts/p2-trends-digest-local.png`
+- `artifacts/p2-trends-digest-remote.png`
+
+### Evidence
+
+- Remote `python3 scripts/update_ai_news.py`: generated 196 items from 71 tracked sources.
+- Remote `python3 scripts/validate_news_data.py`: PASS; 196 items, Top stories 10, Trends 45 items from 2026-05-12 to 2026-05-18, Digest `data/digests/2026-05-18.md`.
+- Local `py -3 scripts/validate_news_data.py`: PASS after downloading remote-generated data.
+- Local `npm.cmd run validate:frontend`: 10 passed.
+- Remote `SITE_URL=http://192.168.1.242:8088 npm.cmd run validate:frontend`: 10 passed.
+- Remote visual check via Playwright: trend meta rendered as `2026-05-12 至 2026-05-18，共 45 条近期高价值情报。`; archive meta rendered as `服务器已生成归档：data/digests/2026-05-18.md，包含 10 条 Top 情报。`.
+- Remote HTTP spot-check: page contains `trend-radar` and `serverDigestLink`; `data/digests/latest.md` returns HTTP 200.
+- Top 10 source quality spot-check after diversity fix: Andrej Karpathy, Simon Willison, OpenAI, Enterprise Agents, Marc Lou, Danny Postma, and Hugging Face all appear in the daily briefing.
+- Local screenshot: `artifacts/p2-trends-digest-local.png`.
+- Remote screenshot: `artifacts/p2-trends-digest-remote.png`.
+
+### Remaining Issues
+
+- Remote deployment and validation are now complete.
+- Deployment backup was created on the server: `/tmp/ai-daily-radar-backups/pre-p2-20260518094911.tgz`.
+- The WeChat/Feishu export is still text-first; a polished rich-media template remains a later improvement.
+
+### Next Step
+
+- Commit and push the P2 server digest/trend radar changes.
+- Next product step: improve WeChat/Feishu rich-media export and add a trend history page.
+
 

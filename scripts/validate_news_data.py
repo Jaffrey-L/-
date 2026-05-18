@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "news.json"
 SOURCES_FILE = ROOT / "sources.json"
+DIGEST_DIR = ROOT / "data" / "digests"
 CREATOR_CATEGORY = "\u6838\u5fc3AI\u535a\u4e3b"
 PRACTICE_CATEGORY = "Vibe/Prompt/Agent\u5b9e\u6218"
 SOLO_CATEGORY = "AI\u4e2a\u4eba\u516c\u53f8\u5927\u795e"
@@ -21,6 +22,8 @@ def main():
     source_health_details = payload.get("sourceHealthDetails", [])
     p0_quality = payload.get("p0Quality", {})
     coverage = payload.get("sourceCoverage", {})
+    trends = payload.get("trends", {})
+    digest_archive = payload.get("digestArchive", {})
     cutoff = datetime.strptime(payload.get("yearStart", YEAR_START), "%Y-%m-%d").replace(tzinfo=timezone.utc)
     expected_sources = set(source_pool.get("companies", [])) | set(source_pool.get("creators", [])) | set(source_pool.get("soloBuilders", []))
 
@@ -33,6 +36,18 @@ def main():
     assert source_health.get("ok", 0) + source_health.get("empty", 0) >= int(source_health.get("total", 0) * 0.75), "too many source failures"
     assert isinstance(source_health_details, list) and len(source_health_details) >= len(expected_sources), "expected source health detail rows"
     assert p0_quality.get("topStoryCount") == 10, "p0 quality metadata should report 10 top stories"
+    assert trends.get("windowDays") == 7, "expected 7-day trends metadata"
+    assert trends.get("itemCount", 0) > 0, "expected at least one item in trend window"
+    assert isinstance(trends.get("topics"), list) and trends["topics"], "expected topic trends"
+    assert isinstance(trends.get("qualityTypes"), list) and trends["qualityTypes"], "expected quality trend summary"
+    digest_path = ROOT / digest_archive.get("path", "")
+    latest_digest_path = ROOT / digest_archive.get("latestPath", "")
+    assert digest_archive.get("date"), "expected digest archive date"
+    assert digest_path.exists(), f"expected digest archive file: {digest_path}"
+    assert latest_digest_path.exists(), f"expected latest digest archive file: {latest_digest_path}"
+    digest_text = digest_path.read_text(encoding="utf-8")
+    assert "今日必看 Top 10" in digest_text, "digest archive missing Top 10"
+    assert "7 天趋势雷达" in digest_text, "digest archive missing trend section"
     assert p0_quality.get("fetchedArticles", 0) >= 3, "expected at least 3 real article bodies to be fetched"
     assert any(item.get("contentFetched") for item in items), "expected fetched full-text article content"
     assert any(item.get("aggregatedEvent") for item in items), "expected at least one aggregated event card"
@@ -83,6 +98,8 @@ def main():
         f"{source_health.get('empty', 0)} empty. "
         f"Curated sources: {source_health.get('curated', 0)}. "
         f"Fetched article bodies: {p0_quality.get('fetchedArticles')}."
+        f" Trends: {trends.get('itemCount')} items from {trends.get('startDate')} to {trends.get('endDate')}. "
+        f"Digest: {digest_archive.get('path')}."
     )
 
 

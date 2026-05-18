@@ -43,6 +43,30 @@
     </article>
   </section>
 
+  <section class="shell trend-radar" aria-label="Seven day AI trends">
+    <div class="trend-radar-head">
+      <div>
+        <span class="eyebrow small">7-DAY SIGNAL</span>
+        <h2>7 &#22825;&#36235;&#21183;&#38647;&#36798;</h2>
+      </div>
+      <p id="trendMeta">&#25353;&#20844;&#21496;&#12289;&#27169;&#22411;&#19982;&#20027;&#39064;&#33258;&#21160;&#27719;&#24635;&#12290;</p>
+    </div>
+    <div class="trend-grid">
+      <article>
+        <h3>&#20844;&#21496;&#28909;&#24230;</h3>
+        <div id="companyTrends" class="trend-list"></div>
+      </article>
+      <article>
+        <h3>&#27169;&#22411;&#28909;&#24230;</h3>
+        <div id="modelTrends" class="trend-list"></div>
+      </article>
+      <article>
+        <h3>&#20027;&#39064;&#28909;&#24230;</h3>
+        <div id="topicTrends" class="trend-list"></div>
+      </article>
+    </div>
+  </section>
+
   <section class="shell top-briefing" aria-label="Top AI stories">
     <div class="top-briefing-head">
       <div>
@@ -64,8 +88,10 @@
         <span class="eyebrow small">DAILY BRIEF EXPORT</span>
         <h2>&#26085;&#25253;&#23548;&#20986;</h2>
         <p id="digestMeta">&#22522;&#20110; Top 10&#12289;&#26041;&#27861;&#35770;&#21644;&#26469;&#28304;&#20581;&#24247;&#33258;&#21160;&#29983;&#25104;&#12290;</p>
+        <p id="digestArchiveMeta" class="archive-meta"></p>
       </div>
       <div class="digest-actions">
+        <a id="serverDigestLink" class="button-link" href="./data/digests/latest.md" target="_blank" rel="noreferrer noopener">&#25171;&#24320;&#26381;&#21153;&#22120;&#24402;&#26723;</a>
         <button id="copyMarkdownBtn" type="button">&#22797;&#21046; Markdown</button>
         <button id="copyWechatBtn" type="button">&#22797;&#21046;&#24494;&#20449;&#29256;</button>
         <button id="downloadDigestBtn" type="button">&#19979;&#36733; .md</button>
