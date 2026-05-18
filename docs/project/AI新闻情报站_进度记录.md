@@ -344,4 +344,63 @@
 - Add a polished WeChat/Feishu rich-media template.
 - Improve digest content selection so method/practice examples avoid marginal official announcements.
 
+## 2026-05-18 16:20 P0 内容质量分层与质量理由验收
+
+### 本次目标
+
+- 按主人访谈要求收紧内容质量：默认只显示高质量内容，Top/日报只使用更高质量内容，低优先级内容进入归档。
+- 增加内容质量筛选器，支持“高质量默认 / 只看 Top 候选 / 查看全部 / 归档”。
+- 每条内容展示质量理由，说明为什么被保留、为什么进入 Top 或为什么归档。
+- 修复核心博主内容误判：避免订阅页脚、Tags、相关文章列表把非 AI 主体文章误抬高。
+
+### 实际完成
+
+- 数据层新增 `qualityReview`：包含 score、tier、isDefaultVisible、isTopEligible、reasons、penalties、reviewer。
+- 默认信息流阈值提升到 `qualityScore >= 60`，Top/日报阈值提升到 `qualityScore >= 80`，Top 不再强行补满低质量内容。
+- 新增 `archiveItems`，低于默认阈值的内容可通过归档查看。
+- 官方源只保留模型、产品能力、API、企业应用相关内容；博主/实战/solo builder 内容必须在主体文本里命中 AI/LLM/Agent/Prompt/Coding 强相关信号。
+- 前端新增“内容质量”筛选器，并改为点击“查询”后统一生效。
+- 前端卡片新增“质量理由 / 扣分原因”展示。
+- 修正日报/导出文案，Top 数量动态展示，不再固定假设 Top 10 一定满额。
+- 已部署到远程 `http://192.168.1.242:8088`，并按 systemd 服务用户 `www-data` 完成远程采集与校验。
+
+### 改动文件
+
+- `scripts/update_ai_news.py`
+- `scripts/validate_news_data.py`
+- `data/news.json`
+- `data/digests/2026-05-18.md`
+- `data/digests/latest.md`
+- `data/digests/index.json`
+- `index.html`
+- `app.js`
+- `styles.css`
+- `tests/frontend.spec.mjs`
+- `artifacts/p0-quality-filter-local.png`
+- `artifacts/p0-quality-filter-archive-local.png`
+- `artifacts/p0-quality-filter-remote.png`
+- `artifacts/p0-quality-filter-archive-remote.png`
+
+### 验证证据
+
+- 本地 `py -3 scripts/validate_news_data.py`：PASS；默认 130 条，归档 57 条，Top stories 10，默认最低质量分 60，Top 最低质量分 100，归档最高质量分 56。
+- 本地 `npm.cmd run validate:frontend`：11 passed。
+- 本地视觉抽检：默认模式 129 条/129 个质量理由；归档模式 56 条，首条 tier=archive。截图：`artifacts/p0-quality-filter-local.png`、`artifacts/p0-quality-filter-archive-local.png`。
+- 远程 `sudo -u www-data python3 scripts/update_ai_news.py && python3 scripts/validate_news_data.py`：PASS；远程生成 130 条默认高质量内容。
+- 远程 `SITE_URL=http://192.168.1.242:8088 npm.cmd run validate:frontend`：11 passed。
+- 远程 HTTP 抽检：`/`、`/data/news.json`、`/data/digests/latest.md` 均返回 200。
+- 远程视觉抽检：默认模式 130 条/130 个质量理由；归档模式 57 条，首条 tier=archive。截图：`artifacts/p0-quality-filter-remote.png`、`artifacts/p0-quality-filter-archive-remote.png`。
+- 远程定时服务确认：`ai-news-sync.service` 使用 `User=www-data`，当前部署权限与定时更新用户一致。
+
+### 剩余问题
+
+- Microsoft AI RSS 仍返回 403；The Batch RSS 当前返回 308/重定向，已在 source health 中记录，不影响整体验收。
+- 中文摘要仍以规则式摘要为主，后续可接入 LLM 摘要器进一步提升表达质量。
+- Top 内容质量已明显提高，但仍可继续增加“主题去噪词典”和“同源多样性策略”的精细度。
+
+### 下一步建议
+
+- 下一阶段建议推进 LLM 摘要器：把每条内容升级为“发生了什么 / 为什么重要 / 怎么用 / 是否值得深读”的更自然中文情报卡。
+- 增加一个“质量复盘页”，每天显示归档原因、被过滤源、Top 入选理由，方便主人定期调校内容口味。
+
 

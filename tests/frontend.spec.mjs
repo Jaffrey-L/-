@@ -24,6 +24,9 @@ test("loads readable monthly AI news cards", async ({ page }) => {
   await expect(page.locator(".card")).toHaveCountGreaterThan(30);
   await expect(page.locator(".reading-actions").first()).toBeVisible();
   await expect(page.locator(".brief-grid").first()).toBeVisible();
+  await expect(page.locator("#qualityFilter")).toHaveValue("default");
+  await expect(page.locator(".quality-review").first()).toContainText("\u8d28\u91cf\u7406\u7531");
+  await expect(page.locator(".card").first()).toHaveAttribute("data-quality-score", /^[6-9]\d|100$/);
   await expect(page.locator(".key-points").first()).toBeVisible();
   await expect(page.locator(".visual").first()).toBeVisible();
   await expect(page.locator(".chip").filter({ hasText: /\u6280\u672f\u66f4\u65b0|\u91cd\u8981\u529f\u80fd\u66f4\u65b0|AI\u5e94\u7528\u65b9\u6cd5/ }).first()).toBeVisible();
@@ -74,6 +77,7 @@ test("source, date, search and reset work", async ({ page }) => {
   await expect(page.locator("#categoryFilter")).toHaveValue("all");
   await expect(page.locator("#sourceFilter")).toHaveValue("all");
   await expect(page.locator("#readingFilter")).toHaveValue("all");
+  await expect(page.locator("#qualityFilter")).toHaveValue("default");
   await expect(page.locator('[data-days="year"]')).toHaveClass(/active/);
   await expect(page.locator("#searchInput")).toHaveValue("");
   await expect(page.locator(".card")).toHaveCountGreaterThan(30);
@@ -125,7 +129,7 @@ test("exports reusable daily digest", async ({ page }) => {
   await expect(page.locator("#digestWechatPreview")).toContainText("AI Daily Radar 日报");
   await expect(page.locator(".digest-source")).not.toHaveAttribute("open", "");
   await expect(page.locator("#digestPreview")).toHaveValue(/AI Daily Radar 日报/);
-  await expect(page.locator("#digestPreview")).toHaveValue(/今日必看 Top 10/);
+  await expect(page.locator("#digestPreview")).toHaveValue(/今日必看 Top \d+/);
   await expect(page.locator("#digestPreview")).toHaveValue(/7 天趋势雷达/);
   await expect(page.locator("#digestPreview")).toHaveValue(/方法论与实战/);
   await expect(page.locator("#digestPreview")).toHaveValue(/来源健康/);
@@ -145,7 +149,7 @@ test("exports reusable daily digest", async ({ page }) => {
 
   await page.click("#copyMarkdownBtn");
   await expect(page.locator("#digestStatus")).toContainText("Markdown 已复制");
-  expect(await page.evaluate(() => window.__copiedText.includes("## 今日必看 Top 10"))).toBe(true);
+  expect(await page.evaluate(() => /## 今日必看 Top \d+/.test(window.__copiedText))).toBe(true);
 
   await page.click("#copyWechatBtn");
   await expect(page.locator("#digestStatus")).toContainText("微信/飞书版日报 已复制");
@@ -155,6 +159,32 @@ test("exports reusable daily digest", async ({ page }) => {
   await page.click("#downloadDigestBtn");
   const file = await download;
   expect(file.suggestedFilename()).toMatch(/ai-daily-radar-\d{4}-\d{2}-\d{2}\.md/);
+});
+
+test("quality filter switches default, top candidates, all and archive", async ({ page }) => {
+  await expect(page.locator("#qualityFilter")).toHaveValue("default");
+  await expect(page.locator(".card").first()).toHaveAttribute("data-quality-tier", /default|top/);
+
+  await page.selectOption("#qualityFilter", "top");
+  await page.click("#applyBtn");
+  await expect(page.locator(".card").first()).toHaveAttribute("data-quality-tier", "top");
+  const topScores = await page.locator(".card").evaluateAll((cards) => cards.map((card) => Number(card.dataset.qualityScore)));
+  expect(topScores.length).toBeGreaterThan(0);
+  expect(topScores.every((score) => score >= 80)).toBe(true);
+
+  await page.selectOption("#qualityFilter", "archive");
+  await page.click("#applyBtn");
+  const archiveCount = await page.locator(".card:not(.empty)").count();
+  if (archiveCount > 0) {
+    await expect(page.locator(".card").first()).toHaveAttribute("data-quality-tier", "archive");
+    await expect(page.locator(".quality-review").first()).toContainText("\u5f52\u6863");
+  } else {
+    await expect(page.locator(".empty")).toBeVisible();
+  }
+
+  await page.selectOption("#qualityFilter", "all");
+  await page.click("#applyBtn");
+  await expect(page.locator(".card").first()).toBeVisible();
 });
 
 test("shows seven day trend radar", async ({ page }) => {

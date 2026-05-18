@@ -25,6 +25,8 @@ RSS_WORKERS = 6
 GOOGLE_WORKERS = 10
 ARTICLE_WORKERS = 6
 MIN_QUALITY_SCORE = 30
+DEFAULT_QUALITY_SCORE = 60
+TOP_QUALITY_SCORE = 80
 
 RSS_SOURCES = [
     {"name": "OpenAI", "url": "https://openai.com/news/rss.xml", "category": CORE_CATEGORY, "tags": ["OpenAI", "official"], "importance": 5},
@@ -78,6 +80,7 @@ LOW_VALUE_SIGNALS = [
     "award", "awards", "conference", "event", "webinar", "podcast", "interview", "quote", "quoting",
     "workforce reduction", "hiring", "appointed", "joins", "stock", "shares", "funding", "raises",
     "partnership announced", "press release", "opinion", "policy statement",
+    "government digital service", "public sector", "nhs", "vulnerability reported", "open source repositories",
 ]
 LOW_VALUE_TITLE_SIGNALS = [
     "quoting ", "quote ", "workforce reduction", "breaking my brain", "chemical hygiene",
@@ -108,6 +111,22 @@ AI_CONTEXT_TERMS = [
     "prompt", "prompting", "model", "models", "openai", "anthropic", "cursor", "vibe coding",
     "machine learning", "neural", "inference", "token", "tokens", "rag", "embedding", "embeddings",
     "eval", "benchmark", "multimodal", "computer use", "tool use",
+]
+OFFICIAL_ALLOWED_SIGNALS = [
+    "model", "models", "api", "sdk", "agent", "agents", "enterprise", "workspace", "product",
+    "feature", "launch", "release", "available", "connector", "integration", "reasoning",
+    "multimodal", "embedding", "fine-tuning", "deep research", "operator", "codex", "inference",
+]
+DEPTH_SIGNALS = [
+    "how to", "guide", "tutorial", "playbook", "case study", "architecture", "benchmark",
+    "evaluation", "eval", "implementation", "lessons", "workflow", "deep dive", "analysis",
+    "prompt", "agent", "vibe coding", "coding", "llm", "rag", "tool use",
+]
+STRONG_AI_SIGNALS = [
+    "llm", "gpt", "claude", "gemini", "grok", "deepseek", "qwen", "codex", "agent", "agents",
+    "prompt", "prompting", "model", "models", "openai", "anthropic", "cursor", "vibe coding",
+    "rag", "embedding", "embeddings", "eval", "benchmark", "multimodal", "computer use",
+    "tool use", "function calling", "inference", "fine-tuning", "reasoning",
 ]
 QUALITY_LABELS_ZH = {
     "technical_update": "\u6280\u672f\u66f4\u65b0",
@@ -246,12 +265,110 @@ def has_ai_context(text):
     return False
 
 
+def clean_quality_text(value):
+    text = strip_html(value)
+    # Some blogs append tag clouds, previous posts and subscription footers. Those
+    # snippets can mention LLMs even when the current article is not about AI.
+    for marker in (
+        "This is a link post by",
+        "Sponsor me",
+        "Tags:",
+        "Notes on the",
+        "Related posts",
+        "Previous post",
+        "Next post",
+    ):
+        index = text.find(marker)
+        if index >= 0:
+            text = text[:index]
+    return text.strip()
+
+
+def strong_ai_hits(text):
+    return matched_signals(text, STRONG_AI_SIGNALS, limit=6)
+
+
+def matched_signals(text, signals, limit=4):
+    lowered = text.lower()
+    hits = []
+    for signal in signals:
+        if signal.lower() in lowered:
+            hits.append(signal)
+    return hits[:limit]
+
+
+def display_signal(signal):
+    return ZH_TERMS.get(signal.lower(), signal)
+
+
+def build_quality_review(title, summary, body, tags, category, grade, quality_type, quality_score, low_hits, title_low_hit, ai_hits):
+    text = " ".join([title or "", summary or "", clean_quality_text(body)])
+    positives = matched_signals(text, DEPTH_SIGNALS + OFFICIAL_ALLOWED_SIGNALS + AI_CONTEXT_TERMS)
+    reasons = []
+    penalties = []
+
+    if category == PRACTICE_CATEGORY:
+        reasons.append("实战方法优先：匹配 Agent / Prompt / Vibe Coding 工作流方向")
+    elif category == CREATOR_CATEGORY:
+        reasons.append("核心博主观点：仅保留 AI/LLM/Agent/Prompt/Coding 相关内容")
+    elif category == CORE_CATEGORY:
+        reasons.append("官方动态：仅保留模型、产品能力、API 或企业应用相关")
+    elif category == SOLO_CATEGORY:
+        reasons.append("独立开发者案例：关注 AI 产品方法论与分发实践")
+
+    if positives:
+        reasons.append("命中高价值信号：" + " / ".join(display_signal(hit) for hit in positives[:4]))
+    if ai_hits:
+        reasons.append("主体明确相关：" + " / ".join(display_signal(hit) for hit in ai_hits[:3]))
+    if grade == "A":
+        reasons.append("一手/核心来源加权")
+    if quality_score >= TOP_QUALITY_SCORE:
+        reasons.append("可进入 Top/日报候选")
+    elif quality_score >= DEFAULT_QUALITY_SCORE:
+        reasons.append("默认信息流保留")
+    else:
+        reasons.append("低于默认阈值，仅进入归档")
+
+    if low_hits:
+        penalties.append("包含普通通知/弱价值信号")
+    if title_low_hit:
+        penalties.append("标题疑似低价值或噪音")
+    if category in (CREATOR_CATEGORY, PRACTICE_CATEGORY, SOLO_CATEGORY) and not ai_hits:
+        penalties.append("主体缺少明确 AI/LLM/Agent/Prompt/Coding 语境")
+    if category == CORE_CATEGORY and not any(hit in text.lower() for hit in OFFICIAL_ALLOWED_SIGNALS):
+        penalties.append("官方内容缺少模型/API/产品能力/企业应用信号")
+
+    return {
+        "score": quality_score,
+        "tier": "top" if quality_score >= TOP_QUALITY_SCORE else ("default" if quality_score >= DEFAULT_QUALITY_SCORE else "archive"),
+        "isDefaultVisible": quality_score >= DEFAULT_QUALITY_SCORE,
+        "isTopEligible": quality_score >= TOP_QUALITY_SCORE,
+        "reasons": reasons[:4],
+        "penalties": penalties[:3],
+        "reviewer": "content-experience-v1",
+    }
+
+
+def quality_sort_key(item):
+    tier_rank = {"top": 2, "default": 1, "archive": 0}
+    review = item.get("qualityReview", {})
+    return (
+        tier_rank.get(review.get("tier"), 0),
+        item.get("qualityScore", 0),
+        item.get("readingScore", 0),
+        item.get("sourceGrade") == "A",
+        item.get("importance", 0),
+    )
+
+
 def quality_profile(title, summary, body, tags, category, grade):
-    text = " ".join([title or "", summary or "", strip_html(body)])
+    quality_body = clean_quality_text(body)
+    text = " ".join([title or "", summary or "", quality_body])
     title_text = (title or "").lower()
     signal_counts = {name: count_signals(text, signals) for name, signals in QUALITY_SIGNALS.items()}
     best_type = max(signal_counts, key=signal_counts.get)
     positive_hits = sum(signal_counts.values())
+    ai_hits = strong_ai_hits(text)
     low_hits = count_signals(text, LOW_VALUE_SIGNALS)
     title_low_hit = any(signal in title_text for signal in LOW_VALUE_TITLE_SIGNALS)
 
@@ -268,7 +385,13 @@ def quality_profile(title, summary, body, tags, category, grade):
         score += 8
     if len(strip_html(body)) > 700:
         score += 8
-    if category in (CREATOR_CATEGORY, PRACTICE_CATEGORY, SOLO_CATEGORY) and not has_ai_context(text):
+    if matched_signals(text, DEPTH_SIGNALS):
+        score += 12
+    if category in (CREATOR_CATEGORY, PRACTICE_CATEGORY, SOLO_CATEGORY) and not ai_hits:
+        score -= 75
+        if positive_hits < 2:
+            best_type = "general"
+    if category == CORE_CATEGORY and not matched_signals(text, OFFICIAL_ALLOWED_SIGNALS):
         score -= 55
         if positive_hits < 2:
             best_type = "general"
@@ -276,13 +399,15 @@ def quality_profile(title, summary, body, tags, category, grade):
         score -= 45
     if positive_hits == 0:
         best_type = "general"
+    quality_score = max(0, min(score, 100))
     return {
-        "qualityScore": max(0, min(score, 100)),
+        "qualityScore": quality_score,
         "qualityType": best_type,
         "qualityLabelZh": QUALITY_LABELS_ZH.get(best_type, QUALITY_LABELS_ZH["general"]),
         "qualitySignals": signal_counts,
         "lowValueSignals": low_hits,
         "titleLowValue": title_low_hit,
+        "qualityReview": build_quality_review(title, summary, body, tags, category, grade, best_type, quality_score, low_hits, title_low_hit, ai_hits),
     }
 
 
@@ -749,7 +874,11 @@ def source_health_details(coverage, source_pool):
 
 
 def top_stories(items, limit=10, max_per_source=2):
-    ranked = sorted(items, key=lambda item: (item.get("readingScore", 0), item.get("qualityScore", 0), item.get("sourceCount", 1), item.get("importance", 0)), reverse=True)
+    ranked = sorted(
+        [item for item in items if item.get("qualityReview", {}).get("isTopEligible")],
+        key=quality_sort_key,
+        reverse=True,
+    )
     top = []
     source_counts = {}
     seen_events = set()
@@ -765,13 +894,6 @@ def top_stories(items, limit=10, max_per_source=2):
         source_counts[source] = source_counts.get(source, 0) + 1
         if len(top) >= limit:
             break
-    if len(top) < limit:
-        for item in ranked:
-            if item in top:
-                continue
-            top.append(item)
-            if len(top) >= limit:
-                break
     for index, item in enumerate(top, start=1):
         item["topRank"] = index
         item["isTopStory"] = True
@@ -862,6 +984,14 @@ def digest_line_item(item, index):
     )
 
 
+def default_visible_items(items):
+    return [item for item in items if item.get("qualityReview", {}).get("isDefaultVisible")]
+
+
+def archive_items(items):
+    return [item for item in items if not item.get("qualityReview", {}).get("isDefaultVisible")]
+
+
 def write_daily_digest(payload):
     items = payload.get("items", [])
     top = (payload.get("topStories") or items[:10])[:10]
@@ -883,8 +1013,9 @@ def write_daily_digest(payload):
     lines = [
         "# AI Daily Radar 日报 - {}".format(date),
         "",
-        "> 今日共 {} 条情报，Top 10 已精选。来源健康：{}/{} 正常，{} 暂无高价值内容，{} 精选兜底，{} 失败。".format(
+        "> 今日默认展示 {} 条高质量情报，Top {} 已精选。来源健康：{}/{} 正常，{} 暂无高价值内容，{} 精选兜底，{} 失败。".format(
             len(items),
+            len(top),
             health.get("ok", 0),
             health.get("total", 0),
             health.get("empty", 0),
@@ -892,7 +1023,7 @@ def write_daily_digest(payload):
             health.get("failed", 0),
         ),
         "",
-        "## 今日必看 Top 10",
+        "## 今日必看 Top {}".format(len(top)),
     ]
     lines.extend(digest_line_item(item, index) for index, item in enumerate(top, start=1))
     lines.extend(["", "## 7 天趋势雷达", ""])
@@ -938,9 +1069,11 @@ def main():
     items.extend(collect_curated_solo_items(coverage))
     fetched_articles = enrich_article_bodies(items)
     items = dedupe(items)
-    items.sort(key=lambda x: (x["date"], x["qualityScore"], x["readingScore"], x["sourceGrade"] == "A", x["importance"]), reverse=True)
+    items.sort(key=lambda x: (x["date"], quality_sort_key(x)), reverse=True)
     items = items[:MAX_ITEMS]
-    top = top_stories(items)
+    default_items = default_visible_items(items)
+    archive = archive_items(items)
+    top = top_stories(default_items)
 
     payload = {
         "updatedAt": datetime.now(timezone.utc).isoformat(),
@@ -948,6 +1081,10 @@ def main():
         "coverageWindow": "YTD",
         "qualityPolicy": {
             "minQualityScore": MIN_QUALITY_SCORE,
+            "defaultQualityScore": DEFAULT_QUALITY_SCORE,
+            "topQualityScore": TOP_QUALITY_SCORE,
+            "defaultMode": "high_quality",
+            "topPolicy": "Top and digest only use qualityScore >= 80. Top may contain fewer than 10 items.",
             "preferredTypes": QUALITY_LABELS_ZH,
             "blockedLowValueSignals": LOW_VALUE_SIGNALS,
         },
@@ -961,13 +1098,17 @@ def main():
             "fetchedArticles": fetched_articles,
             "dedupeStrategy": "same-date normalized event title; related sources are merged into one event card",
             "topStoryCount": len(top),
+            "defaultVisibleCount": len(default_items),
+            "archiveCount": len(archive),
         },
         "sourceHealth": source_health(coverage),
         "sourceHealthDetails": source_health_details(coverage, source_pool),
         "sourceCoverage": coverage,
         "trends": build_trends(items, source_pool),
         "topStories": top,
-        "items": items,
+        "items": default_items,
+        "archiveItems": archive,
+        "allItemsCount": len(items),
     }
     payload["digestArchive"] = write_daily_digest(payload)
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)

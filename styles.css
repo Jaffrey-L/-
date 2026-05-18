@@ -1131,6 +1131,43 @@ button:hover {
   background: linear-gradient(135deg, var(--mint), var(--cyan));
 }
 
+.quality-review {
+  margin: 12px 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(11,156,168,0.20);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(11,156,168,0.10), rgba(255,255,255,0.72));
+}
+
+.quality-review-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #0d5961;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.quality-review-head span {
+  color: #6b5a3d;
+  white-space: nowrap;
+}
+
+.quality-reasons {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #2c3d47;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.quality-penalties {
+  margin: 8px 0 0 !important;
+  color: #8a5a13 !important;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
 .card a {
   color: #087b86;
   text-decoration: none;

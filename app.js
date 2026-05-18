@@ -15,6 +15,8 @@ const TEXT = {
   source: "\u6765\u6e90",
   readingScore: "\u53ef\u8bfb\u6027",
   qualityScore: "\u8d28\u91cf\u5206",
+  qualityReason: "\u8d28\u91cf\u7406\u7531",
+  qualityPenalty: "\u6263\u5206\u539f\u56e0",
   keyPoints: "\u8981\u70b9",
   readMoreNote: "\u5982\u679c\u611f\u5174\u8da3\u8bf7\u70b9\u51fb\u67e5\u770b\u539f\u6587"
 };
@@ -57,6 +59,7 @@ const categoryFilter = document.getElementById("categoryFilter");
 const gradeFilter = document.getElementById("gradeFilter");
 const sourceFilter = document.getElementById("sourceFilter");
 const readingFilter = document.getElementById("readingFilter");
+const qualityFilter = document.getElementById("qualityFilter");
 const startDateFilter = document.getElementById("startDateFilter");
 const endDateFilter = document.getElementById("endDateFilter");
 const presetButtons = Array.from(document.querySelectorAll(".preset-btn"));
@@ -89,6 +92,7 @@ const resultCount = document.getElementById("resultCount");
 const READING_STATE_KEY = "ai-daily-radar-reading-state-v1";
 let appliedFilters = null;
 let activeNewsItems = [];
+let allNewsItems = [];
 let readingState = loadReadingState();
 let digestCache = { markdown: "", wechat: "", brief: "", filename: "ai-daily-radar.md" };
 
@@ -168,7 +172,7 @@ function uniqueValues(values, limit = 3) {
 function buildDigest(payload, newsItems) {
   const items = newsItems || [];
   const top = (payload.topStories?.length ? payload.topStories : items.slice(0, 10)).slice(0, 10);
-  const methods = items.filter((item) => item.qualityType === "application_method" || item.category === TEXT.practice).slice(0, 5);
+  const methods = items.filter((item) => item.qualityScore >= 80 && (item.qualityType === "application_method" || item.category === TEXT.practice)).slice(0, 5);
   const official = items.filter((item) => item.sourceGrade === "A").slice(0, 5);
   const health = payload.sourceHealth || {};
   const trends = payload.trends || {};
@@ -183,9 +187,9 @@ function buildDigest(payload, newsItems) {
   const lines = [
     `# AI Daily Radar 日报 - ${date}`,
     "",
-    `> 今日共 ${items.length} 条情报，Top 10 已精选。来源健康：${health.ok || 0}/${health.total || 0} 正常，${health.empty || 0} 暂无高价值内容，${health.curated || 0} 精选兜底，${health.failed || 0} 失败。`,
+    `> 今日默认展示 ${items.length} 条高质量情报，Top ${top.length} 已精选。来源健康：${health.ok || 0}/${health.total || 0} 正常，${health.empty || 0} 暂无高价值内容，${health.curated || 0} 精选兜底，${health.failed || 0} 失败。`,
     "",
-    "## 今日必看 Top 10",
+    `## 今日必看 Top ${top.length}`,
     ...top.flatMap((item, index) => {
       const brief = item.intelligenceBrief || {};
       return [
@@ -212,7 +216,7 @@ function buildDigest(payload, newsItems) {
   const wechat = [
     `AI Daily Radar 日报｜${date}`,
     "",
-    `今天收录 ${items.length} 条 AI 情报，精选 Top 10。`,
+    `今天默认展示 ${items.length} 条高质量 AI 情报，精选 Top ${top.length}。`,
     "",
     "今日最值得看：",
     ...top.slice(0, 6).map((item, index) => `${index + 1}. ${item.titleZh || item.title}\n   ${firstSentence(item.intelligenceBrief?.recommendationReason || item.summaryZh || item.summary)}\n   原文：${item.sourceUrl}`),
@@ -224,7 +228,7 @@ function buildDigest(payload, newsItems) {
   ].join("\n");
   const brief = [
     `AI Daily Radar 今日简报｜${date}`,
-    `一句话总览：今天收录 ${items.length} 条 AI 情报，Top 10 已精选；7 天趋势样本 ${trends.itemCount || 0} 条。`,
+    `一句话总览：今天默认展示 ${items.length} 条高质量 AI 情报，Top ${top.length} 已精选；7 天趋势样本 ${trends.itemCount || 0} 条。`,
     `趋势信号：${topNames(trends.topics)}。`,
     "",
     "最值得看：",
@@ -248,7 +252,7 @@ function renderDigestExport(payload, newsItems) {
   digestCache = buildDigest(payload, newsItems);
   digestPreview.value = digestCache.markdown;
   const top = (payload.topStories?.length ? payload.topStories : newsItems.slice(0, 10)).slice(0, 10);
-  const methods = newsItems.filter((item) => item.qualityType === "application_method" || item.category === TEXT.practice).slice(0, 3);
+  const methods = newsItems.filter((item) => item.qualityScore >= 80 && (item.qualityType === "application_method" || item.category === TEXT.practice)).slice(0, 3);
   const trends = payload.trends || {};
   const health = payload.sourceHealth || {};
   if (digestMeta) {
@@ -260,6 +264,7 @@ function renderDigestExport(payload, newsItems) {
       `${top.length} 条 Top 情报`,
       `${trends.itemCount || 0} 条趋势样本`,
       `${health.ok || 0}/${health.total || 0} 来源正常`,
+      `${(payload.archiveItems || []).length} 条归档`,
       `${failed} 个失败源`,
     ].map((label, index) => `<span class="${index === 3 && failed ? "warning" : ""}">${escapeHtml(label)}</span>`).join("");
   }
@@ -291,7 +296,7 @@ function renderDigestExport(payload, newsItems) {
   if (digestWechatPreview) {
     digestWechatPreview.innerHTML = `
       <h3>AI Daily Radar 日报</h3>
-      <p>今天收录 ${escapeHtml(newsItems.length)} 条 AI 情报，精选 Top ${escapeHtml(top.length)}。适合直接发到微信群、飞书群或个人知识库。</p>
+      <p>今天默认展示 ${escapeHtml(newsItems.length)} 条高质量 AI 情报，精选 Top ${escapeHtml(top.length)}。适合直接发到微信群、飞书群或个人知识库。</p>
       <ol>
         ${top.slice(0, 3).map((item) => `<li><strong>${escapeHtml(item.titleZh || item.title)}</strong><br><span>${escapeHtml(firstSentence(item.intelligenceBrief?.takeaway || item.summaryZh || item.summary))}</span><br><small>原文：${escapeHtml(item.sourceUrl || "")}</small></li>`).join("")}
       </ol>
@@ -429,6 +434,7 @@ function readFilterControls() {
     grade: gradeFilter.value,
     source: sourceFilter.value,
     reading: readingFilter.value,
+    quality: qualityFilter?.value || "default",
     startDate,
     endDate,
     search: searchInput.value.trim().toLowerCase(),
@@ -456,9 +462,12 @@ function renderNews(items) {
     const tags = Array.isArray(item.tags) ? item.tags : [];
     const tagLabels = tags.map((tag) => TAG_LABELS[String(tag).toLowerCase()] || tag);
     const safeUrl = String(item.sourceUrl || "#");
+    const qualityReview = item.qualityReview || {};
     const card = document.createElement("article");
     card.className = `card${state.read ? " is-read" : ""}`;
     card.dataset.itemKey = itemKey(item);
+    card.dataset.qualityScore = String(item.qualityScore || 0);
+    card.dataset.qualityTier = qualityReview.tier || "";
     card.innerHTML = `
       <div class="meta">
         <span class="chip">${escapeHtml(item.category)}</span>
@@ -475,6 +484,7 @@ function renderNews(items) {
           <h3>${escapeHtml(item.titleZh || item.title)}</h3>
           <p>${escapeHtml(item.summaryZh || item.summary)}</p>
           ${renderReadingActions(item, state)}
+          ${renderQualityReview(item)}
           ${renderIntelligenceBrief(item.intelligenceBrief)}
           ${renderKeyPoints(item.keyPointsZh || item.keyPoints)}
           <p class="tagline">${TEXT.tags}: ${escapeHtml(tagLabels.join(" / "))}</p>
@@ -496,6 +506,28 @@ function renderReadingActions(item, state) {
       <button class="state-btn ${state.favorite ? "active" : ""}" type="button" data-key="${key}" data-state="favorite">${state.favorite ? "已收藏" : "收藏"}</button>
       <button class="state-btn ${state.later ? "active" : ""}" type="button" data-key="${key}" data-state="later">${state.later ? "稍后读中" : "稍后读"}</button>
     </div>
+  `;
+}
+
+function renderQualityReview(item) {
+  const review = item.qualityReview || {};
+  const reasons = Array.isArray(review.reasons) ? review.reasons.slice(0, 3) : [];
+  const penalties = Array.isArray(review.penalties) ? review.penalties.slice(0, 2) : [];
+  if (!reasons.length && !penalties.length) return "";
+  const tierLabel = review.isTopEligible
+    ? "Top \u5019\u9009"
+    : review.isDefaultVisible
+      ? "\u9ad8\u8d28\u91cf\u9ed8\u8ba4"
+      : "\u5f52\u6863\u4f4e\u4f18\u5148\u7ea7";
+  return `
+    <section class="quality-review" aria-label="${TEXT.qualityReason}">
+      <div class="quality-review-head">
+        <strong>${TEXT.qualityReason}</strong>
+        <span>${escapeHtml(tierLabel)} · ${TEXT.qualityScore} ${escapeHtml(review.score ?? item.qualityScore ?? 0)}</span>
+      </div>
+      ${reasons.length ? `<ul class="quality-reasons">${reasons.map((reason) => `<li>${escapeHtml(reason)}</li>`).join("")}</ul>` : ""}
+      ${penalties.length ? `<p class="quality-penalties">${TEXT.qualityPenalty}: ${escapeHtml(penalties.join(" / "))}</p>` : ""}
+    </section>
   `;
 }
 
@@ -583,10 +615,23 @@ function inSelectedTimeRange(dateValue, filters) {
   return true;
 }
 
+function getQualityScopedItems(defaultItems, filters) {
+  const pool = allNewsItems.length ? allNewsItems : defaultItems;
+  if (filters.quality === "all") return pool;
+  if (filters.quality === "archive") {
+    return pool.filter((item) => !item.qualityReview?.isDefaultVisible);
+  }
+  if (filters.quality === "top") {
+    return pool.filter((item) => item.qualityReview?.isTopEligible || item.qualityScore >= 80);
+  }
+  return defaultItems;
+}
+
 function getFilteredNews(newsItems) {
   const filters = appliedFilters || readFilterControls();
+  const scopedItems = getQualityScopedItems(newsItems, filters);
 
-  const filtered = newsItems.filter((item) => {
+  const filtered = scopedItems.filter((item) => {
     const categoryMatch = filters.category === "all" || item.category === filters.category;
     const gradeMatch = filters.grade === "all" || item.sourceGrade === filters.grade;
     const sourceMatch = filters.source === "all" || item.sourceName === filters.source;
@@ -657,6 +702,7 @@ function bindEvents(newsItems) {
     gradeFilter.value = "all";
     sourceFilter.value = "all";
     readingFilter.value = "all";
+    if (qualityFilter) qualityFilter.value = "default";
     initDateRange(newsItems, "year");
     sortFilter.value = "latest";
     searchInput.value = "";
@@ -704,6 +750,9 @@ async function loadNewsData() {
     const data = await response.json();
     return {
       items: Array.isArray(data.items) && data.items.length ? data.items : fallbackNews,
+      archiveItems: Array.isArray(data.archiveItems) ? data.archiveItems : [],
+      allItemsCount: data.allItemsCount || data.items?.length || 0,
+      qualityPolicy: data.qualityPolicy || null,
       topStories: Array.isArray(data.topStories) ? data.topStories : [],
       sourceHealth: data.sourceHealth || null,
       sourceHealthDetails: Array.isArray(data.sourceHealthDetails) ? data.sourceHealthDetails : [],
@@ -712,16 +761,17 @@ async function loadNewsData() {
       updatedAt: data.updatedAt || ""
     };
   } catch (_) {
-    return { items: fallbackNews, topStories: fallbackNews, sourceHealth: null, sourceHealthDetails: [], trends: null, digestArchive: null, updatedAt: "" };
+    return { items: fallbackNews, archiveItems: [], allItemsCount: fallbackNews.length, qualityPolicy: null, topStories: fallbackNews, sourceHealth: null, sourceHealthDetails: [], trends: null, digestArchive: null, updatedAt: "" };
   }
 }
 
 async function init() {
   const payload = await loadNewsData();
   const newsItems = payload.items;
+  allNewsItems = [...newsItems, ...(payload.archiveItems || [])];
   initCategoryOptions();
-  initSourceOptions(newsItems);
-  initDateRange(newsItems, "year");
+  initSourceOptions(allNewsItems);
+  initDateRange(allNewsItems, "year");
   updateKpis(newsItems);
   bindEvents(newsItems);
   appliedFilters = readFilterControls();

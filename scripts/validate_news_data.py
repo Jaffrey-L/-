@@ -17,6 +17,7 @@ def main():
     payload = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     source_pool = json.loads(SOURCES_FILE.read_text(encoding="utf-8"))
     items = payload.get("items", [])
+    archive_items = payload.get("archiveItems", [])
     top_stories = payload.get("topStories", [])
     source_health = payload.get("sourceHealth", {})
     source_health_details = payload.get("sourceHealthDetails", [])
@@ -28,14 +29,23 @@ def main():
     expected_sources = set(source_pool.get("companies", [])) | set(source_pool.get("creators", [])) | set(source_pool.get("soloBuilders", []))
 
     assert len(items) >= 40, f"expected at least 40 YTD news items, got {len(items)}"
+    assert all(item.get("qualityScore", 0) >= 60 for item in items), "default feed contains items below qualityScore 60"
+    assert all(item.get("qualityReview", {}).get("isDefaultVisible") for item in items), "default feed contains non-default-visible items"
+    assert all(item.get("qualityScore", 0) >= 80 for item in top_stories), "top stories must be qualityScore >= 80"
+    assert all(item.get("qualityReview", {}).get("isTopEligible") for item in top_stories), "top stories must be top eligible"
+    assert all(item.get("qualityReview", {}).get("reasons") for item in items), "default items must include quality reasons"
+    assert all(len(item.get("qualityReview", {}).get("reasons", [])) >= 2 for item in top_stories), "top stories need at least two quality reasons"
+    assert isinstance(archive_items, list), "archiveItems should be present for low priority content"
     assert payload.get("coverageWindow") == "YTD", "expected year-to-date coverage window"
     assert expected_sources.issubset(set(coverage)), "source coverage is missing: {}".format(sorted(expected_sources - set(coverage)))
-    assert len(top_stories) == 10, f"expected 10 top stories, got {len(top_stories)}"
+    assert 1 <= len(top_stories) <= 10, f"expected 1-10 top stories, got {len(top_stories)}"
     assert len({item.get("eventId") for item in top_stories}) == len(top_stories), "top stories contain duplicate event ids"
     assert source_health.get("total", 0) >= len(expected_sources), "source health does not cover all tracked sources"
     assert source_health.get("ok", 0) + source_health.get("empty", 0) >= int(source_health.get("total", 0) * 0.75), "too many source failures"
     assert isinstance(source_health_details, list) and len(source_health_details) >= len(expected_sources), "expected source health detail rows"
-    assert p0_quality.get("topStoryCount") == 10, "p0 quality metadata should report 10 top stories"
+    assert p0_quality.get("topStoryCount") == len(top_stories), "p0 quality metadata should match top story count"
+    assert p0_quality.get("defaultVisibleCount") == len(items), "default visible count mismatch"
+    assert p0_quality.get("archiveCount") == len(archive_items), "archive count mismatch"
     assert trends.get("windowDays") == 7, "expected 7-day trends metadata"
     assert trends.get("itemCount", 0) > 0, "expected at least one item in trend window"
     assert isinstance(trends.get("topics"), list) and trends["topics"], "expected topic trends"
@@ -46,7 +56,7 @@ def main():
     assert digest_path.exists(), f"expected digest archive file: {digest_path}"
     assert latest_digest_path.exists(), f"expected latest digest archive file: {latest_digest_path}"
     digest_text = digest_path.read_text(encoding="utf-8")
-    assert "今日必看 Top 10" in digest_text, "digest archive missing Top 10"
+    assert f"今日必看 Top {len(top_stories)}" in digest_text, "digest archive missing dynamic Top section"
     assert "7 天趋势雷达" in digest_text, "digest archive missing trend section"
     assert p0_quality.get("fetchedArticles", 0) >= 3, "expected at least 3 real article bodies to be fetched"
     assert any(item.get("contentFetched") for item in items), "expected fetched full-text article content"
@@ -69,6 +79,7 @@ def main():
         assert date >= cutoff, f"item is older than 30 days: {item['title']} ({item['date']})"
         for field in ("title", "titleZh", "summary", "summaryZh", "date", "sourceName", "sourceUrl", "sourceGrade", "category", "readingScore", "qualityScore", "qualityType", "qualityLabelZh", "eventId", "intelligenceBrief"):
             assert item.get(field), f"missing field {field}: {item}"
+        assert item.get("qualityReview", {}).get("reasons"), f"missing quality reasons: {item['title']}"
         brief = item.get("intelligenceBrief", {})
         for field in ("whatHappened", "whyItMatters", "takeaway", "audience", "recommendationReason"):
             assert brief.get(field), f"missing intelligence brief field {field}: {item['title']}"
