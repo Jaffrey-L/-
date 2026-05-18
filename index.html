@@ -86,18 +86,33 @@
     <div class="digest-export-head">
       <div>
         <span class="eyebrow small">DAILY BRIEF EXPORT</span>
-        <h2>&#26085;&#25253;&#23548;&#20986;</h2>
-        <p id="digestMeta">&#22522;&#20110; Top 10&#12289;&#26041;&#27861;&#35770;&#21644;&#26469;&#28304;&#20581;&#24247;&#33258;&#21160;&#29983;&#25104;&#12290;</p>
+        <h2>&#20170;&#26085;&#31616;&#25253;&#21253;</h2>
+        <p id="digestMeta">&#24050;&#22522;&#20110; Top 10&#12289;7 &#22825;&#36235;&#21183;&#12289;&#26041;&#27861;&#35770;&#21644;&#26469;&#28304;&#20581;&#24247;&#29983;&#25104;&#65292;&#21487;&#30452;&#25509;&#22797;&#21046;&#25110;&#24402;&#26723;&#12290;</p>
         <p id="digestArchiveMeta" class="archive-meta"></p>
       </div>
       <div class="digest-actions">
+        <button id="copyBriefBtn" class="primary-action" type="button">&#22797;&#21046;&#20170;&#26085;&#31616;&#25253;</button>
+        <button id="copyWechatBtn" type="button">&#22797;&#21046;&#24494;&#20449;/&#39134;&#20070;&#29256;</button>
         <a id="serverDigestLink" class="button-link" href="./data/digests/latest.md" target="_blank" rel="noreferrer noopener">&#25171;&#24320;&#26381;&#21153;&#22120;&#24402;&#26723;</a>
         <button id="copyMarkdownBtn" type="button">&#22797;&#21046; Markdown</button>
-        <button id="copyWechatBtn" type="button">&#22797;&#21046;&#24494;&#20449;&#29256;</button>
         <button id="downloadDigestBtn" type="button">&#19979;&#36733; .md</button>
       </div>
     </div>
-    <textarea id="digestPreview" readonly aria-label="Daily digest preview"></textarea>
+    <div id="digestQualityChips" class="digest-quality" aria-label="Brief quality status"></div>
+    <div class="digest-preview-grid">
+      <article class="digest-readable-card">
+        <span class="eyebrow small">READABLE PREVIEW</span>
+        <div id="digestReadablePreview"></div>
+      </article>
+      <article class="digest-channel-card">
+        <span class="eyebrow small">WECHAT / FEISHU</span>
+        <div id="digestWechatPreview"></div>
+      </article>
+    </div>
+    <details class="digest-source">
+      <summary>&#26597;&#30475; Markdown &#28304;&#30721;</summary>
+      <textarea id="digestPreview" readonly aria-label="Daily digest markdown source"></textarea>
+    </details>
     <p id="digestStatus" class="digest-status" role="status"></p>
   </section>
 

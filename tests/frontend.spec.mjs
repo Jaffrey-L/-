@@ -118,6 +118,12 @@ test("source health details and reading state persist", async ({ page }) => {
 
 test("exports reusable daily digest", async ({ page }) => {
   await expect(page.locator(".digest-export")).toBeVisible();
+  await expect(page.locator("#copyBriefBtn")).toBeVisible();
+  await expect(page.locator("#copyBriefBtn")).toContainText("复制今日简报");
+  await expect(page.locator("#digestQualityChips")).toContainText("Top 情报");
+  await expect(page.locator("#digestReadablePreview")).toContainText("最值得看 3 条");
+  await expect(page.locator("#digestWechatPreview")).toContainText("AI Daily Radar 日报");
+  await expect(page.locator(".digest-source")).not.toHaveAttribute("open", "");
   await expect(page.locator("#digestPreview")).toHaveValue(/AI Daily Radar 日报/);
   await expect(page.locator("#digestPreview")).toHaveValue(/今日必看 Top 10/);
   await expect(page.locator("#digestPreview")).toHaveValue(/7 天趋势雷达/);
@@ -133,12 +139,16 @@ test("exports reusable daily digest", async ({ page }) => {
       value: { writeText: async (text) => { window.__copiedText = text; } }
     });
   });
+  await page.click("#copyBriefBtn");
+  await expect(page.locator("#digestStatus")).toContainText("今日简报 已复制");
+  expect(await page.evaluate(() => window.__copiedText.includes("AI Daily Radar 今日简报"))).toBe(true);
+
   await page.click("#copyMarkdownBtn");
   await expect(page.locator("#digestStatus")).toContainText("Markdown 已复制");
   expect(await page.evaluate(() => window.__copiedText.includes("## 今日必看 Top 10"))).toBe(true);
 
   await page.click("#copyWechatBtn");
-  await expect(page.locator("#digestStatus")).toContainText("微信版日报 已复制");
+  await expect(page.locator("#digestStatus")).toContainText("微信/飞书版日报 已复制");
   expect(await page.evaluate(() => window.__copiedText.includes("如果感兴趣请点击查看原文章"))).toBe(true);
 
   const download = page.waitForEvent("download");

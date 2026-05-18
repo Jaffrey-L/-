@@ -72,8 +72,12 @@ const sourceHealthPanel = document.getElementById("sourceHealthPanel");
 const digestPreview = document.getElementById("digestPreview");
 const digestMeta = document.getElementById("digestMeta");
 const digestArchiveMeta = document.getElementById("digestArchiveMeta");
+const digestQualityChips = document.getElementById("digestQualityChips");
+const digestReadablePreview = document.getElementById("digestReadablePreview");
+const digestWechatPreview = document.getElementById("digestWechatPreview");
 const digestStatus = document.getElementById("digestStatus");
 const serverDigestLink = document.getElementById("serverDigestLink");
+const copyBriefBtn = document.getElementById("copyBriefBtn");
 const copyMarkdownBtn = document.getElementById("copyMarkdownBtn");
 const copyWechatBtn = document.getElementById("copyWechatBtn");
 const downloadDigestBtn = document.getElementById("downloadDigestBtn");
@@ -86,7 +90,7 @@ const READING_STATE_KEY = "ai-daily-radar-reading-state-v1";
 let appliedFilters = null;
 let activeNewsItems = [];
 let readingState = loadReadingState();
-let digestCache = { markdown: "", wechat: "", filename: "ai-daily-radar.md" };
+let digestCache = { markdown: "", wechat: "", brief: "", filename: "ai-daily-radar.md" };
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -143,6 +147,22 @@ function formatDigestDate(value) {
 
 function markdownLink(title, url) {
   return url ? `[${title}](${url})` : title;
+}
+
+function topNames(rows, limit = 3) {
+  return (rows || []).slice(0, limit).map((row) => `${row.name} ${row.count}`).join(" / ") || "暂无明显集中趋势";
+}
+
+function uniqueValues(values, limit = 3) {
+  const seen = new Set();
+  const result = [];
+  values.forEach((value) => {
+    const text = plainText(value);
+    if (!text || seen.has(text)) return;
+    seen.add(text);
+    result.push(text);
+  });
+  return result.slice(0, limit);
 }
 
 function buildDigest(payload, newsItems) {
@@ -202,9 +222,23 @@ function buildDigest(payload, newsItems) {
     "",
     "如果感兴趣请点击查看原文章。"
   ].join("\n");
+  const brief = [
+    `AI Daily Radar 今日简报｜${date}`,
+    `一句话总览：今天收录 ${items.length} 条 AI 情报，Top 10 已精选；7 天趋势样本 ${trends.itemCount || 0} 条。`,
+    `趋势信号：${topNames(trends.topics)}。`,
+    "",
+    "最值得看：",
+    ...top.slice(0, 5).map((item, index) => `${index + 1}. ${item.titleZh || item.title}｜${item.sourceName}｜${item.sourceUrl}`),
+    "",
+    "来源健康：",
+    `${health.ok || 0}/${health.total || 0} 正常，${health.empty || 0} 暂无高价值内容，${health.failed || 0} 失败。`,
+    "",
+    "如果感兴趣请点击查看原文章。"
+  ].join("\n");
   return {
     markdown: lines.join("\n"),
     wechat,
+    brief,
     filename: `ai-daily-radar-${date}.md`,
   };
 }
@@ -213,8 +247,56 @@ function renderDigestExport(payload, newsItems) {
   if (!digestPreview) return;
   digestCache = buildDigest(payload, newsItems);
   digestPreview.value = digestCache.markdown;
+  const top = (payload.topStories?.length ? payload.topStories : newsItems.slice(0, 10)).slice(0, 10);
+  const methods = newsItems.filter((item) => item.qualityType === "application_method" || item.category === TEXT.practice).slice(0, 3);
+  const trends = payload.trends || {};
+  const health = payload.sourceHealth || {};
   if (digestMeta) {
-    digestMeta.textContent = `已生成 ${newsItems.length} 条情报的日报，可复制 Markdown / 微信版，也可下载 .md。`;
+    digestMeta.textContent = `已生成 ${newsItems.length} 条情报的简报包，默认展示阅读版和微信/飞书预览，Markdown 源码已收起。`;
+  }
+  if (digestQualityChips) {
+    const failed = health.failed || 0;
+    digestQualityChips.innerHTML = [
+      `${top.length} 条 Top 情报`,
+      `${trends.itemCount || 0} 条趋势样本`,
+      `${health.ok || 0}/${health.total || 0} 来源正常`,
+      `${failed} 个失败源`,
+    ].map((label, index) => `<span class="${index === 3 && failed ? "warning" : ""}">${escapeHtml(label)}</span>`).join("");
+  }
+  if (digestReadablePreview) {
+    const leadSources = uniqueValues(top.map((item) => item.sourceName)).join("、") || "Top 10 情报";
+    digestReadablePreview.innerHTML = `
+      <p class="digest-lede">今天最值得快速扫一遍的是：${escapeHtml(leadSources)}。先看趋势，再挑原文深读。</p>
+      <div class="digest-mini-section">
+        <h3>最值得看 3 条</h3>
+        ${top.slice(0, 3).map((item, index) => `
+          <a class="digest-story" href="${escapeHtml(item.sourceUrl || "#")}" target="_blank" rel="noreferrer noopener">
+            <strong>${index + 1}. ${escapeHtml(item.titleZh || item.title)}</strong>
+            <span>${escapeHtml(item.sourceName)} · ${escapeHtml(item.date)} · ${escapeHtml(item.qualityLabelZh || "")}</span>
+            <em>${escapeHtml(item.intelligenceBrief?.recommendationReason || firstSentence(item.summaryZh || item.summary))}</em>
+          </a>
+        `).join("")}
+      </div>
+      <div class="digest-signal-row">
+        <span>主题：${escapeHtml(topNames(trends.topics))}</span>
+        <span>模型：${escapeHtml(topNames(trends.models))}</span>
+        <span>公司：${escapeHtml(topNames(trends.companies))}</span>
+      </div>
+      <div class="digest-mini-section">
+        <h3>方法论 / 实战</h3>
+        ${methods.map((item) => `<p>${escapeHtml(item.titleZh || item.title)}：${escapeHtml(firstSentence(item.intelligenceBrief?.takeaway || item.summaryZh || item.summary))}</p>`).join("") || "<p>今天暂无特别集中的方法论条目。</p>"}
+      </div>
+    `;
+  }
+  if (digestWechatPreview) {
+    digestWechatPreview.innerHTML = `
+      <h3>AI Daily Radar 日报</h3>
+      <p>今天收录 ${escapeHtml(newsItems.length)} 条 AI 情报，精选 Top ${escapeHtml(top.length)}。适合直接发到微信群、飞书群或个人知识库。</p>
+      <ol>
+        ${top.slice(0, 3).map((item) => `<li><strong>${escapeHtml(item.titleZh || item.title)}</strong><br><span>${escapeHtml(firstSentence(item.intelligenceBrief?.takeaway || item.summaryZh || item.summary))}</span><br><small>原文：${escapeHtml(item.sourceUrl || "")}</small></li>`).join("")}
+      </ol>
+      <p class="channel-note">复制版会包含重点情报、方法提醒和原文链接。</p>
+    `;
   }
   if (payload.digestArchive && serverDigestLink) {
     const path = payload.digestArchive.latestPath || payload.digestArchive.path;
@@ -588,8 +670,9 @@ function bindEvents(newsItems) {
     toggleItemState(item, button.dataset.state);
     renderNews(getFilteredNews(newsItems));
   });
+  copyBriefBtn?.addEventListener("click", () => copyText(digestCache.brief, "今日简报"));
   copyMarkdownBtn?.addEventListener("click", () => copyText(digestCache.markdown, "Markdown"));
-  copyWechatBtn?.addEventListener("click", () => copyText(digestCache.wechat, "微信版日报"));
+  copyWechatBtn?.addEventListener("click", () => copyText(digestCache.wechat, "微信/飞书版日报"));
   downloadDigestBtn?.addEventListener("click", () => downloadText(digestCache.markdown, digestCache.filename));
 }
 

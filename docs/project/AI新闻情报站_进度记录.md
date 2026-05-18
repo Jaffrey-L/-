@@ -296,4 +296,52 @@
 - Commit and push the P2 server digest/trend radar changes.
 - Next product step: improve WeChat/Feishu rich-media export and add a trend history page.
 
+## 2026-05-18 10:47 P2 briefing pack UX refinement
+
+### Goal
+
+- Fix the strange experience where the daily digest area showed raw Markdown in a large textarea by default.
+- Reframe the module as a readable "今日简报包" for AI enthusiasts who want to quickly judge, copy, share, or archive the daily briefing.
+- Keep all existing export capabilities: copy Markdown, copy WeChat/Feishu text, download `.md`, and open server archive.
+
+### Completed
+
+- Replaced the default raw Markdown preview with a readable briefing-pack layout.
+- Added brief quality chips: Top count, trend sample count, source health, failed-source count.
+- Added a readable preview card with "最值得看 3 条", trend signals, and method/practice highlights.
+- Added a WeChat/Feishu preview card so users can see the sharing shape before copying.
+- Added a primary "复制今日简报" action.
+- Moved Markdown source into a collapsed "查看 Markdown 源码" advanced section.
+- Kept Markdown copy, WeChat/Feishu copy, `.md` download, and server archive link.
+
+### Changed Files
+
+- `index.html`
+- `app.js`
+- `styles.css`
+- `tests/frontend.spec.mjs`
+- `artifacts/p2-briefing-pack-local.png`
+- `artifacts/p2-briefing-pack-remote.png`
+
+### Evidence
+
+- Local `py -3 scripts/validate_news_data.py`: PASS; 196 items, Top stories 10, Trends 45 items from 2026-05-12 to 2026-05-18, Digest `data/digests/2026-05-18.md`.
+- Local `npm.cmd run validate:frontend`: 10 passed.
+- Remote `SITE_URL=http://192.168.1.242:8088 npm.cmd run validate:frontend`: 10 passed.
+- Remote HTTP spot-check: page contains `copyBriefBtn`, `digestReadablePreview`, and `digest-source`.
+- Local visual check: digest source details default `open=false`; lede rendered as `今天最值得快速扫一遍的是：Simon Willison、Andrej Karpathy、OpenAI。先看趋势，再挑原文深读。`.
+- Remote visual check: digest source details default `open=false`; same readable lede rendered.
+- Local screenshot: `artifacts/p2-briefing-pack-local.png`.
+- Remote screenshot: `artifacts/p2-briefing-pack-remote.png`.
+
+### Remaining Issues
+
+- The WeChat/Feishu preview is still text-card based, not a fully styled rich-media article template.
+- Some generated Chinese text remains rule-based and can be further improved by an LLM summarizer later.
+
+### Next Step
+
+- Add a polished WeChat/Feishu rich-media template.
+- Improve digest content selection so method/practice examples avoid marginal official announcements.
+
 
