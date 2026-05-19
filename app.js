@@ -289,7 +289,7 @@ function renderDigestExport(payload, newsItems) {
       </div>
       <div class="digest-mini-section">
         <h3>方法论 / 实战</h3>
-        ${methods.map((item) => `<p>${escapeHtml(item.titleZh || item.title)}：${escapeHtml(firstSentence(item.intelligenceBrief?.takeaway || item.summaryZh || item.summary))}</p>`).join("") || "<p>今天暂无特别集中的方法论条目。</p>"}
+        ${methods.map(renderDigestMethodLink).join("") || "<p>今天暂无特别集中的方法论条目。</p>"}
       </div>
     `;
   }
@@ -298,7 +298,7 @@ function renderDigestExport(payload, newsItems) {
       <h3>AI Daily Radar 日报</h3>
       <p>今天默认展示 ${escapeHtml(newsItems.length)} 条高质量 AI 情报，精选 Top ${escapeHtml(top.length)}。适合直接发到微信群、飞书群或个人知识库。</p>
       <ol>
-        ${top.slice(0, 3).map((item) => `<li><strong>${escapeHtml(item.titleZh || item.title)}</strong><br><span>${escapeHtml(firstSentence(item.intelligenceBrief?.takeaway || item.summaryZh || item.summary))}</span><br><small>原文：${escapeHtml(item.sourceUrl || "")}</small></li>`).join("")}
+        ${top.slice(0, 3).map(renderWechatPreviewItem).join("")}
       </ol>
       <p class="channel-note">复制版会包含重点情报、方法提醒和原文链接。</p>
     `;
@@ -341,6 +341,28 @@ function renderTrends(trends) {
   renderTrendList(companyTrends, trends.companies);
   renderTrendList(modelTrends, trends.models);
   renderTrendList(topicTrends, trends.topics);
+}
+
+function renderDigestMethodLink(item) {
+  return `
+    <a class="digest-method-link" href="${escapeHtml(item.sourceUrl || "#")}" target="_blank" rel="noreferrer noopener">
+      <strong>${escapeHtml(item.titleZh || item.title)}</strong>
+      <span>${escapeHtml(firstSentence(item.intelligenceBrief?.takeaway || item.summaryZh || item.summary))}</span>
+      <em>查看关联原文</em>
+    </a>
+  `;
+}
+
+function renderWechatPreviewItem(item) {
+  return `
+    <li>
+      <a class="digest-channel-link" href="${escapeHtml(item.sourceUrl || "#")}" target="_blank" rel="noreferrer noopener">
+        <strong>${escapeHtml(item.titleZh || item.title)}</strong>
+        <span>${escapeHtml(firstSentence(item.intelligenceBrief?.takeaway || item.summaryZh || item.summary))}</span>
+        <small>查看原文：${escapeHtml(item.sourceUrl || "")}</small>
+      </a>
+    </li>
+  `;
 }
 
 async function copyText(text, label) {

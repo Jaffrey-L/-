@@ -130,7 +130,12 @@ test("exports reusable daily digest", async ({ page }) => {
   await expect(page.locator("#copyBriefBtn")).toContainText("复制今日简报");
   await expect(page.locator("#digestQualityChips")).toContainText("Top 情报");
   await expect(page.locator("#digestReadablePreview")).toContainText("最值得看 3 条");
+  await expect(page.locator("#digestReadablePreview .digest-story")).toHaveCount(3);
+  await expect(page.locator("#digestReadablePreview .digest-story").first()).toHaveAttribute("href", /^https?:\/\//);
+  await expect(page.locator("#digestReadablePreview .digest-method-link").first()).toHaveAttribute("href", /^https?:\/\//);
   await expect(page.locator("#digestWechatPreview")).toContainText("AI Daily Radar 日报");
+  await expect(page.locator("#digestWechatPreview .digest-channel-link")).toHaveCount(3);
+  await expect(page.locator("#digestWechatPreview .digest-channel-link").first()).toHaveAttribute("href", /^https?:\/\//);
   await expect(page.locator(".digest-source")).not.toHaveAttribute("open", "");
   await expect(page.locator("#digestPreview")).toHaveValue(/AI Daily Radar 日报/);
   await expect(page.locator("#digestPreview")).toHaveValue(/今日必看 Top \d+/);

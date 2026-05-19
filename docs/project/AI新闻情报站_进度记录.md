@@ -449,4 +449,51 @@
 
 - 做一次全站可点击性审查：Top 10、趋势雷达、来源健康、日报预览、质量理由、卡片正文标题都按“能不能直接进入下一步”复核。
 
+## 2026-05-19 09:20 P1 日报提示关联内容页修复
+
+### 本次目标
+
+- 修复日报预览区域中“方法论/实战”等提示无法点击到关联内容的问题。
+- 保证所有可读提示类条目都能进入下一步阅读，不让用户卡在纯文本提示上。
+
+### 实际完成
+
+- Readable Preview 的“方法论 / 实战”条目从纯段落改为可点击链接卡片。
+- WeChat / Feishu 预览中的 Top 3 条目从纯文本改为可点击链接。
+- 保留复制版文本中的原文 URL，同时让网页预览本身也可点击。
+- 新增 `renderDigestMethodLink` 和 `renderWechatPreviewItem`，统一处理关联原文链接。
+- 更新前端资源版本号，避免浏览器缓存。
+- 增加 Playwright 覆盖：Readable Preview Top 3、方法论条目、微信预览条目都必须有 http(s) 链接。
+- 已部署远程 `http://192.168.1.242:8088`。
+
+### 改动文件
+
+- `app.js`
+- `styles.css`
+- `index.html`
+- `tests/frontend.spec.mjs`
+- `docs/project/AI新闻情报站_进度记录.md`
+- `artifacts/p1-linked-prompts-local.png`
+- `artifacts/p1-linked-prompts-remote.png`
+
+### 验证证据
+
+- 本地 `node --check app.js`：通过。
+- 本地 `py -3 scripts/validate_news_data.py`：PASS。
+- 本地 `npm.cmd run validate:frontend`：11 passed。
+- 本地浏览器抽检：Readable Preview Top 链接 3 个、方法论链接 3 个、微信预览链接 3 个。
+- 本地方法论首条链接：`https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything`。
+- 远程 `SITE_URL=http://192.168.1.242:8088 npm.cmd run validate:frontend`：11 passed。
+- 远程浏览器抽检：Readable Preview Top 链接 3 个、方法论链接 3 个、微信预览链接 3 个。
+- 远程方法论首条链接：`https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything`。
+- 远程截图：`artifacts/p1-linked-prompts-remote.png`。
+
+### 剩余问题
+
+- 本次重点修复日报预览提示。后续还可继续把趋势词、来源健康行、质量理由标签做成可跳转筛选条件或关联内容列表。
+
+### 下一步建议
+
+- 推进“全站可点击性审查”第二段：趋势雷达词条点击后自动筛选相关内容；来源健康行点击后展开该来源详情或过滤到该来源。
+
 

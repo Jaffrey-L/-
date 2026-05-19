@@ -594,6 +594,52 @@ h1 {
   text-decoration: none;
 }
 
+.digest-method-link,
+.digest-channel-link {
+  display: grid;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.digest-method-link {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(11,156,168,0.18);
+  border-radius: 14px;
+  background: rgba(11,156,168,0.06);
+}
+
+.digest-method-link:hover,
+.digest-channel-link:hover {
+  text-decoration: none;
+}
+
+.digest-method-link:hover {
+  border-color: rgba(11,156,168,0.34);
+  background: rgba(11,156,168,0.10);
+}
+
+.digest-method-link strong,
+.digest-channel-link strong {
+  color: var(--ink);
+}
+
+.digest-method-link span,
+.digest-method-link em,
+.digest-channel-link span,
+.digest-channel-link small {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.digest-method-link em {
+  color: #0b6e78;
+  font-weight: 900;
+}
+
 .digest-story strong {
   color: var(--ink);
   font-size: 1rem;
