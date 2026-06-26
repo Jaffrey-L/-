@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T04:14:45.606453+00:00",
+  "updatedAt": "2026-06-26T14:37:06.825035+00:00",
   "yearStart": "2026-01-01",
   "coverageWindow": "YTD",
   "qualityPolicy": {
@@ -53,15 +53,15 @@
     "fetchedArticles": 12,
     "dedupeStrategy": "same-date normalized event title; related sources are merged into one event card",
     "topStoryCount": 10,
-    "defaultVisibleCount": 127,
-    "archiveCount": 64
+    "defaultVisibleCount": 124,
+    "archiveCount": 67
   },
   "sourceHealth": {
     "total": 71,
-    "ok": 40,
-    "empty": 29,
+    "ok": 41,
+    "empty": 28,
     "failed": 2,
-    "fallback": 29,
+    "fallback": 31,
     "curated": 2
   },
   "sourceHealthDetails": [
@@ -236,9 +236,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 23,
-      "googleItems": 3,
+      "googleItems": 4,
       "curatedItems": 0,
-      "totalItems": 26,
+      "totalItems": 27,
       "rss": "https://huggingface.co/blog/feed.xml"
     },
     {
@@ -277,12 +277,12 @@
     {
       "name": "Character.AI",
       "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "status": "no_high_value_items",
-      "statusLabelZh": "\u6682\u65e0\u9ad8\u4ef7\u503c\u5185\u5bb9",
+      "status": "ok",
+      "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 0,
+      "googleItems": 2,
       "curatedItems": 0,
-      "totalItems": 0,
+      "totalItems": 2,
       "rss": ""
     },
     {
@@ -302,9 +302,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 3,
+      "googleItems": 2,
       "curatedItems": 0,
-      "totalItems": 3,
+      "totalItems": 2,
       "rss": ""
     },
     {
@@ -313,9 +313,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 4,
+      "googleItems": 3,
       "curatedItems": 0,
-      "totalItems": 4,
+      "totalItems": 3,
       "rss": ""
     },
     {
@@ -324,9 +324,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 3,
+      "googleItems": 2,
       "curatedItems": 0,
-      "totalItems": 3,
+      "totalItems": 2,
       "rss": ""
     },
     {
@@ -346,9 +346,9 @@
       "status": "failed: HTTP Error 403: Forbidden",
       "statusLabelZh": "\u5931\u8d25",
       "rssItems": 0,
-      "googleItems": 0,
+      "googleItems": 1,
       "curatedItems": 0,
-      "totalItems": 0,
+      "totalItems": 1,
       "rss": "https://blogs.microsoft.com/ai/feed/"
     },
     {
@@ -401,9 +401,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 5,
+      "googleItems": 4,
       "curatedItems": 0,
-      "totalItems": 5,
+      "totalItems": 4,
       "rss": ""
     },
     {
@@ -445,9 +445,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 4,
+      "googleItems": 3,
       "curatedItems": 0,
-      "totalItems": 4,
+      "totalItems": 3,
       "rss": ""
     },
     {
@@ -621,9 +621,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 4,
+      "googleItems": 3,
       "curatedItems": 0,
-      "totalItems": 4,
+      "totalItems": 3,
       "rss": ""
     },
     {
@@ -698,9 +698,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 9,
-      "googleItems": 4,
+      "googleItems": 5,
       "curatedItems": 0,
-      "totalItems": 13,
+      "totalItems": 14,
       "rss": "https://www.latent.space/feed"
     },
     {
@@ -863,13 +863,13 @@
     "Hugging Face": {
       "rss": "https://huggingface.co/blog/feed.xml",
       "rssItems": 23,
-      "googleItems": 3,
+      "googleItems": 4,
       "status": "ok"
     },
     "Microsoft AI": {
       "rss": "https://blogs.microsoft.com/ai/feed/",
       "rssItems": 0,
-      "googleItems": 0,
+      "googleItems": 1,
       "status": "failed: HTTP Error 403: Forbidden"
     },
     "Andrej Karpathy": {
@@ -893,7 +893,7 @@
     "Latent.Space": {
       "rss": "https://www.latent.space/feed",
       "rssItems": 9,
-      "googleItems": 4,
+      "googleItems": 5,
       "status": "ok"
     },
     "Interconnects": {
@@ -929,7 +929,7 @@
     "Google DeepMind": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 3,
+      "googleItems": 2,
       "status": "ok"
     },
     "Meta AI": {
@@ -989,8 +989,8 @@
     "Character.AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 0,
-      "status": "no_high_value_items"
+      "googleItems": 2,
+      "status": "ok"
     },
     "Runway": {
       "rss": "",
@@ -1007,7 +1007,7 @@
     "Databricks AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 3,
+      "googleItems": 2,
       "status": "ok"
     },
     "Snowflake AI": {
@@ -1019,19 +1019,19 @@
     "Salesforce AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 4,
+      "googleItems": 3,
       "status": "ok"
     },
     "Oracle AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 5,
+      "googleItems": 4,
       "status": "ok"
     },
     "DeepSeek": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 4,
+      "googleItems": 3,
       "status": "ok"
     },
     "\u963f\u91cc\u4e91\u901a\u4e49": {
@@ -1181,7 +1181,7 @@
     "deeplearning.ai": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 4,
+      "googleItems": 3,
       "status": "ok"
     },
     "Pieter Levels": {
@@ -1281,15 +1281,15 @@
     "windowDays": 7,
     "startDate": "2026-06-20",
     "endDate": "2026-06-26",
-    "itemCount": 53,
+    "itemCount": 54,
     "companies": [
+      {
+        "name": "Hugging Face",
+        "count": 14
+      },
       {
         "name": "OpenAI",
         "count": 13
-      },
-      {
-        "name": "Hugging Face",
-        "count": 12
       },
       {
         "name": "Google DeepMind",
@@ -1297,14 +1297,10 @@
       },
       {
         "name": "xAI",
-        "count": 4
+        "count": 3
       },
       {
         "name": "Amazon AI",
-        "count": 2
-      },
-      {
-        "name": "Mistral AI",
         "count": 2
       },
       {
@@ -1319,7 +1315,7 @@
     "models": [
       {
         "name": "Claude",
-        "count": 6
+        "count": 7
       },
       {
         "name": "Gemini",
@@ -1333,11 +1329,11 @@
     "topics": [
       {
         "name": "Agent",
-        "count": 28
+        "count": 30
       },
       {
         "name": "Vibe Coding",
-        "count": 18
+        "count": 19
       },
       {
         "name": "\u4f01\u4e1a\u5e94\u7528",
@@ -1345,29 +1341,29 @@
       },
       {
         "name": "\u5f00\u6e90\u6a21\u578b",
-        "count": 8
+        "count": 9
       },
       {
         "name": "Prompt",
         "count": 4
       },
       {
-        "name": "\u63a8\u7406\u80fd\u529b",
+        "name": "\u591a\u6a21\u6001",
         "count": 2
       },
       {
-        "name": "\u591a\u6a21\u6001",
-        "count": 1
+        "name": "\u63a8\u7406\u80fd\u529b",
+        "count": 2
       }
     ],
     "qualityTypes": [
       {
         "name": "\u6280\u672f\u66f4\u65b0",
-        "count": 42
+        "count": 45
       },
       {
         "name": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
-        "count": 8
+        "count": 6
       },
       {
         "name": "AI\u5e94\u7528\u65b9\u6cd5",
@@ -1376,158 +1372,6 @@
     ]
   },
   "topStories": [
-    {
-      "title": "AI and Liability",
-      "titleZh": "\u3010Simon Willison\u3011AI \u4ee5\u53ca Liability",
-      "summary": "Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them\u2014and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries.",
-      "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Why hire human writers, lawyers or doctors when AIs are not only cheaper, but also absolve employers whenever they make a mistake?",
-        "Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments."
-      ],
-      "keyPointsZh": [
-        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002",
-        "Sponsor me \u9762\u5411 $10/month \u4ee5\u53ca get a curated email digest of the month's most important LLM developments."
-      ],
-      "imageUrl": "",
-      "date": "2026-06-26",
-      "sourceName": "Simon Willison",
-      "publisher": "",
-      "sourceUrl": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything",
-      "sourceGrade": "A",
-      "category": "\u6838\u5fc3AI\u535a\u4e3b",
-      "contentType": "article",
-      "readingScore": 100,
-      "tags": [
-        "Simon Willison",
-        "llm-engineering",
-        "creator"
-      ],
-      "importance": 5,
-      "rawBody": "AI and Liability Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them\u2014and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries. [...] To allow businesses to hide behind the excuse of faulty AI in those same circumstances would be a massive handout to companies, and would introduce disastrous incentives for corporate misbehavior. Why hire human writers, lawyers or doctors when AIs are not only cheaper, but also absolve employers whenever they make a mistake? Tags: bruce-schneier , google , law , ai , generative-ai , llms , ai-ethics , hallucinations",
-      "bodyText": "AI and Liability . Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them\u2014and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries. [...] To allow businesses to hide behind the excuse of faulty AI in those same circumstances would be a massive handout to companies, and would introduce disastrous incentives for corporate misbehavior. Why hire human writers, lawyers or doctors when AIs are not only cheaper, but also absolve employers whenever they make a mistake? Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code - 22nd June 2026 sqlite-utils 4.0rc1 adds migrations and nested transactions - 21st June 2026 Datasette Apps: Host custom HTML applications inside Datasette - 18th June 2026 This is a link post by Simon Willison, posted on 25th June 2026 . Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments.",
-      "contentFetched": true,
-      "relatedSources": [
-        {
-          "sourceName": "Simon Willison",
-          "sourceUrl": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything",
-          "sourceGrade": "A",
-          "publisher": ""
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 100,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 5,
-        "feature_update": 2,
-        "application_method": 1
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 100,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u6a21\u578b / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1aclaude / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
-          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "AI \u4ee5\u53ca Liability Bruce Schneier on the recent German ruling that Google be held liable \u9762\u5411 errors introduced in their AI overviews: AI \u667a\u80fd\u4f53 are \u667a\u80fd\u4f53 of the person or organization that deploys them\u2014\u4ee5\u53ca should be treat",
-        "whyItMatters": "AI \u4ee5\u53ca Liability Bruce Schneier on the recent German ruling that Google be held liable \u9762\u5411 errors introduced in their AI overviews: AI \u667a\u80fd\u4f53 are \u667a\u80fd\u4f53 of the person or organization that deploys them\u2014\u4ee5\u53ca should be treat",
-        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
-        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "simon-willison-liability",
-      "topRank": 1,
-      "isTopStory": true
-    },
-    {
-      "title": "simonw/browser-compat-db",
-      "titleZh": "\u3010Simon Willison\u3011simonw/browser-compat-db",
-      "summary": "Inspired by Mozilla's new MDN MCP service - source code here - I decided to try converting their comprehensive mdn/browser-compat-data repository full of browser compatibility data into a SQLite database. This new GitHub repo includes a Claude Code for web (Opus 4.8) generated script for doing that using sqlite-utils .",
-      "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "I wanted the resulting ~66MB SQLite database to be available via the GitHub CDN with open CORS headers.",
-        "Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments."
-      ],
-      "keyPointsZh": [
-        "I wanted the resulting ~66MB SQLite database to be available via the GitHub CDN \u7ed3\u5408 open CORS headers.",
-        "Sponsor me \u9762\u5411 $10/month \u4ee5\u53ca get a curated email digest of the month's most important LLM developments."
-      ],
-      "imageUrl": "",
-      "date": "2026-06-26",
-      "sourceName": "Simon Willison",
-      "publisher": "",
-      "sourceUrl": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything",
-      "sourceGrade": "A",
-      "category": "\u6838\u5fc3AI\u535a\u4e3b",
-      "contentType": "article",
-      "readingScore": 100,
-      "tags": [
-        "Simon Willison",
-        "llm-engineering",
-        "creator"
-      ],
-      "importance": 5,
-      "rawBody": "simonw/browser-compat-db Inspired by Mozilla's new MDN MCP service - source code here - I decided to try converting their comprehensive mdn/browser-compat-data repository full of browser compatibility data into a SQLite database. This new GitHub repo includes a Claude Code for web (Opus 4.8) generated script for doing that using sqlite-utils . I wanted the resulting ~66MB SQLite database to be available via the GitHub CDN with open CORS headers. GitHub releases don't have those, but any file stored in a regular GitHub repository does - so I had Codex Desktop (GPT-5.5) build a GitHub Actions workflow that builds the database and then force-pushes it to a db \"orphan\" branch. You can download the resulting database from here , and since it's hosted with open CORS headers you can also explore it with Datasette Lite . Tags: github , mozilla , projects , github-actions , datasette-lite , ai-assisted-programming , model-context-protocol , mdn",
-      "bodyText": "simonw/browser-compat-db . Inspired by Mozilla's new MDN MCP service - source code here - I decided to try converting their comprehensive mdn/browser-compat-data repository full of browser compatibility data into a SQLite database. This new GitHub repo includes a Claude Code for web (Opus 4.8) generated script for doing that using sqlite-utils . I wanted the resulting ~66MB SQLite database to be available via the GitHub CDN with open CORS headers. GitHub releases don't have those, but any file stored in a regular GitHub repository does - so I had Codex Desktop (GPT-5.5) build a GitHub Actions workflow that builds the database and then force-pushes it to a db \"orphan\" branch. You can download the resulting database from here , and since it's hosted with open CORS headers you can also explore it with Datasette Lite . Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code - 22nd June 2026 sqlite-utils 4.0rc1 adds migrations and nested transactions - 21st June 2026 Datasette Apps: Host custom HTML applications inside Datasette - 18th June 2026 This is a link post by Simon Willison, posted on 24th June 2026 . Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments.",
-      "contentFetched": true,
-      "relatedSources": [
-        {
-          "sourceName": "Simon Willison",
-          "sourceUrl": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything",
-          "sourceGrade": "A",
-          "publisher": ""
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 100,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 3,
-        "feature_update": 3,
-        "application_method": 2
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 100,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u5de5\u4f5c\u6d41 / \u6a21\u578b / release / available",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agpt / claude / codex",
-          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "GitHub releases don't have those, but any file stored in a regular GitHub repository does - so I had Codex Desktop (GPT-5.5) build a GitHub Actions \u5de5\u4f5c\u6d41 that builds the database \u4ee5\u53ca then force-pushes it to a db \"orph",
-        "whyItMatters": "GitHub releases don't have those, but any file stored in a regular GitHub repository does - so I had Codex Desktop (GPT-5.5) build a GitHub Actions \u5de5\u4f5c\u6d41 that builds the database \u4ee5\u53ca then force-pushes it to a db \"orph",
-        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
-        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "simonw-browser-compat-db",
-      "topRank": 2,
-      "isTopStory": true
-    },
     {
       "title": "Auto-grading decade-old Hacker News discussions with hindsight",
       "titleZh": "\u3010Andrej Karpathy\u3011Auto-grading decade-old Hacker News discussions \u7ed3\u5408 hindsight",
@@ -1604,6 +1448,158 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "auto-grading-decade-old-hacker-news-discussions-hindsight",
+      "topRank": 1,
+      "isTopStory": true
+    },
+    {
+      "title": "AI and Liability",
+      "titleZh": "\u3010Simon Willison\u3011AI \u4ee5\u53ca Liability",
+      "summary": "Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them\u2014and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries.",
+      "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Why hire human writers, lawyers or doctors when AIs are not only cheaper, but also absolve employers whenever they make a mistake?",
+        "Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments."
+      ],
+      "keyPointsZh": [
+        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002",
+        "Sponsor me \u9762\u5411 $10/month \u4ee5\u53ca get a curated email digest of the month's most important LLM developments."
+      ],
+      "imageUrl": "",
+      "date": "2026-06-26",
+      "sourceName": "Simon Willison",
+      "publisher": "",
+      "sourceUrl": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything",
+      "sourceGrade": "A",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 100,
+      "tags": [
+        "Simon Willison",
+        "llm-engineering",
+        "creator"
+      ],
+      "importance": 5,
+      "rawBody": "AI and Liability Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them\u2014and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries. [...] To allow businesses to hide behind the excuse of faulty AI in those same circumstances would be a massive handout to companies, and would introduce disastrous incentives for corporate misbehavior. Why hire human writers, lawyers or doctors when AIs are not only cheaper, but also absolve employers whenever they make a mistake? Tags: bruce-schneier , google , law , ai , generative-ai , llms , ai-ethics , hallucinations",
+      "bodyText": "AI and Liability . Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them\u2014and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries. [...] To allow businesses to hide behind the excuse of faulty AI in those same circumstances would be a massive handout to companies, and would introduce disastrous incentives for corporate misbehavior. Why hire human writers, lawyers or doctors when AIs are not only cheaper, but also absolve employers whenever they make a mistake? Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code - 22nd June 2026 sqlite-utils 4.0rc1 adds migrations and nested transactions - 21st June 2026 Datasette Apps: Host custom HTML applications inside Datasette - 18th June 2026 This is a link post by Simon Willison, posted on 25th June 2026 . Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments.",
+      "contentFetched": true,
+      "relatedSources": [
+        {
+          "sourceName": "Simon Willison",
+          "sourceUrl": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything",
+          "sourceGrade": "A",
+          "publisher": ""
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 100,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 5,
+        "feature_update": 2,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 100,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u6a21\u578b / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1aclaude / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "AI \u4ee5\u53ca Liability Bruce Schneier on the recent German ruling that Google be held liable \u9762\u5411 errors introduced in their AI overviews: AI \u667a\u80fd\u4f53 are \u667a\u80fd\u4f53 of the person or organization that deploys them\u2014\u4ee5\u53ca should be treat",
+        "whyItMatters": "AI \u4ee5\u53ca Liability Bruce Schneier on the recent German ruling that Google be held liable \u9762\u5411 errors introduced in their AI overviews: AI \u667a\u80fd\u4f53 are \u667a\u80fd\u4f53 of the person or organization that deploys them\u2014\u4ee5\u53ca should be treat",
+        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "simon-willison-liability",
+      "topRank": 2,
+      "isTopStory": true
+    },
+    {
+      "title": "simonw/browser-compat-db",
+      "titleZh": "\u3010Simon Willison\u3011simonw/browser-compat-db",
+      "summary": "Inspired by Mozilla's new MDN MCP service - source code here - I decided to try converting their comprehensive mdn/browser-compat-data repository full of browser compatibility data into a SQLite database. This new GitHub repo includes a Claude Code for web (Opus 4.8) generated script for doing that using sqlite-utils .",
+      "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "I wanted the resulting ~66MB SQLite database to be available via the GitHub CDN with open CORS headers.",
+        "Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments."
+      ],
+      "keyPointsZh": [
+        "I wanted the resulting ~66MB SQLite database to be available via the GitHub CDN \u7ed3\u5408 open CORS headers.",
+        "Sponsor me \u9762\u5411 $10/month \u4ee5\u53ca get a curated email digest of the month's most important LLM developments."
+      ],
+      "imageUrl": "",
+      "date": "2026-06-26",
+      "sourceName": "Simon Willison",
+      "publisher": "",
+      "sourceUrl": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything",
+      "sourceGrade": "A",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 100,
+      "tags": [
+        "Simon Willison",
+        "llm-engineering",
+        "creator"
+      ],
+      "importance": 5,
+      "rawBody": "simonw/browser-compat-db Inspired by Mozilla's new MDN MCP service - source code here - I decided to try converting their comprehensive mdn/browser-compat-data repository full of browser compatibility data into a SQLite database. This new GitHub repo includes a Claude Code for web (Opus 4.8) generated script for doing that using sqlite-utils . I wanted the resulting ~66MB SQLite database to be available via the GitHub CDN with open CORS headers. GitHub releases don't have those, but any file stored in a regular GitHub repository does - so I had Codex Desktop (GPT-5.5) build a GitHub Actions workflow that builds the database and then force-pushes it to a db \"orphan\" branch. You can download the resulting database from here , and since it's hosted with open CORS headers you can also explore it with Datasette Lite . Tags: github , mozilla , projects , github-actions , datasette-lite , ai-assisted-programming , model-context-protocol , mdn",
+      "bodyText": "simonw/browser-compat-db . Inspired by Mozilla's new MDN MCP service - source code here - I decided to try converting their comprehensive mdn/browser-compat-data repository full of browser compatibility data into a SQLite database. This new GitHub repo includes a Claude Code for web (Opus 4.8) generated script for doing that using sqlite-utils . I wanted the resulting ~66MB SQLite database to be available via the GitHub CDN with open CORS headers. GitHub releases don't have those, but any file stored in a regular GitHub repository does - so I had Codex Desktop (GPT-5.5) build a GitHub Actions workflow that builds the database and then force-pushes it to a db \"orphan\" branch. You can download the resulting database from here , and since it's hosted with open CORS headers you can also explore it with Datasette Lite . Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code - 22nd June 2026 sqlite-utils 4.0rc1 adds migrations and nested transactions - 21st June 2026 Datasette Apps: Host custom HTML applications inside Datasette - 18th June 2026 This is a link post by Simon Willison, posted on 24th June 2026 . Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments.",
+      "contentFetched": true,
+      "relatedSources": [
+        {
+          "sourceName": "Simon Willison",
+          "sourceUrl": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything",
+          "sourceGrade": "A",
+          "publisher": ""
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 100,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 3,
+        "feature_update": 3,
+        "application_method": 2
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 100,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u5de5\u4f5c\u6d41 / \u6a21\u578b / release / available",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agpt / claude / codex",
+          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "GitHub releases don't have those, but any file stored in a regular GitHub repository does - so I had Codex Desktop (GPT-5.5) build a GitHub Actions \u5de5\u4f5c\u6d41 that builds the database \u4ee5\u53ca then force-pushes it to a db \"orph",
+        "whyItMatters": "GitHub releases don't have those, but any file stored in a regular GitHub repository does - so I had Codex Desktop (GPT-5.5) build a GitHub Actions \u5de5\u4f5c\u6d41 that builds the database \u4ee5\u53ca then force-pushes it to a db \"orph",
+        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "simonw-browser-compat-db",
       "topRank": 3,
       "isTopStory": true
     },
@@ -1988,6 +1984,80 @@
       "isTopStory": true
     },
     {
+      "title": "Who Governs AI Agents When Workflows Cross Platforms?",
+      "titleZh": "\u3010Enterprise Agents\u3011Who Governs AI \u667a\u80fd\u4f53 When Workflows Cross Platforms?",
+      "summary": "Who Governs AI Agents When Workflows Cross Platforms? from Enterprise Agents. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aEnterprise Agents\u3002\u4e3b\u9898\uff1a\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002Who Governs AI \u667a\u80fd\u4f53 When Workflows Cross Platforms? \u6765\u81ea \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53. Useful \u9762\u5411 deciding whether the original article deserves a deeper read.\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Who Governs AI Agents When Workflows Cross Platforms?"
+      ],
+      "keyPointsZh": [
+        "Who Governs AI \u667a\u80fd\u4f53 When Workflows Cross Platforms?"
+      ],
+      "imageUrl": "",
+      "date": "2026-06-26",
+      "sourceName": "Enterprise Agents",
+      "publisher": "ERP Today",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9kWXZfRVVubVk1MU1KcnJ3UzB1cUh5ZEsyc1A5RXo5dTRnWXR0T3ZUdGxWRkROMnQxVDNDM3J3cFZaRnhWdG1uZlh5SThyUGE3Y0RRbGJXYjlHUTRwdXdKM0dpTXl2ZmJNRnpqMGRtR3M5UUFtLW5n?oc=5",
+      "sourceGrade": "B",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
+      "contentType": "news",
+      "readingScore": 100,
+      "tags": [
+        "enterprise",
+        "agent",
+        "workflow"
+      ],
+      "importance": 5,
+      "rawBody": "Who Governs AI Agents When Workflows Cross Platforms? ERP Today",
+      "bodyText": "Who Governs AI Agents When Workflows Cross Platforms? ERP Today",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Enterprise Agents",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9kWXZfRVVubVk1MU1KcnJ3UzB1cUh5ZEsyc1A5RXo5dTRnWXR0T3ZUdGxWRkROMnQxVDNDM3J3cFZaRnhWdG1uZlh5SThyUGE3Y0RRbGJXYjlHUTRwdXdKM0dpTXl2ZmJNRnpqMGRtR3M5UUFtLW5n?oc=5",
+          "sourceGrade": "B",
+          "publisher": "ERP Today"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 100,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 2,
+        "feature_update": 1,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 100,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u5b9e\u6218\u65b9\u6cd5\u4f18\u5148\uff1a\u5339\u914d Agent / Prompt / Vibe Coding \u5de5\u4f5c\u6d41\u65b9\u5411",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u5de5\u4f5c\u6d41 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Who Governs AI \u667a\u80fd\u4f53 When Workflows Cross Platforms?",
+        "whyItMatters": "Who Governs AI \u667a\u80fd\u4f53 When Workflows Cross Platforms?",
+        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
+        "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "who-governs-agents-when-workflows-cross-platforms",
+      "topRank": 9,
+      "isTopStory": true
+    },
+    {
       "title": "How to Deploy AI Agents Across the Enterprise",
       "titleZh": "\u3010Enterprise Agents\u3011How to Deploy AI \u667a\u80fd\u4f53 Across the \u4f01\u4e1a\u5e94\u7528",
       "summary": "How to Deploy AI Agents Across the Enterprise from Enterprise Agents. Useful for deciding whether the original article deserves a deeper read.",
@@ -2058,44 +2128,51 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "how-deploy-agents-across-enterprise",
-      "topRank": 9,
+      "topRank": 10,
       "isTopStory": true
-    },
+    }
+  ],
+  "items": [
     {
-      "title": "What Microsoft 365 E7 means for startups building enterprise AI agents",
-      "titleZh": "\u3010Enterprise Agents\u3011What Microsoft 365 E7 means \u9762\u5411 startups building \u4f01\u4e1a\u5e94\u7528 AI \u667a\u80fd\u4f53",
-      "summary": "What Microsoft 365 E7 means for startups building enterprise AI agents Microsoft",
-      "summaryZh": "\u6765\u6e90\uff1aEnterprise Agents\u3002\u4e3b\u9898\uff1a\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Auto-grading decade-old Hacker News discussions with hindsight",
+      "titleZh": "\u3010Andrej Karpathy\u3011Auto-grading decade-old Hacker News discussions \u7ed3\u5408 hindsight",
+      "summary": "Auto-grading decade-old Hacker News discussions with hindsight 10 Dec, 2025 There are two macro reasons for why I think the exercise is interesting more generally: I believe it is quite possible and desirable to train your forward future predictor given training and effort. Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive.",
+      "summaryZh": "\u6765\u6e90\uff1aAndrej Karpathy\u3002\u4e3b\u9898\uff1aAndrej Karpathy\u3001Vibe Coding\u3001\u667a\u80fd\u4f53\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "What Microsoft 365 E7 means for startups building enterprise AI agents Microsoft"
+        "Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive.",
+        "Package up everything into a markdown prompt asking for the analysis.",
+        "A few example threads just for fun: December 11 2015 original announcement of OpenAI :')."
       ],
       "keyPointsZh": [
-        "What Microsoft 365 E7 means \u9762\u5411 startups building \u4f01\u4e1a\u5e94\u7528 AI \u667a\u80fd\u4f53 Microsoft"
+        "Vibe \u7f16\u7a0b the actual project was relatively painless \u4ee5\u53ca took about 3 hours \u7ed3\u5408 Opus 4.5, \u7ed3\u5408 a few hickups but overall very impressive.",
+        "Package up everything into a markdown \u63d0\u793a\u8bcd asking \u9762\u5411 the analysis.",
+        "A few example threads just \u9762\u5411 fun: December 11 2015 original announcement of OpenAI :')."
       ],
       "imageUrl": "",
-      "date": "2026-06-25",
-      "sourceName": "Enterprise Agents",
-      "publisher": "Microsoft",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZmVmb0FZLWRIRE9YQW01NzMwU3lvamFBbnFjN1FxMVVWZkFfLUZRVmZXU3BtRFZlSnMtRFUyaW9pam9vcGlySkEtams5WVZINzA0TXAtV2lGcDE5eG5RWk45a1VNb1NmMWVCMnhnM0xkbWhYVDZEQzlNQWZDXzRpNGI5d1NJeUk3SE5mQzZHeEZmNW11TS1hNGxBUllvUS1vdk9HRWR3MHNudS1vb1BKVG5JejR2RnJs?oc=5",
-      "sourceGrade": "B",
-      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
-      "contentType": "news",
+      "date": "2026-06-26",
+      "sourceName": "Andrej Karpathy",
+      "publisher": "",
+      "sourceUrl": "https://karpathy.bearblog.dev/auto-grade-hn/",
+      "sourceGrade": "A",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
       "readingScore": 100,
       "tags": [
-        "enterprise",
+        "Andrej Karpathy",
+        "vibecoding",
         "agent",
-        "workflow"
+        "creator"
       ],
       "importance": 5,
-      "rawBody": "What Microsoft 365 E7 means for startups building enterprise AI agents Microsoft",
-      "bodyText": "What Microsoft 365 E7 means for startups building enterprise AI agents Microsoft",
-      "contentFetched": false,
+      "rawBody": "A vibe coding thought exercise on what it might look like for LLMs to scour human historical data at scale and in retrospect.",
+      "bodyText": "Auto-grading decade-old Hacker News discussions with hindsight 10 Dec, 2025 There are two macro reasons for why I think the exercise is interesting more generally: I believe it is quite possible and desirable to train your forward future predictor given training and effort. Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive. The repository is on GitHub here: karpathy/hn-time-capsule . Here is the progression of what the code does: Given a date, download the frontpage of 30 articles For each article, download/parse the article itself and the full comment thread using Algolia API. Package up everything into a markdown prompt asking for the analysis. Here is the prompt prefix I used: Render the results into static HTML web pages for easy viewing Host the html result pages on my website: https://karpathy.ai/hncapsule/ Host all the intermediate results of the data directory if someone else would like to play. It's the file data.zip under the exact same url prefix (intentionally avoiding a direct link). I spent a few hours browsing around and found it to be very interesting. A few example threads just for fun: December 11 2015 original announcement of OpenAI :'). December 22 2015 SpaceX launch webcast: Orbcomm-2 Mission My code (wait, Opus' code?) on GitHub can be used to reproduce or tweak the results. Running 31 days of 30 articles through GPT 5.1 Thinking meant 31 * 30 = 930 LLM queries and cost about $58 and somewhere around ~1 hour. The LLM megaminds of the future might find this kind of a thing a lot easier, a lot faster and a lot cheaper.",
+      "contentFetched": true,
       "relatedSources": [
         {
-          "sourceName": "Enterprise Agents",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZmVmb0FZLWRIRE9YQW01NzMwU3lvamFBbnFjN1FxMVVWZkFfLUZRVmZXU3BtRFZlSnMtRFUyaW9pam9vcGlySkEtams5WVZINzA0TXAtV2lGcDE5eG5RWk45a1VNb1NmMWVCMnhnM0xkbWhYVDZEQzlNQWZDXzRpNGI5d1NJeUk3SE5mQzZHeEZmNW11TS1hNGxBUllvUS1vdk9HRWR3MHNudS1vb1BKVG5JejR2RnJs?oc=5",
-          "sourceGrade": "B",
-          "publisher": "Microsoft"
+          "sourceName": "Andrej Karpathy",
+          "sourceUrl": "https://karpathy.bearblog.dev/auto-grade-hn/",
+          "sourceGrade": "A",
+          "publisher": ""
         }
       ],
       "sourceCount": 1,
@@ -2104,8 +2181,8 @@
       "qualityType": "technical_update",
       "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 2,
-        "feature_update": 1,
+        "technical_update": 4,
+        "feature_update": 2,
         "application_method": 2
       },
       "lowValueSignals": 0,
@@ -2116,27 +2193,25 @@
         "isDefaultVisible": true,
         "isTopEligible": true,
         "reasons": [
-          "\u5b9e\u6218\u65b9\u6cd5\u4f18\u5148\uff1a\u5339\u914d Agent / Prompt / Vibe Coding \u5de5\u4f5c\u6d41\u65b9\u5411",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u4f01\u4e1a\u5e94\u7528",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aanalysis / \u63d0\u793a\u8bcd / vibe coding / \u7f16\u7a0b",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / gpt / \u63d0\u793a\u8bcd",
+          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
         ],
         "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "What Microsoft 365 E7 means \u9762\u5411 startups building \u4f01\u4e1a\u5e94\u7528 AI \u667a\u80fd\u4f53 What Microsoft 365 E7 means \u9762\u5411 startups building \u4f01\u4e1a\u5e94\u7528 AI \u667a\u80fd\u4f53 Microsoft What Microsoft 365 E7 means \u9762\u5411 startups building \u4f01\u4e1a\u5e94\u7528 AI agen",
-        "whyItMatters": "What Microsoft 365 E7 means \u9762\u5411 startups building \u4f01\u4e1a\u5e94\u7528 AI \u667a\u80fd\u4f53 What Microsoft 365 E7 means \u9762\u5411 startups building \u4f01\u4e1a\u5e94\u7528 AI \u667a\u80fd\u4f53 Microsoft What Microsoft 365 E7 means \u9762\u5411 startups building \u4f01\u4e1a\u5e94\u7528 AI agen",
-        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
-        "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
+        "whatHappened": "Here is the progression of what the code does: Given a date, download the frontpage of 30 articles \u9762\u5411 each article, download/parse the article itself \u4ee5\u53ca the full comment thread using Algolia API.",
+        "whyItMatters": "Vibe \u7f16\u7a0b the actual project was relatively painless \u4ee5\u53ca took about 3 hours \u7ed3\u5408 Opus 4.5, \u7ed3\u5408 a few hickups but overall very impressive.",
+        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "what-365-e7-means-startups-building-enterprise-agents",
-      "topRank": 10,
+      "eventId": "auto-grading-decade-old-hacker-news-discussions-hindsight",
+      "topRank": 1,
       "isTopStory": true
-    }
-  ],
-  "items": [
+    },
     {
       "title": "AI and Liability",
       "titleZh": "\u3010Simon Willison\u3011AI \u4ee5\u53ca Liability",
@@ -2210,7 +2285,7 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "simon-willison-liability",
-      "topRank": 1,
+      "topRank": 2,
       "isTopStory": true
     },
     {
@@ -2286,7 +2361,7 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "simonw-browser-compat-db",
-      "topRank": 2,
+      "topRank": 3,
       "isTopStory": true
     },
     {
@@ -3274,45 +3349,40 @@
       "eventId": "why-hasn-t-replaced-software-engineers-won-t"
     },
     {
-      "title": "Auto-grading decade-old Hacker News discussions with hindsight",
-      "titleZh": "\u3010Andrej Karpathy\u3011Auto-grading decade-old Hacker News discussions \u7ed3\u5408 hindsight",
-      "summary": "Auto-grading decade-old Hacker News discussions with hindsight 10 Dec, 2025 There are two macro reasons for why I think the exercise is interesting more generally: I believe it is quite possible and desirable to train your forward future predictor given training and effort. Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive.",
-      "summaryZh": "\u6765\u6e90\uff1aAndrej Karpathy\u3002\u4e3b\u9898\uff1aAndrej Karpathy\u3001Vibe Coding\u3001\u667a\u80fd\u4f53\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Who Governs AI Agents When Workflows Cross Platforms?",
+      "titleZh": "\u3010Enterprise Agents\u3011Who Governs AI \u667a\u80fd\u4f53 When Workflows Cross Platforms?",
+      "summary": "Who Governs AI Agents When Workflows Cross Platforms? from Enterprise Agents. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aEnterprise Agents\u3002\u4e3b\u9898\uff1a\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002Who Governs AI \u667a\u80fd\u4f53 When Workflows Cross Platforms? \u6765\u81ea \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53. Useful \u9762\u5411 deciding whether the original article deserves a deeper read.\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive.",
-        "Package up everything into a markdown prompt asking for the analysis.",
-        "A few example threads just for fun: December 11 2015 original announcement of OpenAI :')."
+        "Who Governs AI Agents When Workflows Cross Platforms?"
       ],
       "keyPointsZh": [
-        "Vibe \u7f16\u7a0b the actual project was relatively painless \u4ee5\u53ca took about 3 hours \u7ed3\u5408 Opus 4.5, \u7ed3\u5408 a few hickups but overall very impressive.",
-        "Package up everything into a markdown \u63d0\u793a\u8bcd asking \u9762\u5411 the analysis.",
-        "A few example threads just \u9762\u5411 fun: December 11 2015 original announcement of OpenAI :')."
+        "Who Governs AI \u667a\u80fd\u4f53 When Workflows Cross Platforms?"
       ],
       "imageUrl": "",
       "date": "2026-06-26",
-      "sourceName": "Andrej Karpathy",
-      "publisher": "",
-      "sourceUrl": "https://karpathy.bearblog.dev/auto-grade-hn/",
-      "sourceGrade": "A",
-      "category": "\u6838\u5fc3AI\u535a\u4e3b",
-      "contentType": "article",
+      "sourceName": "Enterprise Agents",
+      "publisher": "ERP Today",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9kWXZfRVVubVk1MU1KcnJ3UzB1cUh5ZEsyc1A5RXo5dTRnWXR0T3ZUdGxWRkROMnQxVDNDM3J3cFZaRnhWdG1uZlh5SThyUGE3Y0RRbGJXYjlHUTRwdXdKM0dpTXl2ZmJNRnpqMGRtR3M5UUFtLW5n?oc=5",
+      "sourceGrade": "B",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
+      "contentType": "news",
       "readingScore": 100,
       "tags": [
-        "Andrej Karpathy",
-        "vibecoding",
+        "enterprise",
         "agent",
-        "creator"
+        "workflow"
       ],
       "importance": 5,
-      "rawBody": "A vibe coding thought exercise on what it might look like for LLMs to scour human historical data at scale and in retrospect.",
-      "bodyText": "Auto-grading decade-old Hacker News discussions with hindsight 10 Dec, 2025 There are two macro reasons for why I think the exercise is interesting more generally: I believe it is quite possible and desirable to train your forward future predictor given training and effort. Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive. The repository is on GitHub here: karpathy/hn-time-capsule . Here is the progression of what the code does: Given a date, download the frontpage of 30 articles For each article, download/parse the article itself and the full comment thread using Algolia API. Package up everything into a markdown prompt asking for the analysis. Here is the prompt prefix I used: Render the results into static HTML web pages for easy viewing Host the html result pages on my website: https://karpathy.ai/hncapsule/ Host all the intermediate results of the data directory if someone else would like to play. It's the file data.zip under the exact same url prefix (intentionally avoiding a direct link). I spent a few hours browsing around and found it to be very interesting. A few example threads just for fun: December 11 2015 original announcement of OpenAI :'). December 22 2015 SpaceX launch webcast: Orbcomm-2 Mission My code (wait, Opus' code?) on GitHub can be used to reproduce or tweak the results. Running 31 days of 30 articles through GPT 5.1 Thinking meant 31 * 30 = 930 LLM queries and cost about $58 and somewhere around ~1 hour. The LLM megaminds of the future might find this kind of a thing a lot easier, a lot faster and a lot cheaper.",
-      "contentFetched": true,
+      "rawBody": "Who Governs AI Agents When Workflows Cross Platforms? ERP Today",
+      "bodyText": "Who Governs AI Agents When Workflows Cross Platforms? ERP Today",
+      "contentFetched": false,
       "relatedSources": [
         {
-          "sourceName": "Andrej Karpathy",
-          "sourceUrl": "https://karpathy.bearblog.dev/auto-grade-hn/",
-          "sourceGrade": "A",
-          "publisher": ""
+          "sourceName": "Enterprise Agents",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9kWXZfRVVubVk1MU1KcnJ3UzB1cUh5ZEsyc1A5RXo5dTRnWXR0T3ZUdGxWRkROMnQxVDNDM3J3cFZaRnhWdG1uZlh5SThyUGE3Y0RRbGJXYjlHUTRwdXdKM0dpTXl2ZmJNRnpqMGRtR3M5UUFtLW5n?oc=5",
+          "sourceGrade": "B",
+          "publisher": "ERP Today"
         }
       ],
       "sourceCount": 1,
@@ -3321,9 +3391,9 @@
       "qualityType": "technical_update",
       "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 4,
-        "feature_update": 2,
-        "application_method": 2
+        "technical_update": 2,
+        "feature_update": 1,
+        "application_method": 1
       },
       "lowValueSignals": 0,
       "titleLowValue": false,
@@ -3333,23 +3403,23 @@
         "isDefaultVisible": true,
         "isTopEligible": true,
         "reasons": [
-          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aanalysis / \u63d0\u793a\u8bcd / vibe coding / \u7f16\u7a0b",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / gpt / \u63d0\u793a\u8bcd",
-          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
+          "\u5b9e\u6218\u65b9\u6cd5\u4f18\u5148\uff1a\u5339\u914d Agent / Prompt / Vibe Coding \u5de5\u4f5c\u6d41\u65b9\u5411",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u5de5\u4f5c\u6d41 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
         ],
         "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Here is the progression of what the code does: Given a date, download the frontpage of 30 articles \u9762\u5411 each article, download/parse the article itself \u4ee5\u53ca the full comment thread using Algolia API.",
-        "whyItMatters": "Vibe \u7f16\u7a0b the actual project was relatively painless \u4ee5\u53ca took about 3 hours \u7ed3\u5408 Opus 4.5, \u7ed3\u5408 a few hickups but overall very impressive.",
-        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
-        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
+        "whatHappened": "Who Governs AI \u667a\u80fd\u4f53 When Workflows Cross Platforms?",
+        "whyItMatters": "Who Governs AI \u667a\u80fd\u4f53 When Workflows Cross Platforms?",
+        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
+        "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "auto-grading-decade-old-hacker-news-discussions-hindsight",
-      "topRank": 3,
+      "eventId": "who-governs-agents-when-workflows-cross-platforms",
+      "topRank": 9,
       "isTopStory": true
     },
     {
@@ -3722,7 +3792,7 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "how-deploy-agents-across-enterprise",
-      "topRank": 9,
+      "topRank": 10,
       "isTopStory": true
     },
     {
@@ -3795,81 +3865,7 @@
         "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "what-365-e7-means-startups-building-enterprise-agents",
-      "topRank": 10,
-      "isTopStory": true
-    },
-    {
-      "title": "CXAI Introduces CXAI 2.0: The Agentic Operating Layer for Enterprises of All Sizes",
-      "titleZh": "\u3010Enterprise Agents\u3011CXAI Introduces CXAI 2.0: The Agentic Operating Layer \u9762\u5411 Enterprises of All Sizes",
-      "summary": "CXAI Introduces CXAI 2.0: The Agentic Operating Layer for Enterprises of All Sizes The Globe and Mail",
-      "summaryZh": "\u6765\u6e90\uff1aEnterprise Agents\u3002\u4e3b\u9898\uff1a\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "CXAI Introduces CXAI 2.0: The Agentic Operating Layer for Enterprises of All Sizes The Globe and Mail"
-      ],
-      "keyPointsZh": [
-        "CXAI Introduces CXAI 2.0: The Agentic Operating Layer \u9762\u5411 Enterprises of All Sizes The Globe \u4ee5\u53ca Mail"
-      ],
-      "imageUrl": "",
-      "date": "2026-06-25",
-      "sourceName": "Enterprise Agents",
-      "publisher": "The Globe and Mail",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNQTBrYVF6N19KQU1FTXpxYW9aS0RIbDEtdHlRNDB2ZFhhNm0xYnlkY1ZfMVgzSjdiaFNCejFieUczclVIdWltZHVRUTNYZUZfa2ZkcE1IbzRYdmljckpNM0pQeEYwUHhFVmUwMWZRSGUzOUkyUlJZa1Yzc2pGZkwzNHdyNUo1cEpjMDhyOGRDMXI3WXpaQ0EwQ3NEOERvQ2pIZ1dTcnlqeU12dE45emcxdXZwWHZRWGYtTktvMFdaNS0zVGFEcmhMeGEwWlFrb1E0eXBvaGhvUmRVM3NZbkYxTW8zdGh3NzZHVGtSUzdqYU9yR0dTeXN2b01Ld1lvNHR1?oc=5",
-      "sourceGrade": "B",
-      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
-      "contentType": "news",
-      "readingScore": 100,
-      "tags": [
-        "enterprise",
-        "agent",
-        "workflow"
-      ],
-      "importance": 5,
-      "rawBody": "CXAI Introduces CXAI 2.0: The Agentic Operating Layer for Enterprises of All Sizes The Globe and Mail",
-      "bodyText": "CXAI Introduces CXAI 2.0: The Agentic Operating Layer for Enterprises of All Sizes The Globe and Mail",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Enterprise Agents",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNQTBrYVF6N19KQU1FTXpxYW9aS0RIbDEtdHlRNDB2ZFhhNm0xYnlkY1ZfMVgzSjdiaFNCejFieUczclVIdWltZHVRUTNYZUZfa2ZkcE1IbzRYdmljckpNM0pQeEYwUHhFVmUwMWZRSGUzOUkyUlJZa1Yzc2pGZkwzNHdyNUo1cEpjMDhyOGRDMXI3WXpaQ0EwQ3NEOERvQ2pIZ1dTcnlqeU12dE45emcxdXZwWHZRWGYtTktvMFdaNS0zVGFEcmhMeGEwWlFrb1E0eXBvaGhvUmRVM3NZbkYxTW8zdGh3NzZHVGtSUzdqYU9yR0dTeXN2b01Ld1lvNHR1?oc=5",
-          "sourceGrade": "B",
-          "publisher": "The Globe and Mail"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 90,
-      "qualityType": "feature_update",
-      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 1,
-        "feature_update": 2,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 90,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u5b9e\u6218\u65b9\u6cd5\u4f18\u5148\uff1a\u5339\u914d Agent / Prompt / Vibe Coding \u5de5\u4f5c\u6d41\u65b9\u5411",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u4f01\u4e1a\u5e94\u7528 / AI",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "CXAI Introduces CXAI 2.0: The Agentic Operating Layer \u9762\u5411 Enterprises of All Sizes CXAI Introduces CXAI 2.0: The Agentic Operating Layer \u9762\u5411 Enterprises of All Sizes The Globe \u4ee5\u53ca Mail CXAI Introduces CXAI 2.0: The \u667a\u80fd\u4f53",
-        "whyItMatters": "CXAI Introduces CXAI 2.0: The Agentic Operating Layer \u9762\u5411 Enterprises of All Sizes CXAI Introduces CXAI 2.0: The Agentic Operating Layer \u9762\u5411 Enterprises of All Sizes The Globe \u4ee5\u53ca Mail CXAI Introduces CXAI 2.0: The \u667a\u80fd\u4f53",
-        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
-        "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "cxai-introduces-cxai-2-0-agentic-operating-layer-enterprises-all-sizes"
+      "eventId": "what-365-e7-means-startups-building-enterprise-agents"
     },
     {
       "title": "Which tokens does a hybrid model predict better?",
@@ -4172,6 +4168,78 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "ainews-claude-tag-multiplayer-proactive-persistent-agents-slack"
+    },
+    {
+      "title": "Top 7 Coding Models You Can Run Locally in 2026",
+      "titleZh": "\u3010Claude Code\u3011Top 7 \u7f16\u7a0b \u6a21\u578b You Can Run Locally in 2026",
+      "summary": "Top 7 Coding Models You Can Run Locally in 2026 from Claude Code. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aClaude Code\u3002\u4e3b\u9898\uff1aClaude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Top 7 Coding Models You Can Run Locally in 2026 KDnuggets"
+      ],
+      "keyPointsZh": [
+        "Top 7 \u7f16\u7a0b \u6a21\u578b You Can Run Locally in 2026 KDnuggets"
+      ],
+      "imageUrl": "",
+      "date": "2026-06-24",
+      "sourceName": "Claude Code",
+      "publisher": "KDnuggets",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAyZE5Lay1SYkQ3SVlVM3pZZjJoNmJ2ODYxY1ZneWZjaDNvYUlJQmdxQjZxMUcxWk8tTnVOeFVqWl9JME1WX1VVUXlVZElWMlNFcURTSDc5bGFOQjJZa1FkZlQzSF9Fb1UzNXRITTg4QktnM0FpSmFMOGotcDRiUQ?oc=5",
+      "sourceGrade": "B",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
+      "contentType": "news",
+      "readingScore": 94,
+      "tags": [
+        "Claude Code",
+        "coding",
+        "agent"
+      ],
+      "importance": 4,
+      "rawBody": "Top 7 Coding Models You Can Run Locally in 2026 KDnuggets",
+      "bodyText": "Top 7 Coding Models You Can Run Locally in 2026 KDnuggets",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Claude Code",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAyZE5Lay1SYkQ3SVlVM3pZZjJoNmJ2ODYxY1ZneWZjaDNvYUlJQmdxQjZxMUcxWk8tTnVOeFVqWl9JME1WX1VVUXlVZElWMlNFcURTSDc5bGFOQjJZa1FkZlQzSF9Fb1UzNXRITTg4QktnM0FpSmFMOGotcDRiUQ?oc=5",
+          "sourceGrade": "B",
+          "publisher": "KDnuggets"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 90,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 3,
+        "feature_update": 0,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 90,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u5b9e\u6218\u65b9\u6cd5\u4f18\u5148\uff1a\u5339\u914d Agent / Prompt / Vibe Coding \u5de5\u4f5c\u6d41\u65b9\u5411",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u7f16\u7a0b / \u6a21\u578b / \u6a21\u578b / claude",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1aclaude / \u6a21\u578b / \u6a21\u578b",
+          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Top 7 \u7f16\u7a0b \u6a21\u578b You Can Run Locally in 2026 Top 7 \u7f16\u7a0b \u6a21\u578b You Can Run Locally in 2026 \u6765\u81ea Claude Code.",
+        "whyItMatters": "Top 7 \u7f16\u7a0b \u6a21\u578b You Can Run Locally in 2026 Top 7 \u7f16\u7a0b \u6a21\u578b You Can Run Locally in 2026 \u6765\u81ea Claude Code.",
+        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
+        "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "top-7-coding-models-you-can-run-locally-2026"
     },
     {
       "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
@@ -6746,77 +6814,6 @@
       "eventId": "how-engineers-at-nextdoor-use-codex-build-without-limits"
     },
     {
-      "title": "Google Research Adds Agentic RAG to Gemini Enterprise Agent Platform with a Sufficient Context Agent for multi-hop queries",
-      "titleZh": "\u3010Google DeepMind\u3011Google \u7814\u7a76 Adds Agentic RAG to Gemini \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53 Platform \u7ed3\u5408 a Sufficient Context \u667a\u80fd\u4f53 \u9762\u5411 multi-hop queries",
-      "summary": "Google Research Adds Agentic RAG to Gemini Enterprise Agent Platform with a Sufficient Context Agent for multi-hop queries MarkTechPost",
-      "summaryZh": "\u6765\u6e90\uff1aGoogle DeepMind\u3002\u4e3b\u9898\uff1aGoogle DeepMind\u3001\u4f01\u4e1a\u5e94\u7528\u3002Google \u7814\u7a76 Adds Agentic RAG to Gemini \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53 Platform \u7ed3\u5408 a Sufficient Context \u667a\u80fd\u4f53 \u9762\u5411 multi-hop queries MarkTechPost\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Google Research Adds Agentic RAG to Gemini Enterprise Agent Platform with a Sufficient Context Agent for multi-hop queries MarkTechPost"
-      ],
-      "keyPointsZh": [
-        "Google \u7814\u7a76 Adds Agentic RAG to Gemini \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53 Platform \u7ed3\u5408 a Sufficient Context \u667a\u80fd\u4f53 \u9762\u5411 multi-hop queries MarkTechPost"
-      ],
-      "imageUrl": "",
-      "date": "2026-06-08",
-      "sourceName": "Google DeepMind",
-      "publisher": "MarkTechPost",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOSC10TEFvaXh4WFlDZVd0cjJaSy1TVXhfaTNQMHBIckdxcFdmdV9xNmRGSFV2UEpoNWF1LTZHaWlkQ3dQTUtoTDFkWDVuY3lkeVNCM0FvYTUxemV4ZG1rY3VBblhIcTFWQ3dIa29nQ2s2OUZwNzlfUzg2LUFTTXFCZjB4cVpiQXhRbFpzWlJKblhEbEVBYUJTUnNHb1ctWjFOa1JfYkI5SDJPNTZYbDVlbDRWV2cxanVwMjRvZDNGbW4tNHFUSTlaa29BRVhlR2Rib1pUaDgyUHhQRUhIbm15SXloQk1BbGt5VHNFQ2tKTnRrR1JaOXc?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 89,
-      "tags": [
-        "Google DeepMind",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Google Research Adds Agentic RAG to Gemini Enterprise Agent Platform with a Sufficient Context Agent for multi-hop queries MarkTechPost",
-      "bodyText": "Google Research Adds Agentic RAG to Gemini Enterprise Agent Platform with a Sufficient Context Agent for multi-hop queries MarkTechPost",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Google DeepMind",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOSC10TEFvaXh4WFlDZVd0cjJaSy1TVXhfaTNQMHBIckdxcFdmdV9xNmRGSFV2UEpoNWF1LTZHaWlkQ3dQTUtoTDFkWDVuY3lkeVNCM0FvYTUxemV4ZG1rY3VBblhIcTFWQ3dIa29nQ2s2OUZwNzlfUzg2LUFTTXFCZjB4cVpiQXhRbFpzWlJKblhEbEVBYUJTUnNHb1ctWjFOa1JfYkI5SDJPNTZYbDVlbDRWV2cxanVwMjRvZDNGbW4tNHFUSTlaa29BRVhlR2Rib1pUaDgyUHhQRUhIbm15SXloQk1BbGt5VHNFQ2tKTnRrR1JaOXc?oc=5",
-          "sourceGrade": "B",
-          "publisher": "MarkTechPost"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 84,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 2,
-        "feature_update": 2,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 84,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / rag / \u667a\u80fd\u4f53 / \u4f01\u4e1a\u5e94\u7528",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agemini / \u667a\u80fd\u4f53 / rag",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Google \u7814\u7a76 Adds Agentic RAG to Gemini \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53 Platform \u7ed3\u5408 a Sufficient Context \u667a\u80fd\u4f53 \u9762\u5411 multi-hop queries Google \u7814\u7a76 Adds Agentic RAG to Gemini \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53 Platform \u7ed3\u5408 a Sufficient Context Ag",
-        "whyItMatters": "Google \u7814\u7a76 Adds Agentic RAG to Gemini \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53 Platform \u7ed3\u5408 a Sufficient Context \u667a\u80fd\u4f53 \u9762\u5411 multi-hop queries Google \u7814\u7a76 Adds Agentic RAG to Gemini \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53 Platform \u7ed3\u5408 a Sufficient Context Ag",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "google-research-adds-agentic-rag-gemini-enterprise-agent-platform-sufficient-con"
-    },
-    {
       "title": "The Open Source Community is backing OpenEnv for Agentic RL",
       "titleZh": "\u3010Hugging Face\u3011The Open Source Community is backing OpenEnv \u9762\u5411 Agentic RL",
       "summary": "The Open Source Community is backing OpenEnv for Agentic RL from Hugging Face. Included for AI tracking; open the original article to verify details.",
@@ -7701,62 +7698,61 @@
       "eventId": "harness-scaffold-agent-terms-worth-getting-right"
     },
     {
-      "title": "Everything Claude Code: 60 Specialized Agents and 232 Skills",
-      "titleZh": "\u3010Claude Code\u3011Everything Claude Code: 60 Specialized \u667a\u80fd\u4f53 \u4ee5\u53ca 232 Skills",
-      "summary": "Everything Claude Code: 60 Specialized Agents and 232 Skills from Claude Code. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u6765\u6e90\uff1aClaude Code\u3002\u4e3b\u9898\uff1aClaude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Build a SuperClaude Framework Workflow with Commands, Agents, Modes, and Session Memory",
+      "titleZh": "\u3010Latent.Space\u3011Build a SuperClaude Framework \u5de5\u4f5c\u6d41 \u7ed3\u5408 Commands, \u667a\u80fd\u4f53, Modes, \u4ee5\u53ca Session Memory",
+      "summary": "Build a SuperClaude Framework Workflow with Commands, Agents, Modes, and Session Memory MarkTechPost",
+      "summaryZh": "\u6765\u6e90\uff1aLatent.Space\u3002\u4e3b\u9898\uff1aLatent.Space\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Everything Claude Code: 60 Specialized Agents and 232 Skills SitePoint"
+        "Build a SuperClaude Framework Workflow with Commands, Agents, Modes, and Session Memory MarkTechPost"
       ],
       "keyPointsZh": [
-        "Everything Claude Code: 60 Specialized \u667a\u80fd\u4f53 \u4ee5\u53ca 232 Skills SitePoint"
+        "Build a SuperClaude Framework \u5de5\u4f5c\u6d41 \u7ed3\u5408 Commands, \u667a\u80fd\u4f53, Modes, \u4ee5\u53ca Session Memory MarkTechPost"
       ],
       "imageUrl": "",
-      "date": "2026-05-24",
-      "sourceName": "Claude Code",
-      "publisher": "SitePoint",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZkU1T3dnWElqTzQ1ZUJmZkNpWFVzMVR6Q2hheVlIXzM4dnNtbkQyZWNSdzJoVFZtNVI3XzBIZUhhRF9feHBSd1lkTkZKWVlCQklnYUI3X1JnQ3pDVzQ5SlFhek50UXEwdEtPdnpmcVN0QXdSTzI5cUhDMzJtbmZkOTkwU1BpNWVMT1A0bFJ3?oc=5",
+      "date": "2026-05-23",
+      "sourceName": "Latent.Space",
+      "publisher": "MarkTechPost",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZURfa0lvRWNaSTBQbU1BcVJFb2tKa0RPU3h4RzI3b1h0dzF3cHd6Vjhwd2RtczVpWEp4b2pmdVZISkVxNjJneU5ER3NuUFU2eEtYb25qNi00M3BUUHU1enNHWVpyaFFKMTRjOXQ4TGliQ2lUQ3F2X08zTnA3RE1mWlJBbHNaM0g1ZGQxZTJMenlTTTBHYTVxVDF2UnpHUElRTTJXR0JyZjA3Zm9XOThFMUhMNk5udy1BckU2RUs4enAxWW8?oc=5",
       "sourceGrade": "B",
-      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
-      "contentType": "news",
-      "readingScore": 94,
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 100,
       "tags": [
-        "Claude Code",
-        "coding",
-        "agent"
+        "Latent.Space",
+        "creator"
       ],
-      "importance": 4,
-      "rawBody": "Everything Claude Code: 60 Specialized Agents and 232 Skills SitePoint",
-      "bodyText": "Everything Claude Code: 60 Specialized Agents and 232 Skills SitePoint",
+      "importance": 5,
+      "rawBody": "Build a SuperClaude Framework Workflow with Commands, Agents, Modes, and Session Memory MarkTechPost",
+      "bodyText": "Build a SuperClaude Framework Workflow with Commands, Agents, Modes, and Session Memory MarkTechPost",
       "contentFetched": false,
       "relatedSources": [
         {
-          "sourceName": "Claude Code",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZkU1T3dnWElqTzQ1ZUJmZkNpWFVzMVR6Q2hheVlIXzM4dnNtbkQyZWNSdzJoVFZtNVI3XzBIZUhhRF9feHBSd1lkTkZKWVlCQklnYUI3X1JnQ3pDVzQ5SlFhek50UXEwdEtPdnpmcVN0QXdSTzI5cUhDMzJtbmZkOTkwU1BpNWVMT1A0bFJ3?oc=5",
+          "sourceName": "Latent.Space",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZURfa0lvRWNaSTBQbU1BcVJFb2tKa0RPU3h4RzI3b1h0dzF3cHd6Vjhwd2RtczVpWEp4b2pmdVZISkVxNjJneU5ER3NuUFU2eEtYb25qNi00M3BUUHU1enNHWVpyaFFKMTRjOXQ4TGliQ2lUQ3F2X08zTnA3RE1mWlJBbHNaM0g1ZGQxZTJMenlTTTBHYTVxVDF2UnpHUElRTTJXR0JyZjA3Zm9XOThFMUhMNk5udy1BckU2RUs4enAxWW8?oc=5",
           "sourceGrade": "B",
-          "publisher": "SitePoint"
+          "publisher": "MarkTechPost"
         }
       ],
       "sourceCount": 1,
       "aggregatedEvent": false,
-      "qualityScore": 90,
+      "qualityScore": 100,
       "qualityType": "technical_update",
       "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
         "technical_update": 3,
         "feature_update": 0,
-        "application_method": 0
+        "application_method": 2
       },
       "lowValueSignals": 0,
       "titleLowValue": false,
       "qualityReview": {
-        "score": 90,
+        "score": 100,
         "tier": "top",
         "isDefaultVisible": true,
         "isTopEligible": true,
         "reasons": [
-          "\u5b9e\u6218\u65b9\u6cd5\u4f18\u5148\uff1a\u5339\u914d Agent / Prompt / Vibe Coding \u5de5\u4f5c\u6d41\u65b9\u5411",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / claude",
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u5de5\u4f5c\u6d41 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
           "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1aclaude / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
           "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
         ],
@@ -7764,13 +7760,13 @@
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Everything Claude Code: 60 Specialized \u667a\u80fd\u4f53 \u4ee5\u53ca 232 Skills Everything Claude Code: 60 Specialized \u667a\u80fd\u4f53 \u4ee5\u53ca 232 Skills \u6765\u81ea Claude Code.",
-        "whyItMatters": "Everything Claude Code: 60 Specialized \u667a\u80fd\u4f53 \u4ee5\u53ca 232 Skills Everything Claude Code: 60 Specialized \u667a\u80fd\u4f53 \u4ee5\u53ca 232 Skills \u6765\u81ea Claude Code.",
-        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
-        "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
+        "whatHappened": "Build a SuperClaude Framework \u5de5\u4f5c\u6d41 \u7ed3\u5408 Commands, \u667a\u80fd\u4f53, Modes, \u4ee5\u53ca Session Memory Build a SuperClaude Framework \u5de5\u4f5c\u6d41 \u7ed3\u5408 Commands, \u667a\u80fd\u4f53, Modes, \u4ee5\u53ca Session Memory MarkTechPost Build a SuperClaude Framework W",
+        "whyItMatters": "Build a SuperClaude Framework \u5de5\u4f5c\u6d41 \u7ed3\u5408 Commands, \u667a\u80fd\u4f53, Modes, \u4ee5\u53ca Session Memory Build a SuperClaude Framework \u5de5\u4f5c\u6d41 \u7ed3\u5408 Commands, \u667a\u80fd\u4f53, Modes, \u4ee5\u53ca Session Memory MarkTechPost Build a SuperClaude Framework W",
+        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "everything-60-specialized-agents-232-skills"
+      "eventId": "build-superclaude-framework-workflow-commands-agents-modes-session-memory"
     },
     {
       "title": "Cohere Releases Command A+: A 218B Sparse MoE Model for Agentic Workflows That Runs on as Few as Two H100 GPUs",
@@ -7983,77 +7979,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "google-just-put-agents-everything"
-    },
-    {
-      "title": "Google Launches Antigravity 2.0 at I/O 2026: A Standalone Agent-First Platform with CLI, SDK, Managed Execution, and Enterprise Support",
-      "titleZh": "\u3010Hugging Face\u3011Google Launches Antigravity 2.0 at I/O 2026: A Standalone \u667a\u80fd\u4f53-First Platform \u7ed3\u5408 CLI, SDK, Managed Execution, \u4ee5\u53ca \u4f01\u4e1a\u5e94\u7528 Support",
-      "summary": "Google Launches Antigravity 2.0 at I/O 2026: A Standalone Agent-First Platform with CLI, SDK, Managed Execution, and Enterprise Support MarkTechPost",
-      "summaryZh": "\u6765\u6e90\uff1aHugging Face\u3002\u4e3b\u9898\uff1aHugging Face\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Google Launches Antigravity 2.0 at I/O 2026: A Standalone Agent-First Platform with CLI, SDK, Managed Execution, and Enterprise Support MarkTechPost"
-      ],
-      "keyPointsZh": [
-        "Google Launches Antigravity 2.0 at I/O 2026: A Standalone \u667a\u80fd\u4f53-First Platform \u7ed3\u5408 CLI, SDK, Managed Execution, \u4ee5\u53ca \u4f01\u4e1a\u5e94\u7528 Support MarkTechPost"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-19",
-      "sourceName": "Hugging Face",
-      "publisher": "MarkTechPost",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNRXlEcnZScFZxUlZtSGtSUnB1LW5QZTlQNm42WXU2azJ2T1RnYnV6V1Eyei1VUlFVaUNFaU5MdElZU2ZGYlJkZ20zNEJORFZBZHo4bVR2Y1BteDhCYXA2NWdIMmxwX0NLblZDRmFILURzUnFXa3BZQ2NFNW9MUkZCY0RqWmVmcGx1aGJBQ1lDX056bHNyNXplQUtRUGc5NGIya21fWXdOdE1QVTBtSldGcXI2Ymg4ck93bml6elRDMFA0MVBkZ2Vqbk1vR0tmQWdlRWlDUWFtS3lDYlF4VWNRdGRKejg0c3RnRVR1MEZOS2hYcndBVkFvbXRNb2tVTFY2Vnc?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 95,
-      "tags": [
-        "Hugging Face",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Google Launches Antigravity 2.0 at I/O 2026: A Standalone Agent-First Platform with CLI, SDK, Managed Execution, and Enterprise Support MarkTechPost",
-      "bodyText": "Google Launches Antigravity 2.0 at I/O 2026: A Standalone Agent-First Platform with CLI, SDK, Managed Execution, and Enterprise Support MarkTechPost",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Hugging Face",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNRXlEcnZScFZxUlZtSGtSUnB1LW5QZTlQNm42WXU2azJ2T1RnYnV6V1Eyei1VUlFVaUNFaU5MdElZU2ZGYlJkZ20zNEJORFZBZHo4bVR2Y1BteDhCYXA2NWdIMmxwX0NLblZDRmFILURzUnFXa3BZQ2NFNW9MUkZCY0RqWmVmcGx1aGJBQ1lDX056bHNyNXplQUtRUGc5NGIya21fWXdOdE1QVTBtSldGcXI2Ymg4ck93bml6elRDMFA0MVBkZ2Vqbk1vR0tmQWdlRWlDUWFtS3lDYlF4VWNRdGRKejg0c3RnRVR1MEZOS2hYcndBVkFvbXRNb2tVTFY2Vnc?oc=5",
-          "sourceGrade": "B",
-          "publisher": "MarkTechPost"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 100,
-      "qualityType": "feature_update",
-      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 2,
-        "feature_update": 3,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 100,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / sdk / \u667a\u80fd\u4f53 / \u4f01\u4e1a\u5e94\u7528",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Google Launches Antigravity 2.0 at I/O 2026: A Standalone \u667a\u80fd\u4f53-First Platform \u7ed3\u5408 CLI, SDK, Managed Execution, \u4ee5\u53ca \u4f01\u4e1a\u5e94\u7528 Support Google Launches Antigravity 2.0 at I/O 2026: A Standalone \u667a\u80fd\u4f53-First Platform \u7ed3\u5408 ",
-        "whyItMatters": "Google Launches Antigravity 2.0 at I/O 2026: A Standalone \u667a\u80fd\u4f53-First Platform \u7ed3\u5408 CLI, SDK, Managed Execution, \u4ee5\u53ca \u4f01\u4e1a\u5e94\u7528 Support Google Launches Antigravity 2.0 at I/O 2026: A Standalone \u667a\u80fd\u4f53-First Platform \u7ed3\u5408 ",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "google-launches-antigravity-2-0-at-i-o-2026-standalone-agent-first-platform-cli-"
     },
     {
       "title": "Anthropic's Code with Claude Announces Managed Agents, Proactive Workflows, Capability Curve",
@@ -8755,7 +8680,7 @@
         }
       ],
       "sourceCount": 1,
-      "aggregatedEvent": true,
+      "aggregatedEvent": false,
       "qualityScore": 64,
       "qualityType": "application_method",
       "qualityLabelZh": "AI\u5e94\u7528\u65b9\u6cd5",
@@ -8788,77 +8713,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1aAI\u5e94\u7528\u65b9\u6cd5\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "how-become-prompt-engineer-duties-skills-steps"
-    },
-    {
-      "title": "How to Run an AI Coding Agent on Crusoe with OpenCode",
-      "titleZh": "\u3010DeepSeek\u3011How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode",
-      "summary": "How to Run an AI Coding Agent on Crusoe with OpenCode from DeepSeek. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u6765\u6e90\uff1aDeepSeek\u3002\u4e3b\u9898\uff1aDeepSeek\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "How to Run an AI Coding Agent on Crusoe with OpenCode Crusoe"
-      ],
-      "keyPointsZh": [
-        "How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode Crusoe"
-      ],
-      "imageUrl": "",
-      "date": "2026-04-27",
-      "sourceName": "DeepSeek",
-      "publisher": "Crusoe",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSXdOek1ma05rekF5TTdSV1g3Nk9TRkw2a1VndURfdk5SSjlxdktJRWI4UHRJT0pqbmhxUFJuaHNvNS1NUFlUNXFHXzd2UkxZTElKZXZVQUFqd1p6UFcxRzBXV2xaaDk4VzhMWEpkUml0T0NncnlRVkJJTVZfX3l1eW01VXZZdXdRSXRKNmgxN1laMXhK?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 89,
-      "tags": [
-        "DeepSeek",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "How to Run an AI Coding Agent on Crusoe with OpenCode Crusoe",
-      "bodyText": "How to Run an AI Coding Agent on Crusoe with OpenCode Crusoe",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "DeepSeek",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSXdOek1ma05rekF5TTdSV1g3Nk9TRkw2a1VndURfdk5SSjlxdktJRWI4UHRJT0pqbmhxUFJuaHNvNS1NUFlUNXFHXzd2UkxZTElKZXZVQUFqd1p6UFcxRzBXV2xaaDk4VzhMWEpkUml0T0NncnlRVkJJTVZfX3l1eW01VXZZdXdRSXRKNmgxN1laMXhK?oc=5",
-          "sourceGrade": "B",
-          "publisher": "Crusoe"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 84,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 3,
-        "feature_update": 0,
-        "application_method": 1
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 84,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1ahow to / \u667a\u80fd\u4f53 / \u7f16\u7a0b / \u667a\u80fd\u4f53",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1adeepseek / \u667a\u80fd\u4f53",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode \u6765\u81ea DeepSeek.",
-        "whyItMatters": "How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode \u6765\u81ea DeepSeek.",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "how-run-coding-agent-opencode"
     },
     {
       "title": "Reading today's open-closed performance gap",
@@ -9153,77 +9007,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1aAI\u5e94\u7528\u65b9\u6cd5\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "5-best-books-building-agentic-systems-2026"
-    },
-    {
-      "title": "Agentic AI \u2013 Ongoing coverage of its impact on the enterprise",
-      "titleZh": "\u3010Salesforce AI\u3011Agentic AI \u2013 Ongoing coverage of its impact on the \u4f01\u4e1a\u5e94\u7528",
-      "summary": "Agentic AI \u2013 Ongoing coverage of its impact on the enterprise from Salesforce AI. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u6765\u6e90\uff1aSalesforce AI\u3002\u4e3b\u9898\uff1aSalesforce AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Agentic AI \u2013 Ongoing coverage of its impact on the enterprise Computerworld"
-      ],
-      "keyPointsZh": [
-        "Agentic AI \u2013 Ongoing coverage of its impact on the \u4f01\u4e1a\u5e94\u7528 Computerworld"
-      ],
-      "imageUrl": "",
-      "date": "2026-04-10",
-      "sourceName": "Salesforce AI",
-      "publisher": "Computerworld",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVDFDVTI5Zm1acGNQcTZ2bnpzTnZFRDVmaFhlbzhFRTY3WEN0TWR3ckZBeTNEQnY2LWppamtVV3NOeDZWaGhjNDhfSmxjdjJDdGFqM29BUU8tRTFhQWRUVHJNajhSWHgyMXN6YkFQQnlZRXVia1pQR3haYVFfMXY5TjJfc2t0aVZVVDlyUWM5b2EyM1VJLXlDU0J0bWRVQmlsb3RtT2JJaTRRNUZLWG5F?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 83,
-      "tags": [
-        "Salesforce AI",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Agentic AI \u2013 Ongoing coverage of its impact on the enterprise Computerworld",
-      "bodyText": "Agentic AI \u2013 Ongoing coverage of its impact on the enterprise Computerworld",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Salesforce AI",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVDFDVTI5Zm1acGNQcTZ2bnpzTnZFRDVmaFhlbzhFRTY3WEN0TWR3ckZBeTNEQnY2LWppamtVV3NOeDZWaGhjNDhfSmxjdjJDdGFqM29BUU8tRTFhQWRUVHJNajhSWHgyMXN6YkFQQnlZRXVia1pQR3haYVFfMXY5TjJfc2t0aVZVVDlyUWM5b2EyM1VJLXlDU0J0bWRVQmlsb3RtT2JJaTRRNUZLWG5F?oc=5",
-          "sourceGrade": "B",
-          "publisher": "Computerworld"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 66,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 2,
-        "feature_update": 1,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 66,
-        "tier": "default",
-        "isDefaultVisible": true,
-        "isTopEligible": false,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / rag / \u667a\u80fd\u4f53 / \u4f01\u4e1a\u5e94\u7528",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / rag",
-          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Agentic AI \u2013 Ongoing coverage of its impact on the \u4f01\u4e1a\u5e94\u7528 Agentic AI \u2013 Ongoing coverage of its impact on the \u4f01\u4e1a\u5e94\u7528 \u6765\u81ea Salesforce AI.",
-        "whyItMatters": "Agentic AI \u2013 Ongoing coverage of its impact on the \u4f01\u4e1a\u5e94\u7528 Agentic AI \u2013 Ongoing coverage of its impact on the \u4f01\u4e1a\u5e94\u7528 \u6765\u81ea Salesforce AI.",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "agentic-ongoing-coverage-its-impact-enterprise"
     },
     {
       "title": "The vibe coding crisis: Why you need a dual-track engineering strategy",
@@ -9870,6 +9653,77 @@
       "eventId": "how-build-deep-agents-enterprise-search-q-langchain-technical-blog"
     },
     {
+      "title": "Mistral AI launches Forge to help companies build proprietary AI models, challenging cloud giants",
+      "titleZh": "\u3010Mistral AI\u3011Mistral AI launches Forge to help companies build proprietary AI \u6a21\u578b, challenging cloud giants",
+      "summary": "Mistral AI launches Forge to help companies build proprietary AI models, challenging cloud giants VentureBeat",
+      "summaryZh": "\u6765\u6e90\uff1aMistral AI\u3002\u4e3b\u9898\uff1aMistral AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Mistral AI launches Forge to help companies build proprietary AI models, challenging cloud giants VentureBeat"
+      ],
+      "keyPointsZh": [
+        "Mistral AI launches Forge to help companies build proprietary AI \u6a21\u578b, challenging cloud giants VentureBeat"
+      ],
+      "imageUrl": "",
+      "date": "2026-03-17",
+      "sourceName": "Mistral AI",
+      "publisher": "VentureBeat",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWi1EZW90eDRxclZRbVo4VUxTUm51LVNQekpHeWNPbnhKdjFoWWNVcENaTjBseTdxSVFCTUdWRUItT2RQWFVBT01rMzFtUGxlTDR5UF9yMDlLS0pjcXJiNnZwR2xpWG9XU0NJX2pwbVBiazdJWkFmNjRSYWlTUVpObjU3Tk0xbjJ4SHZIXzNCeU95RHRuS2ItbFljWnVFdHRHRU9kRW9WZ2N6SUlXdTVv?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 85,
+      "tags": [
+        "Mistral AI",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Mistral AI launches Forge to help companies build proprietary AI models, challenging cloud giants VentureBeat",
+      "bodyText": "Mistral AI launches Forge to help companies build proprietary AI models, challenging cloud giants VentureBeat",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Mistral AI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWi1EZW90eDRxclZRbVo4VUxTUm51LVNQekpHeWNPbnhKdjFoWWNVcENaTjBseTdxSVFCTUdWRUItT2RQWFVBT01rMzFtUGxlTDR5UF9yMDlLS0pjcXJiNnZwR2xpWG9XU0NJX2pwbVBiazdJWkFmNjRSYWlTUVpObjU3Tk0xbjJ4SHZIXzNCeU95RHRuS2ItbFljWnVFdHRHRU9kRW9WZ2N6SUlXdTVv?oc=5",
+          "sourceGrade": "B",
+          "publisher": "VentureBeat"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 72,
+      "qualityType": "feature_update",
+      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 2,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 72,
+        "tier": "default",
+        "isDefaultVisible": true,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / \u6a21\u578b / launch / AI",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b / \u6a21\u578b",
+          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Mistral AI launches Forge to help companies build proprietary AI \u6a21\u578b, challenging cloud giants Mistral AI launches Forge to help companies build proprietary AI \u6a21\u578b, challenging cloud giants VentureBeat Mistral AI l",
+        "whyItMatters": "Mistral AI launches Forge to help companies build proprietary AI \u6a21\u578b, challenging cloud giants Mistral AI launches Forge to help companies build proprietary AI \u6a21\u578b, challenging cloud giants VentureBeat Mistral AI l",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "launches-forge-help-companies-build-proprietary-models-challenging-cloud-giants"
+    },
+    {
       "title": "The ShipFast Guide to Building in Public: How to Grow a Distribution Engine",
       "titleZh": "\u3010Marc Lou\u3011The ShipFast Guide to Building in Public: How to Grow a Distribution Engine",
       "summary": "Marc Lou and ShipFast are used as a case study for building in public, founder distribution, and turning repeatable startup workflow into a product. The article is useful for AI builders because distribution, shipping cadence, and reusable workflow assets increasingly decide whether solo AI products can reach users.",
@@ -10375,6 +10229,77 @@
       "eventId": "build-production-agents-claude-agent-sdk"
     },
     {
+      "title": "OpenAI launches GPT-5.4, its most powerful model for enterprise work\u2014and a direct shot at Anthropic",
+      "titleZh": "\u3010OpenAI\u3011OpenAI launches GPT-5.4, its most powerful \u6a21\u578b \u9762\u5411 \u4f01\u4e1a\u5e94\u7528 work\u2014\u4ee5\u53ca a direct shot at Anthropic",
+      "summary": "OpenAI launches GPT-5.4, its most powerful model for enterprise work\u2014and a direct shot at Anthropic Fortune",
+      "summaryZh": "\u6765\u6e90\uff1aOpenAI\u3002\u4e3b\u9898\uff1aOpenAI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "OpenAI launches GPT-5.4, its most powerful model for enterprise work\u2014and a direct shot at Anthropic Fortune"
+      ],
+      "keyPointsZh": [
+        "OpenAI launches GPT-5.4, its most powerful \u6a21\u578b \u9762\u5411 \u4f01\u4e1a\u5e94\u7528 work\u2014\u4ee5\u53ca a direct shot at Anthropic Fortune"
+      ],
+      "imageUrl": "",
+      "date": "2026-03-05",
+      "sourceName": "OpenAI",
+      "publisher": "Fortune",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQOVIyWTdFa1lmaUZTcl94YVRHNkF3MVdHRTNxS3ZCV2stellYQUpwMGE1cXA3NXR6bDdLQkJIQWJvb3BJYzROR2NHUENFdThqQ3luRlhNdUJQcmM2eU9fdnhYTUhPVk9ZX054RVNxVmo3OEQ2bzB3eUtwUDJIcGdiNVVHSERvQldIT01XWQ?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 85,
+      "tags": [
+        "OpenAI",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "OpenAI launches GPT-5.4, its most powerful model for enterprise work\u2014and a direct shot at Anthropic Fortune",
+      "bodyText": "OpenAI launches GPT-5.4, its most powerful model for enterprise work\u2014and a direct shot at Anthropic Fortune",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "OpenAI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQOVIyWTdFa1lmaUZTcl94YVRHNkF3MVdHRTNxS3ZCV2stellYQUpwMGE1cXA3NXR6bDdLQkJIQWJvb3BJYzROR2NHUENFdThqQ3luRlhNdUJQcmM2eU9fdnhYTUhPVk9ZX054RVNxVmo3OEQ2bzB3eUtwUDJIcGdiNVVHSERvQldIT01XWQ?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Fortune"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 72,
+      "qualityType": "feature_update",
+      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 3,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 72,
+        "tier": "default",
+        "isDefaultVisible": true,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / \u4f01\u4e1a\u5e94\u7528 / launch / AI",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agpt / \u6a21\u578b / openai",
+          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "OpenAI launches GPT-5.4, its most powerful \u6a21\u578b \u9762\u5411 \u4f01\u4e1a\u5e94\u7528 work\u2014\u4ee5\u53ca a direct shot at Anthropic OpenAI launches GPT-5.4, its most powerful \u6a21\u578b \u9762\u5411 \u4f01\u4e1a\u5e94\u7528 work\u2014\u4ee5\u53ca a direct shot at Anthropic Fortune OpenAI launc",
+        "whyItMatters": "OpenAI launches GPT-5.4, its most powerful \u6a21\u578b \u9762\u5411 \u4f01\u4e1a\u5e94\u7528 work\u2014\u4ee5\u53ca a direct shot at Anthropic OpenAI launches GPT-5.4, its most powerful \u6a21\u578b \u9762\u5411 \u4f01\u4e1a\u5e94\u7528 work\u2014\u4ee5\u53ca a direct shot at Anthropic Fortune OpenAI launc",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "launches-gpt-5-4-its-most-powerful-model-enterprise-work-direct-shot-at-anthropi"
+    },
+    {
       "title": "6 Best Devin Alternatives for AI Agent Orchestration in 2026",
       "titleZh": "\u3010Simon Willison\u30116 Best Devin Alternatives \u9762\u5411 AI \u667a\u80fd\u4f53 Orchestration in 2026",
       "summary": "6 Best Devin Alternatives for AI Agent Orchestration in 2026 from Simon Willison. Useful for deciding whether the original article deserves a deeper read.",
@@ -10444,77 +10369,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "6-best-devin-alternatives-agent-orchestration-2026"
-    },
-    {
-      "title": "Agentic AI with multi-model framework using Hugging Face smolagents on AWS | Amazon Web Services",
-      "titleZh": "\u3010Hugging Face\u3011Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services",
-      "summary": "Agentic AI with multi-model framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS)",
-      "summaryZh": "\u6765\u6e90\uff1aHugging Face\u3002\u4e3b\u9898\uff1aHugging Face\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Agentic AI with multi-model framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS)"
-      ],
-      "keyPointsZh": [
-        "Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS)"
-      ],
-      "imageUrl": "",
-      "date": "2026-02-23",
-      "sourceName": "Hugging Face",
-      "publisher": "Amazon Web Services (AWS)",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNN1FBcW02UXV0RUNUeTFYVzlMc1FvbmRVM0RYYjVUYmxKaFBnM3hocENCbktvNTZpbUxJWlVUTjZZUHg4MmNNOC1nSW9MQm1HUmpjbEhob05ZbFlCSmVYTEJ1dUV1a0tBYTRKZnRtdTloSHN0T0wwM3BEa0NiaUNzVVJFUjdJY3hsOG5zeEQ1d055Skp5aEhRX0tFVHdJMEdHNVVtUzRROE1xQ1EzSTduTkF3dFhiN3JWd3dYTnpn?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 83,
-      "tags": [
-        "Hugging Face",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Agentic AI with multi-model framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS)",
-      "bodyText": "Agentic AI with multi-model framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS)",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Hugging Face",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNN1FBcW02UXV0RUNUeTFYVzlMc1FvbmRVM0RYYjVUYmxKaFBnM3hocENCbktvNTZpbUxJWlVUTjZZUHg4MmNNOC1nSW9MQm1HUmpjbEhob05ZbFlCSmVYTEJ1dUV1a0tBYTRKZnRtdTloSHN0T0wwM3BEa0NiaUNzVVJFUjdJY3hsOG5zeEQ1d055Skp5aEhRX0tFVHdJMEdHNVVtUzRROE1xQ1EzSTduTkF3dFhiN3JWd3dYTnpn?oc=5",
-          "sourceGrade": "B",
-          "publisher": "Amazon Web Services (AWS)"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 66,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 3,
-        "feature_update": 0,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 66,
-        "tier": "default",
-        "isDefaultVisible": true,
-        "isTopEligible": false,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u6a21\u578b / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u6a21\u578b",
-          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS) ",
-        "whyItMatters": "Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS) ",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "agentic-multi-model-framework-using-smolagents-aws-amazon-web-services"
     },
     {
       "title": "Why AI Agents Work in Demos But Fail in Production",
@@ -10804,77 +10658,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "guide-which-use-agentic-era"
-    },
-    {
-      "title": "AI/BI Genie, Foundational Model API, and Databricks Assistant Now Generally Available in AWS GovCloud",
-      "titleZh": "\u3010Databricks AI\u3011AI/BI Genie, Foundational \u6a21\u578b API, \u4ee5\u53ca Databricks Assistant Now Generally Available in AWS GovCloud",
-      "summary": "AI/BI Genie, Foundational Model API, and Databricks Assistant Now Generally Available in AWS GovCloud Databricks",
-      "summaryZh": "\u6765\u6e90\uff1aDatabricks AI\u3002\u4e3b\u9898\uff1aDatabricks AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "AI/BI Genie, Foundational Model API, and Databricks Assistant Now Generally Available in AWS GovCloud Databricks"
-      ],
-      "keyPointsZh": [
-        "AI/BI Genie, Foundational \u6a21\u578b API, \u4ee5\u53ca Databricks Assistant Now Generally Available in AWS GovCloud Databricks"
-      ],
-      "imageUrl": "",
-      "date": "2026-02-12",
-      "sourceName": "Databricks AI",
-      "publisher": "Databricks",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNak9FWTBPVUVPQ013Z3V1UXVrTjh4U3o3YjlmRk1fNjEwQWJfQ2tjMWNaWURkTkhCVHNRQzJpVDh2c00xdDFZSXg3Rk5POEJwUmFMWTVva1IzdG9ieS1OS3pMQVVON29Gekhlck9nem5KcWZWSjZZMkU2RjRlMjZLdmJ2Y2hNTUdkMThxQldaZ3hZU0t4bUpONVRmZUhLektJMkp1Rm85NjU5cjFoV0pDVFVPSmFtRHhGcEE?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 85,
-      "tags": [
-        "Databricks AI",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "AI/BI Genie, Foundational Model API, and Databricks Assistant Now Generally Available in AWS GovCloud Databricks",
-      "bodyText": "AI/BI Genie, Foundational Model API, and Databricks Assistant Now Generally Available in AWS GovCloud Databricks",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Databricks AI",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNak9FWTBPVUVPQ013Z3V1UXVrTjh4U3o3YjlmRk1fNjEwQWJfQ2tjMWNaWURkTkhCVHNRQzJpVDh2c00xdDFZSXg3Rk5POEJwUmFMWTVva1IzdG9ieS1OS3pMQVVON29Gekhlck9nem5KcWZWSjZZMkU2RjRlMjZLdmJ2Y2hNTUdkMThxQldaZ3hZU0t4bUpONVRmZUhLektJMkp1Rm85NjU5cjFoV0pDVFVPSmFtRHhGcEE?oc=5",
-          "sourceGrade": "B",
-          "publisher": "Databricks"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 72,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 2,
-        "feature_update": 2,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 72,
-        "tier": "default",
-        "isDefaultVisible": true,
-        "isTopEligible": false,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / api / available / AI",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b",
-          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "AI/BI Genie, Foundational \u6a21\u578b API, \u4ee5\u53ca Databricks Assistant Now Generally Available in AWS GovCloud AI/BI Genie, Foundational \u6a21\u578b API, \u4ee5\u53ca Databricks Assistant Now Generally Available in AWS GovCloud Databricks AI/BI",
-        "whyItMatters": "AI/BI Genie, Foundational \u6a21\u578b API, \u4ee5\u53ca Databricks Assistant Now Generally Available in AWS GovCloud AI/BI Genie, Foundational \u6a21\u578b API, \u4ee5\u53ca Databricks Assistant Now Generally Available in AWS GovCloud Databricks AI/BI",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "bi-genie-foundational-model-api-assistant-now-generally-available-aws-govcloud"
     },
     {
       "title": "From Prompts to Production: a Playbook for Agentic Development",
@@ -11597,77 +11380,6 @@
       "eventId": "cxai-pushes-agentic-into-production-fortune-500-mid-market"
     },
     {
-      "title": "Google Releases Gemini 3.5 Flash with Native Integration of Computer Usage Tools, Replacing the 2.5 Framework",
-      "titleZh": "\u3010Google DeepMind\u3011Google Releases Gemini 3.5 Flash \u7ed3\u5408 Native Integration of Computer Usage Tools, Replacing the 2.5 Framework",
-      "summary": "Google Releases Gemini 3.5 Flash with Native Integration of Computer Usage Tools, Replacing the 2.5 Framework AIBase",
-      "summaryZh": "\u6765\u6e90\uff1aGoogle DeepMind\u3002\u4e3b\u9898\uff1aGoogle DeepMind\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Google Releases Gemini 3.5 Flash with Native Integration of Computer Usage Tools, Replacing the 2.5 Framework AIBase"
-      ],
-      "keyPointsZh": [
-        "Google Releases Gemini 3.5 Flash \u7ed3\u5408 Native Integration of Computer Usage Tools, Replacing the 2.5 Framework AIBase"
-      ],
-      "imageUrl": "",
-      "date": "2026-06-25",
-      "sourceName": "Google DeepMind",
-      "publisher": "AIBase",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5JRjVpNDBpLWc1ZGVLVjNhZ1lGWnlrYllyVmhXR3J2bXJrbm5kNFpDX3l3TTFvd0hwYTlaMDN4bGlmLWpaRFlFTDZB?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 72,
-      "tags": [
-        "Google DeepMind",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Google Releases Gemini 3.5 Flash with Native Integration of Computer Usage Tools, Replacing the 2.5 Framework AIBase",
-      "bodyText": "Google Releases Gemini 3.5 Flash with Native Integration of Computer Usage Tools, Replacing the 2.5 Framework AIBase",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Google DeepMind",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5JRjVpNDBpLWc1ZGVLVjNhZ1lGWnlrYllyVmhXR3J2bXJrbm5kNFpDX3l3TTFvd0hwYTlaMDN4bGlmLWpaRFlFTDZB?oc=5",
-          "sourceGrade": "B",
-          "publisher": "AIBase"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 36,
-      "qualityType": "feature_update",
-      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 0,
-        "feature_update": 2,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 36,
-        "tier": "archive",
-        "isDefaultVisible": false,
-        "isTopEligible": false,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1arelease / integration / AI / gemini",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agemini",
-          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Google Releases Gemini 3.5 Flash \u7ed3\u5408 Native Integration of Computer Usage Tools, Replacing the 2.5 Framework Google Releases Gemini 3.5 Flash \u7ed3\u5408 Native Integration of Computer Usage Tools, Replacing the 2.5 Framework ",
-        "whyItMatters": "Google Releases Gemini 3.5 Flash \u7ed3\u5408 Native Integration of Computer Usage Tools, Replacing the 2.5 Framework Google Releases Gemini 3.5 Flash \u7ed3\u5408 Native Integration of Computer Usage Tools, Replacing the 2.5 Framework ",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "google-releases-gemini-3-5-flash-native-integration-computer-usage-tools-replaci"
-    },
-    {
       "title": "Why the Frontier Ecosystem must be Open \u2014 Matei Zaharia and Reynold Xin, Databricks",
       "titleZh": "\u3010Latent.Space\u3011Why the Frontier Ecosystem must be Open \u2014 Matei Zaharia \u4ee5\u53ca Reynold Xin, Databricks",
       "summary": "In a rare double-interview, the Databricks technical leaders riff on what it will take for every company to build Agent Clouds",
@@ -11740,76 +11452,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "why-frontier-ecosystem-must-be-open-matei-zaharia-reynold-xin-databricks"
-    },
-    {
-      "title": "Mistral launches OCR 4, turning document extraction into a full enterprise AI play",
-      "titleZh": "\u3010Mistral AI\u3011Mistral launches OCR 4, turning document extraction into a full \u4f01\u4e1a\u5e94\u7528 AI play",
-      "summary": "Mistral launches OCR 4, turning document extraction into a full enterprise AI play VentureBeat",
-      "summaryZh": "\u6765\u6e90\uff1aMistral AI\u3002\u4e3b\u9898\uff1aMistral AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Mistral launches OCR 4, turning document extraction into a full enterprise AI play VentureBeat"
-      ],
-      "keyPointsZh": [
-        "Mistral launches OCR 4, turning document extraction into a full \u4f01\u4e1a\u5e94\u7528 AI play VentureBeat"
-      ],
-      "imageUrl": "",
-      "date": "2026-06-24",
-      "sourceName": "Mistral AI",
-      "publisher": "VentureBeat",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNcVFhN0R2RkcyZWJiZlYwLUdUMGpleDdSd1NORXFOSFlRb25Hd25SVnZBeklZSU8wQi1FTE5KaDhLelZRYzZCRkdaUjBfRHkwVjhkcHhjQjU0Y2RLNzhUZGY1MjZhMmNQUVpETjBkTXFpb1REYnR0SWFhV2cydzEzbXMyWFVKX3hRNmRuZ3ZCTUE5WDFlc2x4U05mVXpqc3BwZnJ4OUltRFZaenZPZTdj?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 78,
-      "tags": [
-        "Mistral AI",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Mistral launches OCR 4, turning document extraction into a full enterprise AI play VentureBeat",
-      "bodyText": "Mistral launches OCR 4, turning document extraction into a full enterprise AI play VentureBeat",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Mistral AI",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNcVFhN0R2RkcyZWJiZlYwLUdUMGpleDdSd1NORXFOSFlRb25Hd25SVnZBeklZSU8wQi1FTE5KaDhLelZRYzZCRkdaUjBfRHkwVjhkcHhjQjU0Y2RLNzhUZGY1MjZhMmNQUVpETjBkTXFpb1REYnR0SWFhV2cydzEzbXMyWFVKX3hRNmRuZ3ZCTUE5WDFlc2x4U05mVXpqc3BwZnJ4OUltRFZaenZPZTdj?oc=5",
-          "sourceGrade": "B",
-          "publisher": "VentureBeat"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 54,
-      "qualityType": "feature_update",
-      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 0,
-        "feature_update": 3,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 54,
-        "tier": "archive",
-        "isDefaultVisible": false,
-        "isTopEligible": false,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u4f01\u4e1a\u5e94\u7528 / launch / AI",
-          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Mistral launches OCR 4, turning document extraction into a full \u4f01\u4e1a\u5e94\u7528 AI play Mistral launches OCR 4, turning document extraction into a full \u4f01\u4e1a\u5e94\u7528 AI play VentureBeat Mistral launches OCR 4, turning document e",
-        "whyItMatters": "Mistral launches OCR 4, turning document extraction into a full \u4f01\u4e1a\u5e94\u7528 AI play Mistral launches OCR 4, turning document extraction into a full \u4f01\u4e1a\u5e94\u7528 AI play VentureBeat Mistral launches OCR 4, turning document e",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "mistral-launches-ocr-4-turning-document-extraction-into-full-enterprise-play"
     },
     {
       "title": "NTT DATA and Cursor Partner to Accelerate Enterprise-Grade Modernization and AI Governance",
@@ -12028,6 +11670,147 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "gemini-3-5-flash-gets-powerful-computer-use-features"
+    },
+    {
+      "title": "Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI Agent Vision Takes Shape",
+      "titleZh": "\u3010Google DeepMind\u3011Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI \u667a\u80fd\u4f53 Vision Takes Shape",
+      "summary": "Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI Agent Vision Takes Shape nokiapoweruser.com",
+      "summaryZh": "\u6765\u6e90\uff1aGoogle DeepMind\u3002\u4e3b\u9898\uff1aGoogle DeepMind\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI Agent Vision Takes Shape nokiapoweruser.com"
+      ],
+      "keyPointsZh": [
+        "Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI \u667a\u80fd\u4f53 Vision Takes Shape nokiapoweruser.com"
+      ],
+      "imageUrl": "",
+      "date": "2026-06-24",
+      "sourceName": "Google DeepMind",
+      "publisher": "nokiapoweruser.com",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQOU5DWGF0YURfc3lvOF9kTER1M0FiOHpNWTY1aUliVDlENEZBVzczVDN6VXF1WTJyN3hGUlNUWmo4Zks1bU9UNXZhWEsyQnJUSHF0R1ZvSW9Jbkg4NU5MYU1xM0I1ZnVIeXRreXhtbHIzN0VNY3g0WG54U3RwTFN3SGF6TQ?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 70,
+      "tags": [
+        "Google DeepMind",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI Agent Vision Takes Shape nokiapoweruser.com",
+      "bodyText": "Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI Agent Vision Takes Shape nokiapoweruser.com",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Google DeepMind",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQOU5DWGF0YURfc3lvOF9kTER1M0FiOHpNWTY1aUliVDlENEZBVzczVDN6VXF1WTJyN3hGUlNUWmo4Zks1bU9UNXZhWEsyQnJUSHF0R1ZvSW9Jbkg4NU5MYU1xM0I1ZnVIeXRreXhtbHIzN0VNY3g0WG54U3RwTFN3SGF6TQ?oc=5",
+          "sourceGrade": "B",
+          "publisher": "nokiapoweruser.com"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 30,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 0,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 30,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / AI / gemini",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agemini / \u667a\u80fd\u4f53",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI \u667a\u80fd\u4f53 Vision Takes Shape Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI \u667a\u80fd\u4f53 Vision Takes Shape nokiapoweruser.com Gemini 3.5 Flash Can Now ",
+        "whyItMatters": "Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI \u667a\u80fd\u4f53 Vision Takes Shape Gemini 3.5 Flash Can Now Use Computers Like Humans\u2014Google's AI \u667a\u80fd\u4f53 Vision Takes Shape nokiapoweruser.com Gemini 3.5 Flash Can Now ",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "gemini-3-5-flash-can-now-use-computers-like-humans-google-s-agent-vision-takes-s"
+    },
+    {
+      "title": "Enterprise-grade AI image generation in 2 seconds is here: Krea 2 Raw and Turbo available as open weights under custom license",
+      "titleZh": "\u3010Hugging Face\u3011\u4f01\u4e1a\u5e94\u7528-grade AI image generation in 2 seconds is here: Krea 2 Raw \u4ee5\u53ca Turbo available as open weights under custom license",
+      "summary": "Enterprise-grade AI image generation in 2 seconds is here: Krea 2 Raw and Turbo available as open weights under custom license VentureBeat",
+      "summaryZh": "\u6765\u6e90\uff1aHugging Face\u3002\u4e3b\u9898\uff1aHugging Face\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Enterprise-grade AI image generation in 2 seconds is here: Krea 2 Raw and Turbo available as open weights under custom license VentureBeat"
+      ],
+      "keyPointsZh": [
+        "\u4f01\u4e1a\u5e94\u7528-grade AI image generation in 2 seconds is here: Krea 2 Raw \u4ee5\u53ca Turbo available as open weights under custom license VentureBeat"
+      ],
+      "imageUrl": "",
+      "date": "2026-06-23",
+      "sourceName": "Hugging Face",
+      "publisher": "VentureBeat",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPYlc1THNJVXJjcEZFajA0aXUxd0tud1JDUkdfWTlhT2JoaENydU9oRDRvVDFlU2dKMHFaaV9WemVpWU55U19IcFdXaUV6VHJxT2otcllZOHJMbVJ1U3piVWpvT1pvRS1lNVVBa1FGY1lhSTd0djZqYW12OTUwTTNSdmg1VldpSnFtSjVmWGNnZW95aGQxdGlVUGhUREl0cGVwaktMaTYzb0xBbkNZVGFEQnN0Yzc5MkxKbF9Ga0pNNk1BM3VvNEZxVkc5dWZPaTFaNGEwcGVTM0E3cGlGSks4T0Zkdmhsakx6cGdRaHdvdFV1UQ?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 78,
+      "tags": [
+        "Hugging Face",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Enterprise-grade AI image generation in 2 seconds is here: Krea 2 Raw and Turbo available as open weights under custom license VentureBeat",
+      "bodyText": "Enterprise-grade AI image generation in 2 seconds is here: Krea 2 Raw and Turbo available as open weights under custom license VentureBeat",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Hugging Face",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPYlc1THNJVXJjcEZFajA0aXUxd0tud1JDUkdfWTlhT2JoaENydU9oRDRvVDFlU2dKMHFaaV9WemVpWU55U19IcFdXaUV6VHJxT2otcllZOHJMbVJ1U3piVWpvT1pvRS1lNVVBa1FGY1lhSTd0djZqYW12OTUwTTNSdmg1VldpSnFtSjVmWGNnZW95aGQxdGlVUGhUREl0cGVwaktMaTYzb0xBbkNZVGFEQnN0Yzc5MkxKbF9Ga0pNNk1BM3VvNEZxVkc5dWZPaTFaNGEwcGVTM0E3cGlGSks4T0Zkdmhsakx6cGdRaHdvdFV1UQ?oc=5",
+          "sourceGrade": "B",
+          "publisher": "VentureBeat"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 54,
+      "qualityType": "feature_update",
+      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 2,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 54,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u4f01\u4e1a\u5e94\u7528 / available / AI",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "\u4f01\u4e1a\u5e94\u7528-grade AI image generation in 2 seconds is here: Krea 2 Raw \u4ee5\u53ca Turbo available as open weights under custom license \u4f01\u4e1a\u5e94\u7528-grade AI image generation in 2 seconds is here: Krea 2 Raw \u4ee5\u53ca Turbo available as ",
+        "whyItMatters": "\u4f01\u4e1a\u5e94\u7528-grade AI image generation in 2 seconds is here: Krea 2 Raw \u4ee5\u53ca Turbo available as open weights under custom license \u4f01\u4e1a\u5e94\u7528-grade AI image generation in 2 seconds is here: Krea 2 Raw \u4ee5\u53ca Turbo available as ",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "enterprise-grade-image-generation-2-seconds-is-here-krea-2-raw-turbo-available-a"
     },
     {
       "title": "How Omio is building the future of conversational travel",
@@ -12900,6 +12683,77 @@
       "eventId": "spacex-s-60-billion-deal-buy-gives-it-more-coding-power"
     },
     {
+      "title": "Replicate Review: The Easiest Way to Deploy and Scale ML Models",
+      "titleZh": "\u3010Character.AI\u3011Replicate Review: The Easiest Way to Deploy \u4ee5\u53ca Scale ML \u6a21\u578b",
+      "summary": "Replicate Review: The Easiest Way to Deploy and Scale ML Models from Character.AI. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aCharacter.AI\u3002\u4e3b\u9898\uff1aCharacter.AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Replicate Review: The Easiest Way to Deploy and Scale ML Models quasa.io"
+      ],
+      "keyPointsZh": [
+        "Replicate Review: The Easiest Way to Deploy \u4ee5\u53ca Scale ML \u6a21\u578b quasa.io"
+      ],
+      "imageUrl": "",
+      "date": "2026-06-16",
+      "sourceName": "Character.AI",
+      "publisher": "quasa.io",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSS1DWkdPd3BKc0c3cTUtbldwY2NEeGlfOGo4LUgwNE5aWUQ0Zk5xeHZON3hPMTdaT2wwZXFLVDhCekFUU2NFR1R5WTZIQ2xoREZrWFduaThsenFWdllxczBQRnM3Yk9Ibl91RFJxcmlqUExNdGdrY1picXE2M2ZPZ1hGd3JCalFEdlBmaUdn?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 72,
+      "tags": [
+        "Character.AI",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Replicate Review: The Easiest Way to Deploy and Scale ML Models quasa.io",
+      "bodyText": "Replicate Review: The Easiest Way to Deploy and Scale ML Models quasa.io",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Character.AI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSS1DWkdPd3BKc0c3cTUtbldwY2NEeGlfOGo4LUgwNE5aWUQ0Zk5xeHZON3hPMTdaT2wwZXFLVDhCekFUU2NFR1R5WTZIQ2xoREZrWFduaThsenFWdllxczBQRnM3Yk9Ibl91RFJxcmlqUExNdGdrY1picXE2M2ZPZ1hGd3JCalFEdlBmaUdn?oc=5",
+          "sourceGrade": "B",
+          "publisher": "quasa.io"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 36,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 0,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 36,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / \u6a21\u578b / AI / \u6a21\u578b",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b / \u6a21\u578b",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Replicate Review: The Easiest Way to Deploy \u4ee5\u53ca Scale ML \u6a21\u578b Replicate Review: The Easiest Way to Deploy \u4ee5\u53ca Scale ML \u6a21\u578b \u6765\u81ea Character.AI.",
+        "whyItMatters": "Replicate Review: The Easiest Way to Deploy \u4ee5\u53ca Scale ML \u6a21\u578b Replicate Review: The Easiest Way to Deploy \u4ee5\u53ca Scale ML \u6a21\u578b \u6765\u81ea Character.AI.",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "replicate-review-easiest-way-deploy-scale-ml-models"
+    },
+    {
       "title": "Top 10 Agentic AI ERP Systems & 6 Solutions",
       "titleZh": "\u3010Oracle AI\u3011Top 10 Agentic AI ERP Systems & 6 Solutions",
       "summary": "Top 10 Agentic AI ERP Systems & 6 Solutions from Oracle AI. Useful for deciding whether the original article deserves a deeper read.",
@@ -13337,6 +13191,77 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "introducing-new-capabilities-gpt-rosalind"
+    },
+    {
+      "title": "Introducing Gemma 4 12B: a unified, encoder-free multimodal model",
+      "titleZh": "\u3010Hugging Face\u3011Introducing Gemma 4 12B: a unified, encoder-free multimodal \u6a21\u578b",
+      "summary": "Introducing Gemma 4 12B: a unified, encoder-free multimodal model from Hugging Face. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aHugging Face\u3002\u4e3b\u9898\uff1aHugging Face\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Introducing Gemma 4 12B: a unified, encoder-free multimodal model blog.google"
+      ],
+      "keyPointsZh": [
+        "Introducing Gemma 4 12B: a unified, encoder-free multimodal \u6a21\u578b blog.google"
+      ],
+      "imageUrl": "",
+      "date": "2026-06-03",
+      "sourceName": "Hugging Face",
+      "publisher": "blog.google",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcTdUNDVqeHpOQ3AtSDdyeE1oR2VVXzA2ZFNOTi1mZWh6ek9ZWkhjY19hZU1la2tBalJzcjVsVkk2RENHLWo5c2VDai13QXlZaGs2TXpfYWpkWTBKZnBNbnItYy0yUGpxSzRhQmpUT3NhSHhHOWZGUERHVjZWaDF6am0zUGJLekYtemp2SmhQODU4dDg1?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 78,
+      "tags": [
+        "Hugging Face",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Introducing Gemma 4 12B: a unified, encoder-free multimodal model blog.google",
+      "bodyText": "Introducing Gemma 4 12B: a unified, encoder-free multimodal model blog.google",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Hugging Face",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcTdUNDVqeHpOQ3AtSDdyeE1oR2VVXzA2ZFNOTi1mZWh6ek9ZWkhjY19hZU1la2tBalJzcjVsVkk2RENHLWo5c2VDai13QXlZaGs2TXpfYWpkWTBKZnBNbnItYy0yUGpxSzRhQmpUT3NhSHhHOWZGUERHVjZWaDF6am0zUGJLekYtemp2SmhQODU4dDg1?oc=5",
+          "sourceGrade": "B",
+          "publisher": "blog.google"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 54,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 3,
+        "feature_update": 0,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 54,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / multimodal / \u6a21\u578b / multimodal",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b / multimodal",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Introducing Gemma 4 12B: a unified, encoder-free multimodal \u6a21\u578b Introducing Gemma 4 12B: a unified, encoder-free multimodal \u6a21\u578b \u6765\u81ea Hugging Face.",
+        "whyItMatters": "Introducing Gemma 4 12B: a unified, encoder-free multimodal \u6a21\u578b Introducing Gemma 4 12B: a unified, encoder-free multimodal \u6a21\u578b \u6765\u81ea Hugging Face.",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "introducing-gemma-4-12b-unified-encoder-free-multimodal-model"
     },
     {
       "title": "Meta's WhatsApp Business AI Agent Goes Global with Token Pricing",
@@ -14153,16 +14078,16 @@
       "summary": "OpenAI launches new voice intelligence features in its API from OpenAI. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aOpenAI\u3002\u4e3b\u9898\uff1aOpenAI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "OpenAI launches new voice intelligence features in its API TechCrunch"
+        "OpenAI launches new voice intelligence features in its API The Tech Buzz"
       ],
       "keyPointsZh": [
-        "OpenAI launches new \u8bed\u97f3 intelligence features in its API TechCrunch"
+        "OpenAI launches new \u8bed\u97f3 intelligence features in its API The Tech Buzz"
       ],
       "imageUrl": "",
       "date": "2026-05-07",
       "sourceName": "OpenAI",
-      "publisher": "TechCrunch",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWEVKNVBfWjRiOU9oWWM0Zkh4elFUbWtaMVd6RDVFeXVpTVU0TVZvTzVxbVVaMTdVWW9CejVZcklRTGFZWkhGRG1MS1NQb1V5VEF0MGxnbE9VZzVqZ0tBa2MzYjluZWpOME5wT0VBQzBFbFV4UDBfbDVlQ2tXeDZnUG5IMzdsODNXZ2NHa3I2VndTRk5XZUxXYg?oc=5",
+      "publisher": "The Tech Buzz",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQNDNTV2xJajZLYWg1a0NtQnhDdUVGemp4UzNBYVQ2V1ZvVVlMZG9sbDl5eGEzRkV1OEhRRWU3ajBhNWlCVEN1cER1cl90OWlUX2ZvVlVjUU9iLTgtNU1haVFjQjJYd1FETUFyWThxdHFNSjgyWVhBSVJNUmJkTG54VC1UbjJNYVozRDFhbFFSeUNBdXBhSlE?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
       "contentType": "news",
@@ -14172,21 +14097,21 @@
         "enterprise"
       ],
       "importance": 5,
-      "rawBody": "OpenAI launches new voice intelligence features in its API TechCrunch",
-      "bodyText": "OpenAI launches new voice intelligence features in its API TechCrunch",
+      "rawBody": "OpenAI launches new voice intelligence features in its API The Tech Buzz",
+      "bodyText": "OpenAI launches new voice intelligence features in its API The Tech Buzz",
       "contentFetched": false,
       "relatedSources": [
-        {
-          "sourceName": "OpenAI",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWEVKNVBfWjRiOU9oWWM0Zkh4elFUbWtaMVd6RDVFeXVpTVU0TVZvTzVxbVVaMTdVWW9CejVZcklRTGFZWkhGRG1MS1NQb1V5VEF0MGxnbE9VZzVqZ0tBa2MzYjluZWpOME5wT0VBQzBFbFV4UDBfbDVlQ2tXeDZnUG5IMzdsODNXZ2NHa3I2VndTRk5XZUxXYg?oc=5",
-          "sourceGrade": "B",
-          "publisher": "TechCrunch"
-        },
         {
           "sourceName": "OpenAI",
           "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQNDNTV2xJajZLYWg1a0NtQnhDdUVGemp4UzNBYVQ2V1ZvVVlMZG9sbDl5eGEzRkV1OEhRRWU3ajBhNWlCVEN1cER1cl90OWlUX2ZvVlVjUU9iLTgtNU1haVFjQjJYd1FETUFyWThxdHFNSjgyWVhBSVJNUmJkTG54VC1UbjJNYVozRDFhbFFSeUNBdXBhSlE?oc=5",
           "sourceGrade": "B",
           "publisher": "The Tech Buzz"
+        },
+        {
+          "sourceName": "OpenAI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWEVKNVBfWjRiOU9oWWM0Zkh4elFUbWtaMVd6RDVFeXVpTVU0TVZvTzVxbVVaMTdVWW9CejVZcklRTGFZWkhGRG1MS1NQb1V5VEF0MGxnbE9VZzVqZ0tBa2MzYjluZWpOME5wT0VBQzBFbFV4UDBfbDVlQ2tXeDZnUG5IMzdsODNXZ2NHa3I2VndTRk5XZUxXYg?oc=5",
+          "sourceGrade": "B",
+          "publisher": "TechCrunch"
         }
       ],
       "sourceCount": 2,
@@ -14875,75 +14800,74 @@
       "eventId": "accelerate-agentic-tool-calling-serverless-model-customization-amazon-sagemaker"
     },
     {
-      "title": "Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed Video Generation via The Gemini API",
-      "titleZh": "\u3010Latent.Space\u3011Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed \u89c6\u9891 Generation via The Gemini API",
-      "summary": "Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed Video Generation via The Gemini API MarkTechPost",
-      "summaryZh": "\u6765\u6e90\uff1aLatent.Space\u3002\u4e3b\u9898\uff1aLatent.Space\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups",
+      "titleZh": "\u3010Character.AI\u3011Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups",
+      "summary": "Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups TechCrunch",
+      "summaryZh": "\u6765\u6e90\uff1aCharacter.AI\u3002\u4e3b\u9898\uff1aCharacter.AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed Video Generation via The Gemini API MarkTechPost"
+        "Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups TechCrunch"
       ],
       "keyPointsZh": [
-        "Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed \u89c6\u9891 Generation via The Gemini API MarkTechPost"
+        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002"
       ],
       "imageUrl": "",
       "date": "2026-03-31",
-      "sourceName": "Latent.Space",
-      "publisher": "MarkTechPost",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQMnpTUDhETFN0Y3lmdnNEYm1wcGhteFBLTXFmakdwM3gydm10bGtTS01pc05vcGlxTnV3alJveFBuY2ppbHI5YVZ6NEpWMW4xZ09VSm51OUdqNDJwcWZEVTN1QnlfU2M0eHdZd0dLQVRIbVJwc1dZNzBGV1hBMkNhOF9rTHlDa0F1RVIxUzlicy00ZGUzNE9LUUhUbm1BUElxTVAtdDAwaVZiMWd1ZnlZeGxtcVFiazJWbXNMdmx4N0pvbE85cEZSNzlPMDR3ZTR1SUp3SU5rNEtTZUdGMHpF?oc=5",
+      "sourceName": "Character.AI",
+      "publisher": "TechCrunch",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVVzOUR1V05hSWZGQ20yMk93eFNaV0JZaUp4WU1aR1dWVGVhZWRCZDF1SVR1V01jWER3T3VRdkRGNzRjN3dmVmVUekE4YTZQOTJhckg3SlBmMWlkbkwtN2J2SUlOT0JaeGF5UUkxSzdwcHUwaGZBaVl5bTRhRG9WWGU3VU1vRGZSeW4zOFk5TExhMGQxcWlhYjc2N3lJNjZzREFLUFJQYmQtSVAxN1NONDBIRlEzWlBoZVpoeU1B?oc=5",
       "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u535a\u4e3b",
-      "contentType": "article",
-      "readingScore": 93,
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 78,
       "tags": [
-        "Latent.Space",
-        "creator"
+        "Character.AI",
+        "enterprise"
       ],
       "importance": 5,
-      "rawBody": "Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed Video Generation via The Gemini API MarkTechPost",
-      "bodyText": "Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed Video Generation via The Gemini API MarkTechPost",
+      "rawBody": "Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups TechCrunch",
+      "bodyText": "Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups TechCrunch",
       "contentFetched": false,
       "relatedSources": [
         {
-          "sourceName": "Latent.Space",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQMnpTUDhETFN0Y3lmdnNEYm1wcGhteFBLTXFmakdwM3gydm10bGtTS01pc05vcGlxTnV3alJveFBuY2ppbHI5YVZ6NEpWMW4xZ09VSm51OUdqNDJwcWZEVTN1QnlfU2M0eHdZd0dLQVRIbVJwc1dZNzBGV1hBMkNhOF9rTHlDa0F1RVIxUzlicy00ZGUzNE9LUUhUbm1BUElxTVAtdDAwaVZiMWd1ZnlZeGxtcVFiazJWbXNMdmx4N0pvbE85cEZSNzlPMDR3ZTR1SUp3SU5rNEtTZUdGMHpF?oc=5",
+          "sourceName": "Character.AI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVVzOUR1V05hSWZGQ20yMk93eFNaV0JZaUp4WU1aR1dWVGVhZWRCZDF1SVR1V01jWER3T3VRdkRGNzRjN3dmVmVUekE4YTZQOTJhckg3SlBmMWlkbkwtN2J2SUlOT0JaeGF5UUkxSzdwcHUwaGZBaVl5bTRhRG9WWGU3VU1vRGZSeW4zOFk5TExhMGQxcWlhYjc2N3lJNjZzREFLUFJQYmQtSVAxN1NONDBIRlEzWlBoZVpoeU1B?oc=5",
           "sourceGrade": "B",
-          "publisher": "MarkTechPost"
+          "publisher": "TechCrunch"
         }
       ],
       "sourceCount": 1,
       "aggregatedEvent": false,
-      "qualityScore": 52,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualityScore": 54,
+      "qualityType": "feature_update",
+      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 1,
-        "feature_update": 1,
-        "application_method": 0
+        "technical_update": 0,
+        "feature_update": 2,
+        "application_method": 1
       },
       "lowValueSignals": 0,
       "titleLowValue": false,
       "qualityReview": {
-        "score": 52,
+        "score": 54,
         "tier": "archive",
         "isDefaultVisible": false,
         "isTopEligible": false,
         "reasons": [
-          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aapi / release / AI / gemini",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agemini",
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1alaunch / AI",
           "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
         ],
         "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed \u89c6\u9891 Generation via The Gemini API Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed \u89c6\u9891 Generation via The Gemini API MarkTe",
-        "whyItMatters": "Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed \u89c6\u9891 Generation via The Gemini API Google AI Releases Veo 3.1 Lite: Giving Developers Low Cost High Speed \u89c6\u9891 Generation via The Gemini API MarkTe",
-        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
-        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+        "whatHappened": "Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups TechCrunch Exclusive: Runway launches $1",
+        "whyItMatters": "Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups TechCrunch Exclusive: Runway launches $1",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "google-releases-veo-3-1-lite-giving-developers-low-cost-high-speed-video-generat"
+      "eventId": "exclusive-runway-launches-10m-fund-builders-program-support-early-stage-startups"
     },
     {
       "title": "Latest open artifacts (#20): New orgs! New types of models! With Nemotron Super, Sarvam, Cohere Transcribe, & others",
@@ -15093,6 +15017,77 @@
       "eventId": "openai-is-shutting-down-sora-its-powerful-video-model-app-api"
     },
     {
+      "title": "Luma Labs Launches Uni-1: The Autoregressive Transformer Model that Reasons through Intentions Before Generating Images",
+      "titleZh": "\u3010Latent.Space\u3011Luma Labs Launches Uni-1: The Autoregressive Transformer \u6a21\u578b that Reasons through Intentions Before Generating Images",
+      "summary": "Luma Labs Launches Uni-1: The Autoregressive Transformer Model that Reasons through Intentions Before Generating Images MarkTechPost",
+      "summaryZh": "\u6765\u6e90\uff1aLatent.Space\u3002\u4e3b\u9898\uff1aLatent.Space\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Luma Labs Launches Uni-1: The Autoregressive Transformer Model that Reasons through Intentions Before Generating Images MarkTechPost"
+      ],
+      "keyPointsZh": [
+        "Luma Labs Launches Uni-1: The Autoregressive Transformer \u6a21\u578b that Reasons through Intentions Before Generating Images MarkTechPost"
+      ],
+      "imageUrl": "",
+      "date": "2026-03-23",
+      "sourceName": "Latent.Space",
+      "publisher": "MarkTechPost",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbVNVR1cwZkFwdVllam1MQS1wbDNIanZubHNaMUtkUHczWDlEUTRWQXo4dllfUnRGdV90aHhrQWJReXdOLW5zVHkwSTQ3SHlzTEZpTDVYVUFpYllYUl9NQU14RlFXV3ByOEFjY0x3ckJGbjNjeUt3YnpkUGRQOWVuTjFoVTVtY2MtRE9zeVNVLUJTc180cnlFLXc0RlRWTG8wVnlIZTBJOVR4WHIyN25YdlFFTzNrTm9pcWlmQkw5Wm9qaG1hbDVzR1NlM3Q3eUJkQ0dYbzZpR2ZfZHZYM25jZ0VqTDhTejVkdVU0MlZBb2o?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 93,
+      "tags": [
+        "Latent.Space",
+        "creator"
+      ],
+      "importance": 5,
+      "rawBody": "Luma Labs Launches Uni-1: The Autoregressive Transformer Model that Reasons through Intentions Before Generating Images MarkTechPost",
+      "bodyText": "Luma Labs Launches Uni-1: The Autoregressive Transformer Model that Reasons through Intentions Before Generating Images MarkTechPost",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Latent.Space",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbVNVR1cwZkFwdVllam1MQS1wbDNIanZubHNaMUtkUHczWDlEUTRWQXo4dllfUnRGdV90aHhrQWJReXdOLW5zVHkwSTQ3SHlzTEZpTDVYVUFpYllYUl9NQU14RlFXV3ByOEFjY0x3ckJGbjNjeUt3YnpkUGRQOWVuTjFoVTVtY2MtRE9zeVNVLUJTc180cnlFLXc0RlRWTG8wVnlIZTBJOVR4WHIyN25YdlFFTzNrTm9pcWlmQkw5Wm9qaG1hbDVzR1NlM3Q3eUJkQ0dYbzZpR2ZfZHZYM25jZ0VqTDhTejVkdVU0MlZBb2o?oc=5",
+          "sourceGrade": "B",
+          "publisher": "MarkTechPost"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 54,
+      "qualityType": "feature_update",
+      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 2,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 54,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / launch / \u6a21\u578b",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Luma Labs Launches Uni-1: The Autoregressive Transformer \u6a21\u578b that Reasons through Intentions Before Generating Images Luma Labs Launches Uni-1: The Autoregressive Transformer \u6a21\u578b that Reasons through Intentions Befor",
+        "whyItMatters": "Luma Labs Launches Uni-1: The Autoregressive Transformer \u6a21\u578b that Reasons through Intentions Before Generating Images Luma Labs Launches Uni-1: The Autoregressive Transformer \u6a21\u578b that Reasons through Intentions Befor",
+        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "luma-labs-launches-uni-1-autoregressive-transformer-model-that-reasons-through-i"
+    },
+    {
       "title": "Introducing Private Agent Factory: Unlocking the Agentic AI Potential in Enterprises with Oracle AI Database 26ai",
       "titleZh": "\u3010Oracle AI\u3011Introducing Private \u667a\u80fd\u4f53 Factory: Unlocking the Agentic AI Potential in Enterprises \u7ed3\u5408 Oracle AI Database 26ai",
       "summary": "Introducing Private Agent Factory: Unlocking the Agentic AI Potential in Enterprises with Oracle AI Database 26ai Oracle Blogs",
@@ -15233,6 +15228,77 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "cisco-reimagines-security-agentic-workforce"
+    },
+    {
+      "title": "Microsoft Brings Production Ready AI Agents at GTC",
+      "titleZh": "\u3010Microsoft AI\u3011Microsoft Brings Production Ready AI \u667a\u80fd\u4f53 at GTC",
+      "summary": "Microsoft Brings Production Ready AI Agents at GTC from Microsoft AI. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aMicrosoft AI\u3002\u4e3b\u9898\uff1aMicrosoft AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Microsoft Brings Production Ready AI Agents at GTC Redmondmag.com"
+      ],
+      "keyPointsZh": [
+        "Microsoft Brings Production Ready AI \u667a\u80fd\u4f53 at GTC Redmondmag.com"
+      ],
+      "imageUrl": "",
+      "date": "2026-03-17",
+      "sourceName": "Microsoft AI",
+      "publisher": "Redmondmag.com",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbXoxMFRTTmlpSGJJX1hRR0Y4Y0t2U1FORUZhdXczZ2RTU1ZmN3pZX2ltODU2N25DZ2ZhZzZtYkMxVXZweklrS0JfWUszbzdWaXRpM2FxdXVVQTA2cmpOMUhrUURsYjFWVDBFaTVSSW9HS3g2YmZ2M1ZLQUhuTGdkR1lQRHJ3bTlvOFp5RVRoNEZSMFZjb3NmQXlxNXNIeEk?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 76,
+      "tags": [
+        "Microsoft AI",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Microsoft Brings Production Ready AI Agents at GTC Redmondmag.com",
+      "bodyText": "Microsoft Brings Production Ready AI Agents at GTC Redmondmag.com",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Microsoft AI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbXoxMFRTTmlpSGJJX1hRR0Y4Y0t2U1FORUZhdXczZ2RTU1ZmN3pZX2ltODU2N25DZ2ZhZzZtYkMxVXZweklrS0JfWUszbzdWaXRpM2FxdXVVQTA2cmpOMUhrUURsYjFWVDBFaTVSSW9HS3g2YmZ2M1ZLQUhuTGdkR1lQRHJ3bTlvOFp5RVRoNEZSMFZjb3NmQXlxNXNIeEk?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Redmondmag.com"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 48,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 2,
+        "feature_update": 0,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 48,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / product",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Microsoft Brings Production Ready AI \u667a\u80fd\u4f53 at GTC Microsoft Brings Production Ready AI \u667a\u80fd\u4f53 at GTC \u6765\u81ea Microsoft AI.",
+        "whyItMatters": "Microsoft Brings Production Ready AI \u667a\u80fd\u4f53 at GTC Microsoft Brings Production Ready AI \u667a\u80fd\u4f53 at GTC \u6765\u81ea Microsoft AI.",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "microsoft-brings-production-ready-agents-at-gtc"
     },
     {
       "title": "monday.com Welcomes AI Agents to Its Platform, Marking a Shift in How Work Gets Done - monday.com",
@@ -15810,80 +15876,6 @@
       "eventId": "key-capabilities-agentic"
     },
     {
-      "title": "New Features and Oracle Database Release Updates",
-      "titleZh": "\u3010Oracle AI\u3011New Features \u4ee5\u53ca Oracle Database Release Updates",
-      "summary": "New Features and Oracle Database Release Updates from Oracle AI. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u6765\u6e90\uff1aOracle AI\u3002\u4e3b\u9898\uff1aOracle AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Focus: Oracle AI, enterprise",
-        "Worth reading for practical context and source details.",
-        "Open the original article for full evidence and nuance."
-      ],
-      "keyPointsZh": [
-        "Focus: Oracle AI, \u4f01\u4e1a\u5e94\u7528",
-        "Worth reading \u9762\u5411 practical context \u4ee5\u53ca source details.",
-        "Open the original article \u9762\u5411 full evidence \u4ee5\u53ca nuance."
-      ],
-      "imageUrl": "",
-      "date": "2026-01-21",
-      "sourceName": "Oracle AI",
-      "publisher": "Oracle Blogs",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTE95d205Y3RLelpXR3A3alBjNHhfM1VtS00waXpYUTJQalFEeDBCYnJiTWRiV1lPbHVWLVhHUUZUazVhX041M0xvRXN3SmdSbXk5MEk3emRLVjFNbWdUcVVCbU5tNHBWcU1IeHNuM0kybVNna1BZWjdnbFBTZTY4cTg?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 72,
-      "tags": [
-        "Oracle AI",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "New Features and Oracle Database Release Updates Oracle Blogs",
-      "bodyText": "New Features and Oracle Database Release Updates Oracle Blogs",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Oracle AI",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTE95d205Y3RLelpXR3A3alBjNHhfM1VtS00waXpYUTJQalFEeDBCYnJiTWRiV1lPbHVWLVhHUUZUazVhX041M0xvRXN3SmdSbXk5MEk3emRLVjFNbWdUcVVCbU5tNHBWcU1IeHNuM0kybVNna1BZWjdnbFBTZTY4cTg?oc=5",
-          "sourceGrade": "B",
-          "publisher": "Oracle Blogs"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 36,
-      "qualityType": "feature_update",
-      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 0,
-        "feature_update": 2,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 36,
-        "tier": "archive",
-        "isDefaultVisible": false,
-        "isTopEligible": false,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1afeature / release / AI",
-          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "New Features \u4ee5\u53ca Oracle Database Release Updates New Features \u4ee5\u53ca Oracle Database Release Updates \u6765\u81ea Oracle AI.",
-        "whyItMatters": "New Features \u4ee5\u53ca Oracle Database Release Updates New Features \u4ee5\u53ca Oracle Database Release Updates \u6765\u81ea Oracle AI.",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "new-features-oracle-database-release-updates"
-    },
-    {
       "title": "Salesforce\u2019s Agentic Enterprise Push Highlights the Role of Context",
       "titleZh": "\u3010Salesforce AI\u3011Salesforce\u2019s Agentic \u4f01\u4e1a\u5e94\u7528 Push Highlights the Role of Context",
       "summary": "Salesforce\u2019s Agentic Enterprise Push Highlights the Role of Context The Futurum Group",
@@ -16104,9 +16096,9 @@
   "digestArchive": {
     "date": "2026-06-26",
     "path": "data/digests/2026-06-26.md",
-    "itemCount": 127,
+    "itemCount": 124,
     "topStoryCount": 10,
-    "generatedAt": "2026-06-26T04:14:45.606453+00:00",
+    "generatedAt": "2026-06-26T14:37:06.825035+00:00",
     "latestPath": "data/digests/latest.md"
   }
 }
