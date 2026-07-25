@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T03:19:36.111602+00:00",
+  "updatedAt": "2026-07-25T13:47:54.103902+00:00",
   "yearStart": "2026-01-01",
   "coverageWindow": "YTD",
   "qualityPolicy": {
@@ -53,8 +53,8 @@
     "fetchedArticles": 12,
     "dedupeStrategy": "same-date normalized event title; related sources are merged into one event card",
     "topStoryCount": 10,
-    "defaultVisibleCount": 133,
-    "archiveCount": 58
+    "defaultVisibleCount": 130,
+    "archiveCount": 60
   },
   "sourceHealth": {
     "total": 71,
@@ -236,9 +236,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 22,
-      "googleItems": 3,
+      "googleItems": 2,
       "curatedItems": 0,
-      "totalItems": 25,
+      "totalItems": 24,
       "rss": "https://huggingface.co/blog/feed.xml"
     },
     {
@@ -258,9 +258,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 3,
+      "googleItems": 2,
       "curatedItems": 0,
-      "totalItems": 3,
+      "totalItems": 2,
       "rss": ""
     },
     {
@@ -335,9 +335,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 5,
+      "googleItems": 4,
       "curatedItems": 0,
-      "totalItems": 5,
+      "totalItems": 4,
       "rss": ""
     },
     {
@@ -478,9 +478,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 2,
+      "googleItems": 3,
       "curatedItems": 0,
-      "totalItems": 2,
+      "totalItems": 3,
       "rss": ""
     },
     {
@@ -863,7 +863,7 @@
     "Hugging Face": {
       "rss": "https://huggingface.co/blog/feed.xml",
       "rssItems": 22,
-      "googleItems": 3,
+      "googleItems": 2,
       "status": "ok"
     },
     "Microsoft AI": {
@@ -923,7 +923,7 @@
     "Anthropic": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 3,
+      "googleItems": 2,
       "status": "ok"
     },
     "Google DeepMind": {
@@ -935,13 +935,13 @@
     "Meta AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 5,
+      "googleItems": 4,
       "status": "ok"
     },
     "xAI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 2,
+      "googleItems": 3,
       "status": "ok"
     },
     "Amazon AI": {
@@ -1285,15 +1285,19 @@
     "companies": [
       {
         "name": "OpenAI",
-        "count": 19
+        "count": 18
       },
       {
         "name": "Hugging Face",
-        "count": 13
+        "count": 11
       },
       {
         "name": "Anthropic",
         "count": 5
+      },
+      {
+        "name": "DeepSeek",
+        "count": 3
       },
       {
         "name": "xAI",
@@ -1302,10 +1306,6 @@
       {
         "name": "Microsoft AI",
         "count": 2
-      },
-      {
-        "name": "DeepSeek",
-        "count": 1
       }
     ],
     "models": [
@@ -1322,12 +1322,12 @@
         "count": 3
       },
       {
-        "name": "Gemini",
+        "name": "DeepSeek",
         "count": 2
       },
       {
-        "name": "DeepSeek",
-        "count": 1
+        "name": "Gemini",
+        "count": 2
       },
       {
         "name": "Qwen",
@@ -1349,11 +1349,11 @@
       },
       {
         "name": "\u5f00\u6e90\u6a21\u578b",
-        "count": 11
+        "count": 10
       },
       {
         "name": "\u63a8\u7406\u80fd\u529b",
-        "count": 6
+        "count": 5
       },
       {
         "name": "\u591a\u6a21\u6001",
@@ -4892,77 +4892,6 @@
       "eventId": "causal-models-need-causal-data-xaira-s-x-cell-model-drug-discovery-bo-wang-ci-ch"
     },
     {
-      "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-      "titleZh": "\u3010Hugging Face\u3011OpenAI \u4ee5\u53ca Hugging Face partner to address security incident during \u6a21\u578b evaluation",
-      "summary": "OpenAI and Hugging Face partner to address security incident during model evaluation OpenAI",
-      "summaryZh": "\u6765\u6e90\uff1aHugging Face\u3002\u4e3b\u9898\uff1aHugging Face\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "OpenAI and Hugging Face partner to address security incident during model evaluation OpenAI"
-      ],
-      "keyPointsZh": [
-        "OpenAI \u4ee5\u53ca Hugging Face partner to address security incident during \u6a21\u578b evaluation OpenAI"
-      ],
-      "imageUrl": "",
-      "date": "2026-07-21",
-      "sourceName": "Hugging Face",
-      "publisher": "OpenAI",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5QM0NxYjlpZlBQVHNUaVZta3E1aGJ5LTZHcTg5bEU5T3JCbVdIc19BUk5pcFBlR0RNaDhoYVhGRm95TjVTMVZMLU9XOE1MeEhNQS02VGI3TDh6bWktZ2VoYU82eWFVcVJTM0NKbkUtWU83a2IzNUdvZFVCeDVzdw?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 83,
-      "tags": [
-        "Hugging Face",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "OpenAI and Hugging Face partner to address security incident during model evaluation OpenAI",
-      "bodyText": "OpenAI and Hugging Face partner to address security incident during model evaluation OpenAI",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Hugging Face",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5QM0NxYjlpZlBQVHNUaVZta3E1aGJ5LTZHcTg5bEU5T3JCbVdIc19BUk5pcFBlR0RNaDhoYVhGRm95TjVTMVZMLU9XOE1MeEhNQS02VGI3TDh6bWktZ2VoYU82eWFVcVJTM0NKbkUtWU83a2IzNUdvZFVCeDVzdw?oc=5",
-          "sourceGrade": "B",
-          "publisher": "OpenAI"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 66,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 3,
-        "feature_update": 0,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 66,
-        "tier": "default",
-        "isDefaultVisible": true,
-        "isTopEligible": false,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aevaluation / eval / \u6a21\u578b / AI",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b / openai / eval",
-          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "OpenAI \u4ee5\u53ca Hugging Face partner to address security incident during \u6a21\u578b evaluation OpenAI \u4ee5\u53ca Hugging Face partner to address security incident during \u6a21\u578b evaluation OpenAI OpenAI \u4ee5\u53ca Hugging Face partner to address ",
-        "whyItMatters": "OpenAI \u4ee5\u53ca Hugging Face partner to address security incident during \u6a21\u578b evaluation OpenAI \u4ee5\u53ca Hugging Face partner to address security incident during \u6a21\u578b evaluation OpenAI OpenAI \u4ee5\u53ca Hugging Face partner to address ",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "partner-address-security-incident-during-model-evaluation"
-    },
-    {
       "title": "Introducing the ChatGPT for small business program",
       "titleZh": "\u3010OpenAI\u3011Introducing the ChatGPT \u9762\u5411 small business program",
       "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
@@ -5177,6 +5106,78 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1aAI\u5e94\u7528\u65b9\u6cd5\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "port-announces-builder-experience-platform-engineering"
+    },
+    {
+      "title": "7 Types of AI Agents to Automate Your Workflows in 2026",
+      "titleZh": "\u3010Enterprise Agents\u30117 Types of AI \u667a\u80fd\u4f53 to Automate Your Workflows in 2026",
+      "summary": "7 Types of AI Agents to Automate Your Workflows in 2026 from Enterprise Agents. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aEnterprise Agents\u3002\u4e3b\u9898\uff1a\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u30027 Types of AI \u667a\u80fd\u4f53 to Automate Your Workflows in 2026 \u6765\u81ea \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53. Useful \u9762\u5411 deciding whether the original article deserves a deeper read.\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "7 Types of AI Agents to Automate Your Workflows in 2026 Reply"
+      ],
+      "keyPointsZh": [
+        "7 Types of AI \u667a\u80fd\u4f53 to Automate Your Workflows in 2026 Reply"
+      ],
+      "imageUrl": "",
+      "date": "2026-07-17",
+      "sourceName": "Enterprise Agents",
+      "publisher": "Reply",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVU13cjVYWkVGWFBQWmVKckdNcTRTc0pEdXlTNjVHZDE2TlZVZ1N6WndhenhsLXhKb3hCWU9FcnlQN01BWkdadDdRakR4MV83LTR3bXp0b29WWGM2Sjd2elhoWnViXzdIcHNFT1VxcTdfdzg3bkFQMXBmQUJHUFZySW1BanpKM0dqQzhyQ0NtWWl0XzdpX2hxVUpoWk5ScUF0eWZ5amlmb3lTeEZGUUFF?oc=5",
+      "sourceGrade": "B",
+      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
+      "contentType": "news",
+      "readingScore": 100,
+      "tags": [
+        "enterprise",
+        "agent",
+        "workflow"
+      ],
+      "importance": 5,
+      "rawBody": "7 Types of AI Agents to Automate Your Workflows in 2026 Reply",
+      "bodyText": "7 Types of AI Agents to Automate Your Workflows in 2026 Reply",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Enterprise Agents",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVU13cjVYWkVGWFBQWmVKckdNcTRTc0pEdXlTNjVHZDE2TlZVZ1N6WndhenhsLXhKb3hCWU9FcnlQN01BWkdadDdRakR4MV83LTR3bXp0b29WWGM2Sjd2elhoWnViXzdIcHNFT1VxcTdfdzg3bkFQMXBmQUJHUFZySW1BanpKM0dqQzhyQ0NtWWl0XzdpX2hxVUpoWk5ScUF0eWZ5amlmb3lTeEZGUUFF?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Reply"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 100,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 2,
+        "feature_update": 1,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 100,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u5b9e\u6218\u65b9\u6cd5\u4f18\u5148\uff1a\u5339\u914d Agent / Prompt / Vibe Coding \u5de5\u4f5c\u6d41\u65b9\u5411",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u5de5\u4f5c\u6d41 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "7 Types of AI \u667a\u80fd\u4f53 to Automate Your Workflows in 2026 7 Types of AI \u667a\u80fd\u4f53 to Automate Your Workflows in 2026 \u6765\u81ea \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53.",
+        "whyItMatters": "7 Types of AI \u667a\u80fd\u4f53 to Automate Your Workflows in 2026 7 Types of AI \u667a\u80fd\u4f53 to Automate Your Workflows in 2026 \u6765\u81ea \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53.",
+        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
+        "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "7-types-agents-automate-your-workflows-2026"
     },
     {
       "title": "[AINews] Kimi K3 2.8T-A50B: the largest open model ever released; Opus 4.8-class at Sonnet 5 pricing",
@@ -5837,77 +5838,6 @@
       "eventId": "ainews-openai-launches-gpt-5-6-sol-terra-luna-codex-becomes-chatgpt-superapp"
     },
     {
-      "title": "Meta launches flagship Muse Spark 1.1 model with multi-agent upgrades",
-      "titleZh": "\u3010Meta AI\u3011Meta launches flagship Muse Spark 1.1 \u6a21\u578b \u7ed3\u5408 multi-\u667a\u80fd\u4f53 upgrades",
-      "summary": "Meta launches flagship Muse Spark 1.1 model with multi-agent upgrades SiliconANGLE",
-      "summaryZh": "\u6765\u6e90\uff1aMeta AI\u3002\u4e3b\u9898\uff1aMeta AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Meta launches flagship Muse Spark 1.1 model with multi-agent upgrades SiliconANGLE"
-      ],
-      "keyPointsZh": [
-        "Meta launches flagship Muse Spark 1.1 \u6a21\u578b \u7ed3\u5408 multi-\u667a\u80fd\u4f53 upgrades SiliconANGLE"
-      ],
-      "imageUrl": "",
-      "date": "2026-07-09",
-      "sourceName": "Meta AI",
-      "publisher": "SiliconANGLE",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOajRiTUMxcWtUUDJkY2JrZ3BMekhIUi1SZDhJN2hUcjl5WXkzb3FYZWdTbUFfME9Ea0hhTmJ3ZV8zMlBmRjUwMktpV3c5eVZTTi1ZMDY3aHByTXNSRkhFb2JsR1dPZFlUYU13a1JVODl0aVdkZHliemF4bnV0MTZ6VS1lamxRaFZEREIzTnhYb2dlakI0NTUxM29xY2JpRjlXdW1N?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 95,
-      "tags": [
-        "Meta AI",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Meta launches flagship Muse Spark 1.1 model with multi-agent upgrades SiliconANGLE",
-      "bodyText": "Meta launches flagship Muse Spark 1.1 model with multi-agent upgrades SiliconANGLE",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Meta AI",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOajRiTUMxcWtUUDJkY2JrZ3BMekhIUi1SZDhJN2hUcjl5WXkzb3FYZWdTbUFfME9Ea0hhTmJ3ZV8zMlBmRjUwMktpV3c5eVZTTi1ZMDY3aHByTXNSRkhFb2JsR1dPZFlUYU13a1JVODl0aVdkZHliemF4bnV0MTZ6VS1lamxRaFZEREIzTnhYb2dlakI0NTUxM29xY2JpRjlXdW1N?oc=5",
-          "sourceGrade": "B",
-          "publisher": "SiliconANGLE"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 100,
-      "qualityType": "feature_update",
-      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 2,
-        "feature_update": 3,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 100,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u6a21\u578b / \u667a\u80fd\u4f53 / launch",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u6a21\u578b",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Meta launches flagship Muse Spark 1.1 \u6a21\u578b \u7ed3\u5408 multi-\u667a\u80fd\u4f53 upgrades Meta launches flagship Muse Spark 1.1 \u6a21\u578b \u7ed3\u5408 multi-\u667a\u80fd\u4f53 upgrades SiliconANGLE Meta launches flagship Muse Spark 1.1 \u6a21\u578b \u7ed3\u5408 multi-\u667a\u80fd\u4f53 upgrad",
-        "whyItMatters": "Meta launches flagship Muse Spark 1.1 \u6a21\u578b \u7ed3\u5408 multi-\u667a\u80fd\u4f53 upgrades Meta launches flagship Muse Spark 1.1 \u6a21\u578b \u7ed3\u5408 multi-\u667a\u80fd\u4f53 upgrades SiliconANGLE Meta launches flagship Muse Spark 1.1 \u6a21\u578b \u7ed3\u5408 multi-\u667a\u80fd\u4f53 upgrad",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "meta-launches-flagship-muse-spark-1-1-model-multi-agent-upgrades"
-    },
-    {
       "title": "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities",
       "titleZh": "\u3010Meta AI\u3011Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities",
       "summary": "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities Proactive financial news",
@@ -5980,9 +5910,9 @@
     },
     {
       "title": "Meta Launches Muse Spark 1.1 API, Its First Paid AI Model, to Challenge Anthropic and OpenAI",
-      "titleZh": "\u3010Meta AI\u3011Meta Launches Muse Spark 1.1 API, Its First Paid AI \u6a21\u578b, to Challenge Anthropic \u4ee5\u53ca OpenAI",
+      "titleZh": "\u3010NVIDIA\u3011Meta Launches Muse Spark 1.1 API, Its First Paid AI \u6a21\u578b, to Challenge Anthropic \u4ee5\u53ca OpenAI",
       "summary": "Meta Launches Muse Spark 1.1 API, Its First Paid AI Model, to Challenge Anthropic and OpenAI MLQ.ai",
-      "summaryZh": "\u6765\u6e90\uff1aMeta AI\u3002\u4e3b\u9898\uff1aMeta AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "summaryZh": "\u6765\u6e90\uff1aNVIDIA\u3002\u4e3b\u9898\uff1aNVIDIA\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
         "Meta Launches Muse Spark 1.1 API, Its First Paid AI Model, to Challenge Anthropic and OpenAI MLQ.ai"
       ],
@@ -5991,7 +5921,7 @@
       ],
       "imageUrl": "",
       "date": "2026-07-09",
-      "sourceName": "Meta AI",
+      "sourceName": "NVIDIA",
       "publisher": "MLQ.ai",
       "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVzdPVUUwbktpYy01MUh4bVBhYXVHaFJMcDNRZFJrOFFtVjRXOUhiUTA2T2xiSklId3RQLXFGMEVxX2NkemtweE4wYnVBckwtaWFsTWtkbWViS0tGNW1UeUNldjNGbnNoNEZEOWh1WEVqRkVvbFNpVk1hczFJWm5vRFNodDQzSFpxb3FkeUNBZGx3TTFFWTFubWhOM2s5aURuZ3djcHFjMFhaN0FkYUpz?oc=5",
       "sourceGrade": "B",
@@ -5999,7 +5929,7 @@
       "contentType": "news",
       "readingScore": 85,
       "tags": [
-        "Meta AI",
+        "NVIDIA",
         "enterprise"
       ],
       "importance": 5,
@@ -6008,7 +5938,7 @@
       "contentFetched": false,
       "relatedSources": [
         {
-          "sourceName": "Meta AI",
+          "sourceName": "NVIDIA",
           "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVzdPVUUwbktpYy01MUh4bVBhYXVHaFJMcDNRZFJrOFFtVjRXOUhiUTA2T2xiSklId3RQLXFGMEVxX2NkemtweE4wYnVBckwtaWFsTWtkbWViS0tGNW1UeUNldjNGbnNoNEZEOWh1WEVqRkVvbFNpVk1hczFJWm5vRFNodDQzSFpxb3FkeUNBZGx3TTFFWTFubWhOM2s5aURuZ3djcHFjMFhaN0FkYUpz?oc=5",
           "sourceGrade": "B",
           "publisher": "MLQ.ai"
@@ -7154,78 +7084,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "hp-inc-launches-frontier-strategic-partnership"
-    },
-    {
-      "title": "How to Deploy AI Agents Across the Enterprise",
-      "titleZh": "\u3010Enterprise Agents\u3011How to Deploy AI \u667a\u80fd\u4f53 Across the \u4f01\u4e1a\u5e94\u7528",
-      "summary": "How to Deploy AI Agents Across the Enterprise from Enterprise Agents. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u6765\u6e90\uff1aEnterprise Agents\u3002\u4e3b\u9898\uff1a\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002How to Deploy AI \u667a\u80fd\u4f53 Across the \u4f01\u4e1a\u5e94\u7528 \u6765\u81ea \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53. Useful \u9762\u5411 deciding whether the original article deserves a deeper read.\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "How to Deploy AI Agents Across the Enterprise IBM"
-      ],
-      "keyPointsZh": [
-        "How to Deploy AI \u667a\u80fd\u4f53 Across the \u4f01\u4e1a\u5e94\u7528 IBM"
-      ],
-      "imageUrl": "",
-      "date": "2026-06-25",
-      "sourceName": "Enterprise Agents",
-      "publisher": "IBM",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sU0FXbGRhT1FHNkpyb2txTG5wcWMyOVEyZmQwRjBNR0ZHelc1Y1lsNWFpZXVmZlptNExWazdHYTQwbWs1VjBSODFfb2VuRjFlT3VkMjFHUy1qQnBLRWF6NkVB?oc=5",
-      "sourceGrade": "B",
-      "category": "Vibe/Prompt/Agent\u5b9e\u6218",
-      "contentType": "news",
-      "readingScore": 100,
-      "tags": [
-        "enterprise",
-        "agent",
-        "workflow"
-      ],
-      "importance": 5,
-      "rawBody": "How to Deploy AI Agents Across the Enterprise IBM",
-      "bodyText": "How to Deploy AI Agents Across the Enterprise IBM",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Enterprise Agents",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sU0FXbGRhT1FHNkpyb2txTG5wcWMyOVEyZmQwRjBNR0ZHelc1Y1lsNWFpZXVmZlptNExWazdHYTQwbWs1VjBSODFfb2VuRjFlT3VkMjFHUy1qQnBLRWF6NkVB?oc=5",
-          "sourceGrade": "B",
-          "publisher": "IBM"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 100,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 2,
-        "feature_update": 1,
-        "application_method": 2
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 100,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u5b9e\u6218\u65b9\u6cd5\u4f18\u5148\uff1a\u5339\u914d Agent / Prompt / Vibe Coding \u5de5\u4f5c\u6d41\u65b9\u5411",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1ahow to / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "How to Deploy AI \u667a\u80fd\u4f53 Across the \u4f01\u4e1a\u5e94\u7528 How to Deploy AI \u667a\u80fd\u4f53 Across the \u4f01\u4e1a\u5e94\u7528 \u6765\u81ea \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53.",
-        "whyItMatters": "How to Deploy AI \u667a\u80fd\u4f53 Across the \u4f01\u4e1a\u5e94\u7528 How to Deploy AI \u667a\u80fd\u4f53 Across the \u4f01\u4e1a\u5e94\u7528 \u6765\u81ea \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53.",
-        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
-        "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "how-deploy-agents-across-enterprise"
     },
     {
       "title": "Scaling Laws, Carefully",
@@ -9428,77 +9286,6 @@
       "eventId": "meet-github-spec-kit-open-source-toolkit-spec-driven-development-coding-agents"
     },
     {
-      "title": "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes",
-      "titleZh": "\u3010Anthropic\u3011Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes",
-      "summary": "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes VentureBeat",
-      "summaryZh": "\u6765\u6e90\uff1aAnthropic\u3002\u4e3b\u9898\uff1aAnthropic\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes VentureBeat"
-      ],
-      "keyPointsZh": [
-        "Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes VentureBeat"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-07",
-      "sourceName": "Anthropic",
-      "publisher": "VentureBeat",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVDVxd0FOUXlQdzlvR3otaTdjYkJtdXl5OXNTUXNNTW5MMjJXUnRqdGkwMVVYTUdWQ2tCZFZlcjhZOTBpdU9WYnJobkNHUGI1N3NDb0JBQUFzOGRjRkJCYWNqckhaMF9nLUJpdmZVaEZGbmtjd3plalVyR3dqWnJjMlNxS1BiSG5TTDNscEx5dUM5ZUdubktaWFRCdlExclNDdUlTakVlUFVQSlhkLUFnbHBDRUlsc193aGJvNURCQWo?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 83,
-      "tags": [
-        "Anthropic",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes VentureBeat",
-      "bodyText": "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes VentureBeat",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Anthropic",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVDVxd0FOUXlQdzlvR3otaTdjYkJtdXl5OXNTUXNNTW5MMjJXUnRqdGkwMVVYTUdWQ2tCZFZlcjhZOTBpdU9WYnJobkNHUGI1N3NDb0JBQUFzOGRjRkJCYWNqckhaMF9nLUJpdmZVaEZGbmtjd3plalVyR3dqWnJjMlNxS1BiSG5TTDNscEx5dUM5ZUdubktaWFRCdlExclNDdUlTakVlUFVQSlhkLUFnbHBDRUlsc193aGJvNURCQWo?oc=5",
-          "sourceGrade": "B",
-          "publisher": "VentureBeat"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 66,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 2,
-        "feature_update": 1,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 66,
-        "tier": "default",
-        "isDefaultVisible": true,
-        "isTopEligible": false,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / AI",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / anthropic",
-          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes VentureBeat Anthropic introduces \"dr",
-        "whyItMatters": "Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes VentureBeat Anthropic introduces \"dr",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "introduces-dreaming-system-that-lets-agents-learn-from-their-own-mistakes"
-    },
-    {
       "title": "I Vibe-Coded a Complex Data Visualization and Analysis Dashboard. Here\u2019s What I Learned.",
       "titleZh": "\u3010Vibe Coding\u3011I Vibe-Coded a Complex Data Visualization \u4ee5\u53ca Analysis Dashboard. Here\u2019s What I Learned.",
       "summary": "I Vibe-Coded a Complex Data Visualization and Analysis Dashboard. Here\u2019s What I Learned. from Vibe Coding. Useful for deciding whether the original article deserves a deeper read.",
@@ -9646,75 +9433,75 @@
       "eventId": "how-become-prompt-engineer-duties-skills-steps"
     },
     {
-      "title": "From GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI Agents with Multi-Model Routing in 2026",
-      "titleZh": "\u3010DeepSeek\u3011\u6765\u81ea GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI \u667a\u80fd\u4f53 \u7ed3\u5408 Multi-\u6a21\u578b Routing in 2026",
-      "summary": "From GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI Agents with Multi-Model Routing in 2026 AiThority",
+      "title": "How to Run an AI Coding Agent on Crusoe with OpenCode",
+      "titleZh": "\u3010DeepSeek\u3011How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode",
+      "summary": "How to Run an AI Coding Agent on Crusoe with OpenCode from DeepSeek. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aDeepSeek\u3002\u4e3b\u9898\uff1aDeepSeek\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "From GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI Agents with Multi-Model Routing in 2026 AiThority"
+        "How to Run an AI Coding Agent on Crusoe with OpenCode Crusoe"
       ],
       "keyPointsZh": [
-        "\u6765\u81ea GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI \u667a\u80fd\u4f53 \u7ed3\u5408 Multi-\u6a21\u578b Routing in 2026 AiThority"
+        "How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode Crusoe"
       ],
       "imageUrl": "",
       "date": "2026-04-27",
       "sourceName": "DeepSeek",
-      "publisher": "AiThority",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNck1FSGtBdTQ0bkhDSDVybkFPbzhsaHJvdnczSUFfQmVpWFZBSWdyWWw1czhNSlhTdnk3UXNoMG01WVRwaC1KVWk1UWtnUUxzZUkzaTJ2UHNLN2NJZmRMa3FUMVFtYV9DR0NtUHZLUE9NWkhsb05mVWRzY0w4azZRZDlTOFJOd2R3ZzU1dV9pSUE2U0I1WnJsN3dKUE45YjJiT1BVSkQwNTZoZjdpMDNTa0NOaXRBOFc3UHlBWkZ6WlhHcVBjSHdMd25RdlpPRGtjSFpLQURtZzdVUHFDRDlR?oc=5",
+      "publisher": "Crusoe",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSXdOek1ma05rekF5TTdSV1g3Nk9TRkw2a1VndURfdk5SSjlxdktJRWI4UHRJT0pqbmhxUFJuaHNvNS1NUFlUNXFHXzd2UkxZTElKZXZVQUFqd1p6UFcxRzBXV2xaaDk4VzhMWEpkUml0T0NncnlRVkJJTVZfX3l1eW01VXZZdXdRSXRKNmgxN1laMXhK?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
       "contentType": "news",
-      "readingScore": 95,
+      "readingScore": 89,
       "tags": [
         "DeepSeek",
         "enterprise"
       ],
       "importance": 5,
-      "rawBody": "From GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI Agents with Multi-Model Routing in 2026 AiThority",
-      "bodyText": "From GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI Agents with Multi-Model Routing in 2026 AiThority",
+      "rawBody": "How to Run an AI Coding Agent on Crusoe with OpenCode Crusoe",
+      "bodyText": "How to Run an AI Coding Agent on Crusoe with OpenCode Crusoe",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "DeepSeek",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNck1FSGtBdTQ0bkhDSDVybkFPbzhsaHJvdnczSUFfQmVpWFZBSWdyWWw1czhNSlhTdnk3UXNoMG01WVRwaC1KVWk1UWtnUUxzZUkzaTJ2UHNLN2NJZmRMa3FUMVFtYV9DR0NtUHZLUE9NWkhsb05mVWRzY0w4azZRZDlTOFJOd2R3ZzU1dV9pSUE2U0I1WnJsN3dKUE45YjJiT1BVSkQwNTZoZjdpMDNTa0NOaXRBOFc3UHlBWkZ6WlhHcVBjSHdMd25RdlpPRGtjSFpLQURtZzdVUHFDRDlR?oc=5",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSXdOek1ma05rekF5TTdSV1g3Nk9TRkw2a1VndURfdk5SSjlxdktJRWI4UHRJT0pqbmhxUFJuaHNvNS1NUFlUNXFHXzd2UkxZTElKZXZVQUFqd1p6UFcxRzBXV2xaaDk4VzhMWEpkUml0T0NncnlRVkJJTVZfX3l1eW01VXZZdXdRSXRKNmgxN1laMXhK?oc=5",
           "sourceGrade": "B",
-          "publisher": "AiThority"
+          "publisher": "Crusoe"
         }
       ],
       "sourceCount": 1,
       "aggregatedEvent": false,
-      "qualityScore": 100,
+      "qualityScore": 84,
       "qualityType": "technical_update",
       "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
         "technical_update": 3,
         "feature_update": 0,
-        "application_method": 2
+        "application_method": 1
       },
       "lowValueSignals": 0,
       "titleLowValue": false,
       "qualityReview": {
-        "score": 100,
+        "score": 84,
         "tier": "top",
         "isDefaultVisible": true,
         "isTopEligible": true,
         "reasons": [
           "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u6a21\u578b / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agpt / deepseek / \u667a\u80fd\u4f53",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1ahow to / \u667a\u80fd\u4f53 / \u7f16\u7a0b / \u667a\u80fd\u4f53",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1adeepseek / \u667a\u80fd\u4f53",
           "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
         ],
         "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "\u6765\u81ea GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI \u667a\u80fd\u4f53 \u7ed3\u5408 Multi-\u6a21\u578b Routing in 2026 \u6765\u81ea GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI \u667a\u80fd\u4f53 \u7ed3\u5408 Multi-\u6a21\u578b Routing in 2026 AiTh",
-        "whyItMatters": "\u6765\u81ea GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI \u667a\u80fd\u4f53 \u7ed3\u5408 Multi-\u6a21\u578b Routing in 2026 \u6765\u81ea GPT-5.5 to DeepSeek V4: How Developers Are Building Smarter AI \u667a\u80fd\u4f53 \u7ed3\u5408 Multi-\u6a21\u578b Routing in 2026 AiTh",
+        "whatHappened": "How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode \u6765\u81ea DeepSeek.",
+        "whyItMatters": "How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode How to Run an AI \u7f16\u7a0b \u667a\u80fd\u4f53 on Crusoe \u7ed3\u5408 OpenCode \u6765\u81ea DeepSeek.",
         "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
         "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "from-gpt-5-5-v4-how-developers-are-building-smarter-agents-multi-model-routing-2"
+      "eventId": "how-run-coding-agent-opencode"
     },
     {
       "title": "Google\u2019s new Deep Research and Deep Research Max agents can search the web and your private data",
@@ -10511,6 +10298,77 @@
       "eventId": "shipfast-guide-building-public-how-grow-distribution-engine"
     },
     {
+      "title": "Vibe Coding 2026: The Complete Guide to AI-First Development",
+      "titleZh": "\u3010Andrej Karpathy\u3011Vibe \u7f16\u7a0b 2026: The Complete Guide to AI-First Development",
+      "summary": "Vibe Coding 2026: The Complete Guide to AI-First Development from Andrej Karpathy. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aAndrej Karpathy\u3002\u4e3b\u9898\uff1aAndrej Karpathy\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Vibe Coding 2026: The Complete Guide to AI-First Development SitePoint"
+      ],
+      "keyPointsZh": [
+        "Vibe \u7f16\u7a0b 2026: The Complete Guide to AI-First Development SitePoint"
+      ],
+      "imageUrl": "",
+      "date": "2026-03-13",
+      "sourceName": "Andrej Karpathy",
+      "publisher": "SitePoint",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBPZ3BzbWdPeTYzSzVmSlVKZzBlSnBpZUdsQTJBYkEwNmJhQTQwVWoycVBJSjBmaWlndi1ReTRsTUdPRGU2cUE1MmdaOHhvWXdzbEJscmI1Y25TNFIzODl1ZmVyTWxzRXRLU2c?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 100,
+      "tags": [
+        "Andrej Karpathy",
+        "creator"
+      ],
+      "importance": 5,
+      "rawBody": "Vibe Coding 2026: The Complete Guide to AI-First Development SitePoint",
+      "bodyText": "Vibe Coding 2026: The Complete Guide to AI-First Development SitePoint",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Andrej Karpathy",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBPZ3BzbWdPeTYzSzVmSlVKZzBlSnBpZUdsQTJBYkEwNmJhQTQwVWoycVBJSjBmaWlndi1ReTRsTUdPRGU2cUE1MmdaOHhvWXdzbEJscmI1Y25TNFIzODl1ZmVyTWxzRXRLU2c?oc=5",
+          "sourceGrade": "B",
+          "publisher": "SitePoint"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 82,
+      "qualityType": "application_method",
+      "qualityLabelZh": "AI\u5e94\u7528\u65b9\u6cd5",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 0,
+        "application_method": 2
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 82,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aguide / vibe coding / \u7f16\u7a0b / AI",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1avibe coding",
+          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Vibe \u7f16\u7a0b 2026: The Complete Guide to AI-First Development Vibe \u7f16\u7a0b 2026: The Complete Guide to AI-First Development \u6765\u81ea Andrej Karpathy.",
+        "whyItMatters": "Vibe \u7f16\u7a0b 2026: The Complete Guide to AI-First Development Vibe \u7f16\u7a0b 2026: The Complete Guide to AI-First Development \u6765\u81ea Andrej Karpathy.",
+        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1aAI\u5e94\u7528\u65b9\u6cd5\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "vibe-coding-2026-complete-guide-first-development"
+    },
+    {
       "title": "Vibe Coding vs Spec-Driven Development (2026): When to Use Each",
       "titleZh": "\u3010Andrej Karpathy\u3011Vibe \u7f16\u7a0b vs Spec-Driven Development (2026): When to Use Each",
       "summary": "Vibe Coding vs Spec-Driven Development (2026): When to Use Each from Andrej Karpathy. Useful for deciding whether the original article deserves a deeper read.",
@@ -10671,7 +10529,7 @@
       "date": "2026-03-09",
       "sourceName": "Andrew Ng",
       "publisher": "MarkTechPost",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQNWlhakNYdXBMWHpBd0lvanE5eWtNZGMzMFNXdXJPSzZueWRJWEE2MHF0dGNCTV9PR0d5d1lrTXRFMnFLMkY3UEFGbnZZR1VaTkFBZURhcHZMaFoyUVdRVzBTWEhxa0hDRkU2SmJkU1ZhZEY0V3pjLWNnLUJ2NE9OUjFjZTBKdjN2MUxJRzZzaVlBOEluMnZjYnJKOVNiVHA3V1VWS3Y1c2lXYnlnemFYM3RScTJ5emRXVWp0ZGRFNVRiRnZNNEZVaTVpSGxGX2hzdXBVZmtIVS1fU0F4Wkp2T3laekR3aEFqYmVSYXlQWkJQN093TkhVNHRQbGU?oc=5",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQNWlhakNYdXBMWHpBd0lvanE5eWtNZGMzMFNXdXJPSzZueWRJWEE2MHF0dGNCTV9PR0d5d1lrTXRFMnFLMkY3UEFGbnZZR1VaTkFBZURhcHZMaFoyUVdRVzBTWEhxa0hDRkU2SmJkU1ZhZEY0V3pjLWNnLUJ2NE9OUjFjZTBKdjN2MUxJRzZzaVlBOEluMnZjYnJKOVNiVHA3V1VWS3Y1c2lXYnlnemFYM3RScTJ5emRXVWp0ZGRFNVRiRnZNNEZVaTVpSGxGX2hzdXBVZmtIVS1fU0F4Wkp2T3laekR3aEFqYmVSYXlQWkJQN093TkhVNHRQbGXSAYICQVVfeXFMTkhBQnhpRk5Ba00wMEJDTnhkelRNZU9vUXV0US03eE0yYnhRMXk4NFd0NFJ1M05UOGxOZ1dFYUJ2YnpoWE5aSG4tQVVyYzdxd2UwS3cxOTh3RUVPeF8zaHZ3RTExc2liU1hXLUJHN2haQUE4Ti1fYkVZcGtLQnctakt2ZFFFamVMU0Q5bEppRHNoQXM2MHhtZmsxcFpPWDBoWmRZNURaVEZSVmN0MVRsVjdoalFOdU81dEpSUGtqRVZPN1l2MkdOYzdpNlJ2V0xlWEJzSXNjYVJRdkhqTU1lRkd3TFE5RWVpd3BxQ2tQUlJCY1o5WmlOY2xDQUVmaWF6VzV3?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "contentType": "article",
@@ -10687,7 +10545,7 @@
       "relatedSources": [
         {
           "sourceName": "Andrew Ng",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQNWlhakNYdXBMWHpBd0lvanE5eWtNZGMzMFNXdXJPSzZueWRJWEE2MHF0dGNCTV9PR0d5d1lrTXRFMnFLMkY3UEFGbnZZR1VaTkFBZURhcHZMaFoyUVdRVzBTWEhxa0hDRkU2SmJkU1ZhZEY0V3pjLWNnLUJ2NE9OUjFjZTBKdjN2MUxJRzZzaVlBOEluMnZjYnJKOVNiVHA3V1VWS3Y1c2lXYnlnemFYM3RScTJ5emRXVWp0ZGRFNVRiRnZNNEZVaTVpSGxGX2hzdXBVZmtIVS1fU0F4Wkp2T3laekR3aEFqYmVSYXlQWkJQN093TkhVNHRQbGU?oc=5",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQNWlhakNYdXBMWHpBd0lvanE5eWtNZGMzMFNXdXJPSzZueWRJWEE2MHF0dGNCTV9PR0d5d1lrTXRFMnFLMkY3UEFGbnZZR1VaTkFBZURhcHZMaFoyUVdRVzBTWEhxa0hDRkU2SmJkU1ZhZEY0V3pjLWNnLUJ2NE9OUjFjZTBKdjN2MUxJRzZzaVlBOEluMnZjYnJKOVNiVHA3V1VWS3Y1c2lXYnlnemFYM3RScTJ5emRXVWp0ZGRFNVRiRnZNNEZVaTVpSGxGX2hzdXBVZmtIVS1fU0F4Wkp2T3laekR3aEFqYmVSYXlQWkJQN093TkhVNHRQbGXSAYICQVVfeXFMTkhBQnhpRk5Ba00wMEJDTnhkelRNZU9vUXV0US03eE0yYnhRMXk4NFd0NFJ1M05UOGxOZ1dFYUJ2YnpoWE5aSG4tQVVyYzdxd2UwS3cxOTh3RUVPeF8zaHZ3RTExc2liU1hXLUJHN2haQUE4Ti1fYkVZcGtLQnctakt2ZFFFamVMU0Q5bEppRHNoQXM2MHhtZmsxcFpPWDBoWmRZNURaVEZSVmN0MVRsVjdoalFOdU81dEpSUGtqRVZPN1l2MkdOYzdpNlJ2V0xlWEJzSXNjYVJRdkhqTU1lRkd3TFE5RWVpd3BxQ2tQUlJCY1o5WmlOY2xDQUVmaWF6VzV3?oc=5",
           "sourceGrade": "B",
           "publisher": "MarkTechPost"
         }
@@ -10742,7 +10600,7 @@
       "date": "2026-03-09",
       "sourceName": "deeplearning.ai",
       "publisher": "MarkTechPost",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQNWlhakNYdXBMWHpBd0lvanE5eWtNZGMzMFNXdXJPSzZueWRJWEE2MHF0dGNCTV9PR0d5d1lrTXRFMnFLMkY3UEFGbnZZR1VaTkFBZURhcHZMaFoyUVdRVzBTWEhxa0hDRkU2SmJkU1ZhZEY0V3pjLWNnLUJ2NE9OUjFjZTBKdjN2MUxJRzZzaVlBOEluMnZjYnJKOVNiVHA3V1VWS3Y1c2lXYnlnemFYM3RScTJ5emRXVWp0ZGRFNVRiRnZNNEZVaTVpSGxGX2hzdXBVZmtIVS1fU0F4Wkp2T3laekR3aEFqYmVSYXlQWkJQN093TkhVNHRQbGU?oc=5",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQNWlhakNYdXBMWHpBd0lvanE5eWtNZGMzMFNXdXJPSzZueWRJWEE2MHF0dGNCTV9PR0d5d1lrTXRFMnFLMkY3UEFGbnZZR1VaTkFBZURhcHZMaFoyUVdRVzBTWEhxa0hDRkU2SmJkU1ZhZEY0V3pjLWNnLUJ2NE9OUjFjZTBKdjN2MUxJRzZzaVlBOEluMnZjYnJKOVNiVHA3V1VWS3Y1c2lXYnlnemFYM3RScTJ5emRXVWp0ZGRFNVRiRnZNNEZVaTVpSGxGX2hzdXBVZmtIVS1fU0F4Wkp2T3laekR3aEFqYmVSYXlQWkJQN093TkhVNHRQbGXSAYICQVVfeXFMTkhBQnhpRk5Ba00wMEJDTnhkelRNZU9vUXV0US03eE0yYnhRMXk4NFd0NFJ1M05UOGxOZ1dFYUJ2YnpoWE5aSG4tQVVyYzdxd2UwS3cxOTh3RUVPeF8zaHZ3RTExc2liU1hXLUJHN2haQUE4Ti1fYkVZcGtLQnctakt2ZFFFamVMU0Q5bEppRHNoQXM2MHhtZmsxcFpPWDBoWmRZNURaVEZSVmN0MVRsVjdoalFOdU81dEpSUGtqRVZPN1l2MkdOYzdpNlJ2V0xlWEJzSXNjYVJRdkhqTU1lRkd3TFE5RWVpd3BxQ2tQUlJCY1o5WmlOY2xDQUVmaWF6VzV3?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "contentType": "article",
@@ -10758,7 +10616,7 @@
       "relatedSources": [
         {
           "sourceName": "deeplearning.ai",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQNWlhakNYdXBMWHpBd0lvanE5eWtNZGMzMFNXdXJPSzZueWRJWEE2MHF0dGNCTV9PR0d5d1lrTXRFMnFLMkY3UEFGbnZZR1VaTkFBZURhcHZMaFoyUVdRVzBTWEhxa0hDRkU2SmJkU1ZhZEY0V3pjLWNnLUJ2NE9OUjFjZTBKdjN2MUxJRzZzaVlBOEluMnZjYnJKOVNiVHA3V1VWS3Y1c2lXYnlnemFYM3RScTJ5emRXVWp0ZGRFNVRiRnZNNEZVaTVpSGxGX2hzdXBVZmtIVS1fU0F4Wkp2T3laekR3aEFqYmVSYXlQWkJQN093TkhVNHRQbGU?oc=5",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQNWlhakNYdXBMWHpBd0lvanE5eWtNZGMzMFNXdXJPSzZueWRJWEE2MHF0dGNCTV9PR0d5d1lrTXRFMnFLMkY3UEFGbnZZR1VaTkFBZURhcHZMaFoyUVdRVzBTWEhxa0hDRkU2SmJkU1ZhZEY0V3pjLWNnLUJ2NE9OUjFjZTBKdjN2MUxJRzZzaVlBOEluMnZjYnJKOVNiVHA3V1VWS3Y1c2lXYnlnemFYM3RScTJ5emRXVWp0ZGRFNVRiRnZNNEZVaTVpSGxGX2hzdXBVZmtIVS1fU0F4Wkp2T3laekR3aEFqYmVSYXlQWkJQN093TkhVNHRQbGXSAYICQVVfeXFMTkhBQnhpRk5Ba00wMEJDTnhkelRNZU9vUXV0US03eE0yYnhRMXk4NFd0NFJ1M05UOGxOZ1dFYUJ2YnpoWE5aSG4tQVVyYzdxd2UwS3cxOTh3RUVPeF8zaHZ3RTExc2liU1hXLUJHN2haQUE4Ti1fYkVZcGtLQnctakt2ZFFFamVMU0Q5bEppRHNoQXM2MHhtZmsxcFpPWDBoWmRZNURaVEZSVmN0MVRsVjdoalFOdU81dEpSUGtqRVZPN1l2MkdOYzdpNlJ2V0xlWEJzSXNjYVJRdkhqTU1lRkd3TFE5RWVpd3BxQ2tQUlJCY1o5WmlOY2xDQUVmaWF6VzV3?oc=5",
           "sourceGrade": "B",
           "publisher": "MarkTechPost"
         }
@@ -11302,9 +11160,9 @@
     },
     {
       "title": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers",
-      "titleZh": "\u3010Andrej Karpathy\u3011Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers",
+      "titleZh": "\u3010Sam Altman\u3011Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers",
       "summary": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India",
-      "summaryZh": "\u6765\u6e90\uff1aAndrej Karpathy\u3002\u4e3b\u9898\uff1aAndrej Karpathy\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "summaryZh": "\u6765\u6e90\uff1aSam Altman\u3002\u4e3b\u9898\uff1aSam Altman\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
         "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India"
       ],
@@ -11313,7 +11171,7 @@
       ],
       "imageUrl": "",
       "date": "2026-02-09",
-      "sourceName": "Andrej Karpathy",
+      "sourceName": "Sam Altman",
       "publisher": "The Times of India",
       "sourceUrl": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPY1NQbWZCLU5CYkhYaEd2SEZMMXNaMU1CUjhQTmRBUUxfZWRsbnFaOWtNZHNrcWhfWFZ4N0paZjFMbDBaZExpT1VGRGRZcEZxdnVzdUdJZ0N1ajFXVkFKSUp6bUN3MDI4NERrZU1nbS1RTWxMQ2RZN0ltUGFCNEFVcUtnSERTZ1JJTElXZUxIdjQ5dnNVblEwbmkzMm5hbGFOaXZERGFIRERBMkVud3VpRXI1ZnZmQkZNWnVkTk9JQ0JqZ08xZmpCTUdqbEtGNVpWYzBwREpOd0kyM0FheFVGWXRsRklpNUVjUjFVZlBwVVFNbVYteExyR1NibnY1X19Xb0RGR1VZYW1IXzAwemFmVHJR0gGXAkFVX3lxTFB0c2sydEVpQWlKRkxFTXExUi05Z241R0dnZ0hWYUpQcW5Ldm9raE1VUnJfRmgxNmhVNUhUamliMGxPVzlzWVE3MS01YVE4dUd2Q1UxRWlmQmpNVldQLTEtTENzTEh3R1RpRndQZ0hhMUZyeS01dHdSdHBfalI0WERlZmJLQmhodF9TVmdRaHRyNkZieW5hRDN4bmhEdnZRRzZYaS0tVmxXbTdNVFp6QklkMDZhVVBRbEhRdUNSLThFQ1NzZnZTajFGYkNaMlBjVHk1ZkhhQzduX2U3TDMzZmUxcjZtQ1RUM20wdGJ4Z2g4TkJMSnhoeGs3akkzLTl4SlM4T2dJTThtVWlGRms5Mi1ySUtHU2tZdw?oc=5",
       "sourceGrade": "B",
@@ -11321,7 +11179,7 @@
       "contentType": "article",
       "readingScore": 97,
       "tags": [
-        "Andrej Karpathy",
+        "Sam Altman",
         "creator"
       ],
       "importance": 5,
@@ -11330,78 +11188,7 @@
       "contentFetched": false,
       "relatedSources": [
         {
-          "sourceName": "Andrej Karpathy",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPY1NQbWZCLU5CYkhYaEd2SEZMMXNaMU1CUjhQTmRBUUxfZWRsbnFaOWtNZHNrcWhfWFZ4N0paZjFMbDBaZExpT1VGRGRZcEZxdnVzdUdJZ0N1ajFXVkFKSUp6bUN3MDI4NERrZU1nbS1RTWxMQ2RZN0ltUGFCNEFVcUtnSERTZ1JJTElXZUxIdjQ5dnNVblEwbmkzMm5hbGFOaXZERGFIRERBMkVud3VpRXI1ZnZmQkZNWnVkTk9JQ0JqZ08xZmpCTUdqbEtGNVpWYzBwREpOd0kyM0FheFVGWXRsRklpNUVjUjFVZlBwVVFNbVYteExyR1NibnY1X19Xb0RGR1VZYW1IXzAwemFmVHJR0gGXAkFVX3lxTFB0c2sydEVpQWlKRkxFTXExUi05Z241R0dnZ0hWYUpQcW5Ldm9raE1VUnJfRmgxNmhVNUhUamliMGxPVzlzWVE3MS01YVE4dUd2Q1UxRWlmQmpNVldQLTEtTENzTEh3R1RpRndQZ0hhMUZyeS01dHdSdHBfalI0WERlZmJLQmhodF9TVmdRaHRyNkZieW5hRDN4bmhEdnZRRzZYaS0tVmxXbTdNVFp6QklkMDZhVVBRbEhRdUNSLThFQ1NzZnZTajFGYkNaMlBjVHk1ZkhhQzduX2U3TDMzZmUxcjZtQ1RUM20wdGJ4Z2g4TkJMSnhoeGs3akkzLTl4SlM4T2dJTThtVWlGRms5Mi1ySUtHU2tZdw?oc=5",
-          "sourceGrade": "B",
-          "publisher": "The Times of India"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 64,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 1,
-        "feature_update": 0,
-        "application_method": 1
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 64,
-        "tier": "default",
-        "isDefaultVisible": true,
-        "isTopEligible": false,
-        "reasons": [
-          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1avibe coding / \u7f16\u7a0b / AI / vibe coding",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1avibe coding",
-          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers The Times of",
-        "whyItMatters": "Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers The Times of",
-        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
-        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "tesla-s-former-director-who-coined-word-vibe-coding-has-new-word-engineers"
-    },
-    {
-      "title": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers",
-      "titleZh": "\u3010Dario Amodei\u3011Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers",
-      "summary": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India",
-      "summaryZh": "\u6765\u6e90\uff1aDario Amodei\u3002\u4e3b\u9898\uff1aDario Amodei\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India"
-      ],
-      "keyPointsZh": [
-        "Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers The Times of India"
-      ],
-      "imageUrl": "",
-      "date": "2026-02-09",
-      "sourceName": "Dario Amodei",
-      "publisher": "The Times of India",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPY1NQbWZCLU5CYkhYaEd2SEZMMXNaMU1CUjhQTmRBUUxfZWRsbnFaOWtNZHNrcWhfWFZ4N0paZjFMbDBaZExpT1VGRGRZcEZxdnVzdUdJZ0N1ajFXVkFKSUp6bUN3MDI4NERrZU1nbS1RTWxMQ2RZN0ltUGFCNEFVcUtnSERTZ1JJTElXZUxIdjQ5dnNVblEwbmkzMm5hbGFOaXZERGFIRERBMkVud3VpRXI1ZnZmQkZNWnVkTk9JQ0JqZ08xZmpCTUdqbEtGNVpWYzBwREpOd0kyM0FheFVGWXRsRklpNUVjUjFVZlBwVVFNbVYteExyR1NibnY1X19Xb0RGR1VZYW1IXzAwemFmVHJR0gGXAkFVX3lxTFB0c2sydEVpQWlKRkxFTXExUi05Z241R0dnZ0hWYUpQcW5Ldm9raE1VUnJfRmgxNmhVNUhUamliMGxPVzlzWVE3MS01YVE4dUd2Q1UxRWlmQmpNVldQLTEtTENzTEh3R1RpRndQZ0hhMUZyeS01dHdSdHBfalI0WERlZmJLQmhodF9TVmdRaHRyNkZieW5hRDN4bmhEdnZRRzZYaS0tVmxXbTdNVFp6QklkMDZhVVBRbEhRdUNSLThFQ1NzZnZTajFGYkNaMlBjVHk1ZkhhQzduX2U3TDMzZmUxcjZtQ1RUM20wdGJ4Z2g4TkJMSnhoeGs3akkzLTl4SlM4T2dJTThtVWlGRms5Mi1ySUtHU2tZdw?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u535a\u4e3b",
-      "contentType": "article",
-      "readingScore": 97,
-      "tags": [
-        "Dario Amodei",
-        "creator"
-      ],
-      "importance": 5,
-      "rawBody": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India",
-      "bodyText": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Dario Amodei",
+          "sourceName": "Sam Altman",
           "sourceUrl": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPY1NQbWZCLU5CYkhYaEd2SEZMMXNaMU1CUjhQTmRBUUxfZWRsbnFaOWtNZHNrcWhfWFZ4N0paZjFMbDBaZExpT1VGRGRZcEZxdnVzdUdJZ0N1ajFXVkFKSUp6bUN3MDI4NERrZU1nbS1RTWxMQ2RZN0ltUGFCNEFVcUtnSERTZ1JJTElXZUxIdjQ5dnNVblEwbmkzMm5hbGFOaXZERGFIRERBMkVud3VpRXI1ZnZmQkZNWnVkTk9JQ0JqZ08xZmpCTUdqbEtGNVpWYzBwREpOd0kyM0FheFVGWXRsRklpNUVjUjFVZlBwVVFNbVYteExyR1NibnY1X19Xb0RGR1VZYW1IXzAwemFmVHJR0gGXAkFVX3lxTFB0c2sydEVpQWlKRkxFTXExUi05Z241R0dnZ0hWYUpQcW5Ldm9raE1VUnJfRmgxNmhVNUhUamliMGxPVzlzWVE3MS01YVE4dUd2Q1UxRWlmQmpNVldQLTEtTENzTEh3R1RpRndQZ0hhMUZyeS01dHdSdHBfalI0WERlZmJLQmhodF9TVmdRaHRyNkZieW5hRDN4bmhEdnZRRzZYaS0tVmxXbTdNVFp6QklkMDZhVVBRbEhRdUNSLThFQ1NzZnZTajFGYkNaMlBjVHk1ZkhhQzduX2U3TDMzZmUxcjZtQ1RUM20wdGJ4Z2g4TkJMSnhoeGs3akkzLTl4SlM4T2dJTThtVWlGRms5Mi1ySUtHU2tZdw?oc=5",
           "sourceGrade": "B",
           "publisher": "The Times of India"
@@ -11945,6 +11732,81 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "anthropic-launches-claude-opus-5-bringing-near-fable-performance-at-half-price"
+    },
+    {
+      "title": "DeepSeek V4 Hits GA: 1M Context, Old API Dies Today [2026] - tech-insider.org",
+      "titleZh": "\u3010DeepSeek\u3011DeepSeek V4 Hits GA: 1M Context, Old API Dies Today [2026] - tech-insider.org",
+      "summary": "DeepSeek V4 Hits GA: 1M Context, Old API Dies Today [2026] - tech-insider.org from DeepSeek. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aDeepSeek\u3002\u4e3b\u9898\uff1aDeepSeek\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Focus: DeepSeek, enterprise",
+        "Worth reading for practical context and source details.",
+        "Open the original article for full evidence and nuance."
+      ],
+      "keyPointsZh": [
+        "Focus: DeepSeek, \u4f01\u4e1a\u5e94\u7528",
+        "Worth reading \u9762\u5411 practical context \u4ee5\u53ca source details.",
+        "Open the original article \u9762\u5411 full evidence \u4ee5\u53ca nuance."
+      ],
+      "imageUrl": "",
+      "date": "2026-07-24",
+      "sourceName": "DeepSeek",
+      "publisher": "tech-insider.org",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9FTG81cVNiOTRFY3RncHl5aThXSDJ3Ui1HU0ZCQWh0WFczLTQwV3lYcUNZQTRUd3pXTXkwN3piRUdTcFNRMTVaTmxtOWxiT2txUVFPNGh3RFNZcXA3X2Vjb0s2ekh2TzJ2RU5od2NYR0tlVHRV?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 72,
+      "tags": [
+        "DeepSeek",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "DeepSeek V4 Hits GA: 1M Context, Old API Dies Today [2026] tech-insider.org",
+      "bodyText": "DeepSeek V4 Hits GA: 1M Context, Old API Dies Today [2026] tech-insider.org",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "DeepSeek",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9FTG81cVNiOTRFY3RncHl5aThXSDJ3Ui1HU0ZCQWh0WFczLTQwV3lYcUNZQTRUd3pXTXkwN3piRUdTcFNRMTVaTmxtOWxiT2txUVFPNGh3RFNZcXA3X2Vjb0s2ekh2TzJ2RU5od2NYR0tlVHRV?oc=5",
+          "sourceGrade": "B",
+          "publisher": "tech-insider.org"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 36,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 1,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 36,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aapi / deepseek",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1adeepseek",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "DeepSeek V4 Hits GA: 1M Context, Old API Dies Today [2026] - tech-insider.org DeepSeek V4 Hits GA: 1M Context, Old API Dies Today [2026] - tech-insider.org \u6765\u81ea DeepSeek.",
+        "whyItMatters": "DeepSeek V4 Hits GA: 1M Context, Old API Dies Today [2026] - tech-insider.org DeepSeek V4 Hits GA: 1M Context, Old API Dies Today [2026] - tech-insider.org \u6765\u81ea DeepSeek.",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "v4-hits-ga-1m-context-old-api-dies-today-2026"
     },
     {
       "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
@@ -12789,7 +12651,7 @@
         }
       ],
       "sourceCount": 1,
-      "aggregatedEvent": true,
+      "aggregatedEvent": false,
       "qualityScore": 36,
       "qualityType": "feature_update",
       "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
@@ -13981,6 +13843,81 @@
       "eventId": "we-got-local-models-triage-openclaw-repo-free"
     },
     {
+      "title": "DeepSeek V4 Architecture: How Sparse Attention Cuts Inference Costs, What NIST Found",
+      "titleZh": "\u3010DeepSeek\u3011DeepSeek V4 Architecture: How Sparse Attention Cuts \u63a8\u7406 Costs, What NIST Found",
+      "summary": "DeepSeek V4 Architecture: How Sparse Attention Cuts Inference Costs, What NIST Found Tech Times",
+      "summaryZh": "\u6765\u6e90\uff1aDeepSeek\u3002\u4e3b\u9898\uff1aDeepSeek\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Focus: DeepSeek, enterprise",
+        "Worth reading for practical context and source details.",
+        "Open the original article for full evidence and nuance."
+      ],
+      "keyPointsZh": [
+        "Focus: DeepSeek, \u4f01\u4e1a\u5e94\u7528",
+        "Worth reading \u9762\u5411 practical context \u4ee5\u53ca source details.",
+        "Open the original article \u9762\u5411 full evidence \u4ee5\u53ca nuance."
+      ],
+      "imageUrl": "",
+      "date": "2026-06-19",
+      "sourceName": "DeepSeek",
+      "publisher": "Tech Times",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQc082ZGN2RkNGNzZYYXJiRUFUbWtXMUVfY2RkVjY3N1J6elN2dE1NNWFxZzY5ajFhT1BNYVBzNTczdTcza2NUYXpNUk90WUF4bHZYYnowM2dyOEt5TjdYNi1LX09RSm1iOEhiVDQzRzFQcVVWcVJrMjRkeTNMZTNrSXZLZ2FIcVY0b05vN0cxRGR3ZnZfbkhMSHk4MU9BakZTbzV3U3NuSmYzTWcyZnBGVHlvNTlYc25lak5iNzQtUHk0M2NTMmgxX0ZzLW1NZzVEU2dF?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 76,
+      "tags": [
+        "DeepSeek",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "DeepSeek V4 Architecture: How Sparse Attention Cuts Inference Costs, What NIST Found Tech Times",
+      "bodyText": "DeepSeek V4 Architecture: How Sparse Attention Cuts Inference Costs, What NIST Found Tech Times",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "DeepSeek",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQc082ZGN2RkNGNzZYYXJiRUFUbWtXMUVfY2RkVjY3N1J6elN2dE1NNWFxZzY5ajFhT1BNYVBzNTczdTcza2NUYXpNUk90WUF4bHZYYnowM2dyOEt5TjdYNi1LX09RSm1iOEhiVDQzRzFQcVVWcVJrMjRkeTNMZTNrSXZLZ2FIcVY0b05vN0cxRGR3ZnZfbkhMSHk4MU9BakZTbzV3U3NuSmYzTWcyZnBGVHlvNTlYc25lak5iNzQtUHk0M2NTMmgxX0ZzLW1NZzVEU2dF?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Tech Times"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 48,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 2,
+        "feature_update": 0,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 48,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aarchitecture / \u63a8\u7406 / deepseek / \u63a8\u7406",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1adeepseek / \u63a8\u7406",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "DeepSeek V4 Architecture: How Sparse Attention Cuts \u63a8\u7406 Costs, What NIST Found DeepSeek V4 Architecture: How Sparse Attention Cuts \u63a8\u7406 Costs, What NIST Found Tech Times DeepSeek V4 Architecture: How Sparse At",
+        "whyItMatters": "DeepSeek V4 Architecture: How Sparse Attention Cuts \u63a8\u7406 Costs, What NIST Found DeepSeek V4 Architecture: How Sparse Attention Cuts \u63a8\u7406 Costs, What NIST Found Tech Times DeepSeek V4 Architecture: How Sparse At",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "v4-architecture-how-sparse-attention-cuts-inference-costs-what-nist-found"
+    },
+    {
       "title": "Beyond LoRA: Can you beat the most popular fine-tuning technique?",
       "titleZh": "\u3010Hugging Face\u3011Beyond LoRA: Can you beat the most popular fine-tuning technique?",
       "summary": "Beyond LoRA: Can you beat the most popular fine-tuning technique? from Hugging Face. Included for AI tracking; open the original article to verify details.",
@@ -14350,6 +14287,77 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "launches-new-audio-models-that-can-generate-6-minute-music-tracks"
+    },
+    {
+      "title": "H2O.ai Unveils tabH2O, the Industry\u2019s Top Enterprise Foundation Model for Tabular Data, at Dell Technologies World 2026",
+      "titleZh": "\u3010xAI\u3011H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Technologies World 2026",
+      "summary": "H2O.ai Unveils tabH2O, the Industry\u2019s Top Enterprise Foundation Model for Tabular Data, at Dell Technologies World 2026 Business Wire",
+      "summaryZh": "\u6765\u6e90\uff1axAI\u3002\u4e3b\u9898\uff1axAI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "H2O.ai Unveils tabH2O, the Industry\u2019s Top Enterprise Foundation Model for Tabular Data, at Dell Technologies World 2026 Business Wire"
+      ],
+      "keyPointsZh": [
+        "H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Technologies World 2026 Business Wire"
+      ],
+      "imageUrl": "",
+      "date": "2026-05-19",
+      "sourceName": "xAI",
+      "publisher": "Business Wire",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQZ3VWV0lTa1BBMkkycDBVQjVNaDVUZjdUcHJoRFVTaXgwZm4wTkdfcmhzcFp3VUp3bzVBYWxxY3dMMUVJcUxQVHJJdnlqaUlVMmxjZmhZSi1DbTRtTVBJOVpYSVFaRHJDZG1mNVVQMl8yZnVKb21zUi13bmdIV2laaW9RQ3J2VktCVTBzY1F6MlNMc195WHhEWHVmZmxyaGpwby1QS3h2MkpMOEg2QkpvU2RIbGQwanJnajZIR3JvM25tbFBPVDBoODEta2lOWkxJRWlUNzVsY01OTVNqbGtrcmZ5MnA3MWFQMzh6VUZIVWpIT1F4R0k3UGxwSXBxV1hVVXd3?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 72,
+      "tags": [
+        "xAI",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "H2O.ai Unveils tabH2O, the Industry\u2019s Top Enterprise Foundation Model for Tabular Data, at Dell Technologies World 2026 Business Wire",
+      "bodyText": "H2O.ai Unveils tabH2O, the Industry\u2019s Top Enterprise Foundation Model for Tabular Data, at Dell Technologies World 2026 Business Wire",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "xAI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQZ3VWV0lTa1BBMkkycDBVQjVNaDVUZjdUcHJoRFVTaXgwZm4wTkdfcmhzcFp3VUp3bzVBYWxxY3dMMUVJcUxQVHJJdnlqaUlVMmxjZmhZSi1DbTRtTVBJOVpYSVFaRHJDZG1mNVVQMl8yZnVKb21zUi13bmdIV2laaW9RQ3J2VktCVTBzY1F6MlNMc195WHhEWHVmZmxyaGpwby1QS3h2MkpMOEg2QkpvU2RIbGQwanJnajZIR3JvM25tbFBPVDBoODEta2lOWkxJRWlUNzVsY01OTVNqbGtrcmZ5MnA3MWFQMzh6VUZIVWpIT1F4R0k3UGxwSXBxV1hVVXd3?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Business Wire"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 36,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 1,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 36,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / \u4f01\u4e1a\u5e94\u7528 / AI / \u6a21\u578b",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Technologies World 2026 H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Tech",
+        "whyItMatters": "H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Technologies World 2026 H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Tech",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "h2o-unveils-tabh2o-industry-s-top-enterprise-foundation-model-tabular-data-at-de"
     },
     {
       "title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
@@ -14788,77 +14796,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "what-is-agent-harness-key-reliable"
-    },
-    {
-      "title": "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies",
-      "titleZh": "\u3010DeepSeek\u3011China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies",
-      "summary": "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies CNBC",
-      "summaryZh": "\u6765\u6e90\uff1aDeepSeek\u3002\u4e3b\u9898\uff1aDeepSeek\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies CNBC"
-      ],
-      "keyPointsZh": [
-        "China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies CNBC"
-      ],
-      "imageUrl": "",
-      "date": "2026-04-24",
-      "sourceName": "DeepSeek",
-      "publisher": "CNBC",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPd3BGX1RVY2NmcVZoZnpqQ0hDTmdhem9nVE5wLWlKN2lIYzNuVjJtUjdqeU9oWWIxVjY4WG1BU0ctMm5VNURWZmhnU05IQTVnakRJUFJSeHI5dFB0WThCb1h1Q2Fnb3k5aUwyTUd6NEZ3bU1LRWs5OHZvTi1MQlJpVzNMbnRzcDd6UkZxdFlsX0FycjU5SVc4ONIBngFBVV95cUxQWWFDRGp5MGRYM2FYZ0lvN0Y5cTVOSm56QmZQeENWTzdUQzVXOVZIQjVZZy1OcnJLeEFzSklFVEpWdWV6d05POWktN2JIbkJzQnhSZDdtRm1VQzBEbjR3ZjNyQ0VjSkVpenFrWGM5MnFWdndlVTg5OGgwMUpJa0RONnF2em9hdGhycjNGdmpmZHlQSEdudTMyRm1mdjVQUQ?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 72,
-      "tags": [
-        "DeepSeek",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies CNBC",
-      "bodyText": "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies CNBC",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "DeepSeek",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPd3BGX1RVY2NmcVZoZnpqQ0hDTmdhem9nVE5wLWlKN2lIYzNuVjJtUjdqeU9oWWIxVjY4WG1BU0ctMm5VNURWZmhnU05IQTVnakRJUFJSeHI5dFB0WThCb1h1Q2Fnb3k5aUwyTUd6NEZ3bU1LRWs5OHZvTi1MQlJpVzNMbnRzcDd6UkZxdFlsX0FycjU5SVc4ONIBngFBVV95cUxQWWFDRGp5MGRYM2FYZ0lvN0Y5cTVOSm56QmZQeENWTzdUQzVXOVZIQjVZZy1OcnJLeEFzSklFVEpWdWV6d05POWktN2JIbkJzQnhSZDdtRm1VQzBEbjR3ZjNyQ0VjSkVpenFrWGM5MnFWdndlVTg5OGgwMUpJa0RONnF2em9hdGhycjNGdmpmZHlQSEdudTMyRm1mdjVQUQ?oc=5",
-          "sourceGrade": "B",
-          "publisher": "CNBC"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 36,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 1,
-        "feature_update": 1,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 36,
-        "tier": "archive",
-        "isDefaultVisible": false,
-        "isTopEligible": false,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / release / AI / deepseek",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1adeepseek / \u6a21\u578b",
-          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies CNBC China's DeepSeek releases preview of long-awaited V",
-        "whyItMatters": "China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies CNBC China's DeepSeek releases preview of long-awaited V",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "china-s-releases-preview-long-awaited-v4-model-as-race-intensifies"
     },
     {
       "title": "How I Built a Self-Maintaining Knowledge Base for 6 Projects Using Claude Code & Karpathy's LLM Wiki",
@@ -16075,13 +16012,13 @@
       "eventId": "rubin-platform-open-models-autonomous-driving-presents-blueprint-future-at-ces"
     }
   ],
-  "allItemsCount": 191,
+  "allItemsCount": 190,
   "digestArchive": {
     "date": "2026-07-25",
     "path": "data/digests/2026-07-25.md",
-    "itemCount": 133,
+    "itemCount": 130,
     "topStoryCount": 10,
-    "generatedAt": "2026-07-25T03:19:36.111602+00:00",
+    "generatedAt": "2026-07-25T13:47:54.103902+00:00",
     "latestPath": "data/digests/latest.md"
   }
 }
