@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T03:31:37.872211+00:00",
+  "updatedAt": "2026-08-02T13:40:50.737631+00:00",
   "yearStart": "2026-01-01",
   "coverageWindow": "YTD",
   "qualityPolicy": {
@@ -53,8 +53,8 @@
     "fetchedArticles": 12,
     "dedupeStrategy": "same-date normalized event title; related sources are merged into one event card",
     "topStoryCount": 10,
-    "defaultVisibleCount": 129,
-    "archiveCount": 58
+    "defaultVisibleCount": 130,
+    "archiveCount": 61
   },
   "sourceHealth": {
     "total": 71,
@@ -236,9 +236,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 22,
-      "googleItems": 2,
+      "googleItems": 1,
       "curatedItems": 0,
-      "totalItems": 24,
+      "totalItems": 23,
       "rss": "https://huggingface.co/blog/feed.xml"
     },
     {
@@ -258,9 +258,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 3,
+      "googleItems": 2,
       "curatedItems": 0,
-      "totalItems": 3,
+      "totalItems": 2,
       "rss": ""
     },
     {
@@ -324,9 +324,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 1,
+      "googleItems": 2,
       "curatedItems": 0,
-      "totalItems": 1,
+      "totalItems": 2,
       "rss": ""
     },
     {
@@ -335,9 +335,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 4,
+      "googleItems": 5,
       "curatedItems": 0,
-      "totalItems": 4,
+      "totalItems": 5,
       "rss": ""
     },
     {
@@ -379,9 +379,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 2,
-      "googleItems": 1,
+      "googleItems": 2,
       "curatedItems": 0,
-      "totalItems": 3,
+      "totalItems": 4,
       "rss": "https://blogs.nvidia.com/blog/category/deep-learning/feed/"
     },
     {
@@ -390,9 +390,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 18,
-      "googleItems": 2,
+      "googleItems": 3,
       "curatedItems": 0,
-      "totalItems": 20,
+      "totalItems": 21,
       "rss": "https://openai.com/news/rss.xml"
     },
     {
@@ -664,10 +664,10 @@
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
-      "rssItems": 10,
+      "rssItems": 11,
       "googleItems": 0,
       "curatedItems": 0,
-      "totalItems": 10,
+      "totalItems": 11,
       "rss": "https://www.interconnects.ai/feed"
     },
     {
@@ -774,10 +774,10 @@
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
-      "rssItems": 21,
+      "rssItems": 22,
       "googleItems": 6,
       "curatedItems": 0,
-      "totalItems": 27,
+      "totalItems": 28,
       "rss": "https://simonwillison.net/atom/everything/"
     },
     {
@@ -851,19 +851,19 @@
     "OpenAI": {
       "rss": "https://openai.com/news/rss.xml",
       "rssItems": 18,
-      "googleItems": 2,
+      "googleItems": 3,
       "status": "ok"
     },
     "NVIDIA": {
       "rss": "https://blogs.nvidia.com/blog/category/deep-learning/feed/",
       "rssItems": 2,
-      "googleItems": 1,
+      "googleItems": 2,
       "status": "ok"
     },
     "Hugging Face": {
       "rss": "https://huggingface.co/blog/feed.xml",
       "rssItems": 22,
-      "googleItems": 2,
+      "googleItems": 1,
       "status": "ok"
     },
     "Microsoft AI": {
@@ -880,7 +880,7 @@
     },
     "Simon Willison": {
       "rss": "https://simonwillison.net/atom/everything/",
-      "rssItems": 21,
+      "rssItems": 22,
       "googleItems": 6,
       "status": "ok"
     },
@@ -898,7 +898,7 @@
     },
     "Interconnects": {
       "rss": "https://www.interconnects.ai/feed",
-      "rssItems": 10,
+      "rssItems": 11,
       "googleItems": 0,
       "status": "ok"
     },
@@ -923,19 +923,19 @@
     "Anthropic": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 3,
+      "googleItems": 2,
       "status": "ok"
     },
     "Google DeepMind": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 1,
+      "googleItems": 2,
       "status": "ok"
     },
     "Meta AI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 4,
+      "googleItems": 5,
       "status": "ok"
     },
     "xAI": {
@@ -1281,19 +1281,23 @@
     "windowDays": 7,
     "startDate": "2026-07-27",
     "endDate": "2026-08-02",
-    "itemCount": 53,
+    "itemCount": 54,
     "companies": [
       {
         "name": "OpenAI",
-        "count": 21
+        "count": 22
       },
       {
         "name": "Hugging Face",
-        "count": 12
+        "count": 10
       },
       {
         "name": "DeepSeek",
         "count": 5
+      },
+      {
+        "name": "NVIDIA",
+        "count": 3
       },
       {
         "name": "Amazon AI",
@@ -1301,10 +1305,6 @@
       },
       {
         "name": "Anthropic",
-        "count": 2
-      },
-      {
-        "name": "NVIDIA",
         "count": 2
       },
       {
@@ -1337,7 +1337,7 @@
     "topics": [
       {
         "name": "Agent",
-        "count": 29
+        "count": 28
       },
       {
         "name": "Vibe Coding",
@@ -1345,11 +1345,11 @@
       },
       {
         "name": "\u4f01\u4e1a\u5e94\u7528",
-        "count": 13
+        "count": 12
       },
       {
         "name": "\u63a8\u7406\u80fd\u529b",
-        "count": 11
+        "count": 10
       },
       {
         "name": "\u5f00\u6e90\u6a21\u578b",
@@ -1371,7 +1371,7 @@
       },
       {
         "name": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
-        "count": 5
+        "count": 6
       },
       {
         "name": "AI\u5e94\u7528\u65b9\u6cd5",
@@ -1381,43 +1381,42 @@
   },
   "topStories": [
     {
-      "title": "Auto-grading decade-old Hacker News discussions with hindsight",
-      "titleZh": "\u3010Andrej Karpathy\u3011Auto-grading decade-old Hacker News discussions \u7ed3\u5408 hindsight",
-      "summary": "Auto-grading decade-old Hacker News discussions with hindsight 10 Dec, 2025 There are two macro reasons for why I think the exercise is interesting more generally: I believe it is quite possible and desirable to train your forward future predictor given training and effort. Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive.",
-      "summaryZh": "\u6765\u6e90\uff1aAndrej Karpathy\u3002\u4e3b\u9898\uff1aAndrej Karpathy\u3001Vibe Coding\u3001\u667a\u80fd\u4f53\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Open letters about AI development",
+      "titleZh": "\u3010Simon Willison\u3011Open letters about AI development",
+      "summary": "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only newsletter but I've decided to share it here as well. Open Weights and American AI Leadership was shepherded by Microsoft, dated July 24th, and signed by 235 AI-adjacent companies including NVIDIA, Amazon, Y Combinator, The Linux Foundation and (a later signer) OpenAI.",
+      "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive.",
-        "Package up everything into a markdown prompt asking for the analysis.",
-        "A few example threads just for fun: December 11 2015 original announcement of OpenAI :')."
+        "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only newsletter but I've decided to share it here as well.",
+        "Relying solely on closed models is not inherently safe: they can be breached, misused, or fail in ways that outsiders cannot detect.",
+        "And concentrating advanced AI capabilities behind a small number of closed models compounds that risk."
       ],
       "keyPointsZh": [
-        "Vibe \u7f16\u7a0b the actual project was relatively painless \u4ee5\u53ca took about 3 hours \u7ed3\u5408 Opus 4.5, \u7ed3\u5408 a few hickups but overall very impressive.",
-        "Package up everything into a markdown \u63d0\u793a\u8bcd asking \u9762\u5411 the analysis.",
-        "A few example threads just \u9762\u5411 fun: December 11 2015 original announcement of OpenAI :')."
+        "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only \u901a\u8baf but I've decided to share it here as well.",
+        "Relying solely on closed \u6a21\u578b is not inherently safe: they can be breached, misused, or fail in ways that outsiders cannot detect.",
+        "\u4ee5\u53ca concentrating advanced AI capabilities behind a small number of closed \u6a21\u578b compounds that risk."
       ],
       "imageUrl": "",
       "date": "2026-08-02",
-      "sourceName": "Andrej Karpathy",
+      "sourceName": "Simon Willison",
       "publisher": "",
-      "sourceUrl": "https://karpathy.bearblog.dev/auto-grade-hn/",
+      "sourceUrl": "https://simonwillison.net/2026/Aug/2/open-letters/#atom-everything",
       "sourceGrade": "A",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "contentType": "article",
       "readingScore": 100,
       "tags": [
-        "Andrej Karpathy",
-        "vibecoding",
-        "agent",
+        "Simon Willison",
+        "llm-engineering",
         "creator"
       ],
       "importance": 5,
-      "rawBody": "A vibe coding thought exercise on what it might look like for LLMs to scour human historical data at scale and in retrospect.",
-      "bodyText": "Auto-grading decade-old Hacker News discussions with hindsight 10 Dec, 2025 There are two macro reasons for why I think the exercise is interesting more generally: I believe it is quite possible and desirable to train your forward future predictor given training and effort. Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive. The repository is on GitHub here: karpathy/hn-time-capsule . Here is the progression of what the code does: Given a date, download the frontpage of 30 articles For each article, download/parse the article itself and the full comment thread using Algolia API. Package up everything into a markdown prompt asking for the analysis. Here is the prompt prefix I used: Render the results into static HTML web pages for easy viewing Host the html result pages on my website: https://karpathy.ai/hncapsule/ Host all the intermediate results of the data directory if someone else would like to play. It's the file data.zip under the exact same url prefix (intentionally avoiding a direct link). I spent a few hours browsing around and found it to be very interesting. A few example threads just for fun: December 11 2015 original announcement of OpenAI :'). December 22 2015 SpaceX launch webcast: Orbcomm-2 Mission My code (wait, Opus' code?) on GitHub can be used to reproduce or tweak the results. Running 31 days of 30 articles through GPT 5.1 Thinking meant 31 * 30 = 930 LLM queries and cost about $58 and somewhere around ~1 hour. The LLM megaminds of the future might find this kind of a thing a lot easier, a lot faster and a lot cheaper.",
-      "contentFetched": true,
+      "rawBody": "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only newsletter but I've decided to share it here as well. Open Weights and American AI Leadership was shepherded by Microsoft, dated July 24th, and signed by 235 AI-adjacent companies including NVIDIA, Amazon, Y Combinator, The Linux Foundation and (a later signer) OpenAI. It's clearly an argument designed to counter any instincts by the current US government to ban or limit open weight models over \"safety\" concerns - a reasonable consideration given what happened to Claude Fable 5 ! Relying solely on closed models is not inherently safe: they can be breached, misused, or fail in ways that outsiders cannot detect. And concentrating advanced AI capabilities behind a small number of closed models compounds that risk. It results in a small number of single points of failure, weakens competition, and leaves critical technology in the hands of a few providers. Open weight models, on the other hand, allow a broad community of researchers and developers to examine their behavior, identify vulnerabilities, develop safeguards, and improve them over time. The one surprising note in the letter is that it comes out in support of distillation, where models train on output from other models: In shaping this ecosystem, policymakers should be careful not to conflate legitimate model-development techniques with misappropriation. Distillation, or the practice of using one model\u2019s outputs to help train or improve another, is a widely used technique for model improvement, evaluation, and validation. It reflects a long tradition of learning from, building upon, and improving existing technologies, a tradition that has helped drive innovation since the rise of the open-source software movement. Notably absent from the signatures: Anthropic, who published their own response Our position on open-weights models three days later. CEO Dario Amodei doubled down on the risk of authoritarian governments building \"AI models that are more powerful than those built by the US\", and models being \"misused to carry out cyberattacks or biological attacks\", and called for \"a crack down on industrial-scale distillation operations \", while also stating that \"Anthropic has never advocated for a ban on open-weights models\". Then on July 28th Pacing the Frontier was published, featuring signatures from \"1,324 employees of frontier AI companies\" - with names like Jakub Pachocki (Chief Scientist, OpenAI), Ilya Sutskever (Safe Superintelligence Inc, previously OpenAI), Dario Amodei (Anthropic), Jack Clark (Anthropic) and more. Their core message: We request that the U.S. government support an international effort to develop the technical and governance tools needed to deliberately pace the frontier of automated AI development. Their concern is intense competitive pressure combined with accelerated AI progress caused by automated AI research - and given that Anthropic produce 80% of their code with Claude Code , OpenAI had Sol reduce their end-to-end serving costs by 20% , and Kimi K3 designed a chip to serve a nano model built on its own architecture , you can see why people are taking that risk more seriously right now. Tags: anthropic , generative-ai , openai , ai , llms , ai-ethics",
+      "bodyText": "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only newsletter but I've decided to share it here as well. Open Weights and American AI Leadership was shepherded by Microsoft, dated July 24th, and signed by 235 AI-adjacent companies including NVIDIA, Amazon, Y Combinator, The Linux Foundation and (a later signer) OpenAI. It's clearly an argument designed to counter any instincts by the current US government to ban or limit open weight models over \"safety\" concerns - a reasonable consideration given what happened to Claude Fable 5 ! Relying solely on closed models is not inherently safe: they can be breached, misused, or fail in ways that outsiders cannot detect. And concentrating advanced AI capabilities behind a small number of closed models compounds that risk. It results in a small number of single points of failure, weakens competition, and leaves critical technology in the hands of a few providers. Open weight models, on the other hand, allow a broad community of researchers and developers to examine their behavior, identify vulnerabilities, develop safeguards, and improve them over time. The one surprising note in the letter is that it comes out in support of distillation, where models train on output from other models: In shaping this ecosystem, policymakers should be careful not to conflate legitimate model-development techniques with misappropriation. Distillation, or the practice of using one model\u2019s outputs to help train or improve another, is a widely used technique for model improvement, evaluation, and validation. It reflects a long tradition of learning from, building upon, and improving existing technologies, a tradition that has helped drive innovation since the rise of the open-source software movement. Notably absent from the signatures: Anthropic, who published their own response Our position on open-weights models three days later. CEO Dario Amodei doubled down on the risk of authoritarian governments building \"AI models that are more powerful than those built by the US\", and models being \"misused to carry out cyberattacks or biological attacks\", and called for \"a crack down on industrial-scale distillation operations \", while also stating that \"Anthropic has never advocated for a ban on open-weights models\". Then on July 28th Pacing the Frontier was published, featuring signatures from \"1,324 employees of frontier AI companies\" - with names like Jakub Pachocki (Chief Scientist, OpenAI), Ilya Sutskever (Safe Superintelligence Inc, previously OpenAI), Dario Amodei (Anthropic), Jack Clark (Anthropic) and more. Their core message: We request that the U.S. government support an international effort to develop the technical and governance tools needed to deliberately pace the frontier of automated AI development. Their concern is intense competitive pressure combined with accelerated AI progress caused by automated AI research - and given that Anthropic produce 80% of their code with Claude Code , OpenAI had Sol reduce their end-to-end serving costs by 20% , and Kimi K3 designed a chip to serve a nano model built on its own architecture , you can see why people are taking that risk more seriously right now. Tags: anthropic , generative-ai , openai , ai , llms , ai-ethics",
+      "contentFetched": false,
       "relatedSources": [
         {
-          "sourceName": "Andrej Karpathy",
-          "sourceUrl": "https://karpathy.bearblog.dev/auto-grade-hn/",
+          "sourceName": "Simon Willison",
+          "sourceUrl": "https://simonwillison.net/2026/Aug/2/open-letters/#atom-everything",
           "sourceGrade": "A",
           "publisher": ""
         }
@@ -1428,8 +1427,8 @@
       "qualityType": "technical_update",
       "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 4,
-        "feature_update": 2,
+        "technical_update": 8,
+        "feature_update": 0,
         "application_method": 2
       },
       "lowValueSignals": 0,
@@ -1441,44 +1440,42 @@
         "isTopEligible": true,
         "reasons": [
           "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aanalysis / \u63d0\u793a\u8bcd / vibe coding / \u7f16\u7a0b",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / gpt / \u63d0\u793a\u8bcd",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aarchitecture / evaluation / eval / \u6a21\u578b",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1aclaude / \u6a21\u578b / \u6a21\u578b",
           "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
         ],
         "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Here is the progression of what the code does: Given a date, download the frontpage of 30 articles \u9762\u5411 each article, download/parse the article itself \u4ee5\u53ca the full comment thread using Algolia API.",
-        "whyItMatters": "Vibe \u7f16\u7a0b the actual project was relatively painless \u4ee5\u53ca took about 3 hours \u7ed3\u5408 Opus 4.5, \u7ed3\u5408 a few hickups but overall very impressive.",
+        "whatHappened": "It's clearly an argument designed to counter any instincts by the current US government to ban or limit open weight \u6a21\u578b over \"safety\" concerns - a reasonable consideration given what happened to Claude Fable 5 !",
+        "whyItMatters": "Open weight \u6a21\u578b, on the other hand, allow a broad community of researchers \u4ee5\u53ca developers to examine their behavior, identify vulnerabilities, develop safeguards, \u4ee5\u53ca improve them over time.",
         "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "auto-grading-decade-old-hacker-news-discussions-hindsight",
+      "eventId": "open-letters-about-development",
       "topRank": 1,
       "isTopStory": true
     },
     {
-      "title": "Ten advances in mathematics and theoretical computer science",
-      "titleZh": "\u3010Simon Willison\u3011Ten advances in mathematics \u4ee5\u53ca theoretical computer science",
-      "summary": "Ten advances in mathematics and theoretical computer science A few days ago it was Anthropic discovering cryptographic weaknesses with Claude using Mythos Preview, spending $100,000 on tokens and with prompts that included \"again we are not looking for low hanging fruit, we want proper research to find genuinly hard findings.\" Now it's OpenAI's turn to flex. They set \"an internal version of Astra, our next major mode",
+      "title": "July 2026 newsletter",
+      "titleZh": "\u3010Simon Willison\u3011July 2026 \u901a\u8baf",
+      "summary": "The June edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here .",
       "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "They claim to have spent less than $2,000 at GPT-5.6 Sol token prices on each one.",
-        "That's a decent level of transparency, but I want to see the prompts they used!",
-        "OpenAI's results reminds me of what Terence Tao described as \"big mathematics\" in IEEE Spectrum in June : Unlike some of his peers, Tao is neither dismissive of AI nor fearful."
+        "Accidental cyberattacks by OpenAl and Anthropic models under test Here's a copy of the June newsletter as a preview of what you'll get.",
+        "Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments."
       ],
       "keyPointsZh": [
-        "\u4fe1\u606f\u6765\u6e90\u5df2\u7eb3\u5165\u6838\u5fc3\u8ffd\u8e2a\u6e05\u5355\uff0c\u9002\u5408\u4f5c\u4e3a\u8fd1\u671f AI \u52a8\u6001\u89c2\u5bdf\u3002",
-        "\u53ef\u4f18\u5148\u5173\u6ce8\u5176\u5bf9\u4f01\u4e1a\u5e94\u7528\u3001Agent \u5de5\u4f5c\u6d41\u6216\u5b9e\u6218\u65b9\u6cd5\u7684\u542f\u53d1\u3002",
-        "\u82e5\u8981\u505a\u51b3\u7b56\u6216\u6df1\u5ea6\u5b66\u4e60\uff0c\u5efa\u8bae\u70b9\u51fb\u539f\u6587\u6838\u9a8c\u5b8c\u6574\u8bed\u5883\u3002"
+        "Accidental cyberattacks by OpenAl \u4ee5\u53ca Anthropic \u6a21\u578b under test Here's a copy of the June \u901a\u8baf as a preview of what you'll get.",
+        "Sponsor me \u9762\u5411 $10/month \u4ee5\u53ca get a curated email digest of the month's most important LLM developments."
       ],
       "imageUrl": "",
       "date": "2026-08-02",
       "sourceName": "Simon Willison",
       "publisher": "",
-      "sourceUrl": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything",
+      "sourceUrl": "https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything",
       "sourceGrade": "A",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "contentType": "article",
@@ -1489,13 +1486,13 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "Ten advances in mathematics and theoretical computer science A few days ago it was Anthropic discovering cryptographic weaknesses with Claude using Mythos Preview, spending $100,000 on tokens and with prompts that included \"again we are not looking for low hanging fruit, we want proper research to find genuinly hard findings.\" Now it's OpenAI's turn to flex. They set \"an internal version of Astra, our next major model\" on finding solutions to ten mathematical problems that \"have seen no progress on the main result for at least a decade\". They claim to have spent less than $2,000 at GPT-5.6 Sol token prices on each one. (No news on how many problems they spent $2,000 on without reaching a solution though.) The openai/ten-proofs repository has Lean 4 formalizations of their results, and there's also a paper describing the solutions and an additional LLM-generated PDF where the model \"reconstructs how the proof came together\" based on the unpublished reasoning traces. That's a decent level of transparency, but I want to see the prompts they used! A lot of mathematicians online are experiencing a collective burst of Deep Blue . Mathematician Kirwin Hampshire published an impassioned essay last week, The Dark Night of Mathematics , describing \"a profound spiritual crisis\" brought on by previous (and less significant) results. OpenAI's results reminds me of what Terence Tao described as \"big mathematics\" in IEEE Spectrum in June : Unlike some of his peers, Tao is neither dismissive of AI nor fearful. Instead, he sees it as the catalyst for a fundamental shift in the discipline\u2014a transition toward what he calls \u201cbig mathematics.\u201d He envisions a future of large-scale, decentralized collaborations between humans and machines, where complex mathematical tasks can be diced and sliced, with humans claiming the creative parts and AI doing the lion\u2019s share of the technical grunt work. Via Hacker News Tags: mathematics , ai , openai , generative-ai , llms , deep-blue",
-      "bodyText": "Ten advances in mathematics and theoretical computer science A few days ago it was Anthropic discovering cryptographic weaknesses with Claude using Mythos Preview, spending $100,000 on tokens and with prompts that included \"again we are not looking for low hanging fruit, we want proper research to find genuinly hard findings.\" Now it's OpenAI's turn to flex. They set \"an internal version of Astra, our next major model\" on finding solutions to ten mathematical problems that \"have seen no progress on the main result for at least a decade\". They claim to have spent less than $2,000 at GPT-5.6 Sol token prices on each one. (No news on how many problems they spent $2,000 on without reaching a solution though.) The openai/ten-proofs repository has Lean 4 formalizations of their results, and there's also a paper describing the solutions and an additional LLM-generated PDF where the model \"reconstructs how the proof came together\" based on the unpublished reasoning traces. That's a decent level of transparency, but I want to see the prompts they used! A lot of mathematicians online are experiencing a collective burst of Deep Blue . Mathematician Kirwin Hampshire published an impassioned essay last week, The Dark Night of Mathematics , describing \"a profound spiritual crisis\" brought on by previous (and less significant) results. OpenAI's results reminds me of what Terence Tao described as \"big mathematics\" in IEEE Spectrum in June : Unlike some of his peers, Tao is neither dismissive of AI nor fearful. Instead, he sees it as the catalyst for a fundamental shift in the discipline\u2014a transition toward what he calls \u201cbig mathematics.\u201d He envisions a future of large-scale, decentralized collaborations between humans and machines, where complex mathematical tasks can be diced and sliced, with humans claiming the creative parts and AI doing the lion\u2019s share of the technical grunt work. Via Hacker News Tags: mathematics , ai , openai , generative-ai , llms , deep-blue",
-      "contentFetched": false,
+      "rawBody": "The June edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here . This month: Accidental cyberattacks by OpenAl and Anthropic models under test GPT-5.6 Sol, Terra, and Luna Claude Opus 5 Kimi K3 and DeepSeek-V4-Flash-0731 Open letters about Al development A fireside chat and a podcast Reigniting my interest in MCP Other model releases My projects What I'm using at the moment Here's a copy of the June newsletter as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy! Tags: newsletter",
+      "bodyText": "The June edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here . Accidental cyberattacks by OpenAl and Anthropic models under test Here's a copy of the June newsletter as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy! Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp) - 31st July 2026 OpenAI\u2019s accidental cyberattack against Hugging Face is science fiction that happened - 22nd July 2026 A Fireside Chat with Cat and Thariq from the Claude Code team - 21st July 2026 This is a note by Simon Willison, posted on 2nd August 2026 . Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments.",
+      "contentFetched": true,
       "relatedSources": [
         {
           "sourceName": "Simon Willison",
-          "sourceUrl": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything",
+          "sourceUrl": "https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything",
           "sourceGrade": "A",
           "publisher": ""
         }
@@ -1508,84 +1505,6 @@
       "qualitySignals": {
         "technical_update": 3,
         "feature_update": 1,
-        "application_method": 1
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 100,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u63d0\u793a\u8bcd / llm / \u6a21\u578b / reasoning",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / gpt / claude",
-          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "They set \"an internal version of Astra, our next major \u6a21\u578b\" on finding solutions to ten mathematical problems that \"have seen no progress on the main result \u9762\u5411 at least a decade\".",
-        "whyItMatters": "(No news on how many problems they spent $2,000 on without reaching a solution though.) The openai/ten-proofs repository has Lean 4 formalizations of their results, \u4ee5\u53ca there's also a paper describing the solutions \u4ee5\u53ca a",
-        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
-        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "ten-advances-mathematics-theoretical-computer-science",
-      "topRank": 2,
-      "isTopStory": true
-    },
-    {
-      "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
-      "titleZh": "\u3010Simon Willison\u3011deepseek-AI/DeepSeek-V4-Flash-0731",
-      "summary": "deepseek-ai/DeepSeek-V4-Flash-0731 ( via ) The latest release in DeepSeek's V4 family, \"with substantially enhanced agentic capabilities\". It's 304 billion parameters - 167GB on Hugging Face - but it appears to punch well above its weight.",
-      "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "deepseek-ai/DeepSeek-V4-Flash-0731 ( via ) The latest release in DeepSeek's V4 family, \"with substantially enhanced agentic capabilities\".",
-        "Artificial Analysis rank it ahead of MiniMax M3 - a 428B model.",
-        "It's $0.14/million input and $0.27/million output pricing means this may currently be the best value-per-intelligence model out there."
-      ],
-      "keyPointsZh": [
-        "deepseek-AI/DeepSeek-V4-Flash-0731 ( via ) The latest release in DeepSeek's V4 family, \"\u7ed3\u5408 substantially enhanced agentic capabilities\".",
-        "Artificial Analysis rank it ahead of MiniMax M3 - a 428B \u6a21\u578b.",
-        "It's $0.14/million input \u4ee5\u53ca $0.27/million output pricing means this may currently be the best value-per-intelligence \u6a21\u578b out there."
-      ],
-      "imageUrl": "https://static.simonwillison.net/static/2026/deepseek-flash-chart.webp",
-      "date": "2026-08-02",
-      "sourceName": "Simon Willison",
-      "publisher": "",
-      "sourceUrl": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything",
-      "sourceGrade": "A",
-      "category": "\u6838\u5fc3AI\u535a\u4e3b",
-      "contentType": "article",
-      "readingScore": 100,
-      "tags": [
-        "Simon Willison",
-        "llm-engineering",
-        "creator"
-      ],
-      "importance": 5,
-      "rawBody": "deepseek-ai/DeepSeek-V4-Flash-0731 The latest release in DeepSeek's V4 family, \"with substantially enhanced agentic capabilities\". It's 304 billion parameters - 167GB on Hugging Face - but it appears to punch well above its weight. Artificial Analysis rank it ahead of MiniMax M3 - a 428B model. It's $0.14/million input and $0.27/million output pricing means this may currently be the best value-per-intelligence model out there. It's looking very good on the Intelligence Index vs. Cost per Intelligence Index Task chart: I got a disappointing pelican from it using the default reasoning level via OpenRouter: But when I bumped reasoning level up to high I got something much better : llm -m openrouter/deepseek/deepseek-v4-flash-0731 -t pelican -o reasoning_effort high Via Hacker News Tags: ai , generative-ai , llms , pelican-riding-a-bicycle , deepseek , llm-release , openrouter , ai-in-china , artificial-analysis",
-      "bodyText": "deepseek-ai/DeepSeek-V4-Flash-0731 ( via ) The latest release in DeepSeek's V4 family, \"with substantially enhanced agentic capabilities\". It's 304 billion parameters - 167GB on Hugging Face - but it appears to punch well above its weight. Artificial Analysis rank it ahead of MiniMax M3 - a 428B model. It's $0.14/million input and $0.27/million output pricing means this may currently be the best value-per-intelligence model out there. It's looking very good on the Intelligence Index vs. Cost per Intelligence Index Task chart: I got a disappointing pelican from it using the default reasoning level via OpenRouter: But when I bumped reasoning level up to high I got something much better : llm -m openrouter/deepseek/deepseek-v4-flash-0731 -t pelican -o reasoning_effort high Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp) - 31st July 2026 OpenAI\u2019s accidental cyberattack against Hugging Face is science fiction that happened - 22nd July 2026 A Fireside Chat with Cat and Thariq from the Claude Code team - 21st July 2026 This is a link post by Simon Willison, posted on 31st July 2026 . Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments.",
-      "contentFetched": true,
-      "relatedSources": [
-        {
-          "sourceName": "Simon Willison",
-          "sourceUrl": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything",
-          "sourceGrade": "A",
-          "publisher": ""
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 100,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 5,
-        "feature_update": 2,
         "application_method": 0
       },
       "lowValueSignals": 0,
@@ -1597,61 +1516,61 @@
         "isTopEligible": true,
         "reasons": [
           "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aanalysis / \u667a\u80fd\u4f53 / llm / \u6a21\u578b",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / claude / deepseek",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / \u6a21\u578b / AI / claude",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1aclaude / \u6a21\u578b / \u6a21\u578b",
           "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
         ],
         "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "deepseek-AI/DeepSeek-V4-Flash-0731 deepseek-AI/DeepSeek-V4-Flash-0731 ( via ) The latest release in DeepSeek's V4 family, \"\u7ed3\u5408 substantially enhanced agentic capabilities\".",
-        "whyItMatters": "deepseek-AI/DeepSeek-V4-Flash-0731 deepseek-AI/DeepSeek-V4-Flash-0731 ( via ) The latest release in DeepSeek's V4 family, \"\u7ed3\u5408 substantially enhanced agentic capabilities\".",
+        "whatHappened": "Accidental cyberattacks by OpenAl \u4ee5\u53ca Anthropic \u6a21\u578b under test Here's a copy of the June \u901a\u8baf as a preview of what you'll get.",
+        "whyItMatters": "July 2026 \u901a\u8baf The June edition of my sponsors-only monthly \u901a\u8baf is out.",
         "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "deepseek-deepseek-v4-flash-0731",
-      "topRank": 3,
+      "eventId": "july-2026-newsletter",
+      "topRank": 2,
       "isTopStory": true
     },
     {
-      "title": "[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization",
-      "titleZh": "\u3010Latent.Space\u3011[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization",
-      "summary": "One of our big \u201chero charts\u201d a year ago (eventually adopted by Demis ) made the stunning observation that, holding LMSys Elo constant, GPT4 level intelligence fell by 1000x over 18 months : Back then, it was unclear if these were \u201cnoob gains\u201d - going from unoptimized to optimized, going from completions to reasoning, going from dense to MoE, with all the low hanging fruit gone. Another 18 months later, it seems the a",
-      "summaryZh": "\u6765\u6e90\uff1aLatent.Space\u3002\u4e3b\u9898\uff1aswyx\u3001\u667a\u80fd\u4f53\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Latest open artifacts (#23): Laguna S2.1, Inkling, & Kimi K3 show the utility of open models on the Pareto frontier",
+      "titleZh": "\u3010Interconnects\u3011Latest open artifacts (#23): Laguna S2.1, Inkling, & Kimi K3 show the utility of open \u6a21\u578b on the Pareto frontier",
+      "summary": "The demand for tokens is incredibly high, and likely to increase as models get more efficient and unlock more possible use cases. All of these labs we thought would need to consolidate are realizing that building token machines is a likely path to value, and more companies will identify that source of value over time.",
+      "summaryZh": "\u6765\u6e90\uff1aInterconnects\u3002\u4e3b\u9898\uff1aNathan Lambert\u3001\u7814\u7a76\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Prompt Caching: To avoid reprocessing the same instructions and history repeatedly, the harness treats all model-visible history as append-only.",
-        "This preserves the prompt prefix, allowing the system to reuse previously computed data and maintain a high cache hit rate.",
-        "In other words, roughly four months later, OpenAI is selling March\u2019s full flagship intelligence at about one-thirteenth the token price ."
+        "The demand for tokens is incredibly high, and likely to increase as models get more efficient and unlock more possible use cases.",
+        "Now their open model finetuning service is making hundreds of millions in revenue per year and they\u2019re releasing the best open-weight models built in the U.S.A.",
+        "This is one of the most packed recaps of open models we\u2019ve ever had, we\u2019re excited!"
       ],
       "keyPointsZh": [
-        "\u63d0\u793a\u8bcd Caching: To avoid reprocessing the same instructions \u4ee5\u53ca history repeatedly, the harness treats all \u6a21\u578b-visible history as append-only.",
-        "This preserves the \u63d0\u793a\u8bcd prefix, allowing the system to reuse previously computed data \u4ee5\u53ca maintain a high cache hit rate.",
-        "\u82e5\u8981\u505a\u51b3\u7b56\u6216\u6df1\u5ea6\u5b66\u4e60\uff0c\u5efa\u8bae\u70b9\u51fb\u539f\u6587\u6838\u9a8c\u5b8c\u6574\u8bed\u5883\u3002"
+        "The demand \u9762\u5411 tokens is incredibly high, \u4ee5\u53ca likely to increase as \u6a21\u578b get more efficient \u4ee5\u53ca unlock more possible use cases.",
+        "Now their open \u6a21\u578b finetuning service is making hundreds of millions in revenue per year \u4ee5\u53ca they\u2019re releasing the best open-weight \u6a21\u578b built in the U.S.A.",
+        "This is one of the most packed recaps of open \u6a21\u578b we\u2019ve ever had, we\u2019re excited!"
       ],
-      "imageUrl": "https://substackcdn.com/image/fetch/$s_!gT87!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fmedia%2FHOfg3rSWsAACTkR.png",
-      "date": "2026-07-31",
-      "sourceName": "Latent.Space",
+      "imageUrl": "https://substackcdn.com/image/fetch/$s_!RSM6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7a71a4f9-5ac5-447e-82ff-899915627512_2048x1152.jpeg",
+      "date": "2026-08-02",
+      "sourceName": "Interconnects",
       "publisher": "",
-      "sourceUrl": "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
+      "sourceUrl": "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21",
       "sourceGrade": "A",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "contentType": "article",
       "readingScore": 100,
       "tags": [
-        "swyx",
-        "agent",
+        "Nathan Lambert",
+        "research",
         "creator"
       ],
       "importance": 5,
-      "rawBody": "Distillation is all you need!",
-      "bodyText": "One of our big \u201chero charts\u201d a year ago (eventually adopted by Demis ) made the stunning observation that, holding LMSys Elo constant, GPT4 level intelligence fell by 1000x over 18 months : Back then, it was unclear if these were \u201cnoob gains\u201d - going from unoptimized to optimized, going from completions to reasoning, going from dense to MoE, with all the low hanging fruit gone. Another 18 months later, it seems the answer is no; constant-level intelligence is continuing to get precipitously cheaper. Yesterday, OpenAI published findings on how GPT 5.6 had optimized its own serving: To serve more tokens on the same hardware without sacrificing quality, OpenAI focused on several systemic upgrades: Self-Optimization: GPT-5.6 Sol was actively used to analyze production traffic, tune load balancing, and autonomously rewrite production kernels in OpenAI\u2019s own Triton and Gluon languages. This autonomous kernel optimization reduced end-to-end serving costs by 20%. Speculative Decoding: Improved its own draft model (by designing and running hundreds of experiments on its architecture, testing changes in size, structure, and features, while monitoring the speculator training process, autonomously intervening when issues arose, including hardware failures and training instability) increasing token-generation efficiency by over 15%. KV Caching: Optimized batching, sharding, and cache management specific to different workloads (primarily Sol in Codex) to extract more inference from existing hardware. To streamline the complex, multi-step tasks in tools like Codex and ChatGPT Work, OpenAI optimized their Rust orchestration layer to reduce repetitive compute costs: Avoiding Context Bloat: Tools, skills, and plugins are only surfaced when needed (deferred discovery), and tool outputs are capped at 10,000 tokens by default to prevent the context window from expanding unnecessarily. Prompt Caching: To avoid reprocessing the same instructions and history repeatedly, the harness treats all model-visible history as append-only. This preserves the prompt prefix, allowing the system to reuse previously computed data and maintain a high cache hit rate. Today, they proved it wasn\u2019t just theory, announcing large price cuts for the smaller models and a new 2.5x Faster mode in Sol (though not the hinted 10x faster Cerebras-driven mode promised in July): Good, but what is truly jaw dropping is Nicdunz\u2019s observation : GPT-5.4 full at xhigh scored 51, exactly where Luna max sits today . GPT-5.4 costs $2.50/$15; Luna now costs $0.20/$1.20. In other words, roughly four months later, OpenAI is selling March\u2019s full flagship intelligence at about one-thirteenth the token price . AI News for 7/29/2026-7/30/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews\u2019 website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! OpenAI Pricing Cuts, Harness Semantics, and the ARC-AGI-3 Memory Debate Thinking Machines\u2019 Inkling-Small and the Continuing Open-Weights Push",
+      "rawBody": "Capacity to train strong models is proliferating.",
+      "bodyText": "The demand for tokens is incredibly high, and likely to increase as models get more efficient and unlock more possible use cases. All of these labs we thought would need to consolidate are realizing that building token machines is a likely path to value, and more companies will identify that source of value over time. The prime example is Thinking Machines \u2014 when they announced their company in February 2025, very few people would\u2019ve put them in the bucket of an open models company, myself included. Now their open model finetuning service is making hundreds of millions in revenue per year and they\u2019re releasing the best open-weight models built in the U.S.A. \u2014 ahead of the early leaders in NVIDIA with Nemotron and Arcee\u2019s Trilogy. This is one of the most packed recaps of open models we\u2019ve ever had, we\u2019re excited! But if a US company needs a contract with Moonshot to provide the inference tokens that Kimi K3 generates, the picture looks different. Some of the policy tools US officials and others have debated as potential levers to restrict Chinese open model use would more clearly apply. LongCat-2.0 by meituan-longcat : The Chinese DoorDash is back again. This time, the company released another big MoE with 1.6T parameters. While the model itself is not the most capable for its size beyond benchmarks, it was trained entirely on Ascend 910s, making it the first non-Huawei, non-toy model trained entirely on Chinese accelerators. Other Chinese chips are mostly used for inference (if at all). Laguna-XS-2.1 by poolside : An update to the small (33B-A3B) MoE from Poolside. Motif-3-Beta by Motif-Technologies : A preview of a 314B-A13B MoE by the Korean Motif. This is by far the company\u2019s most ambitious model, as it is considerably larger and introduces some architectural innovations like GDLA and mHC. Apertus-v1.5-70B by swiss-ai : A continued pre-train of the fully open-source Apertus 1.0, using 2T more tokens. Instella-MoE-16B-A3B-Think by amd : A 16B-A3B MoE trained by AMD on Instinct cards. AMD also provides all the different stages, from the base to the SFT checkpoints, as well as MidTrain and DPO .",
       "contentFetched": true,
       "relatedSources": [
         {
-          "sourceName": "Latent.Space",
-          "sourceUrl": "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
+          "sourceName": "Interconnects",
+          "sourceUrl": "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21",
           "sourceGrade": "A",
           "publisher": ""
         }
@@ -1659,14 +1578,14 @@
       "sourceCount": 1,
       "aggregatedEvent": false,
       "qualityScore": 100,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualityType": "feature_update",
+      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 10,
-        "feature_update": 2,
-        "application_method": 1
+        "technical_update": 4,
+        "feature_update": 5,
+        "application_method": 3
       },
-      "lowValueSignals": 1,
+      "lowValueSignals": 0,
       "titleLowValue": false,
       "qualityReview": {
         "score": 100,
@@ -1675,24 +1594,22 @@
         "isTopEligible": true,
         "reasons": [
           "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aarchitecture / \u63d0\u793a\u8bcd / \u7f16\u7a0b / \u6a21\u578b",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agpt / codex / \u63d0\u793a\u8bcd",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1abenchmark / \u6a21\u578b / \u6a21\u578b / release",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b / \u6a21\u578b / benchmark",
           "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
         ],
-        "penalties": [
-          "\u5305\u542b\u666e\u901a\u901a\u77e5/\u5f31\u4ef7\u503c\u4fe1\u53f7"
-        ],
+        "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Speculative Decoding: Improved its own draft \u6a21\u578b (by designing \u4ee5\u53ca running hundreds of experiments on its architecture, testing changes in size, structure, \u4ee5\u53ca features, while monitoring the speculator \u8bad\u7ec3 process",
-        "whyItMatters": "[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization One of our big \u201chero charts\u201d a year ago (eventually adopted by Demis ) made the stunn",
+        "whatHappened": "Latest open artifacts (#23): Laguna S2.1, Inkling, & Kimi K3 show the utility of open \u6a21\u578b on the Pareto frontier The demand \u9762\u5411 tokens is incredibly high, \u4ee5\u53ca likely to increase as \u6a21\u578b get more efficient \u4ee5\u53ca unlock",
+        "whyItMatters": "Latest open artifacts (#23): Laguna S2.1, Inkling, & Kimi K3 show the utility of open \u6a21\u578b on the Pareto frontier The demand \u9762\u5411 tokens is incredibly high, \u4ee5\u53ca likely to increase as \u6a21\u578b get more efficient \u4ee5\u53ca unlock",
         "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "ainews-gpt-5-6-price-cut-20-80-cost-gpt-5-4-intelligence-dropped-13x-4-months-du",
-      "topRank": 4,
+      "eventId": "latest-open-artifacts-23-laguna-s2-1-inkling-kimi-k3-show-utility-open-models-pa",
+      "topRank": 3,
       "isTopStory": true
     },
     {
@@ -1770,7 +1687,7 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "codex-from-0-10m-users-building-chatgpt-work-akshay-nathan-openai",
-      "topRank": 5,
+      "topRank": 4,
       "isTopStory": true
     },
     {
@@ -1843,6 +1760,80 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "introducing-presence",
+      "topRank": 5,
+      "isTopStory": true
+    },
+    {
+      "title": "[AINews] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open model (with Inkling-Small, 276B-A12B)",
+      "titleZh": "\u3010Latent.Space\u3011[AINews] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open \u6a21\u578b (\u7ed3\u5408 Inkling-Small, 276B-A12B)",
+      "summary": "[AINews] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open model (with Inkling-Small, 276B-A12B) from Latent.Space. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aLatent.Space\u3002\u4e3b\u9898\uff1aswyx\u3001\u667a\u80fd\u4f53\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Thinky's first full LLM release is a banger and bonus: it's open weights!"
+      ],
+      "keyPointsZh": [
+        "Thinky's first full LLM release is a banger \u4ee5\u53ca bonus: it's open weights!"
+      ],
+      "imageUrl": "https://substackcdn.com/image/fetch/$s_!AvrX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F90048da3-a87f-44d8-8ad4-e954031d2721_2540x1692.png",
+      "date": "2026-07-16",
+      "sourceName": "Latent.Space",
+      "publisher": "",
+      "sourceUrl": "https://www.latent.space/p/ainews-thinkys-inkling-975b-a41b",
+      "sourceGrade": "A",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 100,
+      "tags": [
+        "swyx",
+        "agent",
+        "creator"
+      ],
+      "importance": 5,
+      "rawBody": "Thinky's first full LLM release is a banger and bonus: it's open weights!",
+      "bodyText": "Thinky's first full LLM release is a banger and bonus: it's open weights!",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Latent.Space",
+          "sourceUrl": "https://www.latent.space/p/ainews-thinkys-inkling-975b-a41b",
+          "sourceGrade": "A",
+          "publisher": ""
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 100,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 3,
+        "feature_update": 1,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 100,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1allm / \u6a21\u578b / release / multimodal",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / \u6a21\u578b / multimodal",
+          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "[AINews] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open \u6a21\u578b (\u7ed3\u5408 Inkling-Small, 276B-A12B) [AINews] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open \u6a21\u578b (\u7ed3\u5408 Inkl",
+        "whyItMatters": "[AINews] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open \u6a21\u578b (\u7ed3\u5408 Inkling-Small, 276B-A12B) [AINews] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open \u6a21\u578b (\u7ed3\u5408 Inkl",
+        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "ainews-thinky-s-inkling-975b-a41b-multimodal-new-best-american-apache-2-0-open-m",
       "topRank": 6,
       "isTopStory": true
     },
@@ -2149,43 +2140,42 @@
   ],
   "items": [
     {
-      "title": "Auto-grading decade-old Hacker News discussions with hindsight",
-      "titleZh": "\u3010Andrej Karpathy\u3011Auto-grading decade-old Hacker News discussions \u7ed3\u5408 hindsight",
-      "summary": "Auto-grading decade-old Hacker News discussions with hindsight 10 Dec, 2025 There are two macro reasons for why I think the exercise is interesting more generally: I believe it is quite possible and desirable to train your forward future predictor given training and effort. Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive.",
-      "summaryZh": "\u6765\u6e90\uff1aAndrej Karpathy\u3002\u4e3b\u9898\uff1aAndrej Karpathy\u3001Vibe Coding\u3001\u667a\u80fd\u4f53\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Open letters about AI development",
+      "titleZh": "\u3010Simon Willison\u3011Open letters about AI development",
+      "summary": "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only newsletter but I've decided to share it here as well. Open Weights and American AI Leadership was shepherded by Microsoft, dated July 24th, and signed by 235 AI-adjacent companies including NVIDIA, Amazon, Y Combinator, The Linux Foundation and (a later signer) OpenAI.",
+      "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive.",
-        "Package up everything into a markdown prompt asking for the analysis.",
-        "A few example threads just for fun: December 11 2015 original announcement of OpenAI :')."
+        "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only newsletter but I've decided to share it here as well.",
+        "Relying solely on closed models is not inherently safe: they can be breached, misused, or fail in ways that outsiders cannot detect.",
+        "And concentrating advanced AI capabilities behind a small number of closed models compounds that risk."
       ],
       "keyPointsZh": [
-        "Vibe \u7f16\u7a0b the actual project was relatively painless \u4ee5\u53ca took about 3 hours \u7ed3\u5408 Opus 4.5, \u7ed3\u5408 a few hickups but overall very impressive.",
-        "Package up everything into a markdown \u63d0\u793a\u8bcd asking \u9762\u5411 the analysis.",
-        "A few example threads just \u9762\u5411 fun: December 11 2015 original announcement of OpenAI :')."
+        "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only \u901a\u8baf but I've decided to share it here as well.",
+        "Relying solely on closed \u6a21\u578b is not inherently safe: they can be breached, misused, or fail in ways that outsiders cannot detect.",
+        "\u4ee5\u53ca concentrating advanced AI capabilities behind a small number of closed \u6a21\u578b compounds that risk."
       ],
       "imageUrl": "",
       "date": "2026-08-02",
-      "sourceName": "Andrej Karpathy",
+      "sourceName": "Simon Willison",
       "publisher": "",
-      "sourceUrl": "https://karpathy.bearblog.dev/auto-grade-hn/",
+      "sourceUrl": "https://simonwillison.net/2026/Aug/2/open-letters/#atom-everything",
       "sourceGrade": "A",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "contentType": "article",
       "readingScore": 100,
       "tags": [
-        "Andrej Karpathy",
-        "vibecoding",
-        "agent",
+        "Simon Willison",
+        "llm-engineering",
         "creator"
       ],
       "importance": 5,
-      "rawBody": "A vibe coding thought exercise on what it might look like for LLMs to scour human historical data at scale and in retrospect.",
-      "bodyText": "Auto-grading decade-old Hacker News discussions with hindsight 10 Dec, 2025 There are two macro reasons for why I think the exercise is interesting more generally: I believe it is quite possible and desirable to train your forward future predictor given training and effort. Vibe coding the actual project was relatively painless and took about 3 hours with Opus 4.5, with a few hickups but overall very impressive. The repository is on GitHub here: karpathy/hn-time-capsule . Here is the progression of what the code does: Given a date, download the frontpage of 30 articles For each article, download/parse the article itself and the full comment thread using Algolia API. Package up everything into a markdown prompt asking for the analysis. Here is the prompt prefix I used: Render the results into static HTML web pages for easy viewing Host the html result pages on my website: https://karpathy.ai/hncapsule/ Host all the intermediate results of the data directory if someone else would like to play. It's the file data.zip under the exact same url prefix (intentionally avoiding a direct link). I spent a few hours browsing around and found it to be very interesting. A few example threads just for fun: December 11 2015 original announcement of OpenAI :'). December 22 2015 SpaceX launch webcast: Orbcomm-2 Mission My code (wait, Opus' code?) on GitHub can be used to reproduce or tweak the results. Running 31 days of 30 articles through GPT 5.1 Thinking meant 31 * 30 = 930 LLM queries and cost about $58 and somewhere around ~1 hour. The LLM megaminds of the future might find this kind of a thing a lot easier, a lot faster and a lot cheaper.",
-      "contentFetched": true,
+      "rawBody": "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only newsletter but I've decided to share it here as well. Open Weights and American AI Leadership was shepherded by Microsoft, dated July 24th, and signed by 235 AI-adjacent companies including NVIDIA, Amazon, Y Combinator, The Linux Foundation and (a later signer) OpenAI. It's clearly an argument designed to counter any instincts by the current US government to ban or limit open weight models over \"safety\" concerns - a reasonable consideration given what happened to Claude Fable 5 ! Relying solely on closed models is not inherently safe: they can be breached, misused, or fail in ways that outsiders cannot detect. And concentrating advanced AI capabilities behind a small number of closed models compounds that risk. It results in a small number of single points of failure, weakens competition, and leaves critical technology in the hands of a few providers. Open weight models, on the other hand, allow a broad community of researchers and developers to examine their behavior, identify vulnerabilities, develop safeguards, and improve them over time. The one surprising note in the letter is that it comes out in support of distillation, where models train on output from other models: In shaping this ecosystem, policymakers should be careful not to conflate legitimate model-development techniques with misappropriation. Distillation, or the practice of using one model\u2019s outputs to help train or improve another, is a widely used technique for model improvement, evaluation, and validation. It reflects a long tradition of learning from, building upon, and improving existing technologies, a tradition that has helped drive innovation since the rise of the open-source software movement. Notably absent from the signatures: Anthropic, who published their own response Our position on open-weights models three days later. CEO Dario Amodei doubled down on the risk of authoritarian governments building \"AI models that are more powerful than those built by the US\", and models being \"misused to carry out cyberattacks or biological attacks\", and called for \"a crack down on industrial-scale distillation operations \", while also stating that \"Anthropic has never advocated for a ban on open-weights models\". Then on July 28th Pacing the Frontier was published, featuring signatures from \"1,324 employees of frontier AI companies\" - with names like Jakub Pachocki (Chief Scientist, OpenAI), Ilya Sutskever (Safe Superintelligence Inc, previously OpenAI), Dario Amodei (Anthropic), Jack Clark (Anthropic) and more. Their core message: We request that the U.S. government support an international effort to develop the technical and governance tools needed to deliberately pace the frontier of automated AI development. Their concern is intense competitive pressure combined with accelerated AI progress caused by automated AI research - and given that Anthropic produce 80% of their code with Claude Code , OpenAI had Sol reduce their end-to-end serving costs by 20% , and Kimi K3 designed a chip to serve a nano model built on its own architecture , you can see why people are taking that risk more seriously right now. Tags: anthropic , generative-ai , openai , ai , llms , ai-ethics",
+      "bodyText": "Open letters about AI development I wrote this summary of the past few weeks of open letters as a section of my sponsors-only newsletter but I've decided to share it here as well. Open Weights and American AI Leadership was shepherded by Microsoft, dated July 24th, and signed by 235 AI-adjacent companies including NVIDIA, Amazon, Y Combinator, The Linux Foundation and (a later signer) OpenAI. It's clearly an argument designed to counter any instincts by the current US government to ban or limit open weight models over \"safety\" concerns - a reasonable consideration given what happened to Claude Fable 5 ! Relying solely on closed models is not inherently safe: they can be breached, misused, or fail in ways that outsiders cannot detect. And concentrating advanced AI capabilities behind a small number of closed models compounds that risk. It results in a small number of single points of failure, weakens competition, and leaves critical technology in the hands of a few providers. Open weight models, on the other hand, allow a broad community of researchers and developers to examine their behavior, identify vulnerabilities, develop safeguards, and improve them over time. The one surprising note in the letter is that it comes out in support of distillation, where models train on output from other models: In shaping this ecosystem, policymakers should be careful not to conflate legitimate model-development techniques with misappropriation. Distillation, or the practice of using one model\u2019s outputs to help train or improve another, is a widely used technique for model improvement, evaluation, and validation. It reflects a long tradition of learning from, building upon, and improving existing technologies, a tradition that has helped drive innovation since the rise of the open-source software movement. Notably absent from the signatures: Anthropic, who published their own response Our position on open-weights models three days later. CEO Dario Amodei doubled down on the risk of authoritarian governments building \"AI models that are more powerful than those built by the US\", and models being \"misused to carry out cyberattacks or biological attacks\", and called for \"a crack down on industrial-scale distillation operations \", while also stating that \"Anthropic has never advocated for a ban on open-weights models\". Then on July 28th Pacing the Frontier was published, featuring signatures from \"1,324 employees of frontier AI companies\" - with names like Jakub Pachocki (Chief Scientist, OpenAI), Ilya Sutskever (Safe Superintelligence Inc, previously OpenAI), Dario Amodei (Anthropic), Jack Clark (Anthropic) and more. Their core message: We request that the U.S. government support an international effort to develop the technical and governance tools needed to deliberately pace the frontier of automated AI development. Their concern is intense competitive pressure combined with accelerated AI progress caused by automated AI research - and given that Anthropic produce 80% of their code with Claude Code , OpenAI had Sol reduce their end-to-end serving costs by 20% , and Kimi K3 designed a chip to serve a nano model built on its own architecture , you can see why people are taking that risk more seriously right now. Tags: anthropic , generative-ai , openai , ai , llms , ai-ethics",
+      "contentFetched": false,
       "relatedSources": [
         {
-          "sourceName": "Andrej Karpathy",
-          "sourceUrl": "https://karpathy.bearblog.dev/auto-grade-hn/",
+          "sourceName": "Simon Willison",
+          "sourceUrl": "https://simonwillison.net/2026/Aug/2/open-letters/#atom-everything",
           "sourceGrade": "A",
           "publisher": ""
         }
@@ -2196,8 +2186,8 @@
       "qualityType": "technical_update",
       "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 4,
-        "feature_update": 2,
+        "technical_update": 8,
+        "feature_update": 0,
         "application_method": 2
       },
       "lowValueSignals": 0,
@@ -2209,22 +2199,98 @@
         "isTopEligible": true,
         "reasons": [
           "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aanalysis / \u63d0\u793a\u8bcd / vibe coding / \u7f16\u7a0b",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / gpt / \u63d0\u793a\u8bcd",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aarchitecture / evaluation / eval / \u6a21\u578b",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1aclaude / \u6a21\u578b / \u6a21\u578b",
           "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
         ],
         "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Here is the progression of what the code does: Given a date, download the frontpage of 30 articles \u9762\u5411 each article, download/parse the article itself \u4ee5\u53ca the full comment thread using Algolia API.",
-        "whyItMatters": "Vibe \u7f16\u7a0b the actual project was relatively painless \u4ee5\u53ca took about 3 hours \u7ed3\u5408 Opus 4.5, \u7ed3\u5408 a few hickups but overall very impressive.",
+        "whatHappened": "It's clearly an argument designed to counter any instincts by the current US government to ban or limit open weight \u6a21\u578b over \"safety\" concerns - a reasonable consideration given what happened to Claude Fable 5 !",
+        "whyItMatters": "Open weight \u6a21\u578b, on the other hand, allow a broad community of researchers \u4ee5\u53ca developers to examine their behavior, identify vulnerabilities, develop safeguards, \u4ee5\u53ca improve them over time.",
         "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "auto-grading-decade-old-hacker-news-discussions-hindsight",
+      "eventId": "open-letters-about-development",
       "topRank": 1,
+      "isTopStory": true
+    },
+    {
+      "title": "July 2026 newsletter",
+      "titleZh": "\u3010Simon Willison\u3011July 2026 \u901a\u8baf",
+      "summary": "The June edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here .",
+      "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Accidental cyberattacks by OpenAl and Anthropic models under test Here's a copy of the June newsletter as a preview of what you'll get.",
+        "Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments."
+      ],
+      "keyPointsZh": [
+        "Accidental cyberattacks by OpenAl \u4ee5\u53ca Anthropic \u6a21\u578b under test Here's a copy of the June \u901a\u8baf as a preview of what you'll get.",
+        "Sponsor me \u9762\u5411 $10/month \u4ee5\u53ca get a curated email digest of the month's most important LLM developments."
+      ],
+      "imageUrl": "",
+      "date": "2026-08-02",
+      "sourceName": "Simon Willison",
+      "publisher": "",
+      "sourceUrl": "https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything",
+      "sourceGrade": "A",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 100,
+      "tags": [
+        "Simon Willison",
+        "llm-engineering",
+        "creator"
+      ],
+      "importance": 5,
+      "rawBody": "The June edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here . This month: Accidental cyberattacks by OpenAl and Anthropic models under test GPT-5.6 Sol, Terra, and Luna Claude Opus 5 Kimi K3 and DeepSeek-V4-Flash-0731 Open letters about Al development A fireside chat and a podcast Reigniting my interest in MCP Other model releases My projects What I'm using at the moment Here's a copy of the June newsletter as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy! Tags: newsletter",
+      "bodyText": "The June edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here . Accidental cyberattacks by OpenAl and Anthropic models under test Here's a copy of the June newsletter as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy! Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp) - 31st July 2026 OpenAI\u2019s accidental cyberattack against Hugging Face is science fiction that happened - 22nd July 2026 A Fireside Chat with Cat and Thariq from the Claude Code team - 21st July 2026 This is a note by Simon Willison, posted on 2nd August 2026 . Sponsor me for $10/month and get a curated email digest of the month's most important LLM developments.",
+      "contentFetched": true,
+      "relatedSources": [
+        {
+          "sourceName": "Simon Willison",
+          "sourceUrl": "https://simonwillison.net/2026/Aug/2/july-newsletter/#atom-everything",
+          "sourceGrade": "A",
+          "publisher": ""
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 100,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 3,
+        "feature_update": 1,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 100,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / \u6a21\u578b / AI / claude",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1aclaude / \u6a21\u578b / \u6a21\u578b",
+          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Accidental cyberattacks by OpenAl \u4ee5\u53ca Anthropic \u6a21\u578b under test Here's a copy of the June \u901a\u8baf as a preview of what you'll get.",
+        "whyItMatters": "July 2026 \u901a\u8baf The June edition of my sponsors-only monthly \u901a\u8baf is out.",
+        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "july-2026-newsletter",
+      "topRank": 2,
       "isTopStory": true
     },
     {
@@ -2301,9 +2367,7 @@
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "ten-advances-mathematics-theoretical-computer-science",
-      "topRank": 2,
-      "isTopStory": true
+      "eventId": "ten-advances-mathematics-theoretical-computer-science"
     },
     {
       "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
@@ -2379,9 +2443,7 @@
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "deepseek-deepseek-v4-flash-0731",
-      "topRank": 3,
-      "isTopStory": true
+      "eventId": "deepseek-deepseek-v4-flash-0731"
     },
     {
       "title": "Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)",
@@ -3442,42 +3504,42 @@
       "eventId": "inside-look-at-relay-market-powering-token-resellers-fraud"
     },
     {
-      "title": "Ruff v0.16.0",
-      "titleZh": "\u3010Simon Willison\u3011Ruff v0.16.0",
-      "summary": "Ruff v0.16.0 Astral shipped a significant new version of their Ruff Python linting tool a few days ago on July 23rd. I noticed today because my various CI jobs all started failing thanks to new default Ruff checks and my unpinned \"ruff\" dev dependency.",
-      "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001llm-engineering\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Latest open artifacts (#23): Laguna S2.1, Inkling, & Kimi K3 show the utility of open models on the Pareto frontier",
+      "titleZh": "\u3010Interconnects\u3011Latest open artifacts (#23): Laguna S2.1, Inkling, & Kimi K3 show the utility of open \u6a21\u578b on the Pareto frontier",
+      "summary": "The demand for tokens is incredibly high, and likely to increase as models get more efficient and unlock more possible use cases. All of these labs we thought would need to consolidate are realizing that building token machines is a likely path to value, and more companies will identify that source of value over time.",
+      "summaryZh": "\u6765\u6e90\uff1aInterconnects\u3002\u4e3b\u9898\uff1aNathan Lambert\u3001\u7814\u7a76\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "I noticed today because my various CI jobs all started failing thanks to new default Ruff checks and my unpinned \"ruff\" dev dependency.",
-        "I ran the latest Ruff against my three biggest projects - Datasette , sqlite-utils , and LLM - and it found hundreds of minor issues that breached the new default rules.",
-        "All three projects have very comprehensive test suites, executed in CI against Python 3.10 through Python 3.14, so upgrades like this are pretty safe."
+        "The demand for tokens is incredibly high, and likely to increase as models get more efficient and unlock more possible use cases.",
+        "Now their open model finetuning service is making hundreds of millions in revenue per year and they\u2019re releasing the best open-weight models built in the U.S.A.",
+        "This is one of the most packed recaps of open models we\u2019ve ever had, we\u2019re excited!"
       ],
       "keyPointsZh": [
-        "I noticed today because my various CI jobs all started failing thanks to new default Ruff checks \u4ee5\u53ca my unpinned \"ruff\" dev dependency.",
-        "I ran the latest Ruff against my three biggest projects - Datasette , sqlite-utils , \u4ee5\u53ca LLM - \u4ee5\u53ca it found hundreds of minor issues that breached the new default rules.",
-        "\u82e5\u8981\u505a\u51b3\u7b56\u6216\u6df1\u5ea6\u5b66\u4e60\uff0c\u5efa\u8bae\u70b9\u51fb\u539f\u6587\u6838\u9a8c\u5b8c\u6574\u8bed\u5883\u3002"
+        "The demand \u9762\u5411 tokens is incredibly high, \u4ee5\u53ca likely to increase as \u6a21\u578b get more efficient \u4ee5\u53ca unlock more possible use cases.",
+        "Now their open \u6a21\u578b finetuning service is making hundreds of millions in revenue per year \u4ee5\u53ca they\u2019re releasing the best open-weight \u6a21\u578b built in the U.S.A.",
+        "This is one of the most packed recaps of open \u6a21\u578b we\u2019ve ever had, we\u2019re excited!"
       ],
-      "imageUrl": "",
+      "imageUrl": "https://substackcdn.com/image/fetch/$s_!RSM6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7a71a4f9-5ac5-447e-82ff-899915627512_2048x1152.jpeg",
       "date": "2026-08-02",
-      "sourceName": "Simon Willison",
+      "sourceName": "Interconnects",
       "publisher": "",
-      "sourceUrl": "https://simonwillison.net/2026/Jul/25/ruff/#atom-everything",
+      "sourceUrl": "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21",
       "sourceGrade": "A",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "contentType": "article",
       "readingScore": 100,
       "tags": [
-        "Simon Willison",
-        "llm-engineering",
+        "Nathan Lambert",
+        "research",
         "creator"
       ],
       "importance": 5,
-      "rawBody": "Ruff v0.16.0 Astral shipped a significant new version of their Ruff Python linting tool a few days ago on July 23rd. I noticed today because my various CI jobs all started failing thanks to new default Ruff checks and my unpinned \"ruff\" dev dependency. From Brent Westbrook's announcement post: Ruff now enables 413 rules by default, up from 59 in previous versions. Since Ruff's default rule set was last modified in v0.1.0 , the number of rules in Ruff has grown from 708 to 968. Many of these rules catch severe issues, including syntax errors and immediate runtime errors but were not previously enabled by default. With the new rule set, Ruff will bring these issues and many others to your attention without any Ruff configuration. Here's a one-liner for trying it on any Python project: uvx ruff@latest check . I ran the latest Ruff against my three biggest projects - Datasette , sqlite-utils , and LLM - and it found hundreds of minor issues that breached the new default rules. All three projects have very comprehensive test suites, executed in CI against Python 3.10 through Python 3.14, so upgrades like this are pretty safe. The following command did the bulk of the upgrades: uvx ruff@latest check . --fix --unsafe-fixes Against sqlite-utils , that command reported: Found 1618 errors (1538 fixed, 80 remaining). As an illustrative example, here are three of the remaining issues. Ruff does a nice job of explaining each one: DTZ005 `datetime.datetime.now()` called without a `tz` argument --> tests/test_duplicate.py:17:10 | 15 | \"datetime_col\" TEXT)\"\"\") 16 | # Insert one row of mock data: 17 | dt = datetime.datetime.now() | ^^^^^^^^^^^^^^^^^^^^^^^ 18 | data = { 19 | \"text_col\": \"Cleo\", | help: Pass a `datetime.timezone` object to the `tz` parameter BLE001 Do not catch blind exception: `Exception` --> tests/test_plugins.py:16:12 | 14 | db.execute(\"select * from pragma_function_list()\") 15 | return True 16 | except Exception: | ^^^^^^^^^ 17 | return False 18 | finally: | B018 Found useless attribute access. Either assign it to a variable or remove it. --> tests/test_update.py:46:5 | 44 | def test_update_invalid_pk(fresh_db, pk, update_pk): 45 | table = fresh_db[\"table\"] 46 | table.insert({\"id1\": 5, \"id2\": 3, \"v\": 1}, pk=pk).last_pk | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 47 | with pytest.raises(NotFoundError): 48 | table.update(update_pk, {\"v\": 2}) | Unsurprisingly, given Astral's new home at OpenAI , this output provides everything a coding agent would need to fix the problems. I had Codex (GPT-5.6 Sol high) upgrade LLM and sqlite-utils , and Claude Code (with Opus 5) upgrade Datasette . Tags: python , ruff , astral",
-      "bodyText": "Ruff v0.16.0 Astral shipped a significant new version of their Ruff Python linting tool a few days ago on July 23rd. I noticed today because my various CI jobs all started failing thanks to new default Ruff checks and my unpinned \"ruff\" dev dependency. From Brent Westbrook's announcement post: Ruff now enables 413 rules by default, up from 59 in previous versions. Since Ruff's default rule set was last modified in v0.1.0 , the number of rules in Ruff has grown from 708 to 968. Many of these rules catch severe issues, including syntax errors and immediate runtime errors but were not previously enabled by default. With the new rule set, Ruff will bring these issues and many others to your attention without any Ruff configuration. Here's a one-liner for trying it on any Python project: uvx ruff@latest check . I ran the latest Ruff against my three biggest projects - Datasette , sqlite-utils , and LLM - and it found hundreds of minor issues that breached the new default rules. All three projects have very comprehensive test suites, executed in CI against Python 3.10 through Python 3.14, so upgrades like this are pretty safe. The following command did the bulk of the upgrades: uvx ruff@latest check . --fix --unsafe-fixes Against sqlite-utils , that command reported: Found 1618 errors (1538 fixed, 80 remaining). As an illustrative example, here are three of the remaining issues. Ruff does a nice job of explaining each one: DTZ005 `datetime.datetime.now()` called without a `tz` argument --> tests/test_duplicate.py:17:10 | 15 | \"datetime_col\" TEXT)\"\"\") 16 | # Insert one row of mock data: 17 | dt = datetime.datetime.now() | ^^^^^^^^^^^^^^^^^^^^^^^ 18 | data = { 19 | \"text_col\": \"Cleo\", | help: Pass a `datetime.timezone` object to the `tz` parameter BLE001 Do not catch blind exception: `Exception` --> tests/test_plugins.py:16:12 | 14 | db.execute(\"select * from pragma_function_list()\") 15 | return True 16 | except Exception: | ^^^^^^^^^ 17 | return False 18 | finally: | B018 Found useless attribute access. Either assign it to a variable or remove it. --> tests/test_update.py:46:5 | 44 | def test_update_invalid_pk(fresh_db, pk, update_pk): 45 | table = fresh_db[\"table\"] 46 | table.insert({\"id1\": 5, \"id2\": 3, \"v\": 1}, pk=pk).last_pk | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 47 | with pytest.raises(NotFoundError): 48 | table.update(update_pk, {\"v\": 2}) | Unsurprisingly, given Astral's new home at OpenAI , this output provides everything a coding agent would need to fix the problems. I had Codex (GPT-5.6 Sol high) upgrade LLM and sqlite-utils , and Claude Code (with Opus 5) upgrade Datasette . Tags: python , ruff , astral",
-      "contentFetched": false,
+      "rawBody": "Capacity to train strong models is proliferating.",
+      "bodyText": "The demand for tokens is incredibly high, and likely to increase as models get more efficient and unlock more possible use cases. All of these labs we thought would need to consolidate are realizing that building token machines is a likely path to value, and more companies will identify that source of value over time. The prime example is Thinking Machines \u2014 when they announced their company in February 2025, very few people would\u2019ve put them in the bucket of an open models company, myself included. Now their open model finetuning service is making hundreds of millions in revenue per year and they\u2019re releasing the best open-weight models built in the U.S.A. \u2014 ahead of the early leaders in NVIDIA with Nemotron and Arcee\u2019s Trilogy. This is one of the most packed recaps of open models we\u2019ve ever had, we\u2019re excited! But if a US company needs a contract with Moonshot to provide the inference tokens that Kimi K3 generates, the picture looks different. Some of the policy tools US officials and others have debated as potential levers to restrict Chinese open model use would more clearly apply. LongCat-2.0 by meituan-longcat : The Chinese DoorDash is back again. This time, the company released another big MoE with 1.6T parameters. While the model itself is not the most capable for its size beyond benchmarks, it was trained entirely on Ascend 910s, making it the first non-Huawei, non-toy model trained entirely on Chinese accelerators. Other Chinese chips are mostly used for inference (if at all). Laguna-XS-2.1 by poolside : An update to the small (33B-A3B) MoE from Poolside. Motif-3-Beta by Motif-Technologies : A preview of a 314B-A13B MoE by the Korean Motif. This is by far the company\u2019s most ambitious model, as it is considerably larger and introduces some architectural innovations like GDLA and mHC. Apertus-v1.5-70B by swiss-ai : A continued pre-train of the fully open-source Apertus 1.0, using 2T more tokens. Instella-MoE-16B-A3B-Think by amd : A 16B-A3B MoE trained by AMD on Instinct cards. AMD also provides all the different stages, from the base to the SFT checkpoints, as well as MidTrain and DPO .",
+      "contentFetched": true,
       "relatedSources": [
         {
-          "sourceName": "Simon Willison",
-          "sourceUrl": "https://simonwillison.net/2026/Jul/25/ruff/#atom-everything",
+          "sourceName": "Interconnects",
+          "sourceUrl": "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21",
           "sourceGrade": "A",
           "publisher": ""
         }
@@ -3485,14 +3547,14 @@
       "sourceCount": 1,
       "aggregatedEvent": false,
       "qualityScore": 100,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualityType": "feature_update",
+      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 5,
-        "feature_update": 2,
-        "application_method": 0
+        "technical_update": 4,
+        "feature_update": 5,
+        "application_method": 3
       },
-      "lowValueSignals": 1,
+      "lowValueSignals": 0,
       "titleLowValue": false,
       "qualityReview": {
         "score": 100,
@@ -3501,23 +3563,23 @@
         "isTopEligible": true,
         "reasons": [
           "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u7f16\u7a0b / llm / rag",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / gpt / claude",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1abenchmark / \u6a21\u578b / \u6a21\u578b / release",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b / \u6a21\u578b / benchmark",
           "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
         ],
-        "penalties": [
-          "\u5305\u542b\u666e\u901a\u901a\u77e5/\u5f31\u4ef7\u503c\u4fe1\u53f7"
-        ],
+        "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "\u6765\u81ea Brent Westbrook's announcement post: Ruff now enables 413 rules by default, up \u6765\u81ea 59 in previous versions.",
-        "whyItMatters": "--> tests/test_update.py:46:5 | 44 | def test_update_invalid_pk(fresh_db, pk, update_pk): 45 | table = fresh_db[\"table\"] 46 | table.insert({\"id1\": 5, \"id2\": 3, \"v\": 1}, pk=pk).last_pk | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "whatHappened": "Latest open artifacts (#23): Laguna S2.1, Inkling, & Kimi K3 show the utility of open \u6a21\u578b on the Pareto frontier The demand \u9762\u5411 tokens is incredibly high, \u4ee5\u53ca likely to increase as \u6a21\u578b get more efficient \u4ee5\u53ca unlock",
+        "whyItMatters": "Latest open artifacts (#23): Laguna S2.1, Inkling, & Kimi K3 show the utility of open \u6a21\u578b on the Pareto frontier The demand \u9762\u5411 tokens is incredibly high, \u4ee5\u53ca likely to increase as \u6a21\u578b get more efficient \u4ee5\u53ca unlock",
         "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "simon-willison-ruff-v0-16-0"
+      "eventId": "latest-open-artifacts-23-laguna-s2-1-inkling-kimi-k3-show-utility-open-models-pa",
+      "topRank": 3,
+      "isTopStory": true
     },
     {
       "title": "datasette-apps 0.2a0",
@@ -3817,84 +3879,77 @@
       "eventId": "adding-custom-mcp-server-claude-chatgpt"
     },
     {
-      "title": "[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization",
-      "titleZh": "\u3010Latent.Space\u3011[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization",
-      "summary": "One of our big \u201chero charts\u201d a year ago (eventually adopted by Demis ) made the stunning observation that, holding LMSys Elo constant, GPT4 level intelligence fell by 1000x over 18 months : Back then, it was unclear if these were \u201cnoob gains\u201d - going from unoptimized to optimized, going from completions to reasoning, going from dense to MoE, with all the low hanging fruit gone. Another 18 months later, it seems the a",
-      "summaryZh": "\u6765\u6e90\uff1aLatent.Space\u3002\u4e3b\u9898\uff1aswyx\u3001\u667a\u80fd\u4f53\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Auto-grading decade-old Hacker News discussions with hindsight",
+      "titleZh": "\u3010Andrej Karpathy\u3011Auto-grading decade-old Hacker News discussions \u7ed3\u5408 hindsight",
+      "summary": "A vibe coding thought exercise on what it might look like for LLMs to scour human historical data at scale and in retrospect.",
+      "summaryZh": "\u6765\u6e90\uff1aAndrej Karpathy\u3002\u4e3b\u9898\uff1aAndrej Karpathy\u3001Vibe Coding\u3001\u667a\u80fd\u4f53\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Prompt Caching: To avoid reprocessing the same instructions and history repeatedly, the harness treats all model-visible history as append-only.",
-        "This preserves the prompt prefix, allowing the system to reuse previously computed data and maintain a high cache hit rate.",
-        "In other words, roughly four months later, OpenAI is selling March\u2019s full flagship intelligence at about one-thirteenth the token price ."
+        "A vibe coding thought exercise on what it might look like for LLMs to scour human historical data at scale and in retrospect."
       ],
       "keyPointsZh": [
-        "\u63d0\u793a\u8bcd Caching: To avoid reprocessing the same instructions \u4ee5\u53ca history repeatedly, the harness treats all \u6a21\u578b-visible history as append-only.",
-        "This preserves the \u63d0\u793a\u8bcd prefix, allowing the system to reuse previously computed data \u4ee5\u53ca maintain a high cache hit rate.",
-        "\u82e5\u8981\u505a\u51b3\u7b56\u6216\u6df1\u5ea6\u5b66\u4e60\uff0c\u5efa\u8bae\u70b9\u51fb\u539f\u6587\u6838\u9a8c\u5b8c\u6574\u8bed\u5883\u3002"
+        "A vibe \u7f16\u7a0b thought exercise on what it might look like \u9762\u5411 LLMs to scour human historical data at scale \u4ee5\u53ca in retrospect."
       ],
-      "imageUrl": "https://substackcdn.com/image/fetch/$s_!gT87!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fmedia%2FHOfg3rSWsAACTkR.png",
-      "date": "2026-07-31",
-      "sourceName": "Latent.Space",
+      "imageUrl": "",
+      "date": "2026-08-02",
+      "sourceName": "Andrej Karpathy",
       "publisher": "",
-      "sourceUrl": "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
+      "sourceUrl": "https://karpathy.bearblog.dev/auto-grade-hn/",
       "sourceGrade": "A",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "contentType": "article",
       "readingScore": 100,
       "tags": [
-        "swyx",
+        "Andrej Karpathy",
+        "vibecoding",
         "agent",
         "creator"
       ],
       "importance": 5,
-      "rawBody": "Distillation is all you need!",
-      "bodyText": "One of our big \u201chero charts\u201d a year ago (eventually adopted by Demis ) made the stunning observation that, holding LMSys Elo constant, GPT4 level intelligence fell by 1000x over 18 months : Back then, it was unclear if these were \u201cnoob gains\u201d - going from unoptimized to optimized, going from completions to reasoning, going from dense to MoE, with all the low hanging fruit gone. Another 18 months later, it seems the answer is no; constant-level intelligence is continuing to get precipitously cheaper. Yesterday, OpenAI published findings on how GPT 5.6 had optimized its own serving: To serve more tokens on the same hardware without sacrificing quality, OpenAI focused on several systemic upgrades: Self-Optimization: GPT-5.6 Sol was actively used to analyze production traffic, tune load balancing, and autonomously rewrite production kernels in OpenAI\u2019s own Triton and Gluon languages. This autonomous kernel optimization reduced end-to-end serving costs by 20%. Speculative Decoding: Improved its own draft model (by designing and running hundreds of experiments on its architecture, testing changes in size, structure, and features, while monitoring the speculator training process, autonomously intervening when issues arose, including hardware failures and training instability) increasing token-generation efficiency by over 15%. KV Caching: Optimized batching, sharding, and cache management specific to different workloads (primarily Sol in Codex) to extract more inference from existing hardware. To streamline the complex, multi-step tasks in tools like Codex and ChatGPT Work, OpenAI optimized their Rust orchestration layer to reduce repetitive compute costs: Avoiding Context Bloat: Tools, skills, and plugins are only surfaced when needed (deferred discovery), and tool outputs are capped at 10,000 tokens by default to prevent the context window from expanding unnecessarily. Prompt Caching: To avoid reprocessing the same instructions and history repeatedly, the harness treats all model-visible history as append-only. This preserves the prompt prefix, allowing the system to reuse previously computed data and maintain a high cache hit rate. Today, they proved it wasn\u2019t just theory, announcing large price cuts for the smaller models and a new 2.5x Faster mode in Sol (though not the hinted 10x faster Cerebras-driven mode promised in July): Good, but what is truly jaw dropping is Nicdunz\u2019s observation : GPT-5.4 full at xhigh scored 51, exactly where Luna max sits today . GPT-5.4 costs $2.50/$15; Luna now costs $0.20/$1.20. In other words, roughly four months later, OpenAI is selling March\u2019s full flagship intelligence at about one-thirteenth the token price . AI News for 7/29/2026-7/30/2026. We checked 12 subreddits, 544 Twitters and no further Discords. AINews\u2019 website lets you search all past issues. As a reminder, AINews is now a section of Latent Space . You can opt in/out of email frequencies! OpenAI Pricing Cuts, Harness Semantics, and the ARC-AGI-3 Memory Debate Thinking Machines\u2019 Inkling-Small and the Continuing Open-Weights Push",
-      "contentFetched": true,
+      "rawBody": "A vibe coding thought exercise on what it might look like for LLMs to scour human historical data at scale and in retrospect.",
+      "bodyText": "A vibe coding thought exercise on what it might look like for LLMs to scour human historical data at scale and in retrospect.",
+      "contentFetched": false,
       "relatedSources": [
         {
-          "sourceName": "Latent.Space",
-          "sourceUrl": "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
+          "sourceName": "Andrej Karpathy",
+          "sourceUrl": "https://karpathy.bearblog.dev/auto-grade-hn/",
           "sourceGrade": "A",
           "publisher": ""
         }
       ],
       "sourceCount": 1,
       "aggregatedEvent": false,
-      "qualityScore": 100,
+      "qualityScore": 72,
       "qualityType": "technical_update",
       "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 10,
-        "feature_update": 2,
+        "technical_update": 1,
+        "feature_update": 0,
         "application_method": 1
       },
-      "lowValueSignals": 1,
+      "lowValueSignals": 0,
       "titleLowValue": false,
       "qualityReview": {
-        "score": 100,
-        "tier": "top",
+        "score": 72,
+        "tier": "default",
         "isDefaultVisible": true,
-        "isTopEligible": true,
+        "isTopEligible": false,
         "reasons": [
           "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aarchitecture / \u63d0\u793a\u8bcd / \u7f16\u7a0b / \u6a21\u578b",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agpt / codex / \u63d0\u793a\u8bcd",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1avibe coding / \u7f16\u7a0b / llm / llm",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / vibe coding",
           "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
         ],
-        "penalties": [
-          "\u5305\u542b\u666e\u901a\u901a\u77e5/\u5f31\u4ef7\u503c\u4fe1\u53f7"
-        ],
+        "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Speculative Decoding: Improved its own draft \u6a21\u578b (by designing \u4ee5\u53ca running hundreds of experiments on its architecture, testing changes in size, structure, \u4ee5\u53ca features, while monitoring the speculator \u8bad\u7ec3 process",
-        "whyItMatters": "[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization One of our big \u201chero charts\u201d a year ago (eventually adopted by Demis ) made the stunn",
+        "whatHappened": "Auto-grading decade-old Hacker News discussions \u7ed3\u5408 hindsight A vibe \u7f16\u7a0b thought exercise on what it might look like \u9762\u5411 LLMs to scour human historical data at scale \u4ee5\u53ca in retrospect.",
+        "whyItMatters": "Auto-grading decade-old Hacker News discussions \u7ed3\u5408 hindsight A vibe \u7f16\u7a0b thought exercise on what it might look like \u9762\u5411 LLMs to scour human historical data at scale \u4ee5\u53ca in retrospect.",
         "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "ainews-gpt-5-6-price-cut-20-80-cost-gpt-5-4-intelligence-dropped-13x-4-months-du",
-      "topRank": 4,
-      "isTopStory": true
+      "eventId": "auto-grading-decade-old-hacker-news-discussions-hindsight"
     },
     {
       "title": "7 Types of AI Agents to Automate Your Workflows in 2026",
@@ -3902,15 +3957,15 @@
       "summary": "7 Types of AI Agents to Automate Your Workflows in 2026 from Enterprise Agents. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aEnterprise Agents\u3002\u4e3b\u9898\uff1a\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u30027 Types of AI \u667a\u80fd\u4f53 to Automate Your Workflows in 2026 \u6765\u81ea \u4f01\u4e1a\u5e94\u7528 \u667a\u80fd\u4f53. Useful \u9762\u5411 deciding whether the original article deserves a deeper read.\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "7 Types of AI Agents to Automate Your Workflows in 2026 reply.com"
+        "7 Types of AI Agents to Automate Your Workflows in 2026 Reply"
       ],
       "keyPointsZh": [
-        "7 Types of AI \u667a\u80fd\u4f53 to Automate Your Workflows in 2026 reply.com"
+        "7 Types of AI \u667a\u80fd\u4f53 to Automate Your Workflows in 2026 Reply"
       ],
       "imageUrl": "",
       "date": "2026-07-31",
       "sourceName": "Enterprise Agents",
-      "publisher": "reply.com",
+      "publisher": "Reply",
       "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVU13cjVYWkVGWFBQWmVKckdNcTRTc0pEdXlTNjVHZDE2TlZVZ1N6WndhenhsLXhKb3hCWU9FcnlQN01BWkdadDdRakR4MV83LTR3bXp0b29WWGM2Sjd2elhoWnViXzdIcHNFT1VxcTdfdzg3bkFQMXBmQUJHUFZySW1BanpKM0dqQzhyQ0NtWWl0XzdpX2hxVUpoWk5ScUF0eWZ5amlmb3lTeEZGUUFF?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
@@ -3922,15 +3977,15 @@
         "workflow"
       ],
       "importance": 5,
-      "rawBody": "7 Types of AI Agents to Automate Your Workflows in 2026 reply.com",
-      "bodyText": "7 Types of AI Agents to Automate Your Workflows in 2026 reply.com",
+      "rawBody": "7 Types of AI Agents to Automate Your Workflows in 2026 Reply",
+      "bodyText": "7 Types of AI Agents to Automate Your Workflows in 2026 Reply",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Enterprise Agents",
           "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVU13cjVYWkVGWFBQWmVKckdNcTRTc0pEdXlTNjVHZDE2TlZVZ1N6WndhenhsLXhKb3hCWU9FcnlQN01BWkdadDdRakR4MV83LTR3bXp0b29WWGM2Sjd2elhoWnViXzdIcHNFT1VxcTdfdzg3bkFQMXBmQUJHUFZySW1BanpKM0dqQzhyQ0NtWWl0XzdpX2hxVUpoWk5ScUF0eWZ5amlmb3lTeEZGUUFF?oc=5",
           "sourceGrade": "B",
-          "publisher": "reply.com"
+          "publisher": "Reply"
         }
       ],
       "sourceCount": 1,
@@ -4402,77 +4457,6 @@
       "eventId": "advancing-price-performance-frontier-gpt-5-6"
     },
     {
-      "title": "Cequence Brings Agentic Zero Trust Across MCP, API, and LLM So Every Business Team Can Deploy Agents Without Losing Control",
-      "titleZh": "\u3010Hugging Face\u3011Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy \u667a\u80fd\u4f53 Without Losing Control",
-      "summary": "Cequence Brings Agentic Zero Trust Across MCP, API, and LLM So Every Business Team Can Deploy Agents Without Losing Control The Manila Times",
-      "summaryZh": "\u6765\u6e90\uff1aHugging Face\u3002\u4e3b\u9898\uff1aHugging Face\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Cequence Brings Agentic Zero Trust Across MCP, API, and LLM So Every Business Team Can Deploy Agents Without Losing Control The Manila Times"
-      ],
-      "keyPointsZh": [
-        "Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy \u667a\u80fd\u4f53 Without Losing Control The Manila Times"
-      ],
-      "imageUrl": "",
-      "date": "2026-07-30",
-      "sourceName": "Hugging Face",
-      "publisher": "The Manila Times",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQR2xkdDZQTVd6d0RHN05EQ25lLTh1bUZneUIyRDA4T3UxV3hxTXJ4aGxYSDBXUXhlMnN5ejgzZmg4WnBEWmljREhpOFpQOGw4U0YwRFdLeGdsdnQxbUpzQ0VHZy1XSm5VaVNSZVNBTkxVRl9lQXVHM3RDR3pfMG5jb3A4andsaHZLQUVTdEt2X2sxM21NNEZZWE40SVdHa0xCVC1haWtBcmctVS1Wang0dE5rMzZraHZ5YjRSd2VZY2dOb21JUFAtclJXUG1NS0VwUFRmcWlQVDhLWFRnS1dqdXU5dkUxOHlnalhteGRBV2ZZN0JSbUFtMlhDUGRoTXVPN2ZYMHdpT25FSHpyS2FMTUQ4aVBOQnFoNVlTLTU4REfSAaYCQVVfeXFMT0tmWWVkVE9GWVNzaElxRS13ZFBnWmFNV2dGSjl4VjFfUVAzQ2VmQ3FqeS1iNXg0c091d0NUV1BZT0ZwS0pPcnhfN2hyd0M2b0ZMZWVwM3BZQlhLQWo5Zm00MG1yRU1TRnNHbjA3QWVRdzR1RlpUbEdtMlNNNjE3aUEtVE9TSjVzR3Q2M2xqQzRfTnp2V2ZNTlh5dzI4U3E2b05zMUhpUjEwMnFaZWh4bGZadmVZbEtRUUxTQllGaW5aUnNrbHB1OHFVa0ZiUVRSdlo2N3RrVHhLNDJPUUY3TUhXd0NTM29OZlNwa3ZneFYzS0VKUVRTUkxuaWNHajAwUmNFMjFiTThGcllkbU5zbEZ1ZllKUkl5cklzTXFOaTNjUXFWNDZB?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 89,
-      "tags": [
-        "Hugging Face",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Cequence Brings Agentic Zero Trust Across MCP, API, and LLM So Every Business Team Can Deploy Agents Without Losing Control The Manila Times",
-      "bodyText": "Cequence Brings Agentic Zero Trust Across MCP, API, and LLM So Every Business Team Can Deploy Agents Without Losing Control The Manila Times",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Hugging Face",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQR2xkdDZQTVd6d0RHN05EQ25lLTh1bUZneUIyRDA4T3UxV3hxTXJ4aGxYSDBXUXhlMnN5ejgzZmg4WnBEWmljREhpOFpQOGw4U0YwRFdLeGdsdnQxbUpzQ0VHZy1XSm5VaVNSZVNBTkxVRl9lQXVHM3RDR3pfMG5jb3A4andsaHZLQUVTdEt2X2sxM21NNEZZWE40SVdHa0xCVC1haWtBcmctVS1Wang0dE5rMzZraHZ5YjRSd2VZY2dOb21JUFAtclJXUG1NS0VwUFRmcWlQVDhLWFRnS1dqdXU5dkUxOHlnalhteGRBV2ZZN0JSbUFtMlhDUGRoTXVPN2ZYMHdpT25FSHpyS2FMTUQ4aVBOQnFoNVlTLTU4REfSAaYCQVVfeXFMT0tmWWVkVE9GWVNzaElxRS13ZFBnWmFNV2dGSjl4VjFfUVAzQ2VmQ3FqeS1iNXg0c091d0NUV1BZT0ZwS0pPcnhfN2hyd0M2b0ZMZWVwM3BZQlhLQWo5Zm00MG1yRU1TRnNHbjA3QWVRdzR1RlpUbEdtMlNNNjE3aUEtVE9TSjVzR3Q2M2xqQzRfTnp2V2ZNTlh5dzI4U3E2b05zMUhpUjEwMnFaZWh4bGZadmVZbEtRUUxTQllGaW5aUnNrbHB1OHFVa0ZiUVRSdlo2N3RrVHhLNDJPUUY3TUhXd0NTM29OZlNwa3ZneFYzS0VKUVRTUkxuaWNHajAwUmNFMjFiTThGcllkbU5zbEZ1ZllKUkl5cklzTXFOaTNjUXFWNDZB?oc=5",
-          "sourceGrade": "B",
-          "publisher": "The Manila Times"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 84,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 3,
-        "feature_update": 0,
-        "application_method": 1
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 84,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / llm / api / \u667a\u80fd\u4f53",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy \u667a\u80fd\u4f53 Without Losing Control Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy Ag",
-        "whyItMatters": "Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy \u667a\u80fd\u4f53 Without Losing Control Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy Ag",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "cequence-brings-agentic-zero-trust-across-mcp-api-so-every-business-team-can-dep"
-    },
-    {
       "title": "Ontologies Are So Back: Why AI Agents Are Reviving the Semantic Web",
       "titleZh": "\u3010Latent.Space\u3011Ontologies Are So Back: Why AI \u667a\u80fd\u4f53 Are Reviving the Semantic Web",
       "summary": "AI engineers are rediscovering ontologies as a way to keep probabilistic agents inside deterministic boundaries.",
@@ -4618,18 +4602,18 @@
     {
       "title": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI Agents",
       "titleZh": "\u3010Enterprise Agents\u3011You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53",
-      "summary": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI Agents HPCwire",
+      "summary": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI Agents hpcwire.com",
       "summaryZh": "\u6765\u6e90\uff1aEnterprise Agents\u3002\u4e3b\u9898\uff1a\u4f01\u4e1a\u5e94\u7528\u3001\u667a\u80fd\u4f53\u3001\u5de5\u4f5c\u6d41\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI Agents HPCwire"
+        "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI Agents hpcwire.com"
       ],
       "keyPointsZh": [
-        "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53 HPCwire"
+        "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53 hpcwire.com"
       ],
       "imageUrl": "",
       "date": "2026-07-29",
       "sourceName": "Enterprise Agents",
-      "publisher": "HPCwire",
+      "publisher": "hpcwire.com",
       "sourceUrl": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQUE9EVUFTaDJ2N1hrYzlHZ2k0dFVCeUExNTFRYVh0aklrb2tkd0c0RlJqdnNqOV80cVpybXJ2WmZ2NGpQNk9LdWN6R1dnbzAzREpYVmhpdTB2VzdvUmNqdmNBalpjU3JWdXlXblJVU1Z5aDJUd2g5S2dhcnZQYUVGOU1la0E4Q0tjNFZJNjJmZHVyaGZ3bFFvTGxiRGJKN0poSlRZNkZoRXltaTdNMlE2amlzWXdIVHJBNk1PSA?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
@@ -4641,15 +4625,15 @@
         "workflow"
       ],
       "importance": 5,
-      "rawBody": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI Agents HPCwire",
-      "bodyText": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI Agents HPCwire",
+      "rawBody": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI Agents hpcwire.com",
+      "bodyText": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI Agents hpcwire.com",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Enterprise Agents",
           "sourceUrl": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQUE9EVUFTaDJ2N1hrYzlHZ2k0dFVCeUExNTFRYVh0aklrb2tkd0c0RlJqdnNqOV80cVpybXJ2WmZ2NGpQNk9LdWN6R1dnbzAzREpYVmhpdTB2VzdvUmNqdmNBalpjU3JWdXlXblJVU1Z5aDJUd2g5S2dhcnZQYUVGOU1la0E4Q0tjNFZJNjJmZHVyaGZ3bFFvTGxiRGJKN0poSlRZNkZoRXltaTdNMlE2amlzWXdIVHJBNk1PSA?oc=5",
           "sourceGrade": "B",
-          "publisher": "HPCwire"
+          "publisher": "hpcwire.com"
         }
       ],
       "sourceCount": 1,
@@ -4679,8 +4663,8 @@
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53 You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53 HPCwire You Cannot Govern What You Cannot See: Closing the Vis",
-        "whyItMatters": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53 You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53 HPCwire You Cannot Govern What You Cannot See: Closing the Vis",
+        "whatHappened": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53 You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53 hpcwire.com You Cannot Govern What You Cannot See: Closing the",
+        "whyItMatters": "You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53 You Cannot Govern What You Cannot See: Closing the Visibility Gap in AI \u667a\u80fd\u4f53 hpcwire.com You Cannot Govern What You Cannot See: Closing the",
         "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
         "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
@@ -4979,7 +4963,7 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "codex-from-0-10m-users-building-chatgpt-work-akshay-nathan-openai",
-      "topRank": 5,
+      "topRank": 4,
       "isTopStory": true
     },
     {
@@ -5645,15 +5629,15 @@
       "summary": "7 Best Claude Code Alternatives for CLI Agentic Coding from Claude Code. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aClaude Code\u3002\u4e3b\u9898\uff1aClaude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "7 Best Claude Code Alternatives for CLI Agentic Coding kdnuggets.com"
+        "7 Best Claude Code Alternatives for CLI Agentic Coding KDnuggets"
       ],
       "keyPointsZh": [
-        "7 Best Claude Code Alternatives \u9762\u5411 CLI Agentic \u7f16\u7a0b kdnuggets.com"
+        "7 Best Claude Code Alternatives \u9762\u5411 CLI Agentic \u7f16\u7a0b KDnuggets"
       ],
       "imageUrl": "",
       "date": "2026-07-23",
       "sourceName": "Claude Code",
-      "publisher": "kdnuggets.com",
+      "publisher": "KDnuggets",
       "sourceUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQamlqYkIwRktfeHdET25sR0xKRHYyQ0NXZXYwT3FfODhTaFRjLXhEU21lNFlCUHdJMm1wTEZEdFhyZ0dJdVJSa2dEc1ZyZGZ0TmlSUFRwSFpZX2xIbkw4STh0MEJrMkRYNVRJMms1d0tQelhrMWFDYTlqM2Z0anRuM1NMYmFZamM?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
@@ -5665,15 +5649,15 @@
         "agent"
       ],
       "importance": 4,
-      "rawBody": "7 Best Claude Code Alternatives for CLI Agentic Coding kdnuggets.com",
-      "bodyText": "7 Best Claude Code Alternatives for CLI Agentic Coding kdnuggets.com",
+      "rawBody": "7 Best Claude Code Alternatives for CLI Agentic Coding KDnuggets",
+      "bodyText": "7 Best Claude Code Alternatives for CLI Agentic Coding KDnuggets",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Claude Code",
           "sourceUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQamlqYkIwRktfeHdET25sR0xKRHYyQ0NXZXYwT3FfODhTaFRjLXhEU21lNFlCUHdJMm1wTEZEdFhyZ0dJdVJSa2dEc1ZyZGZ0TmlSUFRwSFpZX2xIbkw4STh0MEJrMkRYNVRJMms1d0tQelhrMWFDYTlqM2Z0anRuM1NMYmFZamM?oc=5",
           "sourceGrade": "B",
-          "publisher": "kdnuggets.com"
+          "publisher": "KDnuggets"
         }
       ],
       "sourceCount": 1,
@@ -5853,7 +5837,7 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "introducing-presence",
-      "topRank": 6,
+      "topRank": 5,
       "isTopStory": true
     },
     {
@@ -6505,7 +6489,9 @@
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "ainews-thinky-s-inkling-975b-a41b-multimodal-new-best-american-apache-2-0-open-m"
+      "eventId": "ainews-thinky-s-inkling-975b-a41b-multimodal-new-best-american-apache-2-0-open-m",
+      "topRank": 6,
+      "isTopStory": true
     },
     {
       "title": "How Cars24 scales conversations and builds faster with OpenAI",
@@ -6724,18 +6710,18 @@
     {
       "title": "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities",
       "titleZh": "\u3010Meta AI\u3011Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities",
-      "summary": "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities Proactive financial news",
+      "summary": "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities proactiveinvestors.com",
       "summaryZh": "\u6765\u6e90\uff1aMeta AI\u3002\u4e3b\u9898\uff1aMeta AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities Proactive financial news"
+        "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities proactiveinvestors.com"
       ],
       "keyPointsZh": [
-        "Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities Proactive financial news"
+        "Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities proactiveinvestors.com"
       ],
       "imageUrl": "",
       "date": "2026-07-09",
       "sourceName": "Meta AI",
-      "publisher": "Proactive financial news",
+      "publisher": "proactiveinvestors.com",
       "sourceUrl": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQbXdVM250Nkl3N1NWVnk4WmVqSGdleDlxRTRpRy1fWThYZzVWazNtOUxDSFdhdzdaTDVRaFNIQ1Y5VzRrb0ZpX2cwLWgwWHAzTWRnVGxKdjdaM3g5WVZKNE8wT0JhWmR1RzZBYTl0MWJvX0FhOVpSUmpWdDAyY016MWdOOEFISFNENGx2bER3Ylo3LUl0VUE2NG9WMVNrYm1QWk1TcEZMdEJieGpudUNzRTlvVHhCOXNQMkpOS1J5enNteFBzOWlfSGNYNk5OUHpPdmowbVdHUkNNczA?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
@@ -6746,15 +6732,15 @@
         "enterprise"
       ],
       "importance": 5,
-      "rawBody": "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities Proactive financial news",
-      "bodyText": "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities Proactive financial news",
+      "rawBody": "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities proactiveinvestors.com",
+      "bodyText": "Meta launches Muse Spark 1.1 AI model with expanded agentic capabilities proactiveinvestors.com",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Meta AI",
           "sourceUrl": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQbXdVM250Nkl3N1NWVnk4WmVqSGdleDlxRTRpRy1fWThYZzVWazNtOUxDSFdhdzdaTDVRaFNIQ1Y5VzRrb0ZpX2cwLWgwWHAzTWRnVGxKdjdaM3g5WVZKNE8wT0JhWmR1RzZBYTl0MWJvX0FhOVpSUmpWdDAyY016MWdOOEFISFNENGx2bER3Ylo3LUl0VUE2NG9WMVNrYm1QWk1TcEZMdEJieGpudUNzRTlvVHhCOXNQMkpOS1J5enNteFBzOWlfSGNYNk5OUHpPdmowbVdHUkNNczA?oc=5",
           "sourceGrade": "B",
-          "publisher": "Proactive financial news"
+          "publisher": "proactiveinvestors.com"
         }
       ],
       "sourceCount": 1,
@@ -6784,8 +6770,8 @@
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities Proactive financial news Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expand",
-        "whyItMatters": "Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities Proactive financial news Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expand",
+        "whatHappened": "Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities proactiveinvestors.com Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded",
+        "whyItMatters": "Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded agentic capabilities proactiveinvestors.com Meta launches Muse Spark 1.1 AI \u6a21\u578b \u7ed3\u5408 expanded",
         "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
         "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
@@ -8519,18 +8505,18 @@
     {
       "title": "\ud83d\ude3a New Codex, Copilot, Hermes, and Microsoft Build 2026 AI updates",
       "titleZh": "\u3010Demis Hassabis\u3011\ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates",
-      "summary": "\ud83d\ude3a New Codex, Copilot, Hermes, and Microsoft Build 2026 AI updates from Demis Hassabis. Useful for deciding whether the original article deserves a deeper read.",
+      "summary": "\ud83d\ude3a New Codex, Copilot, Hermes, and Microsoft Build 2026 AI updates theneurondaily.com",
       "summaryZh": "\u6765\u6e90\uff1aDemis Hassabis\u3002\u4e3b\u9898\uff1aDemis Hassabis\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "\ud83d\ude3a New Codex, Copilot, Hermes, and Microsoft Build 2026 AI updates The Neuron"
+        "\ud83d\ude3a New Codex, Copilot, Hermes, and Microsoft Build 2026 AI updates theneurondaily.com"
       ],
       "keyPointsZh": [
-        "\ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates The Neuron"
+        "\ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates theneurondaily.com"
       ],
       "imageUrl": "",
       "date": "2026-06-03",
       "sourceName": "Demis Hassabis",
-      "publisher": "The Neuron",
+      "publisher": "theneurondaily.com",
       "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMkNJQW9IRVhSWVJpRUt3YmVYby1XUE5lZUYwTlZBMXdPQjBjYXQxaWdCcEJoVU9SeVRTdldCTktnLUlhemRZNnlCdlZLZ0RtSW1OX2diTXJXZjI4enU4WjAzLVdjZkpFNXB6NnoxXzE1MEZqTUR1aHRDS2lBM1YxWkZwdzJ1NC1LTXZhQm5Hb1QzTVZ5QXc?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
@@ -8541,15 +8527,15 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "\ud83d\ude3a New Codex, Copilot, Hermes, and Microsoft Build 2026 AI updates The Neuron",
-      "bodyText": "\ud83d\ude3a New Codex, Copilot, Hermes, and Microsoft Build 2026 AI updates The Neuron",
+      "rawBody": "\ud83d\ude3a New Codex, Copilot, Hermes, and Microsoft Build 2026 AI updates theneurondaily.com",
+      "bodyText": "\ud83d\ude3a New Codex, Copilot, Hermes, and Microsoft Build 2026 AI updates theneurondaily.com",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Demis Hassabis",
           "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMkNJQW9IRVhSWVJpRUt3YmVYby1XUE5lZUYwTlZBMXdPQjBjYXQxaWdCcEJoVU9SeVRTdldCTktnLUlhemRZNnlCdlZLZ0RtSW1OX2diTXJXZjI4enU4WjAzLVdjZkpFNXB6NnoxXzE1MEZqTUR1aHRDS2lBM1YxWkZwdzJ1NC1LTXZhQm5Hb1QzTVZ5QXc?oc=5",
           "sourceGrade": "B",
-          "publisher": "The Neuron"
+          "publisher": "theneurondaily.com"
         }
       ],
       "sourceCount": 1,
@@ -8579,8 +8565,8 @@
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "\ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates \ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates \u6765\u81ea Demis Hassabis.",
-        "whyItMatters": "\ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates \ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates \u6765\u81ea Demis Hassabis.",
+        "whatHappened": "\ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates \ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates theneurondaily.com \ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates the",
+        "whyItMatters": "\ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates \ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates theneurondaily.com \ud83d\ude3a New Codex, Copilot, Hermes, \u4ee5\u53ca Microsoft Build 2026 AI updates the",
         "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
@@ -8657,6 +8643,77 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "s-codex-update-lets-agents-build-interactive-enterprise-workspaces-via-sites-rol"
+    },
+    {
+      "title": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA | NVIDIA Technical Blog",
+      "titleZh": "\u3010NVIDIA\u3011Build Personal AI \u667a\u80fd\u4f53 on Windows PCs \u7ed3\u5408 New Tools \u6765\u81ea Microsoft \u4ee5\u53ca NVIDIA | NVIDIA Technical Blog",
+      "summary": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA | NVIDIA Technical Blog NVIDIA Developer",
+      "summaryZh": "\u6765\u6e90\uff1aNVIDIA\u3002\u4e3b\u9898\uff1aNVIDIA\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA | NVIDIA Technical Blog NVIDIA Developer"
+      ],
+      "keyPointsZh": [
+        "Build Personal AI \u667a\u80fd\u4f53 on Windows PCs \u7ed3\u5408 New Tools \u6765\u81ea Microsoft \u4ee5\u53ca NVIDIA | NVIDIA Technical Blog NVIDIA Developer"
+      ],
+      "imageUrl": "",
+      "date": "2026-06-02",
+      "sourceName": "NVIDIA",
+      "publisher": "NVIDIA Developer",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVEVHQXFycUNNS3lIOXNOSjhqdUVIVzI5MGtHTEd5MGZ2ZDAtc1NtMGlMSjBqWmdzdXB6b0dmSXBwa181OHdZNTgzWjZhODhvYTBPdDYySzZjRzNQd2FSaW14WlBXWjlhRzBlU2ZJREtvLUFKSnNTaVk2S2ZadW5wMUxqTVBsN3R0VzJJRmdGVHhXN0I1a1k0enB0UkxzVDA3WVJRYzNPUTJfSjEwVmlaYl9CSFVSQQ?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 83,
+      "tags": [
+        "NVIDIA",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA | NVIDIA Technical Blog NVIDIA Developer",
+      "bodyText": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA | NVIDIA Technical Blog NVIDIA Developer",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "NVIDIA",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVEVHQXFycUNNS3lIOXNOSjhqdUVIVzI5MGtHTEd5MGZ2ZDAtc1NtMGlMSjBqWmdzdXB6b0dmSXBwa181OHdZNTgzWjZhODhvYTBPdDYySzZjRzNQd2FSaW14WlBXWjlhRzBlU2ZJREtvLUFKSnNTaVk2S2ZadW5wMUxqTVBsN3R0VzJJRmdGVHhXN0I1a1k0enB0UkxzVDA3WVJRYzNPUTJfSjEwVmlaYl9CSFVSQQ?oc=5",
+          "sourceGrade": "B",
+          "publisher": "NVIDIA Developer"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 66,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 2,
+        "feature_update": 0,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 66,
+        "tier": "default",
+        "isDefaultVisible": true,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / AI",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Build Personal AI \u667a\u80fd\u4f53 on Windows PCs \u7ed3\u5408 New Tools \u6765\u81ea Microsoft \u4ee5\u53ca NVIDIA | NVIDIA Technical Blog Build Personal AI \u667a\u80fd\u4f53 on Windows PCs \u7ed3\u5408 New Tools \u6765\u81ea Microsoft \u4ee5\u53ca NVIDIA | NVIDIA Technical Blog NVIDIA Dev",
+        "whyItMatters": "Build Personal AI \u667a\u80fd\u4f53 on Windows PCs \u7ed3\u5408 New Tools \u6765\u81ea Microsoft \u4ee5\u53ca NVIDIA | NVIDIA Technical Blog Build Personal AI \u667a\u80fd\u4f53 on Windows PCs \u7ed3\u5408 New Tools \u6765\u81ea Microsoft \u4ee5\u53ca NVIDIA | NVIDIA Technical Blog NVIDIA Dev",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "build-personal-agents-windows-pcs-new-tools-from-microsoft-technical-blog"
     },
     {
       "title": "Snowflake Announces Intent to Acquire Natoma, Providing Secure Connectivity For The Agentic Enterprise",
@@ -8806,15 +8863,15 @@
       "summary": "\ud83d\ude3a Google just put agents in everything from Demis Hassabis. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aDemis Hassabis\u3002\u4e3b\u9898\uff1aDemis Hassabis\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "\ud83d\ude3a Google just put agents in everything The Neuron"
+        "\ud83d\ude3a Google just put agents in everything theneurondaily.com"
       ],
       "keyPointsZh": [
-        "\ud83d\ude3a Google just put \u667a\u80fd\u4f53 in everything The Neuron"
+        "\ud83d\ude3a Google just put \u667a\u80fd\u4f53 in everything theneurondaily.com"
       ],
       "imageUrl": "",
       "date": "2026-05-20",
       "sourceName": "Demis Hassabis",
-      "publisher": "The Neuron",
+      "publisher": "theneurondaily.com",
       "sourceUrl": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9xNGtjcjRPWXgwT0xoZWdmNjhEbmxIWmF1V0lGTHNobjl1V0ZmQjNNR254R0Znc2tDUlB2ZjJnQmVzNXIzRkhDQmtGN25jdk54R0xVZFVEb2xYTzBrZ0FVaXJ3SVZ2TjNZa3phdmFpMEZJSm1BTm9TcA?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
@@ -8825,15 +8882,15 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "\ud83d\ude3a Google just put agents in everything The Neuron",
-      "bodyText": "\ud83d\ude3a Google just put agents in everything The Neuron",
+      "rawBody": "\ud83d\ude3a Google just put agents in everything theneurondaily.com",
+      "bodyText": "\ud83d\ude3a Google just put agents in everything theneurondaily.com",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Demis Hassabis",
           "sourceUrl": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9xNGtjcjRPWXgwT0xoZWdmNjhEbmxIWmF1V0lGTHNobjl1V0ZmQjNNR254R0Znc2tDUlB2ZjJnQmVzNXIzRkhDQmtGN25jdk54R0xVZFVEb2xYTzBrZ0FVaXJ3SVZ2TjNZa3phdmFpMEZJSm1BTm9TcA?oc=5",
           "sourceGrade": "B",
-          "publisher": "The Neuron"
+          "publisher": "theneurondaily.com"
         }
       ],
       "sourceCount": 1,
@@ -8855,7 +8912,7 @@
         "isTopEligible": false,
         "reasons": [
           "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / AI",
           "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
           "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
         ],
@@ -9372,77 +9429,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "agentic-coding-vs-vibe-coding-key-differences-explained"
-    },
-    {
-      "title": "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes",
-      "titleZh": "\u3010Anthropic\u3011Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes",
-      "summary": "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes VentureBeat",
-      "summaryZh": "\u6765\u6e90\uff1aAnthropic\u3002\u4e3b\u9898\uff1aAnthropic\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes VentureBeat"
-      ],
-      "keyPointsZh": [
-        "Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes VentureBeat"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-07",
-      "sourceName": "Anthropic",
-      "publisher": "VentureBeat",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVDVxd0FOUXlQdzlvR3otaTdjYkJtdXl5OXNTUXNNTW5MMjJXUnRqdGkwMVVYTUdWQ2tCZFZlcjhZOTBpdU9WYnJobkNHUGI1N3NDb0JBQUFzOGRjRkJCYWNqckhaMF9nLUJpdmZVaEZGbmtjd3plalVyR3dqWnJjMlNxS1BiSG5TTDNscEx5dUM5ZUdubktaWFRCdlExclNDdUlTakVlUFVQSlhkLUFnbHBDRUlsc193aGJvNURCQWo?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 83,
-      "tags": [
-        "Anthropic",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes VentureBeat",
-      "bodyText": "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes VentureBeat",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Anthropic",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVDVxd0FOUXlQdzlvR3otaTdjYkJtdXl5OXNTUXNNTW5MMjJXUnRqdGkwMVVYTUdWQ2tCZFZlcjhZOTBpdU9WYnJobkNHUGI1N3NDb0JBQUFzOGRjRkJCYWNqckhaMF9nLUJpdmZVaEZGbmtjd3plalVyR3dqWnJjMlNxS1BiSG5TTDNscEx5dUM5ZUdubktaWFRCdlExclNDdUlTakVlUFVQSlhkLUFnbHBDRUlsc193aGJvNURCQWo?oc=5",
-          "sourceGrade": "B",
-          "publisher": "VentureBeat"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 66,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 2,
-        "feature_update": 1,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 66,
-        "tier": "default",
-        "isDefaultVisible": true,
-        "isTopEligible": false,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / AI",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / anthropic",
-          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes VentureBeat Anthropic introduces \"dr",
-        "whyItMatters": "Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes Anthropic introduces \"dreaming,\" a system that lets AI \u667a\u80fd\u4f53 learn \u6765\u81ea their own mistakes VentureBeat Anthropic introduces \"dr",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "introduces-dreaming-system-that-lets-agents-learn-from-their-own-mistakes"
     },
     {
       "title": "Anthropic introduces \"dreaming,\" a system that lets AI agents learn from their own mistakes",
@@ -10033,15 +10019,15 @@
       "summary": "5 Best Books for Building Agentic AI Systems in 2026 from Chip Huyen. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aChip Huyen\u3002\u4e3b\u9898\uff1aChip Huyen\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "5 Best Books for Building Agentic AI Systems in 2026 kdnuggets.com"
+        "5 Best Books for Building Agentic AI Systems in 2026 KDnuggets"
       ],
       "keyPointsZh": [
-        "5 Best Books \u9762\u5411 Building Agentic AI Systems in 2026 kdnuggets.com"
+        "5 Best Books \u9762\u5411 Building Agentic AI Systems in 2026 KDnuggets"
       ],
       "imageUrl": "",
       "date": "2026-04-13",
       "sourceName": "Chip Huyen",
-      "publisher": "kdnuggets.com",
+      "publisher": "KDnuggets",
       "sourceUrl": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQR3RlbmNsQzlWNC1iSUg4UEVQbkJEOVlVeV9uY295QzBDSHVCMldRbWhDOHBLd1JWOFlBS09pLVgxLTZSWkNFcW9RbXN2eEVNNjFyNFJDMUpEeERXUzlHUEdQQWFybDBLTHpacFlqcV9ONWNiQVhlX3ZqVXBmMktuT0JyT3Y?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
@@ -10052,15 +10038,15 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "5 Best Books for Building Agentic AI Systems in 2026 kdnuggets.com",
-      "bodyText": "5 Best Books for Building Agentic AI Systems in 2026 kdnuggets.com",
+      "rawBody": "5 Best Books for Building Agentic AI Systems in 2026 KDnuggets",
+      "bodyText": "5 Best Books for Building Agentic AI Systems in 2026 KDnuggets",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Chip Huyen",
           "sourceUrl": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQR3RlbmNsQzlWNC1iSUg4UEVQbkJEOVlVeV9uY295QzBDSHVCMldRbWhDOHBLd1JWOFlBS09pLVgxLTZSWkNFcW9RbXN2eEVNNjFyNFJDMUpEeERXUzlHUEdQQWFybDBLTHpacFlqcV9ONWNiQVhlX3ZqVXBmMktuT0JyT3Y?oc=5",
           "sourceGrade": "B",
-          "publisher": "kdnuggets.com"
+          "publisher": "KDnuggets"
         }
       ],
       "sourceCount": 1,
@@ -11106,15 +11092,15 @@
       "summary": "\ud83d\ude3a Dreamer lets anyone build AI agents from Ethan Mollick. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aEthan Mollick\u3002\u4e3b\u9898\uff1aEthan Mollick\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "\ud83d\ude3a Dreamer lets anyone build AI agents The Neuron"
+        "\ud83d\ude3a Dreamer lets anyone build AI agents theneurondaily.com"
       ],
       "keyPointsZh": [
-        "\ud83d\ude3a Dreamer lets anyone build AI \u667a\u80fd\u4f53 The Neuron"
+        "\ud83d\ude3a Dreamer lets anyone build AI \u667a\u80fd\u4f53 theneurondaily.com"
       ],
       "imageUrl": "",
       "date": "2026-02-18",
       "sourceName": "Ethan Mollick",
-      "publisher": "The Neuron",
+      "publisher": "theneurondaily.com",
       "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1udDEzcGo0TEYwVnVxbWhhN3FqYVU1dnA5dVNQV3ZweVVmYWJjQ3NCYzljTHNNV1Izek1QYl9vbTR6TGhQZE1FWm1rbE8xQjk4R3UtYy1NWTg3ZmFKN05ocEo0OTJpZjN5TkZxdl9vM3djdXBXRkFV?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
@@ -11125,15 +11111,15 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "\ud83d\ude3a Dreamer lets anyone build AI agents The Neuron",
-      "bodyText": "\ud83d\ude3a Dreamer lets anyone build AI agents The Neuron",
+      "rawBody": "\ud83d\ude3a Dreamer lets anyone build AI agents theneurondaily.com",
+      "bodyText": "\ud83d\ude3a Dreamer lets anyone build AI agents theneurondaily.com",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Ethan Mollick",
           "sourceUrl": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1udDEzcGo0TEYwVnVxbWhhN3FqYVU1dnA5dVNQV3ZweVVmYWJjQ3NCYzljTHNNV1Izek1QYl9vbTR6TGhQZE1FWm1rbE8xQjk4R3UtYy1NWTg3ZmFKN05ocEo0OTJpZjN5TkZxdl9vM3djdXBXRkFV?oc=5",
           "sourceGrade": "B",
-          "publisher": "The Neuron"
+          "publisher": "theneurondaily.com"
         }
       ],
       "sourceCount": 1,
@@ -11471,15 +11457,15 @@
       "summary": "Get Good at Agents from Latent.Space. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aLatent.Space\u3002\u4e3b\u9898\uff1aLatent.Space\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Get Good at Agents interconnects.ai"
+        "Get Good at Agents Interconnects AI"
       ],
       "keyPointsZh": [
-        "Get Good at \u667a\u80fd\u4f53 interconnects.AI"
+        "Get Good at \u667a\u80fd\u4f53 Interconnects AI"
       ],
       "imageUrl": "",
       "date": "2026-01-21",
       "sourceName": "Latent.Space",
-      "publisher": "interconnects.ai",
+      "publisher": "Interconnects AI",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1IQ1htSzNocTZWeEFxU2hBZ24zNFpoVV9sZjJ3d2NxVkFFY1Y1WTVQdmdVZGlqZW1ULXdvVThONjVFNHNvNzZnSTFTYm5qUHNRWHo0cU9NN1YzRFRySXc?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
@@ -11490,15 +11476,15 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "Get Good at Agents interconnects.ai",
-      "bodyText": "Get Good at Agents interconnects.ai",
+      "rawBody": "Get Good at Agents Interconnects AI",
+      "bodyText": "Get Good at Agents Interconnects AI",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Latent.Space",
           "sourceUrl": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1IQ1htSzNocTZWeEFxU2hBZ24zNFpoVV9sZjJ3d2NxVkFFY1Y1WTVQdmdVZGlqZW1ULXdvVThONjVFNHNvNzZnSTFTYm5qUHNRWHo0cU9NN1YzRFRySXc?oc=5",
           "sourceGrade": "B",
-          "publisher": "interconnects.ai"
+          "publisher": "Interconnects AI"
         }
       ],
       "sourceCount": 1,
@@ -11535,6 +11521,77 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "get-good-at-agents"
+    },
+    {
+      "title": "\ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows for beginners",
+      "titleZh": "\u3010The Neuron\u3011\ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows \u9762\u5411 beginners",
+      "summary": "\ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows for beginners from The Neuron. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aThe Neuron\u3002\u4e3b\u9898\uff1aThe Neuron\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "\ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows for beginners theneurondaily.com"
+      ],
+      "keyPointsZh": [
+        "\ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows \u9762\u5411 beginners theneurondaily.com"
+      ],
+      "imageUrl": "",
+      "date": "2026-01-20",
+      "sourceName": "The Neuron",
+      "publisher": "theneurondaily.com",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPM2JudVBIN1dtaVVtZmJQSUZLa3JyR1dUSVg1ZEdRdmpZU0xTQXBiWVBLRGdYcFc3VEQ4TURBTG5KbVRfLVdTcF9BUUZXckVmWFI2N0s0WEwzanBXaDBzOTVMRy1LR1AxUE1TUzFRTDdaa0MtbFh0Q2RWWTVKR3o0aGNOWDRTMEM0TUJZ?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 100,
+      "tags": [
+        "The Neuron",
+        "creator"
+      ],
+      "importance": 5,
+      "rawBody": "\ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows for beginners theneurondaily.com",
+      "bodyText": "\ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows for beginners theneurondaily.com",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "The Neuron",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPM2JudVBIN1dtaVVtZmJQSUZLa3JyR1dUSVg1ZEdRdmpZU0xTQXBiWVBLRGdYcFc3VEQ4TURBTG5KbVRfLVdTcF9BUUZXckVmWFI2N0s0WEwzanBXaDBzOTVMRy1LR1AxUE1TUzFRTDdaa0MtbFh0Q2RWWTVKR3o0aGNOWDRTMEM0TUJZ?oc=5",
+          "sourceGrade": "B",
+          "publisher": "theneurondaily.com"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 100,
+      "qualityType": "application_method",
+      "qualityLabelZh": "AI\u5e94\u7528\u65b9\u6cd5",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 0,
+        "application_method": 3
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 100,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1ahow to / \u5de5\u4f5c\u6d41 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53",
+          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "\ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows \u9762\u5411 beginners \ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows \u9762\u5411 beginners \u6765\u81ea The Neuron.",
+        "whyItMatters": "\ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows \u9762\u5411 beginners \ud83d\ude3a \ud83c\udf99\ufe0f Watch: How to build agentic workflows \u9762\u5411 beginners \u6765\u81ea The Neuron.",
+        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1aAI\u5e94\u7528\u65b9\u6cd5\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "watch-how-build-agentic-workflows-beginners"
     },
     {
       "title": "10 things I learned from burning myself out with AI coding agents",
@@ -11826,6 +11883,82 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "univ-builds-ready-workforce"
+    },
+    {
+      "title": "[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization",
+      "titleZh": "\u3010Latent.Space\u3011[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization",
+      "summary": "[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization from Latent.Space. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aLatent.Space\u3002\u4e3b\u9898\uff1aswyx\u3001\u667a\u80fd\u4f53\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Focus: swyx, agent, creator",
+        "Worth reading for practical context and source details.",
+        "Open the original article for full evidence and nuance."
+      ],
+      "keyPointsZh": [
+        "Focus: swyx, \u667a\u80fd\u4f53, \u535a\u4e3b\u89c2\u70b9",
+        "Worth reading \u9762\u5411 practical context \u4ee5\u53ca source details.",
+        "Open the original article \u9762\u5411 full evidence \u4ee5\u53ca nuance."
+      ],
+      "imageUrl": "https://substackcdn.com/image/fetch/$s_!gT87!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fmedia%2FHOfg3rSWsAACTkR.png",
+      "date": "2026-07-31",
+      "sourceName": "Latent.Space",
+      "publisher": "",
+      "sourceUrl": "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
+      "sourceGrade": "A",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 100,
+      "tags": [
+        "swyx",
+        "agent",
+        "creator"
+      ],
+      "importance": 5,
+      "rawBody": "Distillation is all you need!",
+      "bodyText": "Distillation is all you need!",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Latent.Space",
+          "sourceUrl": "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
+          "sourceGrade": "A",
+          "publisher": ""
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 42,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 0,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 42,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aAI / gpt",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agpt",
+          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization [AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 ",
+        "whyItMatters": "[AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 months due to GPT 5.6 recursive self-optimization [AINews] GPT 5.6 price cut by 20%-80%: Cost of GPT 5.4 Intelligence dropped 13x in 4 ",
+        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "ainews-gpt-5-6-price-cut-20-80-cost-gpt-5-4-intelligence-dropped-13x-4-months-du"
     },
     {
       "title": "Introducing Cursor Benchmark Partners",
@@ -12205,15 +12338,15 @@
       "summary": "Announcing Fugu-Ultra v1.1 and Claude Code interface for Fugu from Claude Code. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aClaude Code\u3002\u4e3b\u9898\uff1aClaude Code\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Announcing Fugu-Ultra v1.1 and Claude Code interface for Fugu Sakana AI"
+        "Announcing Fugu-Ultra v1.1 and Claude Code interface for Fugu sakana.ai"
       ],
       "keyPointsZh": [
-        "Announcing Fugu-Ultra v1.1 \u4ee5\u53ca Claude Code interface \u9762\u5411 Fugu Sakana AI"
+        "Announcing Fugu-Ultra v1.1 \u4ee5\u53ca Claude Code interface \u9762\u5411 Fugu sakana.AI"
       ],
       "imageUrl": "",
       "date": "2026-07-24",
       "sourceName": "Claude Code",
-      "publisher": "Sakana AI",
+      "publisher": "sakana.ai",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1lNUZEQnBqS3hhS2gtYlJIQVBDOHVkTWtTOHUyRWtFdTJURkFnM2ZuRVNGcnVsTjFWU0ZjeWJ5VVZrNDRIZWE5RjBfNFRNQU1MdWJzMHlSLWNTeFo2VVE?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
@@ -12225,15 +12358,15 @@
         "agent"
       ],
       "importance": 4,
-      "rawBody": "Announcing Fugu-Ultra v1.1 and Claude Code interface for Fugu Sakana AI",
-      "bodyText": "Announcing Fugu-Ultra v1.1 and Claude Code interface for Fugu Sakana AI",
+      "rawBody": "Announcing Fugu-Ultra v1.1 and Claude Code interface for Fugu sakana.ai",
+      "bodyText": "Announcing Fugu-Ultra v1.1 and Claude Code interface for Fugu sakana.ai",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Claude Code",
           "sourceUrl": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1lNUZEQnBqS3hhS2gtYlJIQVBDOHVkTWtTOHUyRWtFdTJURkFnM2ZuRVNGcnVsTjFWU0ZjeWJ5VVZrNDRIZWE5RjBfNFRNQU1MdWJzMHlSLWNTeFo2VVE?oc=5",
           "sourceGrade": "B",
-          "publisher": "Sakana AI"
+          "publisher": "sakana.ai"
         }
       ],
       "sourceCount": 1,
@@ -12568,6 +12701,77 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "ntt-data-group-cuts-incident-analysis-30-minutes-codex"
+    },
+    {
+      "title": "What is Google Gemini? (Models, Capabilities & How to Use)",
+      "titleZh": "\u3010Google DeepMind\u3011What is Google Gemini? (\u6a21\u578b, Capabilities & How to Use)",
+      "summary": "What is Google Gemini? (Models, Capabilities & How to Use) from Google DeepMind. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aGoogle DeepMind\u3002\u4e3b\u9898\uff1aGoogle DeepMind\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "(Models, Capabilities & How to Use) Built In"
+      ],
+      "keyPointsZh": [
+        "(\u6a21\u578b, Capabilities & How to Use) Built In"
+      ],
+      "imageUrl": "",
+      "date": "2026-07-22",
+      "sourceName": "Google DeepMind",
+      "publisher": "Built In",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBXanowczhneC1OaVYwSngyWVJiTm81VVZRTEtIZVV2N1hsOTBjSzFtYU5rd0MyVjZ3S1c0bElDVW4wQXd5WW9DR09RaEFGVXZKVVdhUA?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 76,
+      "tags": [
+        "Google DeepMind",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "What is Google Gemini? (Models, Capabilities & How to Use) Built In",
+      "bodyText": "What is Google Gemini? (Models, Capabilities & How to Use) Built In",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Google DeepMind",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBXanowczhneC1OaVYwSngyWVJiTm81VVZRTEtIZVV2N1hsOTBjSzFtYU5rd0MyVjZ3S1c0bElDVW4wQXd5WW9DR09RaEFGVXZKVVdhUA?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Built In"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": true,
+      "qualityScore": 48,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 0,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 48,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1ahow to / \u6a21\u578b / \u6a21\u578b / gemini",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agemini / \u6a21\u578b / \u6a21\u578b",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "(\u6a21\u578b, Capabilities & How to Use) What is Google Gemini?",
+        "whyItMatters": "(\u6a21\u578b, Capabilities & How to Use) What is Google Gemini?",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "what-is-google-gemini-models-capabilities-how-use"
     },
     {
       "title": "Agent 365 Enhanced With Granular Controls for AI Agents Running Locally",
@@ -13373,18 +13577,18 @@
     {
       "title": "Cursor Is Developing an AI Agent to Compete With Claude Cowork",
       "titleZh": "\u3010Cursor\u3011Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork",
-      "summary": "Cursor Is Developing an AI Agent to Compete With Claude Cowork theinformation.com",
+      "summary": "Cursor Is Developing an AI Agent to Compete With Claude Cowork from Cursor. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aCursor\u3002\u4e3b\u9898\uff1aCursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Cursor Is Developing an AI Agent to Compete With Claude Cowork theinformation.com"
+        "Cursor Is Developing an AI Agent to Compete With Claude Cowork The Information"
       ],
       "keyPointsZh": [
-        "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork theinformation.com"
+        "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork The Information"
       ],
       "imageUrl": "",
       "date": "2026-07-09",
       "sourceName": "Cursor",
-      "publisher": "theinformation.com",
+      "publisher": "The Information",
       "sourceUrl": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZ2tEWU1XQmk4OEdCcHhKSmF1VkFwMUxLcUJsQTVRY2N3NEhkMXduSUo3bVBBUk1zYUp6Q2p2QWozRHZ5NnJwM2VLSG0yUkJSOV9JMGpoZjl6R3Jsa0UxZnozeGQ1NjI1Z3NobzZMQlpLNjJBVTZSR3plRTJ6T2pCalhKUHVubnBlOENtVTBSN0dOUQ?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
@@ -13396,15 +13600,15 @@
         "agent"
       ],
       "importance": 4,
-      "rawBody": "Cursor Is Developing an AI Agent to Compete With Claude Cowork theinformation.com",
-      "bodyText": "Cursor Is Developing an AI Agent to Compete With Claude Cowork theinformation.com",
+      "rawBody": "Cursor Is Developing an AI Agent to Compete With Claude Cowork The Information",
+      "bodyText": "Cursor Is Developing an AI Agent to Compete With Claude Cowork The Information",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Cursor",
           "sourceUrl": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZ2tEWU1XQmk4OEdCcHhKSmF1VkFwMUxLcUJsQTVRY2N3NEhkMXduSUo3bVBBUk1zYUp6Q2p2QWozRHZ5NnJwM2VLSG0yUkJSOV9JMGpoZjl6R3Jsa0UxZnozeGQ1NjI1Z3NobzZMQlpLNjJBVTZSR3plRTJ6T2pCalhKUHVubnBlOENtVTBSN0dOUQ?oc=5",
           "sourceGrade": "B",
-          "publisher": "theinformation.com"
+          "publisher": "The Information"
         }
       ],
       "sourceCount": 1,
@@ -13434,8 +13638,8 @@
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork theinformation.com Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork theinformati",
-        "whyItMatters": "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork theinformation.com Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork theinformati",
+        "whatHappened": "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork \u6765\u81ea Cursor.",
+        "whyItMatters": "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork \u6765\u81ea Cursor.",
         "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
         "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
@@ -14095,6 +14299,77 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "beyond-lora-can-you-beat-most-popular-fine-tuning-technique"
+    },
+    {
+      "title": "Meta enters enterprise AI race with new business agent",
+      "titleZh": "\u3010Meta AI\u3011Meta enters \u4f01\u4e1a\u5e94\u7528 AI race \u7ed3\u5408 new business \u667a\u80fd\u4f53",
+      "summary": "Meta enters enterprise AI race with new business agent from Meta AI. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aMeta AI\u3002\u4e3b\u9898\uff1aMeta AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002Meta enters \u4f01\u4e1a\u5e94\u7528 AI race \u7ed3\u5408 new business \u667a\u80fd\u4f53 \u6765\u81ea Meta AI. Useful \u9762\u5411 deciding whether the original article deserves a deeper read.\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Meta enters enterprise AI race with new business agent Reuters"
+      ],
+      "keyPointsZh": [
+        "Meta enters \u4f01\u4e1a\u5e94\u7528 AI race \u7ed3\u5408 new business \u667a\u80fd\u4f53 Reuters"
+      ],
+      "imageUrl": "",
+      "date": "2026-06-03",
+      "sourceName": "Meta AI",
+      "publisher": "Reuters",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQ0VmR0diTmJnejBXTlNDMTExQU9wWnh0U3ZWOXNOb0VHdTZScnFIR2w4dm8zcFNDdGk1ellycUpCUnh4NG51SVhOQ21RWGZtSlg0MHJtY0ZwU05ZbG5BR1V6b2hxeEJOTzR6VWEwZkwybWt1NC0wUl9qRHRXekM1RnM2VkxNR2M3OEtQQ0VKb3ZkUE95NEthYnR1eVZWczMtbWlMWTRyZ093dV9BamxIal91WXlhQXIyY21uU3ZR?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 76,
+      "tags": [
+        "Meta AI",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Meta enters enterprise AI race with new business agent Reuters",
+      "bodyText": "Meta enters enterprise AI race with new business agent Reuters",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Meta AI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQ0VmR0diTmJnejBXTlNDMTExQU9wWnh0U3ZWOXNOb0VHdTZScnFIR2w4dm8zcFNDdGk1ellycUpCUnh4NG51SVhOQ21RWGZtSlg0MHJtY0ZwU05ZbG5BR1V6b2hxeEJOTzR6VWEwZkwybWt1NC0wUl9qRHRXekM1RnM2VkxNR2M3OEtQQ0VKb3ZkUE95NEthYnR1eVZWczMtbWlMWTRyZ093dV9BamxIal91WXlhQXIyY21uU3ZR?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Reuters"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 48,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 1,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 48,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u4f01\u4e1a\u5e94\u7528 / AI",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Meta enters \u4f01\u4e1a\u5e94\u7528 AI race \u7ed3\u5408 new business \u667a\u80fd\u4f53 Meta enters \u4f01\u4e1a\u5e94\u7528 AI race \u7ed3\u5408 new business \u667a\u80fd\u4f53 \u6765\u81ea Meta AI.",
+        "whyItMatters": "Meta enters \u4f01\u4e1a\u5e94\u7528 AI race \u7ed3\u5408 new business \u667a\u80fd\u4f53 Meta enters \u4f01\u4e1a\u5e94\u7528 AI race \u7ed3\u5408 new business \u667a\u80fd\u4f53 \u6765\u81ea Meta AI.",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "meta-enters-enterprise-race-new-business-agent"
     },
     {
       "title": "Snowflake's AI Push for the Agentic Enterprise",
@@ -15252,15 +15527,15 @@
       "summary": "Oracle Unveils AI Database Agentic Innovations for Business Data from Oracle AI. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aOracle AI\u3002\u4e3b\u9898\uff1aOracle AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Oracle Unveils AI Database Agentic Innovations for Business Data oracle.com"
+        "Oracle Unveils AI Database Agentic Innovations for Business Data Oracle"
       ],
       "keyPointsZh": [
-        "Oracle Unveils AI Database Agentic Innovations \u9762\u5411 Business Data oracle.com"
+        "Oracle Unveils AI Database Agentic Innovations \u9762\u5411 Business Data Oracle"
       ],
       "imageUrl": "",
       "date": "2026-03-24",
       "sourceName": "Oracle AI",
-      "publisher": "oracle.com",
+      "publisher": "Oracle",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVDg3bHM0Q0VGQUNiTjRvaVpELWV0VG1ocDBwX2tMXzFWcVFMSTZHREhWVGJuRkVETkxIT3JjbXR3RTd3eW9Wcm4xelljelBuZ20xSEZQRGc5OHgyNkM3UlZVYnVCX05MNjlzOUN6UWgzUHk3VmpzVDdhY3RRdjdqa01qSnFEOUxtLTd3UEk4RzNTeVFKOFY0RXZLaFZFdTM3ZXRUZlBVeUIxZ1paeWQtOUVJT25UNTJo?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
@@ -15271,15 +15546,15 @@
         "enterprise"
       ],
       "importance": 5,
-      "rawBody": "Oracle Unveils AI Database Agentic Innovations for Business Data oracle.com",
-      "bodyText": "Oracle Unveils AI Database Agentic Innovations for Business Data oracle.com",
+      "rawBody": "Oracle Unveils AI Database Agentic Innovations for Business Data Oracle",
+      "bodyText": "Oracle Unveils AI Database Agentic Innovations for Business Data Oracle",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Oracle AI",
           "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVDg3bHM0Q0VGQUNiTjRvaVpELWV0VG1ocDBwX2tMXzFWcVFMSTZHREhWVGJuRkVETkxIT3JjbXR3RTd3eW9Wcm4xelljelBuZ20xSEZQRGc5OHgyNkM3UlZVYnVCX05MNjlzOUN6UWgzUHk3VmpzVDdhY3RRdjdqa01qSnFEOUxtLTd3UEk4RzNTeVFKOFY0RXZLaFZFdTM3ZXRUZlBVeUIxZ1paeWQtOUVJT25UNTJo?oc=5",
           "sourceGrade": "B",
-          "publisher": "oracle.com"
+          "publisher": "Oracle"
         }
       ],
       "sourceCount": 1,
@@ -15315,7 +15590,7 @@
         "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "oracle-unveils-database-agentic-innovations-business-data"
+      "eventId": "unveils-database-agentic-innovations-business-data"
     },
     {
       "title": "monday.com Welcomes AI Agents to Its Platform, Marking a Shift in How Work Gets Done - monday.com",
@@ -15822,13 +16097,13 @@
       "eventId": "rubin-platform-open-models-autonomous-driving-presents-blueprint-future-at-ces"
     }
   ],
-  "allItemsCount": 187,
+  "allItemsCount": 191,
   "digestArchive": {
     "date": "2026-08-02",
     "path": "data/digests/2026-08-02.md",
-    "itemCount": 129,
+    "itemCount": 130,
     "topStoryCount": 10,
-    "generatedAt": "2026-08-02T03:31:37.872211+00:00",
+    "generatedAt": "2026-08-02T13:40:50.737631+00:00",
     "latestPath": "data/digests/latest.md"
   }
 }
