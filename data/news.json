@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-03T03:33:58.110427+00:00",
+  "updatedAt": "2026-08-03T14:53:04.163505+00:00",
   "yearStart": "2026-01-01",
   "coverageWindow": "YTD",
   "qualityPolicy": {
@@ -53,8 +53,8 @@
     "fetchedArticles": 12,
     "dedupeStrategy": "same-date normalized event title; related sources are merged into one event card",
     "topStoryCount": 10,
-    "defaultVisibleCount": 130,
-    "archiveCount": 59
+    "defaultVisibleCount": 129,
+    "archiveCount": 64
   },
   "sourceHealth": {
     "total": 71,
@@ -236,9 +236,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 22,
-      "googleItems": 1,
+      "googleItems": 3,
       "curatedItems": 0,
-      "totalItems": 23,
+      "totalItems": 25,
       "rss": "https://huggingface.co/blog/feed.xml"
     },
     {
@@ -313,9 +313,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 3,
+      "googleItems": 4,
       "curatedItems": 0,
-      "totalItems": 3,
+      "totalItems": 4,
       "rss": ""
     },
     {
@@ -390,9 +390,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 18,
-      "googleItems": 2,
+      "googleItems": 3,
       "curatedItems": 0,
-      "totalItems": 20,
+      "totalItems": 21,
       "rss": "https://openai.com/news/rss.xml"
     },
     {
@@ -412,9 +412,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 4,
+      "googleItems": 5,
       "curatedItems": 0,
-      "totalItems": 4,
+      "totalItems": 5,
       "rss": ""
     },
     {
@@ -478,9 +478,9 @@
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
       "rssItems": 0,
-      "googleItems": 1,
+      "googleItems": 2,
       "curatedItems": 0,
-      "totalItems": 1,
+      "totalItems": 2,
       "rss": ""
     },
     {
@@ -664,10 +664,10 @@
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
       "status": "ok",
       "statusLabelZh": "\u6b63\u5e38",
-      "rssItems": 11,
+      "rssItems": 10,
       "googleItems": 0,
       "curatedItems": 0,
-      "totalItems": 11,
+      "totalItems": 10,
       "rss": "https://www.interconnects.ai/feed"
     },
     {
@@ -851,7 +851,7 @@
     "OpenAI": {
       "rss": "https://openai.com/news/rss.xml",
       "rssItems": 18,
-      "googleItems": 2,
+      "googleItems": 3,
       "status": "ok"
     },
     "NVIDIA": {
@@ -863,7 +863,7 @@
     "Hugging Face": {
       "rss": "https://huggingface.co/blog/feed.xml",
       "rssItems": 22,
-      "googleItems": 1,
+      "googleItems": 3,
       "status": "ok"
     },
     "Microsoft AI": {
@@ -898,7 +898,7 @@
     },
     "Interconnects": {
       "rss": "https://www.interconnects.ai/feed",
-      "rssItems": 11,
+      "rssItems": 10,
       "googleItems": 0,
       "status": "ok"
     },
@@ -941,7 +941,7 @@
     "xAI": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 1,
+      "googleItems": 2,
       "status": "ok"
     },
     "Amazon AI": {
@@ -971,7 +971,7 @@
     "Perplexity": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 4,
+      "googleItems": 5,
       "status": "ok"
     },
     "Stability AI": {
@@ -1031,7 +1031,7 @@
     "DeepSeek": {
       "rss": "",
       "rssItems": 0,
-      "googleItems": 3,
+      "googleItems": 4,
       "status": "ok"
     },
     "\u963f\u91cc\u4e91\u901a\u4e49": {
@@ -1281,7 +1281,7 @@
     "windowDays": 7,
     "startDate": "2026-07-28",
     "endDate": "2026-08-03",
-    "itemCount": 52,
+    "itemCount": 53,
     "companies": [
       {
         "name": "OpenAI",
@@ -1289,7 +1289,7 @@
       },
       {
         "name": "Hugging Face",
-        "count": 8
+        "count": 10
       },
       {
         "name": "DeepSeek",
@@ -1337,7 +1337,7 @@
     "topics": [
       {
         "name": "Agent",
-        "count": 25
+        "count": 26
       },
       {
         "name": "Vibe Coding",
@@ -1345,7 +1345,7 @@
       },
       {
         "name": "\u4f01\u4e1a\u5e94\u7528",
-        "count": 11
+        "count": 13
       },
       {
         "name": "\u63a8\u7406\u80fd\u529b",
@@ -1353,7 +1353,7 @@
       },
       {
         "name": "\u5f00\u6e90\u6a21\u578b",
-        "count": 8
+        "count": 9
       },
       {
         "name": "Prompt",
@@ -1371,7 +1371,7 @@
       },
       {
         "name": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
-        "count": 6
+        "count": 7
       },
       {
         "name": "AI\u5e94\u7528\u65b9\u6cd5",
@@ -4103,15 +4103,15 @@
       "summary": "Machine-Driven Development: Coding in the Age of AI from Vibe Coding. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aVibe Coding\u3002\u4e3b\u9898\uff1aVibe Coding\u3001\u63d0\u793a\u8bcd\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Machine-Driven Development: Coding in the Age of AI hackernoon.com"
+        "Machine-Driven Development: Coding in the Age of AI HackerNoon"
       ],
       "keyPointsZh": [
-        "Machine-Driven Development: \u7f16\u7a0b in the Age of AI hackernoon.com"
+        "Machine-Driven Development: \u7f16\u7a0b in the Age of AI HackerNoon"
       ],
       "imageUrl": "",
       "date": "2026-07-31",
       "sourceName": "Vibe Coding",
-      "publisher": "hackernoon.com",
+      "publisher": "HackerNoon",
       "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTFB0NGgwM3pWcUl1M0I0LWFxNEloTEZjSHZ1QlVqdlhOS1BiVzRybDdrb0JCNDd0YlhkeDAyQklmS1ptWWZhQWpudDYwZXdid0pkamlISnNSdHdidmxRMjFubHJ1ZFhzY2JwN0hsWjJVT2FVOWZfTWZfN0dZQUxiUQ?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
@@ -4123,15 +4123,15 @@
         "agent"
       ],
       "importance": 5,
-      "rawBody": "Machine-Driven Development: Coding in the Age of AI hackernoon.com",
-      "bodyText": "Machine-Driven Development: Coding in the Age of AI hackernoon.com",
+      "rawBody": "Machine-Driven Development: Coding in the Age of AI HackerNoon",
+      "bodyText": "Machine-Driven Development: Coding in the Age of AI HackerNoon",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Vibe Coding",
           "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTFB0NGgwM3pWcUl1M0I0LWFxNEloTEZjSHZ1QlVqdlhOS1BiVzRybDdrb0JCNDd0YlhkeDAyQklmS1ptWWZhQWpudDYwZXdid0pkamlISnNSdHdidmxRMjFubHJ1ZFhzY2JwN0hsWjJVT2FVOWZfTWZfN0dZQUxiUQ?oc=5",
           "sourceGrade": "B",
-          "publisher": "hackernoon.com"
+          "publisher": "HackerNoon"
         }
       ],
       "sourceCount": 1,
@@ -4460,6 +4460,77 @@
       "eventId": "advancing-price-performance-frontier-gpt-5-6"
     },
     {
+      "title": "Cequence Brings Agentic Zero Trust Across MCP, API, and LLM So Every Business Team Can Deploy Agents Without Losing Control",
+      "titleZh": "\u3010Hugging Face\u3011Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy \u667a\u80fd\u4f53 Without Losing Control",
+      "summary": "Cequence Brings Agentic Zero Trust Across MCP, API, and LLM So Every Business Team Can Deploy Agents Without Losing Control The Manila Times",
+      "summaryZh": "\u6765\u6e90\uff1aHugging Face\u3002\u4e3b\u9898\uff1aHugging Face\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Cequence Brings Agentic Zero Trust Across MCP, API, and LLM So Every Business Team Can Deploy Agents Without Losing Control The Manila Times"
+      ],
+      "keyPointsZh": [
+        "Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy \u667a\u80fd\u4f53 Without Losing Control The Manila Times"
+      ],
+      "imageUrl": "",
+      "date": "2026-07-30",
+      "sourceName": "Hugging Face",
+      "publisher": "The Manila Times",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPS2ZZZWRUT0ZZU3NoSXFFLXdkUGdaYU1XZ0ZKOXhWMV9RUDNDZWZDcWp5LWI1eDRzT3V3Q1RXUFlPRnBLSk9yeF83aHJ3QzZvRkxlZXAzcFlCWEtBajlmbTQwbXJFTVNGc0duMDdBZVF3NHVGWlRsR20yU002MTdpQS1UT1NKNXNHdDYzbGpDNF9OenZXZk1OWHl3MjhTcTZvTnMxSGlSMTAycVplaHhsZlp2ZVlsS1FRTFNCWUZpblpSc2tscHU4cVVrRmJRVFJ2WjY3dGtUeEs0Mk9RRjdNSFd3Q1Mzb05mU3Brdmd4VjNLRUpRVFNSTG5pY0dqMDBSY0UyMWJNOEZyWWRtTnNsRnVmWUpSSXlySXNNcU5pM2NRcVY0NkHSAaYCQVVfeXFMT0tmWWVkVE9GWVNzaElxRS13ZFBnWmFNV2dGSjl4VjFfUVAzQ2VmQ3FqeS1iNXg0c091d0NUV1BZT0ZwS0pPcnhfN2hyd0M2b0ZMZWVwM3BZQlhLQWo5Zm00MG1yRU1TRnNHbjA3QWVRdzR1RlpUbEdtMlNNNjE3aUEtVE9TSjVzR3Q2M2xqQzRfTnp2V2ZNTlh5dzI4U3E2b05zMUhpUjEwMnFaZWh4bGZadmVZbEtRUUxTQllGaW5aUnNrbHB1OHFVa0ZiUVRSdlo2N3RrVHhLNDJPUUY3TUhXd0NTM29OZlNwa3ZneFYzS0VKUVRTUkxuaWNHajAwUmNFMjFiTThGcllkbU5zbEZ1ZllKUkl5cklzTXFOaTNjUXFWNDZB?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 89,
+      "tags": [
+        "Hugging Face",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Cequence Brings Agentic Zero Trust Across MCP, API, and LLM So Every Business Team Can Deploy Agents Without Losing Control The Manila Times",
+      "bodyText": "Cequence Brings Agentic Zero Trust Across MCP, API, and LLM So Every Business Team Can Deploy Agents Without Losing Control The Manila Times",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Hugging Face",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPS2ZZZWRUT0ZZU3NoSXFFLXdkUGdaYU1XZ0ZKOXhWMV9RUDNDZWZDcWp5LWI1eDRzT3V3Q1RXUFlPRnBLSk9yeF83aHJ3QzZvRkxlZXAzcFlCWEtBajlmbTQwbXJFTVNGc0duMDdBZVF3NHVGWlRsR20yU002MTdpQS1UT1NKNXNHdDYzbGpDNF9OenZXZk1OWHl3MjhTcTZvTnMxSGlSMTAycVplaHhsZlp2ZVlsS1FRTFNCWUZpblpSc2tscHU4cVVrRmJRVFJ2WjY3dGtUeEs0Mk9RRjdNSFd3Q1Mzb05mU3Brdmd4VjNLRUpRVFNSTG5pY0dqMDBSY0UyMWJNOEZyWWRtTnNsRnVmWUpSSXlySXNNcU5pM2NRcVY0NkHSAaYCQVVfeXFMT0tmWWVkVE9GWVNzaElxRS13ZFBnWmFNV2dGSjl4VjFfUVAzQ2VmQ3FqeS1iNXg0c091d0NUV1BZT0ZwS0pPcnhfN2hyd0M2b0ZMZWVwM3BZQlhLQWo5Zm00MG1yRU1TRnNHbjA3QWVRdzR1RlpUbEdtMlNNNjE3aUEtVE9TSjVzR3Q2M2xqQzRfTnp2V2ZNTlh5dzI4U3E2b05zMUhpUjEwMnFaZWh4bGZadmVZbEtRUUxTQllGaW5aUnNrbHB1OHFVa0ZiUVRSdlo2N3RrVHhLNDJPUUY3TUhXd0NTM29OZlNwa3ZneFYzS0VKUVRTUkxuaWNHajAwUmNFMjFiTThGcllkbU5zbEZ1ZllKUkl5cklzTXFOaTNjUXFWNDZB?oc=5",
+          "sourceGrade": "B",
+          "publisher": "The Manila Times"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 84,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 3,
+        "feature_update": 0,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 84,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / llm / api / \u667a\u80fd\u4f53",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy \u667a\u80fd\u4f53 Without Losing Control Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy Ag",
+        "whyItMatters": "Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy \u667a\u80fd\u4f53 Without Losing Control Cequence Brings Agentic Zero Trust Across MCP, API, \u4ee5\u53ca LLM So Every Business Team Can Deploy Ag",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "cequence-brings-agentic-zero-trust-across-mcp-api-so-every-business-team-can-dep"
+    },
+    {
       "title": "Ontologies Are So Back: Why AI Agents Are Reviving the Semantic Web",
       "titleZh": "\u3010Latent.Space\u3011Ontologies Are So Back: Why AI \u667a\u80fd\u4f53 Are Reviving the Semantic Web",
       "summary": "AI engineers are rediscovering ontologies as a way to keep probabilistic agents inside deterministic boundaries.",
@@ -4675,76 +4746,76 @@
       "eventId": "you-cannot-govern-what-you-cannot-see-closing-visibility-gap-agents"
     },
     {
-      "title": "The model isn't what makes one AI coding agent 10x cheaper than another",
-      "titleZh": "\u3010Cursor\u3011The \u6a21\u578b isn't what makes one AI \u7f16\u7a0b \u667a\u80fd\u4f53 10x cheaper than another",
-      "summary": "The model isn't what makes one AI coding agent 10x cheaper than another Startup Fortune",
+      "title": "SailPoint introduces new Cursor Enterprise connector to secure AI-driven software development",
+      "titleZh": "\u3010Cursor\u3011SailPoint introduces new Cursor \u4f01\u4e1a\u5e94\u7528 connector to secure AI-driven software development",
+      "summary": "SailPoint introduces new Cursor Enterprise connector to secure AI-driven software development GlobeNewswire",
       "summaryZh": "\u6765\u6e90\uff1aCursor\u3002\u4e3b\u9898\uff1aCursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "The model isn't what makes one AI coding agent 10x cheaper than another Startup Fortune"
+        "SailPoint introduces new Cursor Enterprise connector to secure AI-driven software development GlobeNewswire"
       ],
       "keyPointsZh": [
-        "The \u6a21\u578b isn't what makes one AI \u7f16\u7a0b \u667a\u80fd\u4f53 10x cheaper than another Startup Fortune"
+        "SailPoint introduces new Cursor \u4f01\u4e1a\u5e94\u7528 connector to secure AI-driven software development GlobeNewswire"
       ],
       "imageUrl": "",
       "date": "2026-07-29",
       "sourceName": "Cursor",
-      "publisher": "Startup Fortune",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQTRvTmVSejJGaUJLeC13MFl6YzRKNVhaY1Z0TXgzYUMteGZEdkF3NnFNVUFpdWJ0UEJ1YnQ2WmpVY3JORDBOM3dJQkI5UEFjczBJcjFQaGtiTlpyQTFTWWJzLV96ZWdnTTFJaFk1NEZleE9EWUJOOXB3bkV6V3ZmSlRwWVg2R01wcFR6LXZOVVZ2RUVOMHV4UDNhQ3JISkU?oc=5",
+      "publisher": "GlobeNewswire",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPaDdaeUF5VHIwcTVJeldHb1M3SE8tMjdRTG1xS21meEpCelVINFh5UWNEb2lYVUJURVZVc2hmOE5qTllIVzdJVm1BYm1QRmh2eGlFalFpRlcweGQ1Z19TRDMtQXpiLVJGSDlyUkJ2cmp1bTFPRUZad2JtTUhDRVdVZkkwbzNEdTBqaXZNZ3NSaTBOQnVYY2xwTWgwbzN6VENvaDVRWlcySjBNUFRUOG9yWG5mVFZ3Z05FYXMxWXY0WVYyNWNvUHEyNG1xalBMaXFDRVpQZnBWS1p2NXQxdURhelBzdTZNOVduc3NyVWRKMnRhSDQtSkZQSg?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
       "contentType": "news",
-      "readingScore": 94,
+      "readingScore": 90,
       "tags": [
         "Cursor",
         "coding",
         "agent"
       ],
       "importance": 4,
-      "rawBody": "The model isn't what makes one AI coding agent 10x cheaper than another Startup Fortune",
-      "bodyText": "The model isn't what makes one AI coding agent 10x cheaper than another Startup Fortune",
+      "rawBody": "SailPoint introduces new Cursor Enterprise connector to secure AI-driven software development GlobeNewswire",
+      "bodyText": "SailPoint introduces new Cursor Enterprise connector to secure AI-driven software development GlobeNewswire",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Cursor",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQTRvTmVSejJGaUJLeC13MFl6YzRKNVhaY1Z0TXgzYUMteGZEdkF3NnFNVUFpdWJ0UEJ1YnQ2WmpVY3JORDBOM3dJQkI5UEFjczBJcjFQaGtiTlpyQTFTWWJzLV96ZWdnTTFJaFk1NEZleE9EWUJOOXB3bkV6V3ZmSlRwWVg2R01wcFR6LXZOVVZ2RUVOMHV4UDNhQ3JISkU?oc=5",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPaDdaeUF5VHIwcTVJeldHb1M3SE8tMjdRTG1xS21meEpCelVINFh5UWNEb2lYVUJURVZVc2hmOE5qTllIVzdJVm1BYm1QRmh2eGlFalFpRlcweGQ1Z19TRDMtQXpiLVJGSDlyUkJ2cmp1bTFPRUZad2JtTUhDRVdVZkkwbzNEdTBqaXZNZ3NSaTBOQnVYY2xwTWgwbzN6VENvaDVRWlcySjBNUFRUOG9yWG5mVFZ3Z05FYXMxWXY0WVYyNWNvUHEyNG1xalBMaXFDRVpQZnBWS1p2NXQxdURhelBzdTZNOVduc3NyVWRKMnRhSDQtSkZQSg?oc=5",
           "sourceGrade": "B",
-          "publisher": "Startup Fortune"
+          "publisher": "GlobeNewswire"
         }
       ],
       "sourceCount": 1,
       "aggregatedEvent": false,
-      "qualityScore": 90,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualityScore": 78,
+      "qualityType": "feature_update",
+      "qualityLabelZh": "\u91cd\u8981\u529f\u80fd\u66f4\u65b0",
       "qualitySignals": {
-        "technical_update": 3,
-        "feature_update": 0,
+        "technical_update": 0,
+        "feature_update": 3,
         "application_method": 0
       },
       "lowValueSignals": 0,
       "titleLowValue": false,
       "qualityReview": {
-        "score": 90,
-        "tier": "top",
+        "score": 78,
+        "tier": "default",
         "isDefaultVisible": true,
-        "isTopEligible": true,
+        "isTopEligible": false,
         "reasons": [
           "\u5b9e\u6218\u65b9\u6cd5\u4f18\u5148\uff1a\u5339\u914d Agent / Prompt / Vibe Coding \u5de5\u4f5c\u6d41\u65b9\u5411",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u7f16\u7a0b / \u6a21\u578b / \u667a\u80fd\u4f53",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u6a21\u578b",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u4f01\u4e1a\u5e94\u7528 / connector / AI / cursor",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1acursor",
+          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
         ],
         "penalties": [],
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "The \u6a21\u578b isn't what makes one AI \u7f16\u7a0b \u667a\u80fd\u4f53 10x cheaper than another The \u6a21\u578b isn't what makes one AI \u7f16\u7a0b \u667a\u80fd\u4f53 10x cheaper than another Startup Fortune The \u6a21\u578b isn't what makes one AI \u7f16\u7a0b \u667a\u80fd\u4f53 10x cheaper t",
-        "whyItMatters": "The \u6a21\u578b isn't what makes one AI \u7f16\u7a0b \u667a\u80fd\u4f53 10x cheaper than another The \u6a21\u578b isn't what makes one AI \u7f16\u7a0b \u667a\u80fd\u4f53 10x cheaper than another Startup Fortune The \u6a21\u578b isn't what makes one AI \u7f16\u7a0b \u667a\u80fd\u4f53 10x cheaper t",
+        "whatHappened": "SailPoint introduces new Cursor \u4f01\u4e1a\u5e94\u7528 connector to secure AI-driven software development SailPoint introduces new Cursor \u4f01\u4e1a\u5e94\u7528 connector to secure AI-driven software development GlobeNewswire SailPoint introduc",
+        "whyItMatters": "SailPoint introduces new Cursor \u4f01\u4e1a\u5e94\u7528 connector to secure AI-driven software development SailPoint introduces new Cursor \u4f01\u4e1a\u5e94\u7528 connector to secure AI-driven software development GlobeNewswire SailPoint introduc",
         "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
         "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
-      "eventId": "model-isn-t-what-makes-one-coding-agent-10x-cheaper-than-another"
+      "eventId": "sailpoint-introduces-new-enterprise-connector-secure-driven-software-development"
     },
     {
       "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
@@ -8369,18 +8440,18 @@
     {
       "title": "Beyond vibe coding: How Codev 3.0 engineers the AI-powered dev team",
       "titleZh": "\u3010Vibe Coding\u3011Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team",
-      "summary": "Beyond vibe coding: How Codev 3.0 engineers the AI-powered dev team from Vibe Coding. Useful for deciding whether the original article deserves a deeper read.",
+      "summary": "Beyond vibe coding: How Codev 3.0 engineers the AI-powered dev team bdtechtalks.com",
       "summaryZh": "\u6765\u6e90\uff1aVibe Coding\u3002\u4e3b\u9898\uff1aVibe Coding\u3001\u63d0\u793a\u8bcd\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Beyond vibe coding: How Codev 3.0 engineers the AI-powered dev team TechTalks"
+        "Beyond vibe coding: How Codev 3.0 engineers the AI-powered dev team bdtechtalks.com"
       ],
       "keyPointsZh": [
-        "Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team TechTalks"
+        "Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team bdtechtalks.com"
       ],
       "imageUrl": "",
       "date": "2026-06-08",
       "sourceName": "Vibe Coding",
-      "publisher": "TechTalks",
+      "publisher": "bdtechtalks.com",
       "sourceUrl": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBXcVVnUU9IT3ZlNDctUjIyaFRENjBubF9mRWQ4Q3BoM2ZyY01UazgyTHRZeWZkSDNkSzRBRjFWdmVKWnBrQkFnUFVvcUFDV2N2SlJkNGdEUnVqdmhEcjRKXzgtZ09VeHJLVWFRclVCQdIBdEFVX3lxTFBGc3NzV1BZTVdmaS00UWt5RzZEZ2pka2gyV2NORGNtNGhCRkFXUE9TUTZIU2xseWViYm9Md1F0d1lRRWM5dHk0U0ZzX2NtMlpPR1lJTTU1WEQ5WlU0aEFnWldlTndJaWE2UFA4SmNDY2dFQmhP?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
@@ -8392,15 +8463,15 @@
         "agent"
       ],
       "importance": 5,
-      "rawBody": "Beyond vibe coding: How Codev 3.0 engineers the AI-powered dev team TechTalks",
-      "bodyText": "Beyond vibe coding: How Codev 3.0 engineers the AI-powered dev team TechTalks",
+      "rawBody": "Beyond vibe coding: How Codev 3.0 engineers the AI-powered dev team bdtechtalks.com",
+      "bodyText": "Beyond vibe coding: How Codev 3.0 engineers the AI-powered dev team bdtechtalks.com",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Vibe Coding",
           "sourceUrl": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBXcVVnUU9IT3ZlNDctUjIyaFRENjBubF9mRWQ4Q3BoM2ZyY01UazgyTHRZeWZkSDNkSzRBRjFWdmVKWnBrQkFnUFVvcUFDV2N2SlJkNGdEUnVqdmhEcjRKXzgtZ09VeHJLVWFRclVCQdIBdEFVX3lxTFBGc3NzV1BZTVdmaS00UWt5RzZEZ2pka2gyV2NORGNtNGhCRkFXUE9TUTZIU2xseWViYm9Md1F0d1lRRWM5dHk0U0ZzX2NtMlpPR1lJTTU1WEQ5WlU0aEFnWldlTndJaWE2UFA4SmNDY2dFQmhP?oc=5",
           "sourceGrade": "B",
-          "publisher": "TechTalks"
+          "publisher": "bdtechtalks.com"
         }
       ],
       "sourceCount": 1,
@@ -8430,8 +8501,8 @@
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team \u6765\u81ea Vibe \u7f16\u7a0b.",
-        "whyItMatters": "Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team \u6765\u81ea Vibe \u7f16\u7a0b.",
+        "whatHappened": "Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team bdtechtalks.com Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team ",
+        "whyItMatters": "Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team bdtechtalks.com Beyond vibe \u7f16\u7a0b: How Codev 3.0 engineers the AI-powered dev team ",
         "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
         "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
@@ -8581,6 +8652,77 @@
       "eventId": "new-codex-copilot-hermes-microsoft-build-2026-updates"
     },
     {
+      "title": "OpenAI's Codex update lets agents build interactive enterprise workspaces via Sites and role-specific plugins",
+      "titleZh": "\u3010OpenAI\u3011OpenAI's Codex update lets \u667a\u80fd\u4f53 build interactive \u4f01\u4e1a\u5e94\u7528 workspaces via Sites \u4ee5\u53ca role-specific plugins",
+      "summary": "OpenAI's Codex update lets agents build interactive enterprise workspaces via Sites and role-specific plugins Venturebeat",
+      "summaryZh": "\u6765\u6e90\uff1aOpenAI\u3002\u4e3b\u9898\uff1aOpenAI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "OpenAI's Codex update lets agents build interactive enterprise workspaces via Sites and role-specific plugins Venturebeat"
+      ],
+      "keyPointsZh": [
+        "OpenAI's Codex update lets \u667a\u80fd\u4f53 build interactive \u4f01\u4e1a\u5e94\u7528 workspaces via Sites \u4ee5\u53ca role-specific plugins Venturebeat"
+      ],
+      "imageUrl": "",
+      "date": "2026-06-02",
+      "sourceName": "OpenAI",
+      "publisher": "Venturebeat",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPVWkzdDNDdHpkbWN0dElScDMzNHV6SkJkb1VvR3d0cl84MWNxTHU3TWRhRUM5c3V0dHFKYnQ0UGZmVThZbTVHZ1NfUzB0OTBtR1R2M1BWQTlBYlgxWDVFZDBaZ2pMQkl3N2syWm04b1JYam1BdnZsS0NBczlZLU56R05zdEg5VjVRMVpWZEZGMzZOdkUtZ3JlVTVRdVVTa01kS3c2ZC0zdVBQMVhQRW4wM1lQZjhDemlCcXlKUWM1QVdPUlhTbDhhYWpVQmlQdHpwb283aDFuUFM4Wjlfcllj?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 95,
+      "tags": [
+        "OpenAI",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "OpenAI's Codex update lets agents build interactive enterprise workspaces via Sites and role-specific plugins Venturebeat",
+      "bodyText": "OpenAI's Codex update lets agents build interactive enterprise workspaces via Sites and role-specific plugins Venturebeat",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "OpenAI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPVWkzdDNDdHpkbWN0dElScDMzNHV6SkJkb1VvR3d0cl84MWNxTHU3TWRhRUM5c3V0dHFKYnQ0UGZmVThZbTVHZ1NfUzB0OTBtR1R2M1BWQTlBYlgxWDVFZDBaZ2pMQkl3N2syWm04b1JYam1BdnZsS0NBczlZLU56R05zdEg5VjVRMVpWZEZGMzZOdkUtZ3JlVTVRdVVTa01kS3c2ZC0zdVBQMVhQRW4wM1lQZjhDemlCcXlKUWM1QVdPUlhTbDhhYWpVQmlQdHpwb283aDFuUFM4Wjlfcllj?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Venturebeat"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 100,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 3,
+        "feature_update": 2,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 100,
+        "tier": "top",
+        "isDefaultVisible": true,
+        "isTopEligible": true,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u4f01\u4e1a\u5e94\u7528",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1acodex / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "OpenAI's Codex update lets \u667a\u80fd\u4f53 build interactive \u4f01\u4e1a\u5e94\u7528 workspaces via Sites \u4ee5\u53ca role-specific plugins OpenAI's Codex update lets \u667a\u80fd\u4f53 build interactive \u4f01\u4e1a\u5e94\u7528 workspaces via Sites \u4ee5\u53ca role-specific plugins ",
+        "whyItMatters": "OpenAI's Codex update lets \u667a\u80fd\u4f53 build interactive \u4f01\u4e1a\u5e94\u7528 workspaces via Sites \u4ee5\u53ca role-specific plugins OpenAI's Codex update lets \u667a\u80fd\u4f53 build interactive \u4f01\u4e1a\u5e94\u7528 workspaces via Sites \u4ee5\u53ca role-specific plugins ",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "s-codex-update-lets-agents-build-interactive-enterprise-workspaces-via-sites-rol"
+    },
+    {
       "title": "Snowflake Announces Intent to Acquire Natoma, Providing Secure Connectivity For The Agentic Enterprise",
       "titleZh": "\u3010Snowflake AI\u3011Snowflake Announces Intent to Acquire Natoma, Providing Secure Connectivity \u9762\u5411 The Agentic \u4f01\u4e1a\u5e94\u7528",
       "summary": "Snowflake Announces Intent to Acquire Natoma, Providing Secure Connectivity For The Agentic Enterprise Morningstar",
@@ -8650,77 +8792,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "snowflake-announces-intent-acquire-natoma-providing-secure-connectivity-agentic-"
-    },
-    {
-      "title": "Agentic Search in 2026: Benchmark 8 Search APIs for Agents",
-      "titleZh": "\u3010Perplexity\u3011Agentic \u641c\u7d22 in 2026: Benchmark 8 \u641c\u7d22 APIs \u9762\u5411 \u667a\u80fd\u4f53",
-      "summary": "Agentic Search in 2026: Benchmark 8 Search APIs for Agents from Perplexity. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u6765\u6e90\uff1aPerplexity\u3002\u4e3b\u9898\uff1aPerplexity\u3001\u4f01\u4e1a\u5e94\u7528\u3002Agentic \u641c\u7d22 in 2026: Benchmark 8 \u641c\u7d22 APIs \u9762\u5411 \u667a\u80fd\u4f53 \u6765\u81ea Perplexity. Useful \u9762\u5411 deciding whether the original article deserves a deeper read.\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Agentic Search in 2026: Benchmark 8 Search APIs for Agents aimultiple.com"
-      ],
-      "keyPointsZh": [
-        "Agentic \u641c\u7d22 in 2026: Benchmark 8 \u641c\u7d22 APIs \u9762\u5411 \u667a\u80fd\u4f53 aimultiple.com"
-      ],
-      "imageUrl": "",
-      "date": "2026-05-25",
-      "sourceName": "Perplexity",
-      "publisher": "aimultiple.com",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5CX1ZtX2RaQUVYckpHbTdSNTR6SzJFd2VodFh1ckhoY1RDb0dzY192WGVQZV93aXk4Y0lFV3AyWHVSNUc3cmdaOUdISkFOUQ?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 89,
-      "tags": [
-        "Perplexity",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Agentic Search in 2026: Benchmark 8 Search APIs for Agents aimultiple.com",
-      "bodyText": "Agentic Search in 2026: Benchmark 8 Search APIs for Agents aimultiple.com",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Perplexity",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5CX1ZtX2RaQUVYckpHbTdSNTR6SzJFd2VodFh1ckhoY1RDb0dzY192WGVQZV93aXk4Y0lFV3AyWHVSNUc3cmdaOUdISkFOUQ?oc=5",
-          "sourceGrade": "B",
-          "publisher": "aimultiple.com"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 84,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 4,
-        "feature_update": 0,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 84,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1abenchmark / \u667a\u80fd\u4f53 / api / \u667a\u80fd\u4f53",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / benchmark",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Agentic \u641c\u7d22 in 2026: Benchmark 8 \u641c\u7d22 APIs \u9762\u5411 \u667a\u80fd\u4f53 Agentic \u641c\u7d22 in 2026: Benchmark 8 \u641c\u7d22 APIs \u9762\u5411 \u667a\u80fd\u4f53 \u6765\u81ea Perplexity.",
-        "whyItMatters": "Agentic \u641c\u7d22 in 2026: Benchmark 8 \u641c\u7d22 APIs \u9762\u5411 \u667a\u80fd\u4f53 Agentic \u641c\u7d22 in 2026: Benchmark 8 \u641c\u7d22 APIs \u9762\u5411 \u667a\u80fd\u4f53 \u6765\u81ea Perplexity.",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "agentic-search-2026-benchmark-8-search-apis-agents"
     },
     {
       "title": "\ud83d\ude3a Google just put agents in everything",
@@ -9016,15 +9087,15 @@
       "summary": "Best 50+ Open Source AI Agents Listed from Simon Willison. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Best 50+ Open Source AI Agents Listed aimultiple.com"
+        "Best 50+ Open Source AI Agents Listed AIMultiple"
       ],
       "keyPointsZh": [
-        "Best 50+ Open Source AI \u667a\u80fd\u4f53 Listed aimultiple.com"
+        "Best 50+ Open Source AI \u667a\u80fd\u4f53 Listed AIMultiple"
       ],
       "imageUrl": "",
       "date": "2026-05-14",
       "sourceName": "Simon Willison",
-      "publisher": "aimultiple.com",
+      "publisher": "AIMultiple",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5WbnFnU3kxUnVrMWt2TlYyR3h4T3g0SWVFU0xQZlpBZHhxRDhGWnIzR284empKR1BVeVBIa0gyTmFiZWo3RjZvcjdIZ0puU3BMdlMzVURDOA?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
@@ -9035,15 +9106,15 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "Best 50+ Open Source AI Agents Listed aimultiple.com",
-      "bodyText": "Best 50+ Open Source AI Agents Listed aimultiple.com",
+      "rawBody": "Best 50+ Open Source AI Agents Listed AIMultiple",
+      "bodyText": "Best 50+ Open Source AI Agents Listed AIMultiple",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Simon Willison",
           "sourceUrl": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5WbnFnU3kxUnVrMWt2TlYyR3h4T3g0SWVFU0xQZlpBZHhxRDhGWnIzR284empKR1BVeVBIa0gyTmFiZWo3RjZvcjdIZ0puU3BMdlMzVURDOA?oc=5",
           "sourceGrade": "B",
-          "publisher": "aimultiple.com"
+          "publisher": "AIMultiple"
         }
       ],
       "sourceCount": 1,
@@ -9550,7 +9621,7 @@
         }
       ],
       "sourceCount": 1,
-      "aggregatedEvent": false,
+      "aggregatedEvent": true,
       "qualityScore": 64,
       "qualityType": "application_method",
       "qualityLabelZh": "AI\u5e94\u7528\u65b9\u6cd5",
@@ -9803,82 +9874,6 @@
       "eventId": "salesforce-launches-headless-360-support-agent-first-enterprise-workflows"
     },
     {
-      "title": "My bets on open models, mid-2026",
-      "titleZh": "\u3010Interconnects\u3011My bets on open \u6a21\u578b, mid-2026",
-      "summary": "My bets on open models, mid-2026 from Interconnects. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u6765\u6e90\uff1aInterconnects\u3002\u4e3b\u9898\uff1aNathan Lambert\u3001\u7814\u7a76\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Focus: Nathan Lambert, research, creator",
-        "Worth reading for practical context and source details.",
-        "Open the original article for full evidence and nuance."
-      ],
-      "keyPointsZh": [
-        "Focus: Nathan Lambert, \u7814\u7a76, \u535a\u4e3b\u89c2\u70b9",
-        "Worth reading \u9762\u5411 practical context \u4ee5\u53ca source details.",
-        "Open the original article \u9762\u5411 full evidence \u4ee5\u53ca nuance."
-      ],
-      "imageUrl": "https://substack-post-media.s3.amazonaws.com/public/images/8be08b29-d70a-43f3-8422-6b952816ddab_3182x1790.png",
-      "date": "2026-04-15",
-      "sourceName": "Interconnects",
-      "publisher": "",
-      "sourceUrl": "https://www.interconnects.ai/p/my-bets-on-open-models-mid-2026",
-      "sourceGrade": "A",
-      "category": "\u6838\u5fc3AI\u535a\u4e3b",
-      "contentType": "article",
-      "readingScore": 100,
-      "tags": [
-        "Nathan Lambert",
-        "research",
-        "creator"
-      ],
-      "importance": 5,
-      "rawBody": "What I expect to come next and why, focused on the open-closed gap.",
-      "bodyText": "What I expect to come next and why, focused on the open-closed gap.",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Interconnects",
-          "sourceUrl": "https://www.interconnects.ai/p/my-bets-on-open-models-mid-2026",
-          "sourceGrade": "A",
-          "publisher": ""
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 60,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 1,
-        "feature_update": 1,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 60,
-        "tier": "default",
-        "isDefaultVisible": true,
-        "isTopEligible": false,
-        "reasons": [
-          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / \u6a21\u578b / \u6a21\u578b / \u6a21\u578b",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b / \u6a21\u578b",
-          "\u4e00\u624b/\u6838\u5fc3\u6765\u6e90\u52a0\u6743"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "My bets on open \u6a21\u578b, mid-2026 My bets on open \u6a21\u578b, mid-2026 \u6765\u81ea Interconnects.",
-        "whyItMatters": "My bets on open \u6a21\u578b, mid-2026 My bets on open \u6a21\u578b, mid-2026 \u6765\u81ea Interconnects.",
-        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
-        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "my-bets-open-models-mid-2026"
-    },
-    {
       "title": "5 Best Books for Building Agentic AI Systems in 2026",
       "titleZh": "\u3010Chip Huyen\u30115 Best Books \u9762\u5411 Building Agentic AI Systems in 2026",
       "summary": "5 Best Books for Building Agentic AI Systems in 2026 from Chip Huyen. Useful for deciding whether the original article deserves a deeper read.",
@@ -10026,15 +10021,15 @@
       "summary": "Recipes for Determinism: Helping Agents Follow Instructions from Simon Willison. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aSimon Willison\u3002\u4e3b\u9898\uff1aSimon Willison\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Recipes for Determinism: Helping Agents Follow Instructions blogs.oracle.com"
+        "Recipes for Determinism: Helping Agents Follow Instructions Oracle Blogs"
       ],
       "keyPointsZh": [
-        "Recipes \u9762\u5411 Determinism: Helping \u667a\u80fd\u4f53 Follow Instructions blogs.oracle.com"
+        "Recipes \u9762\u5411 Determinism: Helping \u667a\u80fd\u4f53 Follow Instructions Oracle Blogs"
       ],
       "imageUrl": "",
       "date": "2026-04-09",
       "sourceName": "Simon Willison",
-      "publisher": "blogs.oracle.com",
+      "publisher": "Oracle Blogs",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1GY00wR2hoVkJkN1Q5aWxvNGtMMzRTcDJlSEg5Ny1hYnl4NWxlVUFfbmZabDAyQnRXeDBNNS1GS3ByRTgwMTZrbURHdVIzTEYwVmJWdQ?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
@@ -10045,15 +10040,15 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "Recipes for Determinism: Helping Agents Follow Instructions blogs.oracle.com",
-      "bodyText": "Recipes for Determinism: Helping Agents Follow Instructions blogs.oracle.com",
+      "rawBody": "Recipes for Determinism: Helping Agents Follow Instructions Oracle Blogs",
+      "bodyText": "Recipes for Determinism: Helping Agents Follow Instructions Oracle Blogs",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Simon Willison",
           "sourceUrl": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1GY00wR2hoVkJkN1Q5aWxvNGtMMzRTcDJlSEg5Ny1hYnl4NWxlVUFfbmZabDAyQnRXeDBNNS1GS3ByRTgwMTZrbURHdVIzTEYwVmJWdQ?oc=5",
           "sourceGrade": "B",
-          "publisher": "blogs.oracle.com"
+          "publisher": "Oracle Blogs"
         }
       ],
       "sourceCount": 1,
@@ -10165,18 +10160,18 @@
     {
       "title": "Announcing GA of OCI Enterprise AI: a simplified approach to build, deploy, and govern production AI faster",
       "titleZh": "\u3010Oracle AI\u3011Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster",
-      "summary": "Announcing GA of OCI Enterprise AI: a simplified approach to build, deploy, and govern production AI faster blogs.oracle.com",
+      "summary": "Announcing GA of OCI Enterprise AI: a simplified approach to build, deploy, and govern production AI faster Oracle Blogs",
       "summaryZh": "\u6765\u6e90\uff1aOracle AI\u3002\u4e3b\u9898\uff1aOracle AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Announcing GA of OCI Enterprise AI: a simplified approach to build, deploy, and govern production AI faster blogs.oracle.com"
+        "Announcing GA of OCI Enterprise AI: a simplified approach to build, deploy, and govern production AI faster Oracle Blogs"
       ],
       "keyPointsZh": [
-        "Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster blogs.oracle.com"
+        "Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster Oracle Blogs"
       ],
       "imageUrl": "",
       "date": "2026-03-24",
       "sourceName": "Oracle AI",
-      "publisher": "blogs.oracle.com",
+      "publisher": "Oracle Blogs",
       "sourceUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQQWw0NWN1RXYwVlRuV2pzTVpMQlBZa2hiMFJPcE9UR21Tb0g0Y0pUSl9mNnJvQjRWQ3NjbVdEenk5ZmRYRWNZTWpNbl9FX2FxWm5Qa3ZCMFdadjF1UjBKelV1dHEyRGdRLTg3d21mMEhCZlFwNEQ3dzcxUFNSRXdybQ?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
@@ -10187,15 +10182,15 @@
         "enterprise"
       ],
       "importance": 5,
-      "rawBody": "Announcing GA of OCI Enterprise AI: a simplified approach to build, deploy, and govern production AI faster blogs.oracle.com",
-      "bodyText": "Announcing GA of OCI Enterprise AI: a simplified approach to build, deploy, and govern production AI faster blogs.oracle.com",
+      "rawBody": "Announcing GA of OCI Enterprise AI: a simplified approach to build, deploy, and govern production AI faster Oracle Blogs",
+      "bodyText": "Announcing GA of OCI Enterprise AI: a simplified approach to build, deploy, and govern production AI faster Oracle Blogs",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Oracle AI",
           "sourceUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQQWw0NWN1RXYwVlRuV2pzTVpMQlBZa2hiMFJPcE9UR21Tb0g0Y0pUSl9mNnJvQjRWQ3NjbVdEenk5ZmRYRWNZTWpNbl9FX2FxWm5Qa3ZCMFdadjF1UjBKelV1dHEyRGdRLTg3d21mMEhCZlFwNEQ3dzcxUFNSRXdybQ?oc=5",
           "sourceGrade": "B",
-          "publisher": "blogs.oracle.com"
+          "publisher": "Oracle Blogs"
         }
       ],
       "sourceCount": 1,
@@ -10224,8 +10219,8 @@
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster blog",
-        "whyItMatters": "Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster blog",
+        "whatHappened": "Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster Orac",
+        "whyItMatters": "Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster Announcing GA of OCI \u4f01\u4e1a\u5e94\u7528 AI: a simplified approach to build, deploy, \u4ee5\u53ca govern production AI faster Orac",
         "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
         "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u91cd\u8981\u529f\u80fd\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
@@ -10810,20 +10805,91 @@
       "eventId": "launches-computer-agent-that-coordinates-19-models-priced-at-200-month"
     },
     {
+      "title": "Agentic AI with multi-model framework using Hugging Face smolagents on AWS | Amazon Web Services",
+      "titleZh": "\u3010Hugging Face\u3011Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services",
+      "summary": "Agentic AI with multi-model framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS)",
+      "summaryZh": "\u6765\u6e90\uff1aHugging Face\u3002\u4e3b\u9898\uff1aHugging Face\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Agentic AI with multi-model framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS)"
+      ],
+      "keyPointsZh": [
+        "Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS)"
+      ],
+      "imageUrl": "",
+      "date": "2026-02-23",
+      "sourceName": "Hugging Face",
+      "publisher": "Amazon Web Services (AWS)",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNN1FBcW02UXV0RUNUeTFYVzlMc1FvbmRVM0RYYjVUYmxKaFBnM3hocENCbktvNTZpbUxJWlVUTjZZUHg4MmNNOC1nSW9MQm1HUmpjbEhob05ZbFlCSmVYTEJ1dUV1a0tBYTRKZnRtdTloSHN0T0wwM3BEa0NiaUNzVVJFUjdJY3hsOG5zeEQ1d055Skp5aEhRX0tFVHdJMEdHNVVtUzRROE1xQ1EzSTduTkF3dFhiN3JWd3dYTnpn?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 83,
+      "tags": [
+        "Hugging Face",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Agentic AI with multi-model framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS)",
+      "bodyText": "Agentic AI with multi-model framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS)",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Hugging Face",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNN1FBcW02UXV0RUNUeTFYVzlMc1FvbmRVM0RYYjVUYmxKaFBnM3hocENCbktvNTZpbUxJWlVUTjZZUHg4MmNNOC1nSW9MQm1HUmpjbEhob05ZbFlCSmVYTEJ1dUV1a0tBYTRKZnRtdTloSHN0T0wwM3BEa0NiaUNzVVJFUjdJY3hsOG5zeEQ1d055Skp5aEhRX0tFVHdJMEdHNVVtUzRROE1xQ1EzSTduTkF3dFhiN3JWd3dYTnpn?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Amazon Web Services (AWS)"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 66,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 3,
+        "feature_update": 0,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 66,
+        "tier": "default",
+        "isDefaultVisible": true,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u6a21\u578b / \u667a\u80fd\u4f53 / \u667a\u80fd\u4f53",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u6a21\u578b",
+          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS) ",
+        "whyItMatters": "Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services Agentic AI \u7ed3\u5408 multi-\u6a21\u578b framework using Hugging Face smolagents on AWS | Amazon Web Services Amazon Web Services (AWS) ",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "agentic-multi-model-framework-using-smolagents-aws-amazon-web-services"
+    },
+    {
       "title": "Why AI Agents Work in Demos But Fail in Production",
       "titleZh": "\u3010Latent.Space\u3011Why AI \u667a\u80fd\u4f53 Work in Demos But Fail in Production",
       "summary": "Why AI Agents Work in Demos But Fail in Production from Latent.Space. Useful for deciding whether the original article deserves a deeper read.",
       "summaryZh": "\u6765\u6e90\uff1aLatent.Space\u3002\u4e3b\u9898\uff1aLatent.Space\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Why AI Agents Work in Demos But Fail in Production hackernoon.com"
+        "Why AI Agents Work in Demos But Fail in Production HackerNoon"
       ],
       "keyPointsZh": [
-        "Why AI \u667a\u80fd\u4f53 Work in Demos But Fail in Production hackernoon.com"
+        "Why AI \u667a\u80fd\u4f53 Work in Demos But Fail in Production HackerNoon"
       ],
       "imageUrl": "",
       "date": "2026-02-23",
       "sourceName": "Latent.Space",
-      "publisher": "hackernoon.com",
+      "publisher": "HackerNoon",
       "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1KWUNiQTgyZk94TTRmWnV4YURVc2JFbVF5NVFrNG9Qc0s0d0Q5bEcwZUZEZUJ1Slo1Uk4xRGZ3Z0dnSjJTSUFMWURsOHAzbnlKeUN3TXhrSDdWU0QzTEdBNWIxUjhDdTNwTmRBT1V2c2NFcGdBcFkwdkg4bW5pUQ?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
@@ -10834,15 +10900,15 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "Why AI Agents Work in Demos But Fail in Production hackernoon.com",
-      "bodyText": "Why AI Agents Work in Demos But Fail in Production hackernoon.com",
+      "rawBody": "Why AI Agents Work in Demos But Fail in Production HackerNoon",
+      "bodyText": "Why AI Agents Work in Demos But Fail in Production HackerNoon",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Latent.Space",
           "sourceUrl": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1KWUNiQTgyZk94TTRmWnV4YURVc2JFbVF5NVFrNG9Qc0s0d0Q5bEcwZUZEZUJ1Slo1Uk4xRGZ3Z0dnSjJTSUFMWURsOHAzbnlKeUN3TXhrSDdWU0QzTEdBNWIxUjhDdTNwTmRBT1V2c2NFcGdBcFkwdkg4bW5pUQ?oc=5",
           "sourceGrade": "B",
-          "publisher": "hackernoon.com"
+          "publisher": "HackerNoon"
         }
       ],
       "sourceCount": 1,
@@ -11171,77 +11237,6 @@
     },
     {
       "title": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers",
-      "titleZh": "\u3010Andrej Karpathy\u3011Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers",
-      "summary": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India",
-      "summaryZh": "\u6765\u6e90\uff1aAndrej Karpathy\u3002\u4e3b\u9898\uff1aAndrej Karpathy\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India"
-      ],
-      "keyPointsZh": [
-        "Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers The Times of India"
-      ],
-      "imageUrl": "",
-      "date": "2026-02-09",
-      "sourceName": "Andrej Karpathy",
-      "publisher": "The Times of India",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPY1NQbWZCLU5CYkhYaEd2SEZMMXNaMU1CUjhQTmRBUUxfZWRsbnFaOWtNZHNrcWhfWFZ4N0paZjFMbDBaZExpT1VGRGRZcEZxdnVzdUdJZ0N1ajFXVkFKSUp6bUN3MDI4NERrZU1nbS1RTWxMQ2RZN0ltUGFCNEFVcUtnSERTZ1JJTElXZUxIdjQ5dnNVblEwbmkzMm5hbGFOaXZERGFIRERBMkVud3VpRXI1ZnZmQkZNWnVkTk9JQ0JqZ08xZmpCTUdqbEtGNVpWYzBwREpOd0kyM0FheFVGWXRsRklpNUVjUjFVZlBwVVFNbVYteExyR1NibnY1X19Xb0RGR1VZYW1IXzAwemFmVHJR0gGXAkFVX3lxTFB0c2sydEVpQWlKRkxFTXExUi05Z241R0dnZ0hWYUpQcW5Ldm9raE1VUnJfRmgxNmhVNUhUamliMGxPVzlzWVE3MS01YVE4dUd2Q1UxRWlmQmpNVldQLTEtTENzTEh3R1RpRndQZ0hhMUZyeS01dHdSdHBfalI0WERlZmJLQmhodF9TVmdRaHRyNkZieW5hRDN4bmhEdnZRRzZYaS0tVmxXbTdNVFp6QklkMDZhVVBRbEhRdUNSLThFQ1NzZnZTajFGYkNaMlBjVHk1ZkhhQzduX2U3TDMzZmUxcjZtQ1RUM20wdGJ4Z2g4TkJMSnhoeGs3akkzLTl4SlM4T2dJTThtVWlGRms5Mi1ySUtHU2tZdw?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u535a\u4e3b",
-      "contentType": "article",
-      "readingScore": 97,
-      "tags": [
-        "Andrej Karpathy",
-        "creator"
-      ],
-      "importance": 5,
-      "rawBody": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India",
-      "bodyText": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Andrej Karpathy",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPY1NQbWZCLU5CYkhYaEd2SEZMMXNaMU1CUjhQTmRBUUxfZWRsbnFaOWtNZHNrcWhfWFZ4N0paZjFMbDBaZExpT1VGRGRZcEZxdnVzdUdJZ0N1ajFXVkFKSUp6bUN3MDI4NERrZU1nbS1RTWxMQ2RZN0ltUGFCNEFVcUtnSERTZ1JJTElXZUxIdjQ5dnNVblEwbmkzMm5hbGFOaXZERGFIRERBMkVud3VpRXI1ZnZmQkZNWnVkTk9JQ0JqZ08xZmpCTUdqbEtGNVpWYzBwREpOd0kyM0FheFVGWXRsRklpNUVjUjFVZlBwVVFNbVYteExyR1NibnY1X19Xb0RGR1VZYW1IXzAwemFmVHJR0gGXAkFVX3lxTFB0c2sydEVpQWlKRkxFTXExUi05Z241R0dnZ0hWYUpQcW5Ldm9raE1VUnJfRmgxNmhVNUhUamliMGxPVzlzWVE3MS01YVE4dUd2Q1UxRWlmQmpNVldQLTEtTENzTEh3R1RpRndQZ0hhMUZyeS01dHdSdHBfalI0WERlZmJLQmhodF9TVmdRaHRyNkZieW5hRDN4bmhEdnZRRzZYaS0tVmxXbTdNVFp6QklkMDZhVVBRbEhRdUNSLThFQ1NzZnZTajFGYkNaMlBjVHk1ZkhhQzduX2U3TDMzZmUxcjZtQ1RUM20wdGJ4Z2g4TkJMSnhoeGs3akkzLTl4SlM4T2dJTThtVWlGRms5Mi1ySUtHU2tZdw?oc=5",
-          "sourceGrade": "B",
-          "publisher": "The Times of India"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 64,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 1,
-        "feature_update": 0,
-        "application_method": 1
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 64,
-        "tier": "default",
-        "isDefaultVisible": true,
-        "isTopEligible": false,
-        "reasons": [
-          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1avibe coding / \u7f16\u7a0b / AI / vibe coding",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1avibe coding",
-          "\u9ed8\u8ba4\u4fe1\u606f\u6d41\u4fdd\u7559"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers The Times of",
-        "whyItMatters": "Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers The Times of",
-        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
-        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "tesla-s-former-director-who-coined-word-vibe-coding-has-new-word-engineers"
-    },
-    {
-      "title": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers",
       "titleZh": "\u3010Dario Amodei\u3011Tesla's former AI director Andrej Karpathy who coined the word Vibe \u7f16\u7a0b has a new word \u9762\u5411 engineers",
       "summary": "Tesla's former AI director Andrej Karpathy who coined the word Vibe Coding has a new word for engineers The Times of India",
       "summaryZh": "\u6765\u6e90\uff1aDario Amodei\u3002\u4e3b\u9898\uff1aDario Amodei\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
@@ -11310,77 +11305,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "tesla-s-former-director-andrej-karpathy-who-coined-word-vibe-coding-has-new-word"
-    },
-    {
-      "title": "Snowflake Unveils Cortex Code, An AI Coding Agent That Drastically Increases Productivity by Understanding Your Enterprise Data Context",
-      "titleZh": "\u3010Snowflake AI\u3011Snowflake Unveils Cortex Code, An AI \u7f16\u7a0b \u667a\u80fd\u4f53 That Drastically Increases Productivity by Understanding Your \u4f01\u4e1a\u5e94\u7528 Data Context",
-      "summary": "Snowflake Unveils Cortex Code, An AI Coding Agent That Drastically Increases Productivity by Understanding Your Enterprise Data Context Snowflake",
-      "summaryZh": "\u6765\u6e90\uff1aSnowflake AI\u3002\u4e3b\u9898\uff1aSnowflake AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Snowflake Unveils Cortex Code, An AI Coding Agent That Drastically Increases Productivity by Understanding Your Enterprise Data Context Snowflake"
-      ],
-      "keyPointsZh": [
-        "Snowflake Unveils Cortex Code, An AI \u7f16\u7a0b \u667a\u80fd\u4f53 That Drastically Increases Productivity by Understanding Your \u4f01\u4e1a\u5e94\u7528 Data Context Snowflake"
-      ],
-      "imageUrl": "",
-      "date": "2026-02-03",
-      "sourceName": "Snowflake AI",
-      "publisher": "Snowflake",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQMVV5b0dQYjVZRU9EUG5ub0xjWnQ4NXlpTnl0cmRMUzh2WDZwMk5JTEZkRmJwYWJ5dG85TVdObjZNWnh4M0NjOXRDQjNydHA4ZUs1QkJaaERIbFA0ODdURTNkVEdKaGw2NFNjS0lteDRYRFJTSFQzRXE0WEhtQzlfLWpOTjAxRm81Y2sxQnlmQU1ZVm94U0NCZF8zMWJfejBSMkNFeGd2U3Jkbnp6NGE0ZVpmUkRET2UyNXJ2OWc3VWVGTG91cm9iZTFEY2x5SF9qQmdGeUV1VzFsLWFXZVVoeVBuTXpKaGlIeUdsU2RLb0laY0hZWGtGNExybXI1cll2eWF2R3BDc0xGbzNmVUUxb2Z3?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
-      "contentType": "news",
-      "readingScore": 89,
-      "tags": [
-        "Snowflake AI",
-        "enterprise"
-      ],
-      "importance": 5,
-      "rawBody": "Snowflake Unveils Cortex Code, An AI Coding Agent That Drastically Increases Productivity by Understanding Your Enterprise Data Context Snowflake",
-      "bodyText": "Snowflake Unveils Cortex Code, An AI Coding Agent That Drastically Increases Productivity by Understanding Your Enterprise Data Context Snowflake",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "Snowflake AI",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQMVV5b0dQYjVZRU9EUG5ub0xjWnQ4NXlpTnl0cmRMUzh2WDZwMk5JTEZkRmJwYWJ5dG85TVdObjZNWnh4M0NjOXRDQjNydHA4ZUs1QkJaaERIbFA0ODdURTNkVEdKaGw2NFNjS0lteDRYRFJTSFQzRXE0WEhtQzlfLWpOTjAxRm81Y2sxQnlmQU1ZVm94U0NCZF8zMWJfejBSMkNFeGd2U3Jkbnp6NGE0ZVpmUkRET2UyNXJ2OWc3VWVGTG91cm9iZTFEY2x5SF9qQmdGeUV1VzFsLWFXZVVoeVBuTXpKaGlIeUdsU2RLb0laY0hZWGtGNExybXI1cll2eWF2R3BDc0xGbzNmVUUxb2Z3?oc=5",
-          "sourceGrade": "B",
-          "publisher": "Snowflake"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 84,
-      "qualityType": "technical_update",
-      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
-      "qualitySignals": {
-        "technical_update": 3,
-        "feature_update": 1,
-        "application_method": 0
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 84,
-        "tier": "top",
-        "isDefaultVisible": true,
-        "isTopEligible": true,
-        "reasons": [
-          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u7f16\u7a0b / \u667a\u80fd\u4f53 / \u4f01\u4e1a\u5e94\u7528",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53",
-          "\u53ef\u8fdb\u5165 Top/\u65e5\u62a5\u5019\u9009"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "Snowflake Unveils Cortex Code, An AI \u7f16\u7a0b \u667a\u80fd\u4f53 That Drastically Increases Productivity by Understanding Your \u4f01\u4e1a\u5e94\u7528 Data Context Snowflake Unveils Cortex Code, An AI \u7f16\u7a0b \u667a\u80fd\u4f53 That Drastically Increases Product",
-        "whyItMatters": "Snowflake Unveils Cortex Code, An AI \u7f16\u7a0b \u667a\u80fd\u4f53 That Drastically Increases Productivity by Understanding Your \u4f01\u4e1a\u5e94\u7528 Data Context Snowflake Unveils Cortex Code, An AI \u7f16\u7a0b \u667a\u80fd\u4f53 That Drastically Increases Product",
-        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
-        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "unveils-cortex-code-coding-agent-that-drastically-increases-productivity-underst"
     },
     {
       "title": "Management as AI superpower",
@@ -12353,7 +12277,7 @@
       "imageUrl": "",
       "date": "2026-07-27",
       "sourceName": "Claude Code",
-      "publisher": "blogs.oracle.com",
+      "publisher": "Oracle Blogs",
       "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSmJaWVNWMTNCdE8ycHNucVdieDA3QjlBM3g0WjhpQ19XTndVdDZIMU0zTVFBQWsyaHpCZTJIbjc5X09vSmlNaW8zU2VoSl9ESjlTWGZQRnpGb2U1WmZsSHpmaGVBc0lrMkFVVkFFUUZKdk4xVThvcWRVUTFmckZHQVJ4V25sVmFwUXE0SDdn?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
@@ -12365,15 +12289,15 @@
         "agent"
       ],
       "importance": 4,
-      "rawBody": "Getting Started with Oracle APEX Development in VS Code blogs.oracle.com",
-      "bodyText": "Getting Started with Oracle APEX Development in VS Code blogs.oracle.com",
+      "rawBody": "Getting Started with Oracle APEX Development in VS Code Oracle Blogs",
+      "bodyText": "Getting Started with Oracle APEX Development in VS Code Oracle Blogs",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Claude Code",
           "sourceUrl": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSmJaWVNWMTNCdE8ycHNucVdieDA3QjlBM3g0WjhpQ19XTndVdDZIMU0zTVFBQWsyaHpCZTJIbjc5X09vSmlNaW8zU2VoSl9ESjlTWGZQRnpGb2U1WmZsSHpmaGVBc0lrMkFVVkFFUUZKdk4xVThvcWRVUTFmckZHQVJ4V25sVmFwUXE0SDdn?oc=5",
           "sourceGrade": "B",
-          "publisher": "blogs.oracle.com"
+          "publisher": "Oracle Blogs"
         }
       ],
       "sourceCount": 1,
@@ -12927,6 +12851,77 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "newer-models-same-advantage"
+    },
+    {
+      "title": "40+ Agentic AI Use Cases with Real-life Examples",
+      "titleZh": "\u3010Perplexity\u301140+ Agentic AI Use Cases \u7ed3\u5408 Real-life Examples",
+      "summary": "40+ Agentic AI Use Cases with Real-life Examples from Perplexity. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aPerplexity\u3002\u4e3b\u9898\uff1aPerplexity\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "40+ Agentic AI Use Cases with Real-life Examples AIMultiple"
+      ],
+      "keyPointsZh": [
+        "40+ Agentic AI Use Cases \u7ed3\u5408 Real-life Examples AIMultiple"
+      ],
+      "imageUrl": "",
+      "date": "2026-07-16",
+      "sourceName": "Perplexity",
+      "publisher": "AIMultiple",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5tZ3ZlYWRiTjItMFZpaDFsbVA5MTBYY2ZwSWVIbWFXc2NielI3YXRSQ1hrQVFHUkRXaEVtaWh5bmFyMFRGdGtOQQ?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 76,
+      "tags": [
+        "Perplexity",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "40+ Agentic AI Use Cases with Real-life Examples AIMultiple",
+      "bodyText": "40+ Agentic AI Use Cases with Real-life Examples AIMultiple",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Perplexity",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5tZ3ZlYWRiTjItMFZpaDFsbVA5MTBYY2ZwSWVIbWFXc2NielI3YXRSQ1hrQVFHUkRXaEVtaWh5bmFyMFRGdGtOQQ?oc=5",
+          "sourceGrade": "B",
+          "publisher": "AIMultiple"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 48,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 0,
+        "application_method": 1
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 48,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / AI / \u667a\u80fd\u4f53",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "40+ Agentic AI Use Cases \u7ed3\u5408 Real-life Examples 40+ Agentic AI Use Cases \u7ed3\u5408 Real-life Examples \u6765\u81ea Perplexity.",
+        "whyItMatters": "40+ Agentic AI Use Cases \u7ed3\u5408 Real-life Examples 40+ Agentic AI Use Cases \u7ed3\u5408 Real-life Examples \u6765\u81ea Perplexity.",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "40-agentic-use-cases-real-life-examples"
     },
     {
       "title": "How Codex became a collaborator for OpenAI\u2019s creative team",
@@ -13514,18 +13509,18 @@
     {
       "title": "Cursor Is Developing an AI Agent to Compete With Claude Cowork",
       "titleZh": "\u3010Cursor\u3011Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork",
-      "summary": "Cursor Is Developing an AI Agent to Compete With Claude Cowork from Cursor. Useful for deciding whether the original article deserves a deeper read.",
+      "summary": "Cursor Is Developing an AI Agent to Compete With Claude Cowork theinformation.com",
       "summaryZh": "\u6765\u6e90\uff1aCursor\u3002\u4e3b\u9898\uff1aCursor\u3001\u7f16\u7a0b\u3001\u667a\u80fd\u4f53\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Cursor Is Developing an AI Agent to Compete With Claude Cowork The Information"
+        "Cursor Is Developing an AI Agent to Compete With Claude Cowork theinformation.com"
       ],
       "keyPointsZh": [
-        "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork The Information"
+        "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork theinformation.com"
       ],
       "imageUrl": "",
       "date": "2026-07-09",
       "sourceName": "Cursor",
-      "publisher": "The Information",
+      "publisher": "theinformation.com",
       "sourceUrl": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZ2tEWU1XQmk4OEdCcHhKSmF1VkFwMUxLcUJsQTVRY2N3NEhkMXduSUo3bVBBUk1zYUp6Q2p2QWozRHZ5NnJwM2VLSG0yUkJSOV9JMGpoZjl6R3Jsa0UxZnozeGQ1NjI1Z3NobzZMQlpLNjJBVTZSR3plRTJ6T2pCalhKUHVubnBlOENtVTBSN0dOUQ?oc=5",
       "sourceGrade": "B",
       "category": "Vibe/Prompt/Agent\u5b9e\u6218",
@@ -13537,15 +13532,15 @@
         "agent"
       ],
       "importance": 4,
-      "rawBody": "Cursor Is Developing an AI Agent to Compete With Claude Cowork The Information",
-      "bodyText": "Cursor Is Developing an AI Agent to Compete With Claude Cowork The Information",
+      "rawBody": "Cursor Is Developing an AI Agent to Compete With Claude Cowork theinformation.com",
+      "bodyText": "Cursor Is Developing an AI Agent to Compete With Claude Cowork theinformation.com",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Cursor",
           "sourceUrl": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZ2tEWU1XQmk4OEdCcHhKSmF1VkFwMUxLcUJsQTVRY2N3NEhkMXduSUo3bVBBUk1zYUp6Q2p2QWozRHZ5NnJwM2VLSG0yUkJSOV9JMGpoZjl6R3Jsa0UxZnozeGQ1NjI1Z3NobzZMQlpLNjJBVTZSR3plRTJ6T2pCalhKUHVubnBlOENtVTBSN0dOUQ?oc=5",
           "sourceGrade": "B",
-          "publisher": "The Information"
+          "publisher": "theinformation.com"
         }
       ],
       "sourceCount": 1,
@@ -13575,8 +13570,8 @@
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork \u6765\u81ea Cursor.",
-        "whyItMatters": "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork \u6765\u81ea Cursor.",
+        "whatHappened": "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork theinformation.com Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork theinformati",
+        "whyItMatters": "Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork theinformation.com Cursor Is Developing an AI \u667a\u80fd\u4f53 to Compete \u7ed3\u5408 Claude Cowork theinformati",
         "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
         "audience": "Prompt / Agent / Vibe Coding \u5b9e\u6218\u7528\u6237",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
@@ -13871,81 +13866,6 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1aAI\u5e94\u7528\u65b9\u6cd5\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "complete-guide-gpt-5-6"
-    },
-    {
-      "title": "A Guide to Using ChatGPT for Customer Service",
-      "titleZh": "\u3010deeplearning.ai\u3011A Guide to Using ChatGPT \u9762\u5411 Customer Service",
-      "summary": "A Guide to Using ChatGPT for Customer Service from deeplearning.ai. Useful for deciding whether the original article deserves a deeper read.",
-      "summaryZh": "\u6765\u6e90\uff1adeeplearning.ai\u3002\u4e3b\u9898\uff1adeeplearning.ai\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
-      "keyPoints": [
-        "Focus: deeplearning.ai, creator",
-        "Worth reading for practical context and source details.",
-        "Open the original article for full evidence and nuance."
-      ],
-      "keyPointsZh": [
-        "Focus: deeplearning.AI, \u535a\u4e3b\u89c2\u70b9",
-        "Worth reading \u9762\u5411 practical context \u4ee5\u53ca source details.",
-        "Open the original article \u9762\u5411 full evidence \u4ee5\u53ca nuance."
-      ],
-      "imageUrl": "",
-      "date": "2026-06-29",
-      "sourceName": "deeplearning.ai",
-      "publisher": "Coursera",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9PaHFkOUhsN01GVV9SSDl4YkFPbTdyT3BTcDBjVURZSm9jdWlPcHk3X2d0ZUVYdjhxRXJfaFhObzJ4eXVVRzRHZTJJV2djcHZWa3dPaDBWUG5GQjFIYmlTWUhKTWdQYm9RZUZCZWxESQ?oc=5",
-      "sourceGrade": "B",
-      "category": "\u6838\u5fc3AI\u535a\u4e3b",
-      "contentType": "article",
-      "readingScore": 91,
-      "tags": [
-        "deeplearning.ai",
-        "creator"
-      ],
-      "importance": 5,
-      "rawBody": "A Guide to Using ChatGPT for Customer Service Coursera",
-      "bodyText": "A Guide to Using ChatGPT for Customer Service Coursera",
-      "contentFetched": false,
-      "relatedSources": [
-        {
-          "sourceName": "deeplearning.ai",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9PaHFkOUhsN01GVV9SSDl4YkFPbTdyT3BTcDBjVURZSm9jdWlPcHk3X2d0ZUVYdjhxRXJfaFhObzJ4eXVVRzRHZTJJV2djcHZWa3dPaDBWUG5GQjFIYmlTWUhKTWdQYm9RZUZCZWxESQ?oc=5",
-          "sourceGrade": "B",
-          "publisher": "Coursera"
-        }
-      ],
-      "sourceCount": 1,
-      "aggregatedEvent": false,
-      "qualityScore": 46,
-      "qualityType": "application_method",
-      "qualityLabelZh": "AI\u5e94\u7528\u65b9\u6cd5",
-      "qualitySignals": {
-        "technical_update": 0,
-        "feature_update": 0,
-        "application_method": 1
-      },
-      "lowValueSignals": 0,
-      "titleLowValue": false,
-      "qualityReview": {
-        "score": 46,
-        "tier": "archive",
-        "isDefaultVisible": false,
-        "isTopEligible": false,
-        "reasons": [
-          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
-          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1aguide / AI / gpt",
-          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1agpt",
-          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
-        ],
-        "penalties": [],
-        "reviewer": "content-experience-v1"
-      },
-      "intelligenceBrief": {
-        "whatHappened": "A Guide to Using ChatGPT \u9762\u5411 Customer Service A Guide to Using ChatGPT \u9762\u5411 Customer Service \u6765\u81ea deeplearning.AI.",
-        "whyItMatters": "A Guide to Using ChatGPT \u9762\u5411 Customer Service A Guide to Using ChatGPT \u9762\u5411 Customer Service \u6765\u81ea deeplearning.AI.",
-        "takeaway": "\u5efa\u8bae\u5c06\u5b83\u5f53\u4f5c\u65b9\u6cd5\u8bba\u7d20\u6750\uff1a\u91cd\u70b9\u770b\u5176\u5de5\u4f5c\u6d41\u3001\u63d0\u793a\u8bcd\u3001Agent \u7f16\u6392\u6216\u843d\u5730\u6b65\u9aa4\u662f\u5426\u80fd\u590d\u7528\u3002",
-        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
-        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1aAI\u5e94\u7528\u65b9\u6cd5\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
-      },
-      "eventId": "guide-using-chatgpt-customer-service"
     },
     {
       "title": "Karpathy CLAUDE.md Grows to Ten Rules: New Self-Check Protocol for AI Coding Loops",
@@ -14384,6 +14304,77 @@
       "eventId": "meta-enters-enterprise-race-new-business-agent"
     },
     {
+      "title": "Snowflake's AI Push for the Agentic Enterprise",
+      "titleZh": "\u3010Snowflake AI\u3011Snowflake's AI Push \u9762\u5411 the Agentic \u4f01\u4e1a\u5e94\u7528",
+      "summary": "Snowflake's AI Push for the Agentic Enterprise from Snowflake AI. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aSnowflake AI\u3002\u4e3b\u9898\uff1aSnowflake AI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Snowflake's AI Push for the Agentic Enterprise StartupHub.ai"
+      ],
+      "keyPointsZh": [
+        "Snowflake's AI Push \u9762\u5411 the Agentic \u4f01\u4e1a\u5e94\u7528 StartupHub.AI"
+      ],
+      "imageUrl": "",
+      "date": "2026-06-02",
+      "sourceName": "Snowflake AI",
+      "publisher": "StartupHub.ai",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQlpfdUJ4R1l3bUVxZkNBbnhIZnFhOVQ4RktrSzUwbE40QVlOclYwY0M1RDZTOXJFSzh4QjV4bEtOeC1PVkRfdlZsS3RRc0lTbXBFUjdCTzEwczBjUnRqTmxzNWZrV1dOVWtJYkFCRWoxaVpDbzRtdTJ1RjVxSF9mcjVlNnZYS1VoWXhuQUdZQkxUelQzVERReV82NjQ?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 76,
+      "tags": [
+        "Snowflake AI",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Snowflake's AI Push for the Agentic Enterprise StartupHub.ai",
+      "bodyText": "Snowflake's AI Push for the Agentic Enterprise StartupHub.ai",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Snowflake AI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQlpfdUJ4R1l3bUVxZkNBbnhIZnFhOVQ4RktrSzUwbE40QVlOclYwY0M1RDZTOXJFSzh4QjV4bEtOeC1PVkRfdlZsS3RRc0lTbXBFUjdCTzEwczBjUnRqTmxzNWZrV1dOVWtJYkFCRWoxaVpDbzRtdTJ1RjVxSF9mcjVlNnZYS1VoWXhuQUdZQkxUelQzVERReV82NjQ?oc=5",
+          "sourceGrade": "B",
+          "publisher": "StartupHub.ai"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 48,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 1,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 48,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / \u4f01\u4e1a\u5e94\u7528 / AI",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Snowflake's AI Push \u9762\u5411 the Agentic \u4f01\u4e1a\u5e94\u7528 Snowflake's AI Push \u9762\u5411 the Agentic \u4f01\u4e1a\u5e94\u7528 \u6765\u81ea Snowflake AI.",
+        "whyItMatters": "Snowflake's AI Push \u9762\u5411 the Agentic \u4f01\u4e1a\u5e94\u7528 Snowflake's AI Push \u9762\u5411 the Agentic \u4f01\u4e1a\u5e94\u7528 \u6765\u81ea Snowflake AI.",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "snowflake-s-push-agentic-enterprise"
+    },
+    {
       "title": "Farewell Ai2",
       "titleZh": "\u3010Interconnects\u3011Farewell Ai2",
       "summary": "This was my last week at the Allen Institute for AI (Ai2), where I got the great privilege to work on the Olmo models, to grow, to learn, and to have broad lasting impacts.",
@@ -14674,6 +14665,77 @@
       "eventId": "releases-new-audio-model-that-can-create-6-minute-songs"
     },
     {
+      "title": "H2O.ai Unveils tabH2O, the Industry\u2019s Top Enterprise Foundation Model for Tabular Data, at Dell Technologies World 2026",
+      "titleZh": "\u3010xAI\u3011H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Technologies World 2026",
+      "summary": "H2O.ai Unveils tabH2O, the Industry\u2019s Top Enterprise Foundation Model for Tabular Data, at Dell Technologies World 2026 Business Wire",
+      "summaryZh": "\u6765\u6e90\uff1axAI\u3002\u4e3b\u9898\uff1axAI\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "H2O.ai Unveils tabH2O, the Industry\u2019s Top Enterprise Foundation Model for Tabular Data, at Dell Technologies World 2026 Business Wire"
+      ],
+      "keyPointsZh": [
+        "H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Technologies World 2026 Business Wire"
+      ],
+      "imageUrl": "",
+      "date": "2026-05-19",
+      "sourceName": "xAI",
+      "publisher": "Business Wire",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQZ3VWV0lTa1BBMkkycDBVQjVNaDVUZjdUcHJoRFVTaXgwZm4wTkdfcmhzcFp3VUp3bzVBYWxxY3dMMUVJcUxQVHJJdnlqaUlVMmxjZmhZSi1DbTRtTVBJOVpYSVFaRHJDZG1mNVVQMl8yZnVKb21zUi13bmdIV2laaW9RQ3J2VktCVTBzY1F6MlNMc195WHhEWHVmZmxyaGpwby1QS3h2MkpMOEg2QkpvU2RIbGQwanJnajZIR3JvM25tbFBPVDBoODEta2lOWkxJRWlUNzVsY01OTVNqbGtrcmZ5MnA3MWFQMzh6VUZIVWpIT1F4R0k3UGxwSXBxV1hVVXd3?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 72,
+      "tags": [
+        "xAI",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "H2O.ai Unveils tabH2O, the Industry\u2019s Top Enterprise Foundation Model for Tabular Data, at Dell Technologies World 2026 Business Wire",
+      "bodyText": "H2O.ai Unveils tabH2O, the Industry\u2019s Top Enterprise Foundation Model for Tabular Data, at Dell Technologies World 2026 Business Wire",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "xAI",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQZ3VWV0lTa1BBMkkycDBVQjVNaDVUZjdUcHJoRFVTaXgwZm4wTkdfcmhzcFp3VUp3bzVBYWxxY3dMMUVJcUxQVHJJdnlqaUlVMmxjZmhZSi1DbTRtTVBJOVpYSVFaRHJDZG1mNVVQMl8yZnVKb21zUi13bmdIV2laaW9RQ3J2VktCVTBzY1F6MlNMc195WHhEWHVmZmxyaGpwby1QS3h2MkpMOEg2QkpvU2RIbGQwanJnajZIR3JvM25tbFBPVDBoODEta2lOWkxJRWlUNzVsY01OTVNqbGtrcmZ5MnA3MWFQMzh6VUZIVWpIT1F4R0k3UGxwSXBxV1hVVXd3?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Business Wire"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 36,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 1,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 36,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / \u4f01\u4e1a\u5e94\u7528 / AI / \u6a21\u578b",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u6a21\u578b",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Technologies World 2026 H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Tech",
+        "whyItMatters": "H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Technologies World 2026 H2O.AI Unveils tabH2O, the Industry\u2019s Top \u4f01\u4e1a\u5e94\u7528 Foundation \u6a21\u578b \u9762\u5411 Tabular Data, at Dell Tech",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "h2o-unveils-tabh2o-industry-s-top-enterprise-foundation-model-tabular-data-at-de"
+    },
+    {
       "title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
       "titleZh": "\u3010Interconnects\u3011Latest open artifacts (#21): Open \u6a21\u578b bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
       "summary": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment. from Interconnects. Useful for deciding whether the original article deserves a deeper read.",
@@ -14897,18 +14959,18 @@
     {
       "title": "GENIUS: an agentic AI framework for autonomous design and execution of simulation protocols",
       "titleZh": "\u3010The Neuron\u3011GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols",
-      "summary": "GENIUS: an agentic AI framework for autonomous design and execution of simulation protocols nature.com",
+      "summary": "GENIUS: an agentic AI framework for autonomous design and execution of simulation protocols Nature",
       "summaryZh": "\u6765\u6e90\uff1aThe Neuron\u3002\u4e3b\u9898\uff1aThe Neuron\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "GENIUS: an agentic AI framework for autonomous design and execution of simulation protocols nature.com"
+        "GENIUS: an agentic AI framework for autonomous design and execution of simulation protocols Nature"
       ],
       "keyPointsZh": [
-        "GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols nature.com"
+        "GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols Nature"
       ],
       "imageUrl": "",
       "date": "2026-04-29",
       "sourceName": "The Neuron",
-      "publisher": "nature.com",
+      "publisher": "Nature",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1XekgyWkxLQU10NURCVUdtekw0bFVIV1dPSEFQbnFJZ2pkZ3VBdnZoaDZBUFhxVFd2bWpQNk11bmtOUVNvMlhJTTdtWlJZUmk1Rll3M3lrR0NjS0ptcFhj?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
@@ -14919,15 +14981,15 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "GENIUS: an agentic AI framework for autonomous design and execution of simulation protocols nature.com",
-      "bodyText": "GENIUS: an agentic AI framework for autonomous design and execution of simulation protocols nature.com",
+      "rawBody": "GENIUS: an agentic AI framework for autonomous design and execution of simulation protocols Nature",
+      "bodyText": "GENIUS: an agentic AI framework for autonomous design and execution of simulation protocols Nature",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "The Neuron",
           "sourceUrl": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1XekgyWkxLQU10NURCVUdtekw0bFVIV1dPSEFQbnFJZ2pkZ3VBdnZoaDZBUFhxVFd2bWpQNk11bmtOUVNvMlhJTTdtWlJZUmk1Rll3M3lrR0NjS0ptcFhj?oc=5",
           "sourceGrade": "B",
-          "publisher": "nature.com"
+          "publisher": "Nature"
         }
       ],
       "sourceCount": 1,
@@ -14957,8 +15019,8 @@
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols nature.com GENIUS: an agentic AI fra",
-        "whyItMatters": "GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols nature.com GENIUS: an agentic AI fra",
+        "whatHappened": "GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols Nature GENIUS: an agentic AI framewo",
+        "whyItMatters": "GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols GENIUS: an agentic AI framework \u9762\u5411 autonomous design \u4ee5\u53ca execution of simulation protocols Nature GENIUS: an agentic AI framewo",
         "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
@@ -15106,6 +15168,148 @@
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
       },
       "eventId": "gpt-5-6-models-now-generally-available-amazon-bedrock"
+    },
+    {
+      "title": "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies",
+      "titleZh": "\u3010DeepSeek\u3011China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies",
+      "summary": "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies CNBC",
+      "summaryZh": "\u6765\u6e90\uff1aDeepSeek\u3002\u4e3b\u9898\uff1aDeepSeek\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies CNBC"
+      ],
+      "keyPointsZh": [
+        "China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies CNBC"
+      ],
+      "imageUrl": "",
+      "date": "2026-04-24",
+      "sourceName": "DeepSeek",
+      "publisher": "CNBC",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPd3BGX1RVY2NmcVZoZnpqQ0hDTmdhem9nVE5wLWlKN2lIYzNuVjJtUjdqeU9oWWIxVjY4WG1BU0ctMm5VNURWZmhnU05IQTVnakRJUFJSeHI5dFB0WThCb1h1Q2Fnb3k5aUwyTUd6NEZ3bU1LRWs5OHZvTi1MQlJpVzNMbnRzcDd6UkZxdFlsX0FycjU5SVc4ONIBngFBVV95cUxQWWFDRGp5MGRYM2FYZ0lvN0Y5cTVOSm56QmZQeENWTzdUQzVXOVZIQjVZZy1OcnJLeEFzSklFVEpWdWV6d05POWktN2JIbkJzQnhSZDdtRm1VQzBEbjR3ZjNyQ0VjSkVpenFrWGM5MnFWdndlVTg5OGgwMUpJa0RONnF2em9hdGhycjNGdmpmZHlQSEdudTMyRm1mdjVQUQ?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 72,
+      "tags": [
+        "DeepSeek",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies CNBC",
+      "bodyText": "China's DeepSeek releases preview of long-awaited V4 model as AI race intensifies CNBC",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "DeepSeek",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPd3BGX1RVY2NmcVZoZnpqQ0hDTmdhem9nVE5wLWlKN2lIYzNuVjJtUjdqeU9oWWIxVjY4WG1BU0ctMm5VNURWZmhnU05IQTVnakRJUFJSeHI5dFB0WThCb1h1Q2Fnb3k5aUwyTUd6NEZ3bU1LRWs5OHZvTi1MQlJpVzNMbnRzcDd6UkZxdFlsX0FycjU5SVc4ONIBngFBVV95cUxQWWFDRGp5MGRYM2FYZ0lvN0Y5cTVOSm56QmZQeENWTzdUQzVXOVZIQjVZZy1OcnJLeEFzSklFVEpWdWV6d05POWktN2JIbkJzQnhSZDdtRm1VQzBEbjR3ZjNyQ0VjSkVpenFrWGM5MnFWdndlVTg5OGgwMUpJa0RONnF2em9hdGhycjNGdmpmZHlQSEdudTMyRm1mdjVQUQ?oc=5",
+          "sourceGrade": "B",
+          "publisher": "CNBC"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 36,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 1,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 36,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u6a21\u578b / release / AI / deepseek",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1adeepseek / \u6a21\u578b",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies CNBC China's DeepSeek releases preview of long-awaited V",
+        "whyItMatters": "China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies China's DeepSeek releases preview of long-awaited V4 \u6a21\u578b as AI race intensifies CNBC China's DeepSeek releases preview of long-awaited V",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "china-s-releases-preview-long-awaited-v4-model-as-race-intensifies"
+    },
+    {
+      "title": "How I Built a Self-Maintaining Knowledge Base for 6 Projects Using Claude Code & Karpathy's LLM Wiki",
+      "titleZh": "\u3010Andrej Karpathy\u3011How I Built a Self-Maintaining Knowledge Base \u9762\u5411 6 Projects Using Claude Code & Karpathy's LLM Wiki",
+      "summary": "How I Built a Self-Maintaining Knowledge Base for 6 Projects Using Claude Code & Karpathy's LLM Wiki HackerNoon",
+      "summaryZh": "\u6765\u6e90\uff1aAndrej Karpathy\u3002\u4e3b\u9898\uff1aAndrej Karpathy\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "How I Built a Self-Maintaining Knowledge Base for 6 Projects Using Claude Code & Karpathy's LLM Wiki HackerNoon"
+      ],
+      "keyPointsZh": [
+        "How I Built a Self-Maintaining Knowledge Base \u9762\u5411 6 Projects Using Claude Code & Karpathy's LLM Wiki HackerNoon"
+      ],
+      "imageUrl": "",
+      "date": "2026-04-20",
+      "sourceName": "Andrej Karpathy",
+      "publisher": "HackerNoon",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdzZ6MnY3bHQxSGtQVTBTck5WWGZlYkdqWElMTms0SzhwMWI4cmhBZVRsQTJNdzJmcWU4eUgyNzhxbVRxUTFPaGdyQzlqcUR2WDNUaG5ZcWtzZl9QaWRQSWdwQW1OdklWM0JjR0N1Skk1R2FkMnpEQTJTOUZNbUx3M1pBNm9ka0xxeG0tcEs5RHBORWFOYVhYYTZiZjlBcmZQRVZ1UGh1aVd3Tm5nbTRISHhXVmlWdFoyY2dqdjBOdGNCQQ?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u535a\u4e3b",
+      "contentType": "article",
+      "readingScore": 91,
+      "tags": [
+        "Andrej Karpathy",
+        "creator"
+      ],
+      "importance": 5,
+      "rawBody": "How I Built a Self-Maintaining Knowledge Base for 6 Projects Using Claude Code & Karpathy's LLM Wiki HackerNoon",
+      "bodyText": "How I Built a Self-Maintaining Knowledge Base for 6 Projects Using Claude Code & Karpathy's LLM Wiki HackerNoon",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Andrej Karpathy",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdzZ6MnY3bHQxSGtQVTBTck5WWGZlYkdqWElMTms0SzhwMWI4cmhBZVRsQTJNdzJmcWU4eUgyNzhxbVRxUTFPaGdyQzlqcUR2WDNUaG5ZcWtzZl9QaWRQSWdwQW1OdklWM0JjR0N1Skk1R2FkMnpEQTJTOUZNbUx3M1pBNm9ka0xxeG0tcEs5RHBORWFOYVhYYTZiZjlBcmZQRVZ1UGh1aVd3Tm5nbTRISHhXVmlWdFoyY2dqdjBOdGNCQQ?oc=5",
+          "sourceGrade": "B",
+          "publisher": "HackerNoon"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 46,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 0,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 46,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u6838\u5fc3\u535a\u4e3b\u89c2\u70b9\uff1a\u4ec5\u4fdd\u7559 AI/LLM/Agent/Prompt/Coding \u76f8\u5173\u5185\u5bb9",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1allm / AI / llm / claude",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1allm / claude",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "How I Built a Self-Maintaining Knowledge Base \u9762\u5411 6 Projects Using Claude Code & Karpathy's LLM Wiki How I Built a Self-Maintaining Knowledge Base \u9762\u5411 6 Projects Using Claude Code & Karpathy's LLM Wiki HackerNoon How I B",
+        "whyItMatters": "How I Built a Self-Maintaining Knowledge Base \u9762\u5411 6 Projects Using Claude Code & Karpathy's LLM Wiki How I Built a Self-Maintaining Knowledge Base \u9762\u5411 6 Projects Using Claude Code & Karpathy's LLM Wiki HackerNoon How I B",
+        "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
+        "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "how-i-built-self-maintaining-knowledge-base-6-projects-using-claude-code-karpath"
     },
     {
       "title": "Salesforce, Databricks unveil agentic AI governance tools",
@@ -15680,20 +15884,91 @@
       "eventId": "claude-code-isn-t-just-developers-i-wish-i-d-realized-that-sooner"
     },
     {
-      "title": "Inference-Time Scaling: How Modern AI Models Think Longer to Perform Better",
-      "titleZh": "\u3010Sebastian Raschka\u3011\u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better",
-      "summary": "Inference-Time Scaling: How Modern AI Models Think Longer to Perform Better medium.com",
-      "summaryZh": "\u6765\u6e90\uff1aSebastian Raschka\u3002\u4e3b\u9898\uff1aSebastian Raschka\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "title": "Perplexity\u2019s CEO steps Into the AI agent conversation with Computer",
+      "titleZh": "\u3010Perplexity\u3011Perplexity\u2019s CEO steps Into the AI \u667a\u80fd\u4f53 conversation \u7ed3\u5408 Computer",
+      "summary": "Perplexity\u2019s CEO steps Into the AI agent conversation with Computer from Perplexity. Useful for deciding whether the original article deserves a deeper read.",
+      "summaryZh": "\u6765\u6e90\uff1aPerplexity\u3002\u4e3b\u9898\uff1aPerplexity\u3001\u4f01\u4e1a\u5e94\u7528\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
       "keyPoints": [
-        "Inference-Time Scaling: How Modern AI Models Think Longer to Perform Better medium.com"
+        "Perplexity\u2019s CEO steps Into the AI agent conversation with Computer Fortune"
       ],
       "keyPointsZh": [
-        "\u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better medium.com"
+        "Perplexity\u2019s CEO steps Into the AI \u667a\u80fd\u4f53 conversation \u7ed3\u5408 Computer Fortune"
+      ],
+      "imageUrl": "",
+      "date": "2026-02-26",
+      "sourceName": "Perplexity",
+      "publisher": "Fortune",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOV1R0Tjk5c05YMUN1Y0hIY1RER29wYXlzejJyOGlPcTk2TXZ0V0g0d0pNZlc1a0E5SV9oRllrZEk2UjMxbVFzQmExTV9FS1dwQU4tNXdvSTdmXzNTYmN4OEQwVlU5d0RSNEplZlRvaUZEZXdaNUs1NGFfNkNIYmoxWHNrN0lEcTVoYlY0Qi1Bc0lNdzRO?oc=5",
+      "sourceGrade": "B",
+      "category": "\u6838\u5fc3AI\u516c\u53f8\u65b0\u95fb",
+      "contentType": "news",
+      "readingScore": 70,
+      "tags": [
+        "Perplexity",
+        "enterprise"
+      ],
+      "importance": 5,
+      "rawBody": "Perplexity\u2019s CEO steps Into the AI agent conversation with Computer Fortune",
+      "bodyText": "Perplexity\u2019s CEO steps Into the AI agent conversation with Computer Fortune",
+      "contentFetched": false,
+      "relatedSources": [
+        {
+          "sourceName": "Perplexity",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOV1R0Tjk5c05YMUN1Y0hIY1RER29wYXlzejJyOGlPcTk2TXZ0V0g0d0pNZlc1a0E5SV9oRllrZEk2UjMxbVFzQmExTV9FS1dwQU4tNXdvSTdmXzNTYmN4OEQwVlU5d0RSNEplZlRvaUZEZXdaNUs1NGFfNkNIYmoxWHNrN0lEcTVoYlY0Qi1Bc0lNdzRO?oc=5",
+          "sourceGrade": "B",
+          "publisher": "Fortune"
+        }
+      ],
+      "sourceCount": 1,
+      "aggregatedEvent": false,
+      "qualityScore": 30,
+      "qualityType": "technical_update",
+      "qualityLabelZh": "\u6280\u672f\u66f4\u65b0",
+      "qualitySignals": {
+        "technical_update": 1,
+        "feature_update": 0,
+        "application_method": 0
+      },
+      "lowValueSignals": 0,
+      "titleLowValue": false,
+      "qualityReview": {
+        "score": 30,
+        "tier": "archive",
+        "isDefaultVisible": false,
+        "isTopEligible": false,
+        "reasons": [
+          "\u5b98\u65b9\u52a8\u6001\uff1a\u4ec5\u4fdd\u7559\u6a21\u578b\u3001\u4ea7\u54c1\u80fd\u529b\u3001API \u6216\u4f01\u4e1a\u5e94\u7528\u76f8\u5173",
+          "\u547d\u4e2d\u9ad8\u4ef7\u503c\u4fe1\u53f7\uff1a\u667a\u80fd\u4f53 / \u667a\u80fd\u4f53 / AI / \u667a\u80fd\u4f53",
+          "\u4e3b\u4f53\u660e\u786e\u76f8\u5173\uff1a\u667a\u80fd\u4f53",
+          "\u4f4e\u4e8e\u9ed8\u8ba4\u9608\u503c\uff0c\u4ec5\u8fdb\u5165\u5f52\u6863"
+        ],
+        "penalties": [],
+        "reviewer": "content-experience-v1"
+      },
+      "intelligenceBrief": {
+        "whatHappened": "Perplexity\u2019s CEO steps Into the AI \u667a\u80fd\u4f53 conversation \u7ed3\u5408 Computer Perplexity\u2019s CEO steps Into the AI \u667a\u80fd\u4f53 conversation \u7ed3\u5408 Computer \u6765\u81ea Perplexity.",
+        "whyItMatters": "Perplexity\u2019s CEO steps Into the AI \u667a\u80fd\u4f53 conversation \u7ed3\u5408 Computer Perplexity\u2019s CEO steps Into the AI \u667a\u80fd\u4f53 conversation \u7ed3\u5408 Computer \u6765\u81ea Perplexity.",
+        "takeaway": "\u5bf9\u4f01\u4e1a\u7528\u6237\uff0c\u5efa\u8bae\u5173\u6ce8\u5b83\u662f\u5426\u4f1a\u5e26\u6765\u65b0\u7684 API\u3001\u6a21\u578b\u80fd\u529b\u3001\u96c6\u6210\u65b9\u5f0f\u6216\u6210\u672c\u7ed3\u6784\u53d8\u5316\u3002",
+        "audience": "\u4f01\u4e1a\u51b3\u7b56\u8005\u3001\u4ea7\u54c1\u7ecf\u7406\u3001AI \u5e94\u7528\u56e2\u961f",
+        "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
+      },
+      "eventId": "s-ceo-steps-into-agent-conversation-computer"
+    },
+    {
+      "title": "Inference-Time Scaling: How Modern AI Models Think Longer to Perform Better",
+      "titleZh": "\u3010Sebastian Raschka\u3011\u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better",
+      "summary": "Inference-Time Scaling: How Modern AI Models Think Longer to Perform Better Medium",
+      "summaryZh": "\u6765\u6e90\uff1aSebastian Raschka\u3002\u4e3b\u9898\uff1aSebastian Raschka\u3001\u535a\u4e3b\u89c2\u70b9\u3002\u7cfb\u7edf\u5df2\u4ece\u6807\u9898\u3001\u6458\u8981\u548c\u53ef\u6293\u53d6\u6b63\u6587\u4e2d\u8bc6\u522b\u51fa\u4e3b\u9898\uff0c\u5e76\u7eb3\u5165 2026 \u5e74\u81f3\u4eca AI \u60c5\u62a5\u6d41\u3002\u5efa\u8bae\u5173\u6ce8\u5b83\u5bf9\u4ea7\u54c1\u3001\u4f01\u4e1a\u843d\u5730\u6216\u4e2a\u4eba\u5de5\u4f5c\u6d41\u7684\u542f\u53d1\u3002",
+      "keyPoints": [
+        "Inference-Time Scaling: How Modern AI Models Think Longer to Perform Better Medium"
+      ],
+      "keyPointsZh": [
+        "\u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better Medium"
       ],
       "imageUrl": "",
       "date": "2026-02-03",
       "sourceName": "Sebastian Raschka",
-      "publisher": "medium.com",
+      "publisher": "Medium",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNa3N5V0d5d3M1U2doWTh3R21CU2xHN19idGlBUjJ4WjFmVVI5dTRvdEtYWW9DSFhmay14VVQxNjQybmp1TDFPZzdSVVoyck14bUp5el85UkRrQnl6OVc3S00yNy0tQlhPMTg5NTllNV92ZDJlWWlJUUlTNFVRd053RnJ4OFBYS3ljd0d4NU9Jc1RUakU5UUh4ekNDUDBSOGppbkZ3clNGT1NabkxhMk9zekc2R01SNGYtTkI4?oc=5",
       "sourceGrade": "B",
       "category": "\u6838\u5fc3AI\u535a\u4e3b",
@@ -15704,15 +15979,15 @@
         "creator"
       ],
       "importance": 5,
-      "rawBody": "Inference-Time Scaling: How Modern AI Models Think Longer to Perform Better medium.com",
-      "bodyText": "Inference-Time Scaling: How Modern AI Models Think Longer to Perform Better medium.com",
+      "rawBody": "Inference-Time Scaling: How Modern AI Models Think Longer to Perform Better Medium",
+      "bodyText": "Inference-Time Scaling: How Modern AI Models Think Longer to Perform Better Medium",
       "contentFetched": false,
       "relatedSources": [
         {
           "sourceName": "Sebastian Raschka",
           "sourceUrl": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNa3N5V0d5d3M1U2doWTh3R21CU2xHN19idGlBUjJ4WjFmVVI5dTRvdEtYWW9DSFhmay14VVQxNjQybmp1TDFPZzdSVVoyck14bUp5el85UkRrQnl6OVc3S00yNy0tQlhPMTg5NTllNV92ZDJlWWlJUUlTNFVRd053RnJ4OFBYS3ljd0d4NU9Jc1RUakU5UUh4ekNDUDBSOGppbkZ3clNGT1NabkxhMk9zekc2R01SNGYtTkI4?oc=5",
           "sourceGrade": "B",
-          "publisher": "medium.com"
+          "publisher": "Medium"
         }
       ],
       "sourceCount": 1,
@@ -15742,8 +16017,8 @@
         "reviewer": "content-experience-v1"
       },
       "intelligenceBrief": {
-        "whatHappened": "\u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better \u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better medium.com \u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer",
-        "whyItMatters": "\u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better \u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better medium.com \u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer",
+        "whatHappened": "\u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better \u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better Medium \u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to ",
+        "whyItMatters": "\u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better \u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to Perform Better Medium \u63a8\u7406-Time Scaling: How Modern AI \u6a21\u578b Think Longer to ",
         "takeaway": "\u5bf9 AI \u7231\u597d\u8005\uff0c\u5efa\u8bae\u628a\u5b83\u653e\u5165\u672c\u5468\u8d8b\u52bf\u89c2\u5bdf\uff0c\u770b\u5b83\u662f\u5426\u4ee3\u8868\u65b0\u7684\u5de5\u5177\u7528\u6cd5\u6216\u6280\u672f\u65b9\u5411\u3002",
         "audience": "AI \u7231\u597d\u8005\u3001\u7814\u53d1\u5de5\u7a0b\u5e08\u3001LLM \u5b9e\u8df5\u8005",
         "recommendationReason": "\u4f18\u5148\u9605\u8bfb\uff1a\u6280\u672f\u66f4\u65b0\uff1b\u6765\u81ea\u6838\u5fc3\u8ffd\u8e2a\u6e90\u3002"
@@ -15967,13 +16242,13 @@
       "eventId": "rubin-platform-open-models-autonomous-driving-presents-blueprint-future-at-ces"
     }
   ],
-  "allItemsCount": 189,
+  "allItemsCount": 193,
   "digestArchive": {
     "date": "2026-08-03",
     "path": "data/digests/2026-08-03.md",
-    "itemCount": 130,
+    "itemCount": 129,
     "topStoryCount": 10,
-    "generatedAt": "2026-08-03T03:33:58.110427+00:00",
+    "generatedAt": "2026-08-03T14:53:04.163505+00:00",
     "latestPath": "data/digests/latest.md"
   }
 }
